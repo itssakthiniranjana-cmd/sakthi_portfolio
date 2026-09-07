@@ -7,7 +7,6 @@
 import { renderCapabilities } from './capabilities-3d.js';
 import { renderSelectedWork } from './gallery-3d.js';
 import { renderLiveProducts } from './live-products.js';
-import { renderFigmaArchive } from './figma-archive.js';
 import { initModal, openModal } from './modal.js';
 import { PERSONAL_INFO, SELECTED_WORK } from './data.js';
 
@@ -33,9 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (document.getElementById('live-products-grid')) {
     renderLiveProducts('live-products-grid', 'live-filter-tabs');
-  }
-  if (document.getElementById('figma-archive-container')) {
-    renderFigmaArchive('figma-archive-container');
   }
 
   // 6. Set Active Navigation Link
@@ -177,7 +173,7 @@ function initCustomCursor() {
   renderCursor();
 
   document.addEventListener('mouseover', (e) => {
-    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card, .figma-archive-card');
+    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card');
     if (target) {
       cursor.classList.add('cursor-hover');
       if (cursorText) {
@@ -195,7 +191,7 @@ function initCustomCursor() {
   });
 
   document.addEventListener('mouseout', (e) => {
-    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card, .figma-archive-card');
+    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card');
     if (target) {
       cursor.classList.remove('cursor-hover');
       if (cursorText) cursorText.textContent = '';

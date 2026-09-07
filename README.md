@@ -50,7 +50,6 @@
    - `capabilities.html` — 10 Core UX/UI & Product Capabilities
    - `work.html` — Curated Projects Stage & Real-World Visuals
    - `live-products.html` — Filterable 23-Product Matrix with Category Tabs
-   - `figma-archive.html` — Enterprise WMS, 3PL & Design System Deep-Dives
    - `experience.html` — Career Milestones & Leadership Timeline
    - `contact.html` — Collaboration Inception Form & Direct Contact Actions
 
