@@ -7,7 +7,7 @@
   <!-- SEO & Social Metadata -->
   <title>Sakthi Niranjana S — Senior UX/UI & Product Designer</title>
   <meta name="description" content="Portfolio of Sakthi Niranjana S — Senior UX/UI and Product Designer creating meaningful digital experiences across products, platforms and brands.">
-  <meta name="keywords" content="Sakthi Niranjana, UX/UI Designer, Product Designer, Creative Strategist, FlowHive Solutions, Design Systems, WMS, Supply Chain, Figma, 3D Portfolio">
+  <meta name="keywords" content="Sakthi Niranjana, UX/UI Designer, Product Designer, Creative Strategist, FlowHive Solutions, Design Systems, WMS, Supply Chain, Figma, Portfolio">
   <meta name="author" content="Sakthi Niranjana S">
   
   <!-- Open Graph / Facebook -->
@@ -61,7 +61,7 @@
     <div class="preloader-counter" id="preloader-count">0%</div>
   </div>
 
-  <!-- REFINED FLOATING NAVIGATION BAR (Clean Header without SN) -->
+  <!-- REFINED FLOATING NAVIGATION BAR (Clean Header without SN & without Available Badge) -->
   <header class="navbar-wrapper">
     <nav class="navbar" aria-label="Main Navigation">
       <a href="index.html" class="nav-brand" aria-label="Sakthi Niranjana Home">
@@ -77,11 +77,6 @@
         <li><a href="experience.html" class="nav-link">EXPERIENCE</a></li>
         <li><a href="contact.html" class="nav-link">CONTACT</a></li>
       </ul>
-
-      <div class="nav-status">
-        <span class="status-dot"></span>
-        <span>AVAILABLE FOR SELECTED PROJECTS</span>
-      </div>
 
       <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -102,7 +97,7 @@
       </svg>
     </button>
     <ul class="mobile-nav-links">
-      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html" class="active">HOME</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="capabilities.html">CAPABILITIES</a></li>
       <li><a href="work.html">SELECTED WORK</a></li>
@@ -114,70 +109,39 @@
   </div>
 
   <main>
-    <!-- 2. HERO SECTION WITH 3D PARALLAX PORTRAIT -->
+    <!-- 2. CENTERED HERO SECTION -->
     <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-grid-layout">
-          <!-- Left Column: Editorial Headline & Statement -->
-          <div class="hero-content">
-            <div class="section-tag">SENIOR DIGITAL &amp; PRODUCT DESIGNER</div>
+      <div class="container hero-centered-content">
+        <div class="section-tag">SENIOR DIGITAL &amp; PRODUCT DESIGNER</div>
 
-            <h1 class="hero-headline">
-              SAKTHI<br>
-              <span class="gradient-text">NIRANJANA S</span>
-            </h1>
+        <h1 class="hero-headline">
+          SAKTHI<br>
+          <span class="gradient-text">NIRANJANA S</span>
+        </h1>
 
-            <p class="hero-subline">
-              Senior UX/UI Designer &amp; Creative Head building meaningful digital experiences across products, platforms and brands.
-            </p>
+        <p class="hero-subline">
+          Senior UX/UI Designer &amp; Creative Head building meaningful digital experiences across products, platforms and brands.
+        </p>
 
-            <div class="hero-tags">
-              <span class="hero-tag">UX / UI</span>
-              <span class="hero-tag">PRODUCT DESIGN</span>
-              <span class="hero-tag">BRANDING</span>
-              <span class="hero-tag">DESIGN SYSTEMS</span>
-              <span class="hero-tag">CREATIVE STRATEGY</span>
-            </div>
+        <div class="hero-tags">
+          <span class="hero-tag">UX / UI</span>
+          <span class="hero-tag">PRODUCT DESIGN</span>
+          <span class="hero-tag">BRANDING</span>
+          <span class="hero-tag">DESIGN SYSTEMS</span>
+          <span class="hero-tag">CREATIVE STRATEGY</span>
+        </div>
 
-            <div class="hero-cta-group">
-              <a href="work.html" class="btn btn-primary" data-cursor-text="EXPLORE">
-                <span>VIEW SELECTED WORK</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-              <a href="contact.html" class="btn btn-secondary">
-                <span>LET'S CONNECT</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Column: 3D Parallax Interactive Portrait Stage -->
-          <div class="hero-portrait-stage" data-cursor-text="SAKTHI">
-            <div class="hero-portrait-backdrop-glow"></div>
-            
-            <div class="hero-portrait-card">
-              <div class="hero-portrait-img-wrap">
-                <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana S — Senior UX/UI & Product Designer" class="hero-portrait-img" loading="eager">
-              </div>
-
-              <!-- Floating Depth Badges with 3D Offset -->
-              <div class="floating-badge floating-badge-1">
-                <div class="badge-icon">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <span>FlowHive Solutions Lead</span>
-              </div>
-
-              <div class="floating-badge floating-badge-2">
-                <div class="badge-icon" style="background: var(--accent-secondary)">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                </div>
-                <span>Product Design &amp; Strategy</span>
-              </div>
-            </div>
-          </div>
+        <div class="hero-cta-group">
+          <a href="work.html" class="btn btn-primary" data-cursor-text="EXPLORE">
+            <span>VIEW SELECTED WORK</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="contact.html" class="btn btn-secondary">
+            <span>LET'S CONNECT</span>
+          </a>
         </div>
       </div>
 
@@ -189,41 +153,45 @@
       </div>
     </section>
 
-    <!-- 3. ABOUT ME OVERVIEW SECTION -->
+    <!-- 3. CENTERED ABOUT OVERVIEW SECTION -->
     <section class="section" id="about">
       <div class="container">
-        <div class="about-grid">
-          <div>
-            <div class="section-tag">ABOUT ME // PHILOSOPHY</div>
-            <h2 class="about-editorial-headline">
-              DESIGNING WITH<br>
-              PURPOSE, CLARITY<br>
-              &amp; CURIOSITY.
-            </h2>
-            <p class="about-text-lead">
-              Sakthi Niranjana is a UX/UI and product designer focused on turning complex ideas into clear, intuitive and visually strong digital experiences.
-            </p>
-            <p class="about-text-body">
-              Her work spans UX/UI design, product thinking, visual design, branding, design systems and digital experiences across multiple industries.
-            </p>
-            <p class="about-text-body">
-              She currently works as a <strong>Senior UX/UI Designer &amp; Content Head at FlowHive Solutions</strong>, contributing to digital experiences involving WMS, supply chain optimization and AI-powered transformation.
-            </p>
+        <div class="about-centered-preview">
+          <div class="section-tag">ABOUT ME // PHILOSOPHY</div>
+          <h2 class="about-editorial-headline" style="text-align: center;">
+            DESIGNING WITH PURPOSE,<br>
+            CLARITY &amp; CURIOSITY.
+          </h2>
+          <p class="about-text-lead" style="text-align: center; max-width: 780px;">
+            Sakthi Niranjana is a UX/UI and product designer focused on turning complex ideas into clear, intuitive and visually strong digital experiences.
+          </p>
+          <p class="about-text-body" style="text-align: center; max-width: 760px;">
+            Her work spans UX/UI design, product thinking, visual design, branding, design systems and digital experiences across multiple industries.
+          </p>
+          <p class="about-text-body" style="text-align: center; max-width: 760px;">
+            She currently works as a <strong>Senior UX/UI Designer &amp; Content Head at FlowHive Solutions</strong>, contributing to digital experiences involving WMS, supply chain optimization and AI-powered transformation.
+          </p>
 
-            <div style="margin-top: 2rem;">
-              <a href="about.html" class="btn btn-secondary">
-                <span>READ FULL STORY &amp; PHILOSOPHY</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
+          <div class="about-metrics-row" style="max-width: 720px; margin: 2rem auto 2.5rem auto;">
+            <div class="about-metric-item">
+              <span class="about-metric-label">Current Role</span>
+              <span class="about-metric-value">Senior UX/UI Lead</span>
+            </div>
+            <div class="about-metric-item">
+              <span class="about-metric-label">Organization</span>
+              <span class="about-metric-value">FlowHive Solutions</span>
+            </div>
+            <div class="about-metric-item">
+              <span class="about-metric-label">Location</span>
+              <span class="about-metric-value">Chennai, India</span>
             </div>
           </div>
 
           <div>
-            <div class="about-portrait-frame">
-              <div class="about-portrait-inner">
-                <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana S" loading="lazy">
-              </div>
-            </div>
+            <a href="about.html" class="btn btn-secondary">
+              <span>EXPLORE FULL STORY &amp; PORTRAIT</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
           </div>
         </div>
       </div>
