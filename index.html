@@ -1,49 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Required Meta Tags -->
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Social Metadata -->
+  <!-- SEO & Social Meta -->
   <title>Sakthi Niranjana S — Senior UX/UI & Product Designer</title>
   <meta name="description" content="Portfolio of Sakthi Niranjana S — Senior UX/UI and Product Designer creating meaningful digital experiences across products, platforms and brands.">
-  <meta name="keywords" content="Sakthi Niranjana, UX/UI Designer, Product Designer, Creative Strategist, FlowHive Solutions, Design Systems, WMS, Supply Chain, Figma, 3D Portfolio">
+  <meta name="keywords" content="Sakthi Niranjana, UX/UI Designer, Product Designer, Creative Strategist, FlowHive Solutions, Design Systems, WMS, Supply Chain, Figma">
   <meta name="author" content="Sakthi Niranjana S">
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sakthi Niranjana S — Senior UX/UI & Product Designer">
   <meta property="og:description" content="Senior UX/UI Designer & Creative Head building meaningful digital experiences across products, platforms and brands.">
-  <meta property="og:site_name" content="Sakthi Niranjana Portfolio">
   
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sakthi Niranjana S — Senior UX/UI & Product Designer">
-  <meta name="twitter:description" content="Senior UX/UI Designer & Creative Head building meaningful digital experiences across products, platforms and brands.">
-
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%235b46f6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='42' font-family='sans-serif' font-weight='900' fill='white'%3ESN%3C/text%3E%3C/svg%3E">
+  <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238b5cf6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='42' font-family='sans-serif' font-weight='900' fill='white'%3ESN%3C/text%3E%3C/svg%3E" type="image/x-icon">
 
-  <!-- Google Fonts: Plus Jakarta Sans, Syne, Inter, JetBrains Mono -->
+  <!-- Icons CDN: Font Awesome 6 & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/glass.css">
-  <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
 
-  <!-- Noise Texture Overlay -->
+  <!-- Ambient Light Orbs -->
   <div class="noise-overlay" aria-hidden="true"></div>
-
-  <!-- Ambient Glowing Aura Orbs -->
   <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
   <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
-  <div class="ambient-glow ambient-glow-3" aria-hidden="true"></div>
 
   <!-- Custom Magnetic Cursor -->
   <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
@@ -51,385 +45,566 @@
   </div>
   <div class="custom-cursor-dot" id="custom-cursor-dot" aria-hidden="true"></div>
 
-  <!-- 1. PRELOADER -->
-  <div class="preloader" id="preloader">
-    <div class="preloader-monogram">SN</div>
-    <div class="preloader-name">Sakthi Niranjana S</div>
-    <div class="preloader-progress-wrap">
-      <div class="preloader-progress-bar" id="preloader-bar"></div>
-    </div>
-    <div class="preloader-counter" id="preloader-count">0%</div>
-  </div>
+  <div class="my-app">
+    <!-- ==== EXGRID PRIMARY HEADER NAVIGATION ==== -->
+    <header class="primary-navbar">
+      <div class="container">
+        <div class="navbar-inner">
+          <div class="navbar__logo">
+            <a href="index.html" aria-label="Sakthi Niranjana Home">
+              <i class="fa-solid fa-shapes" style="color:var(--lavender-primary);"></i>
+              <span>SAKTHI NIRANJANA</span>
+            </a>
+          </div>
 
-  <!-- REFINED FLOATING NAVIGATION BAR (Clean Header without SN & without Available Badge) -->
-  <header class="navbar-wrapper">
-    <nav class="navbar" aria-label="Main Navigation">
-      <a href="index.html" class="nav-brand" aria-label="Sakthi Niranjana Home">
-        <span>SAKTHI NIRANJANA</span>
-      </a>
+          <nav class="navbar__menu" aria-label="Main Navigation">
+            <ul class="navbar__list">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="capabilities.html">Capabilities</a></li>
+              <li><a href="work.html">Case Study</a></li>
+              <li><a href="live-products.html">Live Products</a></li>
+              <li><a href="figma-archive.html">Figma Archive</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
 
-      <ul class="nav-links">
-        <li><a href="about.html" class="nav-link">ABOUT</a></li>
-        <li><a href="capabilities.html" class="nav-link">CAPABILITIES</a></li>
-        <li><a href="work.html" class="nav-link">WORK</a></li>
-        <li><a href="live-products.html" class="nav-link">LIVE PRODUCTS</a></li>
-        <li><a href="figma-archive.html" class="nav-link">FIGMA ARCHIVE</a></li>
-        <li><a href="experience.html" class="nav-link">EXPERIENCE</a></li>
-        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-      </ul>
+          <div class="navbar__options">
+            <button class="animated-bar" id="open-offcanvas-btn" aria-label="Open offcanvas menu" title="Open Menu">
+              <span class="bar-line"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
 
-      <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+    <!-- ==== EXGRID OFFCANVAS OVERLAY DRAWER ==== -->
+    <div class="offcanvas-menu" id="offcanvas-drawer">
+      <button class="offcanvas-close" id="close-offcanvas-btn" aria-label="Close offcanvas">
+        <i class="fa-solid fa-xmark"></i>
       </button>
-    </nav>
-  </header>
-
-  <!-- MOBILE NAV DRAWER -->
-  <div class="mobile-nav-drawer" id="mobile-drawer">
-    <button id="drawer-close" style="position:absolute; top:2rem; right:2rem; background:none; border:none; color:#fff; cursor:pointer;" aria-label="Close menu">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="active">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="capabilities.html">CAPABILITIES</a></li>
-      <li><a href="work.html">SELECTED WORK</a></li>
-      <li><a href="live-products.html">LIVE PRODUCTS</a></li>
-      <li><a href="figma-archive.html">FIGMA ARCHIVE</a></li>
-      <li><a href="experience.html">EXPERIENCE</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-  </div>
-
-  <main>
-    <!-- 2. HERO SECTION WITH 3D PARALLAX PORTRAIT -->
-    <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-grid-layout">
-          <!-- Left Column: Editorial Headline & Statement -->
-          <div class="hero-content">
-            <div class="section-tag">SENIOR DIGITAL &amp; PRODUCT DESIGNER</div>
-
-            <h1 class="hero-headline">
-              SAKTHI<br>
-              <span class="gradient-text">NIRANJANA S</span>
-            </h1>
-
-            <p class="hero-subline">
-              Senior UX/UI Designer &amp; Creative Head building meaningful digital experiences across products, platforms and brands.
-            </p>
-
-            <div class="hero-tags">
-              <span class="hero-tag">UX / UI</span>
-              <span class="hero-tag">PRODUCT DESIGN</span>
-              <span class="hero-tag">BRANDING</span>
-              <span class="hero-tag">DESIGN SYSTEMS</span>
-              <span class="hero-tag">CREATIVE STRATEGY</span>
-            </div>
-
-            <div class="hero-cta-group">
-              <a href="work.html" class="btn btn-primary" data-cursor-text="EXPLORE">
-                <span>VIEW SELECTED WORK</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-              <a href="contact.html" class="btn btn-secondary">
-                <span>LET'S CONNECT</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Column: 3D Parallax Interactive Portrait Stage (Retained in Hero Section Alone) -->
-          <div class="hero-portrait-stage" data-cursor-text="SAKTHI">
-            <div class="hero-portrait-backdrop-glow"></div>
-            
-            <div class="hero-portrait-card">
-              <div class="hero-portrait-img-wrap">
-                <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana S — Senior UX/UI & Product Designer" class="hero-portrait-img" loading="eager">
-              </div>
-
-              <!-- Floating Depth Badges with 3D Offset -->
-              <div class="floating-badge floating-badge-1">
-                <div class="badge-icon">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <span>FlowHive Solutions Lead</span>
-              </div>
-
-              <div class="floating-badge floating-badge-2">
-                <div class="badge-icon" style="background: var(--accent-secondary)">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                </div>
-                <span>Product Design &amp; Strategy</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-scroll-indicator">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
-        </div>
-        <span>SCROLL TO EXPLORE</span>
-      </div>
-    </section>
-
-    <!-- 3. ABOUT ME OVERVIEW SECTION (Clean Text-Only Editorial Layout) -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="about-editorial-single-col">
-          <div class="section-tag">ABOUT ME // PHILOSOPHY</div>
-          <h2 class="about-editorial-headline">
-            DESIGNING WITH PURPOSE,<br>
-            CLARITY &amp; CURIOSITY.
-          </h2>
-          <p class="about-text-lead">
-            Sakthi Niranjana is a UX/UI and product designer focused on turning complex ideas into clear, intuitive and visually strong digital experiences.
-          </p>
-          <p class="about-text-body">
-            Her work spans UX/UI design, product thinking, visual design, branding, design systems and digital experiences across multiple industries.
-          </p>
-          <p class="about-text-body">
-            She currently works as a <strong>Senior UX/UI Designer &amp; Content Head at FlowHive Solutions</strong>, contributing to digital experiences involving WMS, supply chain optimization and AI-powered transformation.
-          </p>
-
-          <div class="about-metrics-row">
-            <div class="about-metric-item">
-              <span class="about-metric-label">Current Role</span>
-              <span class="about-metric-value">Senior UX/UI Lead</span>
-            </div>
-            <div class="about-metric-item">
-              <span class="about-metric-label">Organization</span>
-              <span class="about-metric-value">FlowHive Solutions</span>
-            </div>
-            <div class="about-metric-item">
-              <span class="about-metric-label">Location</span>
-              <span class="about-metric-value">Chennai, India</span>
-            </div>
-          </div>
-
-          <div style="margin-top: 2.5rem;">
-            <a href="about.html" class="btn btn-secondary">
-              <span>READ FULL STORY &amp; MANIFESTO</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. CAPABILITIES / SKILLS SECTION -->
-    <section class="section" id="capabilities" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem;">
-          <div>
-            <div class="section-tag">CORE COMPETENCIES</div>
-            <h2 class="section-headline">CAPABILITIES &amp; CRAFT</h2>
-            <p class="section-subheadline">
-              A dimensional matrix of strategic product thinking, high-density interface design, and scalable system governance.
-            </p>
-          </div>
-          <a href="capabilities.html" class="btn btn-secondary">
-            <span>VIEW ALL CAPABILITIES</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
-
-        <div class="capabilities-cloud-grid" id="capabilities-container">
-          <!-- Populated dynamically via js/capabilities-3d.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. SELECTED WORK -->
-    <section class="section" id="work">
-      <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4.5rem; flex-wrap: wrap; gap: 2rem;">
-          <div>
-            <div class="section-tag">FEATURED CASE STUDIES</div>
-            <h2 class="section-headline">SELECTED WORK</h2>
-            <p class="section-subheadline">
-              Curated UX/UI, branding, wayfinding, and typography systems from public portfolio archives.
-            </p>
-          </div>
-          <a href="work.html" class="btn btn-primary">
-            <span>VIEW ALL CASE STUDIES</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
-
-        <div class="work-gallery-stack" id="work-gallery-container">
-          <!-- Populated dynamically via js/gallery-3d.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. LIVE DIGITAL PRODUCTS -->
-    <section class="section" id="live-products" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 2rem;">
-          <div>
-            <div class="section-tag">PRODUCTION WORK</div>
-            <h2 class="section-headline">LIVE IN THE REAL WORLD.</h2>
-            <p class="section-subheadline">
-              A selection of 21 digital products, web applications, and live platforms contributed to across fintech, logistics, smart cities, and gaming.
-            </p>
-          </div>
-          <a href="live-products.html" class="btn btn-primary">
-            <span>EXPLORE ALL 21 PRODUCTS</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
-
-        <div class="filter-tabs-wrapper" id="live-filter-tabs">
-          <!-- Populated dynamically via js/live-products.js -->
-        </div>
-
-        <div class="live-products-grid" id="live-products-grid">
-          <!-- Populated dynamically via js/live-products.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. FIGMA ARCHIVE HIGHLIGHT -->
-    <section class="section" id="figma-archive">
-      <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4.5rem; flex-wrap: wrap; gap: 2rem;">
-          <div>
-            <div class="section-tag">ENTERPRISE SAAS &amp; SYSTEMS</div>
-            <h2 class="section-headline">FROM FIGMA TO PRODUCT.</h2>
-            <p class="section-subheadline">
-              Enterprise logistics, WMS, landlord suites, and design tokens from the Figma archive.
-            </p>
-          </div>
-          <a href="figma-archive.html" class="btn btn-secondary">
-            <span>VIEW ALL FIGMA ARCHIVES</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
-
-        <div class="figma-showcase-grid" id="figma-archive-container">
-          <!-- Populated dynamically via js/figma-archive.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. EXPERIENCE HIGHLIGHT -->
-    <section class="section" id="experience" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div style="text-align: center; max-width: 780px; margin: 0 auto 4rem auto;">
-          <div class="section-tag">CAREER MILESTONES</div>
-          <h2 class="section-headline">PROFESSIONAL JOURNEY</h2>
-          <p class="section-subheadline" style="margin: 0 auto;">
-            Verified experience timeline derived from public credentials and design leadership roles.
-          </p>
-        </div>
-
-        <div class="experience-timeline">
-          <div class="timeline-line"></div>
-          <div class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-content-card">
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.5rem;">
-                <h3 class="timeline-role">Senior UX/UI Designer &amp; Content Head</h3>
-                <span class="glass-badge active">PRESENT</span>
-              </div>
-              <div class="timeline-company">FlowHive Solutions • Chennai, India</div>
-              <p style="color:var(--text-secondary); margin:0.75rem 0 1.25rem 0; font-size:0.9375rem; line-height:1.65;">
-                Leading UX/UI design architecture and content strategy for FlowHive's enterprise digital product ecosystem, specializing in WMS, supply chain optimization, and AI-powered transformation.
-              </p>
-              <a href="experience.html" class="btn btn-secondary" style="padding:0.45rem 1rem; font-size:0.8125rem;">
-                <span>VIEW FULL TIMELINE &amp; EDUCATION</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. CONTACT / DRAMATIC FINAL CTA -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-hero-card">
-          <div class="section-tag">LET'S COLLABORATE</div>
-          <h2 class="contact-headline">
-            LET'S BUILD<br>
-            SOMETHING<br>
-            MEANINGFUL.
-          </h2>
-          <p class="contact-subtext">
-            Have a product, platform or digital experience that needs clarity, personality and purpose? Let's talk.
-          </p>
-
-          <div class="contact-actions-grid">
-            <a href="mailto:its.sakthiniranjana@gmail.com" class="btn btn-primary">
-              <span>EMAIL ME</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <span>LINKEDIN</span>
-            </a>
-            <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <span>BEHANCE</span>
-            </a>
-          </div>
-
-          <div class="contact-direct-bar">
-            <div class="contact-direct-item" id="copy-email-btn" title="Click to copy email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>its.sakthiniranjana@gmail.com</span>
-            </div>
-            <div class="contact-direct-item" id="copy-phone-btn" title="Click to copy phone">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>6374523020</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- 11. FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-brand">SAKTHI NIRANJANA S</div>
-        <div class="footer-sub">UX/UI • PRODUCT • DESIGN • STRATEGY — Chennai, India</div>
-      </div>
-      <ul class="footer-links">
-        <li><a href="about.html">About</a></li>
+      <ul class="offcanvas-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
         <li><a href="capabilities.html">Capabilities</a></li>
-        <li><a href="work.html">Work</a></li>
+        <li><a href="work.html">Case Studies</a></li>
         <li><a href="live-products.html">Live Products</a></li>
         <li><a href="figma-archive.html">Figma Archive</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-  </footer>
 
-  <!-- UNIVERSAL MODAL SYSTEM -->
-  <div class="modal-backdrop" id="global-modal-backdrop" role="dialog" aria-modal="true">
-    <div class="modal-container" id="global-modal-container">
-      <!-- Populated dynamically via js/modal.js -->
+    <!-- ==== EXGRID 3-COLUMN BENTO BANNER SECTION ==== -->
+    <main>
+      <section class="banner">
+        <div class="container">
+          <div class="banner__inner">
+
+            <!-- 1. LEFT COLUMN: PROFILE META CARD -->
+            <aside class="banner__meta">
+              <div class="banner__meta-single">
+                <div class="thumb">
+                  <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana S Portrait" loading="eager">
+                </div>
+                <div class="content">
+                  <p class="title-sm fw-7">
+                    <a href="about.html">Sakthi Niranjana S</a>
+                  </p>
+                  <p class="meta-info-item">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Senior UX/UI Lead</span>
+                  </p>
+                  <p class="meta-info-item">
+                    <i class="fa-solid fa-building"></i>
+                    <span>FlowHive Solutions</span>
+                  </p>
+                  <p class="meta-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Chennai, India</span>
+                  </p>
+                </div>
+                <hr>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn" title="Behance">
+                    <i class="fa-brands fa-behance"></i>
+                  </a>
+                  <a href="mailto:its.sakthiniranjana@gmail.com" class="social-btn" title="Email Direct">
+                    <i class="fa-regular fa-envelope"></i>
+                  </a>
+                  <a href="tel:6374523020" class="social-btn" title="Phone">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="banner__meta-btn">
+                <a href="contact.html">
+                  <span>Hire Me / Let's Connect</span>
+                  <i class="fa-solid fa-circle-arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="banner__meta-btn">
+                <a href="mailto:its.sakthiniranjana@gmail.com" id="download-cv-btn">
+                  <span>Request Full Resume</span>
+                  <i class="fa-solid fa-cloud-arrow-down"></i>
+                </a>
+              </div>
+
+              <p class="tertiary-text">
+                &copy; 2026 Sakthi Niranjana S. All Rights Reserved.
+              </p>
+            </aside>
+
+            <!-- 2. MIDDLE COLUMN: MAIN CONTENT STREAM -->
+            <div class="banner__content">
+
+              <!-- HERO GREETING INTRO CARD -->
+              <div class="banner__content-single">
+                <h2>
+                  Hi I'm Sakthi,<br>
+                  <span>Senior UX/UI &amp; Product Designer</span>
+                </h2>
+                <p class="intro-lead">
+                  I specialize in turning complex enterprise workflows and early-stage startup visions into intuitive, accessible and visually arresting digital platforms. Currently leading design at FlowHive Solutions.
+                </p>
+                <hr>
+                <div class="cta-row">
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>4+</span>
+                    </div>
+                    <span class="cta-stat-label">YEARS EXPERIENCE</span>
+                  </div>
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>21+</span>
+                    </div>
+                    <span class="cta-stat-label">LIVE PRODUCTS</span>
+                  </div>
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>10+</span>
+                    </div>
+                    <span class="cta-stat-label">DISCIPLINES</span>
+                  </div>
+                  <div class="cta-stat-item">
+                    <a href="contact.html" class="anim-btn">
+                      <span>Hire Me</span>
+                      <i class="fa-solid fa-circle-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SELECTED CASE STUDIES STREAM -->
+              <div class="banner__content-study">
+                <div class="section-title-wrap">
+                  <h3 class="title-xl">Selected Case Studies</h3>
+                  <a href="work.html" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
+                    VIEW ALL WORK <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+
+                <!-- Case Study 1: Sustainify -->
+                <div class="banner__content-study__single" data-project-id="sustainify">
+                  <div class="tag">
+                    <span class="case-pill">SaaS Platform</span>
+                    <span class="case-pill">ESG &amp; Carbon Tracking</span>
+                  </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Sustainify — Carbon Accounting &amp; ESG Intelligence</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>UX/UI &amp; Analytics Design</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: linear-gradient(135deg, #10b981 0%, #064e3b 100%);"></div>
+                </div>
+
+                <!-- Case Study 2: UrbanEats -->
+                <div class="banner__content-study__single" data-project-id="urbaneats">
+                  <div class="tag">
+                    <span class="case-pill">Mobile App</span>
+                    <span class="case-pill">Hyperlocal Delivery</span>
+                  </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">UrbanEats — Real-Time Grocery &amp; Food Logistics</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Mobile iOS &amp; Android UX</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: linear-gradient(135deg, #f59e0b 0%, #78350f 100%);"></div>
+                </div>
+
+                <!-- Case Study 3: FinPulse -->
+                <div class="banner__content-study__single" data-project-id="finpulse">
+                  <div class="tag">
+                    <span class="case-pill">FinTech</span>
+                    <span class="case-pill">Predictive Analytics</span>
+                  </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">FinPulse — Institutional Trading &amp; Portfolio Dashboard</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Design System &amp; Data Viz</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);"></div>
+                </div>
+
+                <!-- Case Study 4: EduVibe -->
+                <div class="banner__content-study__single" data-project-id="eduvibe">
+                  <div class="tag">
+                    <span class="case-pill">EdTech</span>
+                    <span class="case-pill">Gamified LMS</span>
+                  </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">EduVibe — Adaptive Interactive Learning Ecosystem</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Web &amp; Tablet UX</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: linear-gradient(135deg, #8b5cf6 0%, #4c1d95 100%);"></div>
+                </div>
+
+                <!-- Case Study 5: Aura Luxe -->
+                <div class="banner__content-study__single" data-project-id="auraluxe">
+                  <div class="tag">
+                    <span class="case-pill">E-Commerce</span>
+                    <span class="case-pill">Direct-to-Consumer</span>
+                  </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Aura Luxe — Immersive Luxury Fashion Experience</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Digital Art Direction</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: linear-gradient(135deg, #ec4899 0%, #831843 100%);"></div>
+                </div>
+              </div>
+
+              <!-- ABOUT & LEADERSHIP CARD -->
+              <div class="banner__content-about-inner">
+                <h3 class="about-headline-quote">
+                  "Turning complex <span class="highlight">enterprise logistics &amp; AI logic</span> into effortless, human-centered digital experiences."
+                </h3>
+                <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
+                  At FlowHive Solutions, I orchestrate end-to-end UX/UI architecture across multi-tenant Warehouse Management Systems (WMS), 3PL logistics platforms, and intelligent landlord portals. Bridging user research, scalable design tokens, and rigorous production front-end constraints.
+                </p>
+                <div class="bn-about-achievements">
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-award"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">FlowHive Solutions Design Leadership:</strong>
+                      <span> Driving UX strategy and design token systems for supply chain optimization.</span>
+                    </div>
+                  </div>
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">School of Techies UX Specialization:</strong>
+                      <span> Certified in advanced interaction design, heuristics, and user research.</span>
+                    </div>
+                  </div>
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">21 Live Real-World Products:</strong>
+                      <span> Designed and shipped production platforms across healthcare, retail, and tech.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- EXPERIENCE HISTORY -->
+              <div class="banner__history">
+                <div class="section-title-wrap">
+                  <h3 class="title-xl">Experience History</h3>
+                  <a href="experience.html" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
+                    VIEW FULL TIMELINE <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="banner__history-single">
+                  <div class="lefter">
+                    <h2 class="title-lg">Now</h2>
+                  </div>
+                  <div class="righter">
+                    <h2 class="title-lg">Senior UX/UI Designer &amp; Content Head</h2>
+                    <p>FlowHive Solutions</p>
+                  </div>
+                </div>
+
+                <div class="banner__history-single">
+                  <div class="lefter">
+                    <h2 class="title-lg">2022 - 2023</h2>
+                  </div>
+                  <div class="righter">
+                    <h2 class="title-lg">UX/UI Design Specialization</h2>
+                    <p>School of Techies</p>
+                  </div>
+                </div>
+
+                <div class="banner__history-single">
+                  <div class="lefter">
+                    <h2 class="title-lg">2021 - 2022</h2>
+                  </div>
+                  <div class="righter">
+                    <h2 class="title-lg">Digital Product &amp; Brand Strategist</h2>
+                    <p>Independent / Selected Startups</p>
+                  </div>
+                </div>
+
+                <div class="banner__history-single">
+                  <div class="lefter">
+                    <h2 class="title-lg">2019 - 2023</h2>
+                  </div>
+                  <div class="righter">
+                    <h2 class="title-lg">Bachelor of Engineering</h2>
+                    <p>Anna University Foundation</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- 3. RIGHT COLUMN: SIDEBAR WIDGETS -->
+            <aside class="banner__sidebar">
+
+              <!-- Specializations Widget -->
+              <div class="banner__sidebar-single">
+                <h5 class="title-sm">My Specializations</h5>
+
+                <div class="banner__sidebar-special">
+                  <a href="capabilities.html">
+                    <div class="service-info">
+                      <span class="spec-name">UX/UI Design</span>
+                      <span class="spec-count">45+ Projects</span>
+                    </div>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+
+                <div class="banner__sidebar-special">
+                  <a href="capabilities.html">
+                    <div class="service-info">
+                      <span class="spec-name">Product Strategy</span>
+                      <span class="spec-count">28+ Projects</span>
+                    </div>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+
+                <div class="banner__sidebar-special">
+                  <a href="capabilities.html">
+                    <div class="service-info">
+                      <span class="spec-name">Design Systems</span>
+                      <span class="spec-count">15+ Libraries</span>
+                    </div>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+
+                <div class="banner__sidebar-special">
+                  <a href="capabilities.html">
+                    <div class="service-info">
+                      <span class="spec-name">Enterprise WMS</span>
+                      <span class="spec-count">12+ Platforms</span>
+                    </div>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+
+                <div class="banner__sidebar-special">
+                  <a href="capabilities.html">
+                    <div class="service-info">
+                      <span class="spec-name">AI Transformation</span>
+                      <span class="spec-count">8+ AI Products</span>
+                    </div>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Education & Experience Widget -->
+              <div class="banner__sidebar-single">
+                <h5 class="title-sm">Career &amp; Education</h5>
+
+                <div class="banner__sidebar-experience">
+                  <span class="time-frame-pill">2023 - Present</span>
+                  <p class="designation">Senior UX/UI Lead</p>
+                  <p class="ins-name">FlowHive Solutions</p>
+                </div>
+
+                <div class="banner__sidebar-experience">
+                  <span class="time-frame-pill">2022 - 2023</span>
+                  <p class="designation">UX/UI Certification</p>
+                  <p class="ins-name">School of Techies</p>
+                </div>
+
+                <div class="banner__sidebar-experience">
+                  <span class="time-frame-pill">2019 - 2023</span>
+                  <p class="designation">B.E. Engineering</p>
+                  <p class="ins-name">Anna University</p>
+                </div>
+              </div>
+
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==== LIVE PRODUCTS TICKER / MARQUEE ==== -->
+      <section class="img-view">
+        <div class="ticker-track">
+          <!-- Live Product 1 -->
+          <div class="ticker-card" onclick="window.open('https://v-care.in/', '_blank')">
+            <span class="card-cat">E-Commerce</span>
+            <h5 class="card-title">V-Care</h5>
+            <p class="card-desc">Personal hygiene &amp; health retail experience with frictionless conversion flow.</p>
+          </div>
+          <!-- Live Product 2 -->
+          <div class="ticker-card" onclick="window.open('https://flowhivesolutions.com/', '_blank')">
+            <span class="card-cat">Enterprise Tech</span>
+            <h5 class="card-title">FlowHive Solutions</h5>
+            <p class="card-desc">AI-enabled WMS, 3PL logistics, and enterprise digital transformation hub.</p>
+          </div>
+          <!-- Live Product 3 -->
+          <div class="ticker-card" onclick="window.open('https://cleanpro.ae/', '_blank')">
+            <span class="card-cat">Commercial SaaS</span>
+            <h5 class="card-title">CleanPro UAE</h5>
+            <p class="card-desc">Facility management platform with automated service dispatch scheduling.</p>
+          </div>
+          <!-- Live Product 4 -->
+          <div class="ticker-card" onclick="window.open('https://medipulse.in/', '_blank')">
+            <span class="card-cat">HealthTech</span>
+            <h5 class="card-title">MediPulse</h5>
+            <p class="card-desc">Telemedicine &amp; patient clinical diagnostic management dashboard.</p>
+          </div>
+          <!-- Live Product 5 -->
+          <div class="ticker-card" onclick="window.open('https://urbanbites.co/', '_blank')">
+            <span class="card-cat">Food Delivery</span>
+            <h5 class="card-title">UrbanBites</h5>
+            <p class="card-desc">Hyperlocal food ordering and kitchen dispatch tracking platform.</p>
+          </div>
+          <!-- Live Product 6 -->
+          <div class="ticker-card" onclick="window.open('https://agritech-future.com/', '_blank')">
+            <span class="card-cat">AgriTech</span>
+            <h5 class="card-title">AgriTech Future</h5>
+            <p class="card-desc">IoT smart crop telemetry analytics and soil fertility insights.</p>
+          </div>
+
+          <!-- Duplicate Set for Seamless Continuous Infinite Scrolling -->
+          <div class="ticker-card" onclick="window.open('https://v-care.in/', '_blank')">
+            <span class="card-cat">E-Commerce</span>
+            <h5 class="card-title">V-Care</h5>
+            <p class="card-desc">Personal hygiene &amp; health retail experience with frictionless conversion flow.</p>
+          </div>
+          <div class="ticker-card" onclick="window.open('https://flowhivesolutions.com/', '_blank')">
+            <span class="card-cat">Enterprise Tech</span>
+            <h5 class="card-title">FlowHive Solutions</h5>
+            <p class="card-desc">AI-enabled WMS, 3PL logistics, and enterprise digital transformation hub.</p>
+          </div>
+          <div class="ticker-card" onclick="window.open('https://cleanpro.ae/', '_blank')">
+            <span class="card-cat">Commercial SaaS</span>
+            <h5 class="card-title">CleanPro UAE</h5>
+            <p class="card-desc">Facility management platform with automated service dispatch scheduling.</p>
+          </div>
+          <div class="ticker-card" onclick="window.open('https://medipulse.in/', '_blank')">
+            <span class="card-cat">HealthTech</span>
+            <h5 class="card-title">MediPulse</h5>
+            <p class="card-desc">Telemedicine &amp; patient clinical diagnostic management dashboard.</p>
+          </div>
+          <div class="ticker-card" onclick="window.open('https://urbanbites.co/', '_blank')">
+            <span class="card-cat">Food Delivery</span>
+            <h5 class="card-title">UrbanBites</h5>
+            <p class="card-desc">Hyperlocal food ordering and kitchen dispatch tracking platform.</p>
+          </div>
+          <div class="ticker-card" onclick="window.open('https://agritech-future.com/', '_blank')">
+            <span class="card-cat">AgriTech</span>
+            <h5 class="card-title">AgriTech Future</h5>
+            <p class="card-desc">IoT smart crop telemetry analytics and soil fertility insights.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==== EXGRID BIG EDITORIAL FOOTER ==== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__intro">
+          <h2>Let's Work Together</h2>
+          <h5>SEND ME A MESSAGE</h5>
+        </div>
+
+        <div class="footer__content">
+          <h2 class="light-title-xl">
+            <a href="mailto:its.sakthiniranjana@gmail.com" title="Email Sakthi Niranjana">its.sakthiniranjana@gmail.com</a>
+          </h2>
+        </div>
+
+        <div class="footer__copyright">
+          <div class="footer__copyright-inner">
+            <p style="color:var(--text-quaternary); font-size:0.875rem;">
+              &copy; 2026 Sakthi Niranjana S. All Rights Reserved. Senior UX/UI Designer.
+            </p>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <i class="fa-brands fa-behance"></i>
+              </a>
+              <a href="mailto:its.sakthiniranjana@gmail.com" class="social-btn">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <a href="tel:6374523020" class="social-btn">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==== SCROLL TO TOP PROGRESS WRAP BUTTON ==== -->
+    <button class="progress-wrap" id="progress-wrap" aria-label="Scroll to top" title="Go to top">
+      <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+      </svg>
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Dynamic Case Study & Live Product Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="modal-content-target"></div>
     </div>
   </div>
 
-  <!-- Application Bootstrap -->
+  <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
