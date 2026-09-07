@@ -959,10 +959,10 @@ a:hover {
 }
 
 /* ==========================================================================
-   TOOLS & TECHNOLOGIES MARQUEE TICKER (IMG-VIEW)
+   TOOLS & TECHNOLOGIES LOGO MARQUEE (IMG-VIEW)
    ========================================================================== */
 .img-view {
-  padding: 55px 0;
+  padding: 36px 0;
   position: relative;
   overflow: hidden;
   background: var(--bg-secondary);
@@ -972,9 +972,10 @@ a:hover {
 
 .ticker-track {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 3.5rem;
   width: max-content;
-  animation: ticker-slide 65s linear infinite;
+  animation: ticker-slide 45s linear infinite;
 }
 
 .ticker-track:hover {
@@ -986,65 +987,46 @@ a:hover {
   100% { transform: translateX(-50%); }
 }
 
-.ticker-card {
-  width: 290px;
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 1.25rem 1.35rem;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
+.tool-logo-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.4rem 0.6rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  flex-shrink: 0;
   cursor: default;
-  transition: var(--transition);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.85;
+}
+
+.tool-logo-item:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.tool-logo-item svg,
+.tool-logo-item img {
+  width: 36px;
+  height: 36px;
+  display: block;
   flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.05));
 }
 
-.ticker-card:hover {
-  border-color: var(--lavender-primary);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lavender);
-}
-
-.ticker-card__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.ticker-card__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.ticker-card .card-cat {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+.tool-logo-item span {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
   font-weight: 700;
-  color: var(--lavender-primary);
-  text-transform: uppercase;
-  background: var(--lavender-tint);
-  padding: 0.2rem 0.55rem;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(139, 92, 246, 0.2);
-}
-
-.ticker-card .card-title {
-  font-size: 1.15rem;
-  font-weight: 800;
   color: var(--text-primary);
+  white-space: nowrap;
   letter-spacing: -0.01em;
+  transition: color 0.2s ease;
 }
 
-.ticker-card .card-desc {
-  font-size: 0.8125rem;
-  color: var(--text-secondary);
-  line-height: 1.45;
+.tool-logo-item:hover span {
+  color: var(--lavender-primary);
 }
 
 /* ==========================================================================
