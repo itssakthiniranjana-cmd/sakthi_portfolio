@@ -3,38 +3,40 @@
    Scroll-driven transformations, kinetic typography, 3D depth, micro-interactions
    ========================================================================== */
 
-/* Hero Section Layout (Centered & Cinematic) */
+/* Hero Section Layout (Split with 3D Parallax Portrait) */
 .hero-section {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: clamp(8rem, 16vh, 12rem);
+  padding-top: clamp(6.5rem, 14vh, 9.5rem);
   padding-bottom: clamp(4rem, 8vh, 6rem);
-  text-align: center;
 }
 
-.hero-centered-content {
+.hero-grid-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
   position: relative;
   z-index: 2;
-  max-width: 920px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-headline {
-  font-size: clamp(3rem, 7.5vw, 7.25rem);
+  font-size: clamp(2.75rem, 6.2vw, 6.25rem);
   font-family: var(--font-display);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 0.95;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   color: var(--text-primary);
 }
 
@@ -45,29 +47,28 @@
 }
 
 .hero-subline {
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-size: clamp(1.125rem, 1.8vw, 1.45rem);
   font-weight: 500;
   color: var(--text-secondary);
-  line-height: 1.55;
-  max-width: 720px;
-  margin: 0 auto 2.25rem auto;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-bottom: 2rem;
   letter-spacing: -0.015em;
 }
 
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-bottom: 3rem;
-  max-width: 780px;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
 }
 
 .hero-tag {
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.4rem 1rem;
+  padding: 0.35rem 0.85rem;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-medium);
@@ -88,8 +89,136 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 1.25rem;
+}
+
+/* 3D Parallax Portrait Stage in Hero */
+.hero-portrait-stage {
+  position: relative;
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.hero-portrait-backdrop-glow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.28) 0%, rgba(240, 237, 249, 0) 70%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+  animation: pulse-aura 6s infinite alternate ease-in-out;
+}
+
+@keyframes pulse-aura {
+  0% { transform: scale(0.95); opacity: 0.6; }
+  100% { transform: scale(1.08); opacity: 0.9; }
+}
+
+.hero-portrait-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 25px 60px rgba(30, 20, 70, 0.12), 0 0 40px rgba(91, 70, 246, 0.15);
+  transform-style: preserve-3d;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.hero-portrait-card:hover {
+  box-shadow: 0 35px 80px rgba(30, 20, 70, 0.18), 0 0 50px rgba(91, 70, 246, 0.25);
+}
+
+.hero-portrait-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.5s var(--ease-out-expo);
+  will-change: transform;
+}
+
+.hero-portrait-card:hover .hero-portrait-img {
+  transform: scale(1.03);
+}
+
+/* Floating Parallax Badges around Portrait */
+.floating-badge {
+  position: absolute;
+  z-index: 2;
+  padding: 0.65rem 1.15rem;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 25px rgba(30, 20, 70, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  pointer-events: none;
+  transition: transform 0.3s var(--ease-out-expo);
+  will-change: transform;
+}
+
+.floating-badge-1 {
+  top: -1rem;
+  right: -1rem;
+  animation: float-badge-1 4s infinite alternate ease-in-out;
+}
+
+.floating-badge-2 {
+  bottom: 1.5rem;
+  left: -2rem;
+  animation: float-badge-2 5s infinite alternate ease-in-out;
+}
+
+@keyframes float-badge-1 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes float-badge-2 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(8px) rotate(-1.5deg); }
+}
+
+.badge-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
 }
 
 .hero-scroll-indicator {
@@ -141,22 +270,10 @@
   }
 }
 
-/* Centered About Preview on Landing Page */
-.about-centered-preview {
-  max-width: 860px;
+/* Text-Only Editorial About Section */
+.about-editorial-single-col {
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Split About Section on Dedicated About Page */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 4.5rem;
-  align-items: center;
 }
 
 .about-editorial-headline {
@@ -214,32 +331,6 @@
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--text-primary);
-}
-
-.about-portrait-frame {
-  position: relative;
-  border-radius: var(--radius-xl);
-  padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border-medium);
-  box-shadow: var(--shadow-xl);
-  overflow: hidden;
-}
-
-.about-portrait-inner {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 4/5;
-  box-shadow: var(--shadow-md);
-}
-
-.about-portrait-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
 }
 
 /* Capabilities 3D Cloud */
@@ -880,7 +971,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .about-grid {
+  .hero-grid-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -896,7 +987,10 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 7rem;
+    padding-top: 6.5rem;
+  }
+  .hero-portrait-card {
+    max-width: 340px;
   }
   .about-metrics-row {
     grid-template-columns: 1fr;
