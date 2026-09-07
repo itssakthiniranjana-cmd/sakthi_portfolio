@@ -9,9 +9,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(13, 12, 24, 0.75);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(20, 15, 35, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -35,7 +35,7 @@
   max-width: 1050px;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 30px 80px rgba(20, 15, 45, 0.2), 0 0 50px var(--lavender-glow);
   position: relative;
   transform: translateY(30px) scale(0.97);
   transition: transform 0.4s var(--ease-out-expo);
@@ -54,8 +54,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(13, 12, 24, 0.08);
-  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,8 +66,10 @@
 }
 
 .modal-close-btn:hover {
-  background: var(--text-primary);
+  background: var(--lavender-primary);
+  border-color: var(--lavender-primary);
   color: #ffffff;
+  box-shadow: 0 0 20px var(--lavender-glow);
   transform: rotate(90deg);
 }
 
