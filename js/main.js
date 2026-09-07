@@ -6,7 +6,6 @@
 
 import { renderCapabilities } from './capabilities-3d.js';
 import { renderSelectedWork } from './gallery-3d.js';
-import { renderLiveProducts } from './live-products.js';
 import { initModal, openModal } from './modal.js';
 import { PERSONAL_INFO, SELECTED_WORK } from './data.js';
 
@@ -29,9 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (document.getElementById('work-gallery-container')) {
     renderSelectedWork('work-gallery-container');
-  }
-  if (document.getElementById('live-products-grid')) {
-    renderLiveProducts('live-products-grid', 'live-filter-tabs');
   }
 
   // 6. Set Active Navigation Link

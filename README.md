@@ -48,8 +48,7 @@
    - `index.html` — Homepage with 3-Column Bento Banner & Projects Stream
    - `about.html` — Professional Background, Design Philosophy & Bio
    - `capabilities.html` — 10 Core UX/UI & Product Capabilities
-   - `work.html` — Curated Projects Stage & Real-World Visuals
-   - `live-products.html` — Filterable 23-Product Matrix with Category Tabs
+   - `work.html` — Curated 23-Project Production Matrix with High-Res Visuals & Category Filters
    - `experience.html` — Career Milestones & Leadership Timeline
    - `contact.html` — Collaboration Inception Form & Direct Contact Actions
 
