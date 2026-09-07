@@ -100,8 +100,34 @@
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 2.5rem;" id="work-gallery-container">
-          <!-- Populated via js/gallery-3d.js -->
+        <!-- Category Filter Tabs -->
+        <div class="work-filter-bar">
+          <button class="work-filter-tab active" data-filter="all">
+            <i class="fa-solid fa-shapes"></i> All Projects
+          </button>
+          <button class="work-filter-tab" data-filter="Fintech">
+            <i class="fa-solid fa-credit-card"></i> FinTech
+          </button>
+          <button class="work-filter-tab" data-filter="Gaming">
+            <i class="fa-solid fa-dice"></i> Gaming &amp; Lotteries
+          </button>
+          <button class="work-filter-tab" data-filter="PropTech">
+            <i class="fa-solid fa-building"></i> PropTech
+          </button>
+          <button class="work-filter-tab" data-filter="Logistics">
+            <i class="fa-solid fa-truck-fast"></i> Logistics &amp; Supply Chain
+          </button>
+          <button class="work-filter-tab" data-filter="Enterprise">
+            <i class="fa-solid fa-layer-group"></i> Enterprise &amp; SaaS
+          </button>
+          <button class="work-filter-tab" data-filter="Creative">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Creative &amp; E-Com
+          </button>
+        </div>
+
+        <!-- 23 Individual Project Stage Cards Stack -->
+        <div class="work-gallery-stack" id="work-gallery-container">
+          <!-- Dynamically populated via js/gallery-3d.js -->
         </div>
       </div>
     </main>
