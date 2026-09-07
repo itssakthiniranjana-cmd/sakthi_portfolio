@@ -262,7 +262,7 @@ a:hover {
 }
 
 .navbar__options {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1rem;
 }
@@ -1306,9 +1306,12 @@ a:hover {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .navbar__list {
     display: none;
+  }
+  .navbar__options {
+    display: flex;
   }
   .banner__meta {
     grid-template-columns: 1fr;
