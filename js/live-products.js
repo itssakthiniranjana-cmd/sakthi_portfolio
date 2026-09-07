@@ -1,99 +1,122 @@
 /**
- * Live Digital Products Filter & Browser Wall System
+ * Live Digital Products Filter & Grid System
  * Sakthi Niranjana S Portfolio
- * 
- * Features:
- * - Filterable showcase of 21 real-world verified products
- * - Category filter pills
- * - Browser window card UI with live URL pills
- * - Interactive detail modal / direct live visit
  */
 
-import { LIVE_PRODUCTS } from './data.js';
-import { openLiveProductModal } from './modal.js';
+import { ALL_PROJECTS } from './data.js';
+import { openModal } from './modal.js';
 
 export function renderLiveProducts(containerId = 'live-products-grid', filterContainerId = 'live-filter-tabs') {
   const container = document.getElementById(containerId);
   const filterContainer = document.getElementById(filterContainerId);
-  if (!container || !filterContainer) return;
+  if (!container) return;
 
-  // 1. Categories
   const categories = [
-    { id: 'ALL', label: 'All Products (21)' },
-    { id: 'Fintech', label: 'Fintech & Payments' },
-    { id: 'Logistics', label: 'Logistics & Smart Cities' },
-    { id: 'PropTech', label: 'PropTech & Spaces' },
+    { id: 'ALL', label: 'All Projects (23)' },
+    { id: 'Fintech', label: 'FinTech' },
     { id: 'Gaming', label: 'Gaming & Lotteries' },
-    { id: 'Enterprise', label: 'Enterprise & Tech' },
-    { id: 'Creative', label: 'Creative Studios' }
+    { id: 'PropTech', label: 'PropTech' },
+    { id: 'Logistics', label: 'Logistics & Supply Chain' },
+    { id: 'Enterprise', label: 'Enterprise & SaaS' },
+    { id: 'Creative', label: 'Creative & E-Com' }
   ];
 
   let currentCategory = 'ALL';
 
-  // Render Filter Tabs
-  filterContainer.innerHTML = '';
-  categories.forEach(cat => {
-    const tab = document.createElement('button');
-    tab.className = `filter-tab ${cat.id === currentCategory ? 'active' : ''}`;
-    tab.textContent = cat.label;
-    tab.addEventListener('click', () => {
-      currentCategory = cat.id;
-      filterContainer.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      renderCards();
+  if (filterContainer) {
+    filterContainer.innerHTML = '';
+    categories.forEach(cat => {
+      const tab = document.createElement('button');
+      tab.className = `filter-tab ${cat.id === currentCategory ? 'active' : ''}`;
+      tab.textContent = cat.label;
+      tab.style.cssText = `
+        padding: 0.55rem 1.25rem;
+        border-radius: 9999px;
+        font-family: var(--font-display);
+        font-size: 0.875rem;
+        font-weight: 600;
+        background: ${cat.id === currentCategory ? 'var(--text-primary)' : '#ffffff'};
+        color: ${cat.id === currentCategory ? '#ffffff' : 'var(--text-secondary)'};
+        border: 1px solid var(--border-color);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      `;
+      tab.addEventListener('click', () => {
+        currentCategory = cat.id;
+        filterContainer.querySelectorAll('.filter-tab').forEach(t => {
+          t.style.background = '#ffffff';
+          t.style.color = 'var(--text-secondary)';
+        });
+        tab.style.background = 'var(--text-primary)';
+        tab.style.color = '#ffffff';
+        renderCards();
+      });
+      filterContainer.appendChild(tab);
     });
-    filterContainer.appendChild(tab);
-  });
+  }
 
-  // Render Cards Function
   function renderCards() {
     container.innerHTML = '';
     const filtered = currentCategory === 'ALL' 
-      ? LIVE_PRODUCTS 
-      : LIVE_PRODUCTS.filter(p => p.category === currentCategory);
+      ? ALL_PROJECTS 
+      : ALL_PROJECTS.filter(p => p.category === currentCategory);
 
-    filtered.forEach((product, idx) => {
+    filtered.forEach((project) => {
       const card = document.createElement('div');
-      card.className = 'live-browser-card';
-      card.dataset.id = product.id;
-      card.dataset.cursorText = "OPEN";
+      card.className = 'banner__sidebar-single';
+      card.style.cssText = `
+        background: #ffffff;
+        border-radius: 24px;
+        border: 1px solid var(--border-color);
+        padding: 1.75rem;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.25rem;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
+      `;
 
-      // Parse display hostname from URL
-      let displayUrl = product.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+      let displayUrl = project.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0];
 
       card.innerHTML = `
-        <div class="browser-header">
-          <div class="browser-dots">
-            <span class="browser-dot" style="background: #ef4444;"></span>
-            <span class="browser-dot" style="background: #f59e0b;"></span>
-            <span class="browser-dot" style="background: #10b981;"></span>
-          </div>
-          <div class="browser-url-pill">${displayUrl}</div>
-        </div>
-        <div class="browser-body">
-          <div class="live-product-name">
-            <span>${product.name}</span>
-            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${product.color}; box-shadow:0 0 8px ${product.color}"></span>
-          </div>
-          <span class="live-product-category">${product.categoryLabel}</span>
-          <p class="live-product-summary">${product.shortSummary}</p>
-          
-          <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom: 1.25rem;">
-            ${product.features.map(f => `<span class="glass-badge" style="font-size:0.6875rem; padding:0.2rem 0.6rem;">${f}</span>`).join('')}
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+            <span class="case-pill" style="font-size:0.6875rem; padding:0.2rem 0.6rem;">${project.categoryLabel}</span>
+            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${project.color || 'var(--lavender-primary)'}; box-shadow:0 0 8px ${project.color || 'var(--lavender-primary)'}"></span>
           </div>
 
-          <div class="live-card-footer">
-            <span>VIEW DETAILS</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
+          <h4 style="font-size:1.35rem; font-weight:800; margin-bottom:0.4rem; color:var(--text-primary);">${project.name}</h4>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1.25rem;">${project.tagline}</p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
+            ${(project.highlights || []).map(h => `<span class="case-pill" style="background:var(--bg-secondary); border-color:transparent; font-size:0.6875rem;">${h}</span>`).join('')}
           </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; padding-top:1rem; border-top:1px solid var(--border-subtle);">
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">${displayUrl}</span>
+          <a href="${project.url}" target="_blank" rel="noopener noreferrer" style="color:var(--lavender-primary); font-weight:700; font-size:0.875rem;" onclick="event.stopPropagation();">
+            VISIT LIVE <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem; margin-left:4px;"></i>
+          </a>
         </div>
       `;
 
+      card.addEventListener('mouseenter', () => {
+        card.style.borderColor = 'var(--lavender-primary)';
+        card.style.transform = 'translateY(-4px)';
+        card.style.boxShadow = 'var(--shadow-lavender)';
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.borderColor = 'var(--border-color)';
+        card.style.transform = 'translateY(0)';
+        card.style.boxShadow = 'var(--shadow-sm)';
+      });
+
       card.addEventListener('click', () => {
-        openLiveProductModal(product);
+        openModal(project);
       });
 
       container.appendChild(card);

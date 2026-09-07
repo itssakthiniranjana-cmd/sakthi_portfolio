@@ -182,7 +182,7 @@ function initCustomCursor() {
       cursor.classList.add('cursor-hover');
       if (cursorText) {
         if (target.classList.contains('banner__content-study__single')) {
-          cursorText.textContent = 'CASE';
+          cursorText.textContent = 'PROJECT';
         } else if (target.classList.contains('ticker-card')) {
           cursorText.textContent = 'LIVE';
         } else {
