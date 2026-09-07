@@ -810,11 +810,20 @@ a:hover {
   opacity: 1;
 }
 
+.banner__history-single .lefter {
+  flex-shrink: 0;
+}
+
 .banner__history-single .lefter h2 {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-quaternary);
   transition: color 0.25s;
+}
+
+.banner__history-single .righter {
+  text-align: right;
+  margin-left: auto;
 }
 
 .banner__history-single .righter h2 {
@@ -1304,5 +1313,17 @@ a:hover {
   .cta-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner__history-single {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .banner__history-single .righter {
+    text-align: left;
+    margin-left: 0;
   }
 }
