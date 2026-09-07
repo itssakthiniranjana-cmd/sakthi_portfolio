@@ -4,7 +4,7 @@
  * Senior UX/UI Designer | Product Designer | Creative Strategist
  */
 
-import HeroThreeScene from './three-scene.js';
+import { initPortraitParallax } from './portrait-parallax.js';
 import { renderCapabilities } from './capabilities-3d.js';
 import { renderSelectedWork } from './gallery-3d.js';
 import { renderLiveProducts } from './live-products.js';
@@ -17,18 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Cinematic Preloader with Counter (0 -> 100)
   runPreloader();
 
-  // 2. Initialize Three.js 3D Glass Sculpture Scene
-  try {
-    new HeroThreeScene('hero-canvas');
-  } catch (err) {
-    console.warn('WebGL / Three.js fallback enabled:', err);
-  }
+  // 2. Initialize 3D Parallax Portrait
+  initPortraitParallax();
 
-  // 3. Render Dynamic Components
-  renderCapabilities('capabilities-container');
-  renderSelectedWork('work-gallery-container');
-  renderLiveProducts('live-products-grid', 'live-filter-tabs');
-  renderFigmaArchive('figma-archive-container');
+  // 3. Render Dynamic Components if present on current page
+  if (document.getElementById('capabilities-container')) {
+    renderCapabilities('capabilities-container');
+  }
+  if (document.getElementById('work-gallery-container')) {
+    renderSelectedWork('work-gallery-container');
+  }
+  if (document.getElementById('live-products-grid')) {
+    renderLiveProducts('live-products-grid', 'live-filter-tabs');
+  }
+  if (document.getElementById('figma-archive-container')) {
+    renderFigmaArchive('figma-archive-container');
+  }
 
   // 4. Initialize Modals & Scroll Engine
   initModal();
@@ -39,6 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Quick Copy Actions & Mobile Drawer
   initUIInteractions();
+
+  // 7. Set Active Navigation Link based on current page URL
+  setActiveNavLink();
 });
 
 function runPreloader() {
@@ -46,26 +53,50 @@ function runPreloader() {
   const progressBar = document.getElementById('preloader-bar');
   const counterEl = document.getElementById('preloader-count');
 
-  if (!preloader || !progressBar || !counterEl) return;
+  if (!preloader) return;
+
+  // If user already visited in current session, quick reveal
+  if (sessionStorage.getItem('visited_preloader')) {
+    preloader.style.display = 'none';
+    document.body.style.overflow = '';
+    return;
+  }
 
   let progress = 0;
   const interval = setInterval(() => {
-    progress += Math.floor(Math.random() * 8) + 4;
+    progress += Math.floor(Math.random() * 10) + 6;
     if (progress >= 100) {
       progress = 100;
       clearInterval(interval);
-      progressBar.style.width = '100%';
-      counterEl.textContent = '100%';
+      if (progressBar) progressBar.style.width = '100%';
+      if (counterEl) counterEl.textContent = '100%';
 
       setTimeout(() => {
         preloader.classList.add('fade-out');
         document.body.style.overflow = '';
-      }, 400);
+        sessionStorage.setItem('visited_preloader', 'true');
+      }, 350);
     } else {
-      progressBar.style.width = `${progress}%`;
-      counterEl.textContent = `${progress}%`;
+      if (progressBar) progressBar.style.width = `${progress}%`;
+      if (counterEl) counterEl.textContent = `${progress}%`;
     }
-  }, 40);
+  }, 35);
+}
+
+function setActiveNavLink() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-links a');
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
+    } else if (href.startsWith('#') && (currentPath === 'index.html' || currentPath === '')) {
+      // Anchors on index page
+    } else {
+      link.classList.remove('active');
+    }
+  });
 }
 
 function initCustomCursor() {
@@ -96,7 +127,7 @@ function initCustomCursor() {
 
   // Hover states on interactive elements
   document.addEventListener('mouseover', (e) => {
-    const target = e.target.closest('[data-cursor-text], a, button, .project-stage-card, .capability-card, .live-browser-card');
+    const target = e.target.closest('[data-cursor-text], a, button, .project-stage-card, .capability-card, .live-browser-card, .hero-portrait-card');
     if (target) {
       const customText = target.getAttribute('data-cursor-text');
       if (customText) {
@@ -109,7 +140,7 @@ function initCustomCursor() {
   });
 
   document.addEventListener('mouseout', (e) => {
-    const target = e.target.closest('[data-cursor-text], a, button, .project-stage-card, .capability-card, .live-browser-card');
+    const target = e.target.closest('[data-cursor-text], a, button, .project-stage-card, .capability-card, .live-browser-card, .hero-portrait-card');
     if (target) {
       cursor.classList.remove('cursor-hover', 'cursor-link');
       if (cursorText) cursorText.textContent = '';

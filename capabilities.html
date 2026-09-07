@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capabilities &amp; Craft — Sakthi Niranjana S</title>
+  <meta name="description" content="Core design capabilities, product design disciplines, and system governance of Sakthi Niranjana S.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%235b46f6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='42' font-family='sans-serif' font-weight='900' fill='white'%3ESN%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/glass.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"><span>VIEW</span></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot" aria-hidden="true"></div>
+
+  <header class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-brand" aria-label="Sakthi Niranjana Home">
+        <span>SAKTHI NIRANJANA</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="capabilities.html" class="nav-link active">CAPABILITIES</a></li>
+        <li><a href="work.html" class="nav-link">WORK</a></li>
+        <li><a href="live-products.html" class="nav-link">LIVE PRODUCTS</a></li>
+        <li><a href="figma-archive.html" class="nav-link">FIGMA ARCHIVE</a></li>
+        <li><a href="experience.html" class="nav-link">EXPERIENCE</a></li>
+        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+      </ul>
+
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span>AVAILABLE FOR SELECTED PROJECTS</span>
+      </div>
+
+      <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <button id="drawer-close" style="position:absolute; top:2rem; right:2rem; background:none; border:none; color:#fff; cursor:pointer;" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="capabilities.html" class="active">CAPABILITIES</a></li>
+      <li><a href="work.html">SELECTED WORK</a></li>
+      <li><a href="live-products.html">LIVE PRODUCTS</a></li>
+      <li><a href="figma-archive.html">FIGMA ARCHIVE</a></li>
+      <li><a href="experience.html">EXPERIENCE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="page-header-section">
+      <div class="container" style="text-align: center; max-width: 860px; margin: 0 auto;">
+        <div class="section-tag">CORE COMPETENCIES</div>
+        <h1 class="section-headline">CAPABILITIES &amp; CRAFT</h1>
+        <p class="section-subheadline" style="margin: 0 auto;">
+          Hover over any discipline to experience 3D perspective tracking and reveal skill breakdowns.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="capabilities-cloud-grid" id="capabilities-container">
+          <!-- Populated dynamically via js/capabilities-3d.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">SAKTHI NIRANJANA S</div>
+        <div class="footer-sub">UX/UI • PRODUCT • DESIGN • STRATEGY — Chennai, India</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="live-products.html">Live Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
