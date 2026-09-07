@@ -6,6 +6,7 @@
 
 import { renderCapabilities } from './capabilities-3d.js';
 import { renderSelectedWork } from './gallery-3d.js';
+import { initExperienceEducationToggle } from './experience-toggle.js';
 import { initModal, openModal } from './modal.js';
 import { PERSONAL_INFO, SELECTED_WORK } from './data.js';
 
@@ -28,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (document.getElementById('work-gallery-container')) {
     renderSelectedWork('work-gallery-container');
+  }
+  if (document.getElementById('exp-edu-container')) {
+    initExperienceEducationToggle('exp-edu-container');
   }
 
   // 6. Set Active Navigation Link

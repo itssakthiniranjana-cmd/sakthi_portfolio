@@ -2318,5 +2318,194 @@ a:hover {
   }
 }
 
+/* ==========================================================================
+   EXPERIENCE & EDUCATION INTERACTIVE TOGGLE & 2-COLUMN CARDS
+   ========================================================================== */
+.exp-edu-wrapper {
+  width: 100%;
+}
+
+.exp-edu-toggle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2.75rem;
+}
+
+.exp-edu-label-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.exp-edu-label-btn.active {
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.exp-edu-label-btn:hover {
+  color: var(--lavender-primary);
+}
+
+.exp-edu-toggle-switch {
+  width: 56px;
+  height: 30px;
+  background: #f1f5f9;
+  border: 1.5px solid var(--border-color);
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exp-edu-toggle-switch:hover {
+  border-color: var(--lavender-primary);
+}
+
+.exp-edu-toggle-thumb {
+  width: 22px;
+  height: 22px;
+  background: #111827;
+  border-radius: 50%;
+  display: block;
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.exp-edu-toggle-switch.toggled-right .exp-edu-toggle-thumb {
+  transform: translateX(24px);
+  background: var(--lavender-primary);
+}
+
+.exp-edu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.exp-edu-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+
+.exp-edu-card:hover {
+  border-color: var(--lavender-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(139, 92, 246, 0.12), 0 0 20px var(--lavender-glow);
+}
+
+.exp-edu-card-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.exp-edu-period-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.exp-edu-card:hover .exp-edu-period-pill {
+  border-color: rgba(139, 92, 246, 0.3);
+  background: var(--lavender-soft);
+  color: var(--text-primary);
+}
+
+.exp-edu-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.exp-edu-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.exp-edu-card:hover .exp-edu-card-title {
+  color: var(--lavender-primary);
+}
+
+.exp-edu-card-org {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.exp-edu-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.exp-edu-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.exp-edu-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  background: var(--bg-secondary);
+  border-color: transparent;
+}
+
+.exp-edu-card:hover .exp-edu-tag {
+  background: var(--lavender-soft);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: var(--text-primary);
+}
+
+@media (max-width: 820px) {
+  .exp-edu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 

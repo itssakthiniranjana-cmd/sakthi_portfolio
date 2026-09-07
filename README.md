@@ -46,10 +46,9 @@
 
 3. **Multi-Page Architecture**:
    - `index.html` — Homepage with 3-Column Bento Banner & Projects Stream
-   - `about.html` — Professional Background, Design Philosophy & Bio
-   - `capabilities.html` — 10 Core UX/UI & Product Capabilities
+   - `about.html` — Professional Bio, Manifesto & Interactive Experience / Education Toggle Cards
+   - `capabilities.html` — 10 Core UX/UI & Product Capabilities with 3D Parallax Tilt
    - `work.html` — Curated 23-Project Production Matrix with High-Res Visuals & Category Filters
-   - `experience.html` — Career Milestones & Leadership Timeline
    - `contact.html` — Collaboration Inception Form & Direct Contact Actions
 
 ---

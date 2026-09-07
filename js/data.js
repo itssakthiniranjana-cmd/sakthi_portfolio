@@ -740,3 +740,55 @@ export const EXPERIENCE_TIMELINE = [
   }
 ];
 
+export const EDUCATION_TIMELINE = [
+  {
+    id: "techies-edu",
+    role: "Professional UI/UX Design & Product Architecture",
+    company: "School of Techies",
+    location: "Chennai, Tamil Nadu, India",
+    period: "2023 — 2024",
+    status: "Completed",
+    badge: "Specialized Academy",
+    description: "Intensive cohort program focusing on advanced Figma auto-layout architectures, tokenized design systems, usability testing, micro-interactions, and design-to-code developer handoff.",
+    skills: ["Design Systems", "Interaction Design", "Figma Auto-Layout", "Product Strategy"],
+    tags: ["UX/UI Design", "Design Tokens", "Prototyping", "Design Systems"]
+  },
+  {
+    id: "degree-edu",
+    role: "Bachelor of Technology / Engineering",
+    company: "B.S. Abdur Rahman Crescent Institute of Science and Technology",
+    location: "Chennai, Tamil Nadu, India",
+    period: "2019 — 2023",
+    status: "Completed",
+    badge: "Undergraduate Degree",
+    description: "Graduated with strong foundations in computer systems, human-computer interaction (HCI), digital information architecture, frontend engineering principles, and structured analytical problem solving.",
+    skills: ["Human-Computer Interaction", "Software Principles", "Information Architecture", "Data Structures"],
+    tags: ["Engineering", "HCI", "Information Architecture", "System Design"]
+  },
+  {
+    id: "google-ux-edu",
+    role: "Google UX Design Professional Certificate",
+    company: "Coursera / Google Career Certificates",
+    location: "Online Professional Certification",
+    period: "2022 — 2023",
+    status: "Certified",
+    badge: "Professional Certification",
+    description: "Comprehensive end-to-end UX training covering user empathy maps, persona synthesis, low-to-high fidelity prototyping in Figma, accessibility (WCAG 2.1), and iterative usability audits.",
+    skills: ["User Research", "Wireframing", "Usability Audits", "Accessibility (WCAG)"],
+    tags: ["User Research", "Usability Testing", "Wireframing", "Accessibility"]
+  },
+  {
+    id: "ixdf-edu",
+    role: "Design Systems & Interaction Masterclass",
+    company: "Interaction Design Foundation (IxDF)",
+    location: "Online Certification",
+    period: "2023",
+    status: "Certified",
+    badge: "Industry Specialization",
+    description: "Advanced coursework in multi-brand design tokens, responsive typography hierarchies, tactile micro-animations, accessible color contrast ratios, and modular pattern governance.",
+    skills: ["Design Tokens", "Micro-Interactions", "WCAG 2.1 AAA", "Pattern Libraries"],
+    tags: ["Design Systems", "Tokens Studio", "Motion Design", "Governance"]
+  }
+];
+
+
