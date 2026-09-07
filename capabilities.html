@@ -82,16 +82,57 @@
     <!-- Main Content -->
     <main style="padding-top: 130px; padding-bottom: 80px;">
       <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem auto;">
           <span class="case-pill" style="margin-bottom: 1rem; display: inline-block;">MY SPECIALIZATIONS</span>
           <h1 class="title-xxl" style="margin-bottom: 1rem;">Capabilities &amp; Craft</h1>
-          <p style="color:var(--text-secondary); font-size:1.1rem; line-height:1.6;">
-            10 specialized design disciplines engineered for enterprise scalability, user accessibility, and conversion impact.
+          <p style="color:var(--text-secondary); font-size:1.15rem; line-height:1.6;">
+            10 specialized design disciplines engineered for enterprise scalability, user accessibility, tactile interaction, and conversion impact.
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;" id="capabilities-container">
-          <!-- Populated via js/capabilities-3d.js -->
+        <!-- Metric Proof Points -->
+        <div class="capabilities-stats-bar">
+          <div class="capabilities-stat-item">
+            <div class="capabilities-stat-num">10<span>+</span></div>
+            <div class="capabilities-stat-label">Specialized Design Disciplines</div>
+          </div>
+          <div class="capabilities-stat-item">
+            <div class="capabilities-stat-num">23<span>+</span></div>
+            <div class="capabilities-stat-label">Shipped Live Products</div>
+          </div>
+          <div class="capabilities-stat-item">
+            <div class="capabilities-stat-num">45<span>+</span></div>
+            <div class="capabilities-stat-label">Enterprise &amp; SaaS Interfaces</div>
+          </div>
+          <div class="capabilities-stat-item">
+            <div class="capabilities-stat-num">15<span>+</span></div>
+            <div class="capabilities-stat-label">Multi-Brand Design Systems</div>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="capabilities-filter-bar">
+          <button class="capability-filter-tab active" data-filter="all">
+            <i class="fa-solid fa-shapes"></i> All Disciplines (10)
+          </button>
+          <button class="capability-filter-tab" data-filter="design">
+            <i class="fa-solid fa-bezier-curve"></i> UI/UX &amp; Visual
+          </button>
+          <button class="capability-filter-tab" data-filter="strategy">
+            <i class="fa-solid fa-compass-drafting"></i> Product &amp; Systems
+          </button>
+          <button class="capability-filter-tab" data-filter="creative">
+            <i class="fa-solid fa-feather-pointed"></i> Branding &amp; Content
+          </button>
+          <button class="capability-filter-tab" data-filter="tech">
+            <i class="fa-solid fa-cubes-stacked"></i> Enterprise &amp; Interaction
+          </button>
+        </div>
+
+        <!-- 3D Parallax Capabilities Cards Grid -->
+        <div class="capabilities-grid" id="capabilities-container">
+          <!-- Dynamically populated and animated by js/capabilities-3d.js -->
         </div>
       </div>
     </main>

@@ -32,71 +32,101 @@ export const CAPABILITIES = [
     id: "01",
     title: "UX / UI DESIGN",
     category: "Core Discipline",
-    description: "Architecting frictionless user journeys, wireframes, high-fidelity prototypes, and component-driven interfaces.",
-    skills: ["User Flows", "Wireframing", "High-Fidelity UI", "Micro-interactions", "Responsive Web & App"]
+    icon: "fa-solid fa-bezier-curve",
+    impact: "Shipped in 23+ Live Products",
+    description: "Architecting frictionless user journeys, wireframes, high-fidelity prototypes, and component-driven interfaces for complex web and mobile platforms.",
+    skills: ["User Flows", "Wireframing", "High-Fidelity UI", "Micro-interactions", "Responsive Web & App"],
+    tools: ["Figma", "Adobe XD", "Antigravity"]
   },
   {
     id: "02",
     title: "PRODUCT DESIGN",
     category: "Strategic Thinking",
-    description: "End-to-end product design aligning user problems with measurable business outcomes and scalable feature roadmaps.",
-    skills: ["Product Strategy", "Feature Scoping", "Information Architecture", "UX Audits", "Usability Testing"]
+    icon: "fa-solid fa-compass-drafting",
+    impact: "Conversion-Focused Architecture",
+    description: "End-to-end product design aligning user pain points with measurable business outcomes, KPI goals, and scalable multi-sprint feature roadmaps.",
+    skills: ["Product Strategy", "Feature Scoping", "Information Architecture", "UX Audits", "Usability Testing"],
+    tools: ["Figma", "Miro", "Claude"]
   },
   {
     id: "03",
     title: "DESIGN SYSTEMS",
     category: "Scalability & Governance",
-    description: "Crafting multi-brand design tokens, modular component libraries, Figma autolayout architectures, and documentation.",
-    skills: ["Design Tokens", "Figma Components", "Pattern Libraries", "Accessibility Standards", "Handoff Specs"]
+    icon: "fa-solid fa-layer-group",
+    impact: "Multi-Brand Design Tokens",
+    description: "Crafting multi-brand design tokens, modular component libraries, Figma autolayout architectures, and rigorous developer handoff documentation.",
+    skills: ["Design Tokens", "Figma Components", "Pattern Libraries", "Accessibility (WCAG)", "Handoff Specs"],
+    tools: ["Figma", "Tokens Studio", "Notion"]
   },
   {
     id: "04",
     title: "VISUAL DESIGN",
     category: "Craft & Aesthetics",
-    description: "Elevating digital products with modern typography, harmonic color systems, spatial grid balance, and tactile depth.",
-    skills: ["Modern Typography", "Color Theory", "Spatial Grids", "Visual Hierarchy", "Iconography"]
+    icon: "fa-solid fa-palette",
+    impact: "Pixel-Perfect Spatial Grids",
+    description: "Elevating digital products with modern editorial typography, harmonic color systems, tactile glassmorphic depth, and immersive visual storytelling.",
+    skills: ["Modern Typography", "Color Theory", "Spatial Grids", "Visual Hierarchy", "Iconography"],
+    tools: ["Photoshop", "Illustrator", "Canva"]
   },
   {
     id: "05",
     title: "BRANDING",
     category: "Identity Systems",
-    description: "Building cohesive brand identities from logomarks and brand guidelines to digital touchpoints and design assets.",
-    skills: ["Brand Strategy", "Logomarks", "Visual Guidelines", "Typography Systems", "Collateral"]
+    icon: "fa-solid fa-fingerprint",
+    impact: "Comprehensive Brand Books",
+    description: "Building cohesive brand identities from logomarks and brand guidelines to digital touchpoints, vector iconography, and marketing design systems.",
+    skills: ["Brand Strategy", "Logomarks", "Visual Guidelines", "Typography Systems", "Marketing Assets"],
+    tools: ["Illustrator", "InDesign", "Adobe Express"]
   },
   {
     id: "06",
     title: "PROTOTYPING",
     category: "Interaction & Motion",
-    description: "Creating high-fidelity interactive prototypes that validate complex interactions and speed up stakeholder alignment.",
-    skills: ["Figma Interactive Components", "Micro-animations", "User Journey Simulation", "Logic Flow"]
+    icon: "fa-solid fa-bolt-lightning",
+    impact: "Zero-Latency User Validation",
+    description: "Creating high-fidelity interactive prototypes that validate complex interactions, user flows, and state logic to accelerate stakeholder alignment.",
+    skills: ["Figma Interactive Components", "Micro-animations", "User Journey Simulation", "Logic Flow"],
+    tools: ["Figma", "Figma Make", "Lovable"]
   },
   {
     id: "07",
     title: "CONTENT & CREATIVE STRATEGY",
     category: "Leadership & Messaging",
-    description: "Leading content strategy and creative direction to ensure clarity, storytelling tone, and product narrative consistency.",
-    skills: ["UX Copywriting", "Content Architecture", "Creative Direction", "Narrative Strategy", "Brand Voice"]
+    icon: "fa-solid fa-feather-pointed",
+    impact: "High-Converting Microcopy",
+    description: "Leading content strategy and creative direction to ensure clarity, high-converting product microcopy, and unified brand storytelling across touchpoints.",
+    skills: ["UX Copywriting", "Content Architecture", "Creative Direction", "Narrative Strategy", "Brand Voice"],
+    tools: ["ChatGPT", "Gemini", "Google Docs"]
   },
   {
     id: "08",
     title: "DESIGN RESEARCH",
     category: "Discovery & Insights",
-    description: "Uncovering user pain points through qualitative research, competitive benchmarking, and iterative persona synthesis.",
-    skills: ["User Interviews", "Competitive Benchmarking", "Empathy Mapping", "Journey Mapping", "Heuristics"]
+    icon: "fa-solid fa-magnifying-glass-chart",
+    impact: "Data-Backed User Insights",
+    description: "Uncovering user pain points through qualitative interviews, heuristic evaluations, competitive benchmarking, and iterative persona synthesis.",
+    skills: ["User Interviews", "Competitive Benchmarking", "Empathy Mapping", "Journey Mapping", "Heuristics"],
+    tools: ["Perplexity", "Miro", "Excel"]
   },
   {
     id: "09",
     title: "INTERACTION DESIGN",
     category: "Tactile Digital Feel",
-    description: "Designing tactile state transitions, gesture dynamics, feedback loops, and meaningful motion choreography.",
-    skills: ["Motion Choreography", "State Transitions", "Haptic/Visual Feedback", "Scroll Mechanics"]
+    icon: "fa-solid fa-wand-magic-sparkles",
+    impact: "60 FPS Fluid Transitions",
+    description: "Designing tactile state transitions, gesture dynamics, magnetic cursor feedback loops, and meaningful UI motion choreography.",
+    skills: ["Motion Choreography", "State Transitions", "Haptic/Visual Feedback", "Scroll Mechanics"],
+    tools: ["Figma", "Adobe XD", "CSS3 / JS"]
   },
   {
     id: "10",
     title: "ENTERPRISE WMS & SUPPLY CHAIN",
     category: "Enterprise Expertise",
-    description: "Specialized in high-density warehouse operational cockpits, multi-carrier logistics triage, and inventory intelligence.",
-    skills: ["WMS Logic", "3PL Dispatch", "Inventory Telemetry", "High-Density Data Grids", "Operational UX"]
+    icon: "fa-solid fa-cubes-stacked",
+    impact: "12+ Enterprise WMS Deployments",
+    description: "Specialized in high-density warehouse operational cockpits, multi-carrier logistics triage, inventory intelligence, and real-time telemetry dashboards.",
+    skills: ["WMS Logic", "3PL Dispatch", "Inventory Telemetry", "High-Density Data Grids", "Operational UX"],
+    tools: ["Figma", "Excel", "Antigravity"]
   }
 ];
 

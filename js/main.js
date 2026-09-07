@@ -177,12 +177,14 @@ function initCustomCursor() {
   renderCursor();
 
   document.addEventListener('mouseover', (e) => {
-    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single');
+    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card, .figma-archive-card');
     if (target) {
       cursor.classList.add('cursor-hover');
       if (cursorText) {
         if (target.classList.contains('banner__content-study__single')) {
           cursorText.textContent = 'PROJECT';
+        } else if (target.classList.contains('capability-card')) {
+          cursorText.textContent = 'CRAFT';
         } else if (target.classList.contains('ticker-card') || target.classList.contains('tool-logo-item')) {
           cursorText.textContent = 'TOOL';
         } else {
@@ -193,7 +195,7 @@ function initCustomCursor() {
   });
 
   document.addEventListener('mouseout', (e) => {
-    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single');
+    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card, .figma-archive-card');
     if (target) {
       cursor.classList.remove('cursor-hover');
       if (cursorText) cursorText.textContent = '';
