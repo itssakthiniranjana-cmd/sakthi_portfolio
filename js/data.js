@@ -615,32 +615,98 @@ export const FIGMA_ARCHIVE_PROJECTS = [
 
 export const EXPERIENCE_TIMELINE = [
   {
+    id: "flowhive",
     role: "Senior UX/UI Designer & Content Head",
     company: "FlowHive Solutions",
-    location: "Chennai, India",
-    period: "Current Role",
+    location: "Atlanta, GA",
+    period: "February 2026 — Present (8 months)",
     status: "Present",
     badge: "Current Leadership",
-    description: "Leading UX/UI design architecture and content strategy for FlowHive's enterprise digital product ecosystem, specializing in WMS, supply chain optimization, and AI-powered operational transformation.",
+    summary: "Passionate UX/UI Designer and Content Strategist with a focus on creating user-centered digital experiences and impactful brand communication. Currently working as a Senior UX/UI Designer & Content Head at FlowHive Solutions, contributing to product design, design systems, content direction, and digital innovation.",
+    description: "Dedicated to building intuitive interfaces, scalable design solutions, and engaging user experiences that align with business goals. Experienced in UI/UX design, visual storytelling, branding, social media creatives, and creative leadership across multi-tenant logistics platforms and enterprise software.",
     highlights: [
-      "Architecting enterprise user interfaces for complex logistics, warehouse operations, and data-dense dashboards.",
-      "Directing content strategy and product messaging to ensure clarity across complex enterprise workflows.",
+      "Contributing to end-to-end product design, design token architectures, and AI-enabled operational workflows.",
+      "Directing content strategy, brand voice, and visual storytelling across digital platforms and creative touchpoints.",
       "Leading design systems governance, multi-team design reviews, and cross-functional engineering handoffs."
     ],
-    tags: ["UX/UI Design", "Product Design", "Content Strategy", "Design Leadership", "WMS & Supply Chain", "AI Transformation"]
+    skills: ["Product Design", "Design Systems", "Content Direction", "Digital Innovation", "Visual Storytelling", "Creative Leadership", "Branding"],
+    tags: ["UX/UI Design", "Content Strategy", "Enterprise SaaS", "Design Systems", "Leadership"]
   },
   {
-    role: "UX/UI Design & Product Craft",
-    company: "School of Techies",
-    location: "Chennai, India",
-    period: "Education & Professional Training",
-    status: "Alumna",
-    badge: "Core Foundation",
-    description: "Intensive training in user research, interface design, design systems, interactive prototyping, and digital product strategy.",
+    id: "gitech",
+    role: "UX/UI Designer",
+    company: "GI TECH GAMING CO INDIA PRIVATE LTD",
+    location: "Chennai, Tamil Nadu, India",
+    period: "May 2024 — Present (2 years 5 months)",
+    status: "Present",
+    badge: "Core Experience",
+    summary: "Specializing in creating user-centered designs that seamlessly blend functionality and aesthetics. Transforming complex problems into simple, elegant solutions that provide users with an intuitive and enjoyable experience across mobile apps, websites, and enterprise software.",
+    description: "Delivering designs rooted in user needs and behaviors with a strong foundation in both user research and interface design. Well-versed in Figma, Sketch, Adobe XD, and InVision, thriving in agile environments prioritizing user feedback and iterative design.",
     highlights: [
-      "Mastered human-computer interaction principles, usability heuristics, and user journey mapping.",
-      "Built production-ready UI component libraries and interactive micro-prototypes."
+      "User Research & Persona Development: Synthesizing qualitative insights to guide UX architecture and feature roadmaps.",
+      "Wireframing & Prototyping: Crafting rapid low-to-high fidelity interactive prototypes for usability validation.",
+      "High-Fidelity UI Design: Creating responsive, visually compelling interfaces with strict typographic and grid hierarchy.",
+      "Usability Testing & User Feedback: Conducting usability audits to optimize user satisfaction and conversion flows.",
+      "Interaction Design & Motion Graphics: Designing tactile micro-interactions, state transitions, and engaging animations.",
+      "Design Systems & Component Libraries: Developing reusable Figma component libraries and design tokens.",
+      "Cross-Functional Collaboration: Partnering with engineering, QA, and product managers in agile sprints."
     ],
-    tags: ["UI/UX Foundations", "Interaction Design", "User Research", "Design Systems", "Prototyping"]
+    skills: ["User Research", "Wireframing & Prototyping", "High-Fidelity UI", "Usability Testing", "Motion Graphics", "Design Systems", "Agile Collaboration"],
+    tags: ["Gaming & Sportsbook", "Mobile Apps", "Design Systems", "Prototyping", "User Research"]
+  },
+  {
+    id: "techienutpam",
+    role: "UX/UI Design Intern",
+    company: "Techienutpam",
+    location: "Chennai, Tamil Nadu, India",
+    period: "November 2023 — January 2024 (3 months)",
+    status: "Completed",
+    badge: "Internship",
+    summary: "Assisted in crafting user flows, wireframes, and UI component assets for web applications, collaborating closely with senior design mentors on user testing and responsive design.",
+    description: "Hands-on experience in visual design principles, component structuring, and interactive Figma prototypes in a fast-paced agency setting.",
+    highlights: [
+      "Designed wireframes and interface screens for web products.",
+      "Assisted senior designers in creating scalable component kits.",
+      "Conducted competitive benchmarking and user journey reviews."
+    ],
+    skills: ["UI Design", "Wireframing", "User Flows", "Figma Components"],
+    tags: ["UI/UX Design", "Wireframing", "Figma", "User Flows"]
+  },
+  {
+    id: "puthiyathalaimurai",
+    role: "Research Department Specialist",
+    company: "Puthiya Thalaimurai TV",
+    location: "Chennai, Tamil Nadu, India",
+    period: "July 2022 — September 2022 (3 months)",
+    status: "Completed",
+    badge: "Research",
+    summary: "Conducted qualitative data research, topic investigation, and information synthesis for broadcast media and digital journalism reporting.",
+    description: "Honed analytical thinking, audience analysis, and content research methodologies to deliver accurate, high-impact narrative briefings.",
+    highlights: [
+      "Gathered and verified critical information for news stories and feature segments.",
+      "Analyzed audience engagement trends to inform broadcast programming.",
+      "Synthesized complex datasets into glanceable narrative summaries."
+    ],
+    skills: ["Qualitative Research", "Data Investigation", "Information Synthesis", "Audience Analysis"],
+    tags: ["Research", "Data Analysis", "Media", "Content Synthesis"]
+  },
+  {
+    id: "chennaicorp",
+    role: "Student Volunteer",
+    company: "Greater Chennai Corporation",
+    location: "Chennai, Tamil Nadu, India",
+    period: "May 2021 — July 2021 (3 months)",
+    status: "Completed",
+    badge: "Community",
+    summary: "Supported civic and public outreach community programs, assisting in ground data collection, public communication coordination, and community welfare initiatives.",
+    description: "Contributed to public health communication, community data gathering, and civic assistance campaigns across Chennai municipal zones.",
+    highlights: [
+      "Coordinated with municipal teams for civic welfare data management.",
+      "Facilitated public communication and citizen query resolution.",
+      "Demonstrated empathy and community leadership in grassroots initiatives."
+    ],
+    skills: ["Community Outreach", "Public Coordination", "Data Collection", "Social Impact"],
+    tags: ["Community", "Public Service", "Coordination", "Field Research"]
   }
 ];
+
