@@ -25,7 +25,6 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
     card.dataset.id = project.id;
     card.dataset.index = idx;
 
-    const numStr = String(idx + 1).padStart(2, '0');
     const highlights = project.highlights || project.features || [];
 
     card.innerHTML = `
@@ -33,7 +32,7 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
         <canvas class="custom-mockup-canvas" id="canvas-${project.id}"></canvas>
       </div>
       <div class="project-info-stage">
-        <span class="project-num-badge">PROJECT ${numStr} // ${(project.categoryLabel || project.category).toUpperCase()}</span>
+        <span class="case-pill" style="margin-bottom: 0.85rem; display: inline-block;">${(project.categoryLabel || project.category).toUpperCase()}</span>
         <h3 class="project-title">${project.name || project.title}</h3>
         <span class="project-category">${project.role || 'Senior UX/UI Designer'}</span>
         <p class="project-tagline">${project.tagline || project.description}</p>

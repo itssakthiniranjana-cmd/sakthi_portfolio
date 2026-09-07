@@ -402,15 +402,6 @@
   color: var(--lavender-primary);
 }
 
-.capability-num {
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--lavender-primary);
-  margin-bottom: 1rem;
-  display: block;
-}
-
 .capability-title {
   font-size: 1.35rem;
   font-weight: 800;
@@ -506,14 +497,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.project-num-badge {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--lavender-primary);
-  margin-bottom: 0.75rem;
 }
 
 .project-title {

@@ -34,8 +34,7 @@ export function renderCapabilities(containerId = 'capabilities-container') {
         <div class="capability-card__inner">
           <div class="capability-card__header">
             <div class="capability-card__meta">
-              <span class="capability-num">${cap.id}</span>
-              <span class="capability-cat">${cap.category}</span>
+              <span class="case-pill">${cap.category}</span>
             </div>
             <div class="capability-icon-badge">
               <i class="${cap.icon || 'fa-solid fa-shapes'}"></i>

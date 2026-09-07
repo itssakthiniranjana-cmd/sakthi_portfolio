@@ -1494,28 +1494,25 @@ a:hover {
 .capability-card__meta {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
 }
 
-.capability-num {
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  font-weight: 800;
-  color: var(--lavender-primary);
-  background: var(--lavender-soft);
-  padding: 0.25rem 0.65rem;
-  border-radius: 8px;
-  border: 1px solid rgba(139, 92, 246, 0.2);
-  display: inline-block;
-}
-
-.capability-cat {
-  font-family: var(--font-mono);
+.capability-card .case-pill {
   font-size: 0.75rem;
-  color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  background: var(--bg-lavender-tint);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  transition: all 0.25s ease;
+}
+
+.capability-card:hover .case-pill {
+  border-color: rgba(139, 92, 246, 0.4);
+  background: var(--lavender-soft);
+  color: var(--lavender-primary);
 }
 
 .capability-icon-badge {

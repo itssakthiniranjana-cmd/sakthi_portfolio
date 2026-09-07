@@ -12,7 +12,7 @@ export function renderLiveProducts(containerId = 'live-products-grid', filterCon
   if (!container) return;
 
   const categories = [
-    { id: 'ALL', label: 'All Projects (23)' },
+    { id: 'ALL', label: 'All Projects' },
     { id: 'Fintech', label: 'FinTech' },
     { id: 'Gaming', label: 'Gaming & Lotteries' },
     { id: 'PropTech', label: 'PropTech' },
