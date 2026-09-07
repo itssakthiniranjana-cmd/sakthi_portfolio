@@ -43,6 +43,12 @@ export function openModal(project) {
     </div>
 
     <div class="modal-body">
+      ${project.image ? `
+        <div style="margin-bottom: 2rem; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); max-height: 360px;">
+          <img src="${project.image}" alt="${project.name || project.title}" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+        </div>
+      ` : ''}
+
       <div class="modal-info-grid">
         <div>
           <h3 class="modal-section-title">Project Overview</h3>
