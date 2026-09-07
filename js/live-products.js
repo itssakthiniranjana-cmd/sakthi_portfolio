@@ -63,57 +63,51 @@ export function renderLiveProducts(containerId = 'live-products-grid', filterCon
 
     filtered.forEach((project) => {
       const card = document.createElement('div');
-      card.className = 'banner__sidebar-single';
-      card.style.cssText = `
-        background: #ffffff;
-        border-radius: 24px;
-        border: 1px solid var(--border-color);
-        padding: 1.75rem;
-        box-shadow: var(--shadow-sm);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1.25rem;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        cursor: pointer;
-      `;
+      card.className = 'project-grid-card';
+      card.dataset.id = project.id;
+      card.dataset.category = project.category;
 
-      let displayUrl = project.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0];
+      const highlights = project.highlights || project.features || [];
+      const cleanUrl = project.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0];
 
       card.innerHTML = `
-        <div>
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
-            <span class="case-pill" style="font-size:0.6875rem; padding:0.2rem 0.6rem;">${project.categoryLabel}</span>
-            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${project.color || 'var(--lavender-primary)'}; box-shadow:0 0 8px ${project.color || 'var(--lavender-primary)'}"></span>
-          </div>
-
-          <h4 style="font-size:1.35rem; font-weight:800; margin-bottom:0.4rem; color:var(--text-primary);">${project.name}</h4>
-          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1.25rem;">${project.tagline}</p>
-
-          <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
-            ${(project.highlights || []).map(h => `<span class="case-pill" style="background:var(--bg-secondary); border-color:transparent; font-size:0.6875rem;">${h}</span>`).join('')}
+        <!-- Thumbnail Image Container -->
+        <div class="project-card-thumb">
+          <div class="project-card-thumb-inner">
+            <img src="${project.image}" alt="${project.name}" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/figmaprojects.jpg';">
+            <div class="project-card-overlay">
+              <span class="view-specs-badge"><i class="fa-solid fa-expand"></i> VIEW SPECS</span>
+            </div>
           </div>
         </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; padding-top:1rem; border-top:1px solid var(--border-subtle);">
-          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">${displayUrl}</span>
-          <a href="${project.url}" target="_blank" rel="noopener noreferrer" style="color:var(--lavender-primary); font-weight:700; font-size:0.875rem;" onclick="event.stopPropagation();">
-            VISIT LIVE <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem; margin-left:4px;"></i>
-          </a>
+        <!-- Card Body -->
+        <div class="project-card-body">
+          <div class="project-card-meta">
+            <span class="case-pill">${project.categoryLabel || project.category}</span>
+            <span class="project-card-dot" style="background:${project.color || 'var(--lavender-primary)'}; box-shadow:0 0 8px ${project.color || 'var(--lavender-primary)'}"></span>
+          </div>
+
+          <h3 class="project-card-title">${project.name}</h3>
+          <span class="project-card-role">${project.role || 'Senior UX/UI Designer'}</span>
+          <p class="project-card-desc">${project.tagline || project.description}</p>
+
+          <div class="project-card-tags">
+            ${highlights.map(h => `<span class="case-pill project-card-tag">${h}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="project-card-footer">
+          <span class="project-card-domain">${cleanUrl}</span>
+          <div class="project-card-actions">
+            <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link" onclick="event.stopPropagation();">
+              <span>VISIT LIVE</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
         </div>
       `;
-
-      card.addEventListener('mouseenter', () => {
-        card.style.borderColor = 'var(--lavender-primary)';
-        card.style.transform = 'translateY(-4px)';
-        card.style.boxShadow = 'var(--shadow-lavender)';
-      });
-
-      card.addEventListener('mouseleave', () => {
-        card.style.borderColor = 'var(--border-color)';
-        card.style.transform = 'translateY(0)';
-        card.style.boxShadow = 'var(--shadow-sm)';
-      });
 
       card.addEventListener('click', () => {
         openModal(project);

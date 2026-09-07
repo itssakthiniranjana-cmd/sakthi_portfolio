@@ -3,9 +3,9 @@
  * Sakthi Niranjana S Portfolio
  * 
  * Features:
- * - Real high-resolution thumbnail images in individual browser frames
- * - Alternating 2-column editorial alignment & structured typography
- * - Live site link & System specifications modal triggers
+ * - Clean grid cards matching Live Projects architecture with high-res thumbnails
+ * - Domain badges, category pills, role subtitles, and feature tags
+ * - Direct external links & specification modal triggers
  * - Category filter tabs
  */
 
@@ -21,7 +21,7 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
 
     items.forEach((project, idx) => {
       const card = document.createElement('div');
-      card.className = 'project-stage-card';
+      card.className = 'project-grid-card';
       card.dataset.id = project.id;
       card.dataset.index = idx;
       card.dataset.category = project.category;
@@ -30,84 +30,47 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
       const cleanUrl = project.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0];
 
       card.innerHTML = `
-        <!-- Visual Stage with Browser Chrome & Real Thumbnail -->
-        <div class="project-visual-stage" data-cursor-text="PROJECT">
-          <div class="project-browser-frame">
-            <div class="project-browser-header">
-              <div class="project-browser-dots">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
-              </div>
-              <div class="project-browser-url">
-                <i class="fa-solid fa-lock"></i>
-                <span>${cleanUrl}</span>
-              </div>
-              <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-browser-external" title="Open ${project.name} in new tab" onclick="event.stopPropagation();">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div class="project-thumb-container">
-              <img src="${project.image}" alt="${project.name} Production Interface" class="project-thumb-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/figmaprojects.jpg';">
-              <div class="project-thumb-overlay">
-                <span class="view-specs-hint"><i class="fa-solid fa-layer-group"></i> VIEW SYSTEM SPECS</span>
-              </div>
+        <!-- Project Thumbnail Image Container -->
+        <div class="project-card-thumb">
+          <div class="project-card-thumb-inner">
+            <img src="${project.image}" alt="${project.name} Production Interface" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/figmaprojects.jpg';">
+            <div class="project-card-overlay">
+              <span class="view-specs-badge"><i class="fa-solid fa-expand"></i> VIEW SPECS</span>
             </div>
           </div>
         </div>
 
-        <!-- Information Stage with Clean Vertical Alignment -->
-        <div class="project-info-stage">
-          <div class="project-header-meta">
+        <!-- Project Body -->
+        <div class="project-card-body">
+          <div class="project-card-meta">
             <span class="case-pill">${project.categoryLabel || project.category}</span>
-            <span class="project-live-indicator"><span class="pulse-dot"></span> LIVE PLATFORM</span>
+            <span class="project-card-dot" style="background: ${project.color || 'var(--lavender-primary)'}; box-shadow: 0 0 8px ${project.color || 'var(--lavender-primary)'}"></span>
           </div>
 
-          <h2 class="project-title">${project.name}</h2>
-          
-          <div class="project-role-badge">
-            <i class="fa-solid fa-user-check"></i>
-            <span>${project.role || 'Lead UX/UI & Product Designer'}</span>
-          </div>
+          <h3 class="project-card-title">${project.name}</h3>
+          <span class="project-card-role">${project.role || 'Lead UX/UI & Product Designer'}</span>
+          <p class="project-card-desc">${project.tagline || project.description}</p>
 
-          <p class="project-tagline">${project.tagline || project.description}</p>
-          
-          <div class="project-highlights-box">
-            <h5 class="highlights-title"><i class="fa-solid fa-microchip"></i> ARCHITECTURE &amp; KEY DELIVERABLES</h5>
-            <ul class="project-highlights-list">
-              ${highlights.map(h => `
-                <li class="project-highlight-item">
-                  <i class="fa-solid fa-circle-check"></i>
-                  <span>${h}</span>
-                </li>
-              `).join('')}
-            </ul>
+          <div class="project-card-tags">
+            ${highlights.map(h => `<span class="case-pill project-card-tag">${h}</span>`).join('')}
           </div>
+        </div>
 
-          <div class="project-actions">
-            <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="anim-btn project-btn-primary">
-              <span>VISIT LIVE SITE</span>
+        <!-- Project Footer -->
+        <div class="project-card-footer">
+          <span class="project-card-domain">${cleanUrl}</span>
+          <div class="project-card-actions">
+            <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link" onclick="event.stopPropagation();">
+              <span>VISIT LIVE</span>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-            <button class="anim-btn view-case-btn project-btn-secondary" data-id="${project.id}">
-              <span>PROJECT SPECS</span>
-              <i class="fa-solid fa-layer-group"></i>
-            </button>
           </div>
         </div>
       `;
 
-      // Bind Modal Triggers
-      const thumbContainer = card.querySelector('.project-thumb-container');
-      const caseBtn = card.querySelector('.view-case-btn');
-
-      const handleOpen = (e) => {
-        e.preventDefault();
+      card.addEventListener('click', () => {
         openModal(project);
-      };
-
-      if (thumbContainer) thumbContainer.addEventListener('click', handleOpen);
-      if (caseBtn) caseBtn.addEventListener('click', handleOpen);
+      });
 
       container.appendChild(card);
     });
@@ -139,5 +102,6 @@ function setupWorkFilterTabs(buildCards) {
     });
   });
 }
+
 
 
