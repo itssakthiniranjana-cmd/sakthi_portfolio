@@ -959,10 +959,10 @@ a:hover {
 }
 
 /* ==========================================================================
-   LIVE PRODUCTS TICKER / MARQUEE (IMG-VIEW)
+   TOOLS & TECHNOLOGIES MARQUEE TICKER (IMG-VIEW)
    ========================================================================== */
 .img-view {
-  padding: 60px 0;
+  padding: 55px 0;
   position: relative;
   overflow: hidden;
   background: var(--bg-secondary);
@@ -974,7 +974,7 @@ a:hover {
   display: flex;
   gap: 1.5rem;
   width: max-content;
-  animation: ticker-slide 35s linear infinite;
+  animation: ticker-slide 65s linear infinite;
 }
 
 .ticker-track:hover {
@@ -987,17 +987,18 @@ a:hover {
 }
 
 .ticker-card {
-  width: 280px;
+  width: 290px;
   background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 1.25rem;
+  padding: 1.25rem 1.35rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  cursor: pointer;
+  gap: 0.65rem;
+  cursor: default;
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .ticker-card:hover {
@@ -1006,18 +1007,38 @@ a:hover {
   box-shadow: var(--shadow-lavender);
 }
 
+.ticker-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.ticker-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .ticker-card .card-cat {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   font-weight: 700;
   color: var(--lavender-primary);
   text-transform: uppercase;
+  background: var(--lavender-tint);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .ticker-card .card-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
 .ticker-card .card-desc {

@@ -184,7 +184,7 @@ function initCustomCursor() {
         if (target.classList.contains('banner__content-study__single')) {
           cursorText.textContent = 'PROJECT';
         } else if (target.classList.contains('ticker-card')) {
-          cursorText.textContent = 'LIVE';
+          cursorText.textContent = 'TOOL';
         } else {
           cursorText.textContent = 'VIEW';
         }
