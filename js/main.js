@@ -11,28 +11,19 @@ import { initModal, openModal } from './modal.js';
 import { PERSONAL_INFO, SELECTED_WORK } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Preloader
-  initPreloader();
-
-  // 2. Initialize Dual Magnetic Mouse Cursor
-  initExgridCursor();
-
-  // 3. Initialize Modals
+  // 1. Initialize Modals
   initModal();
 
-  // 4. Initialize Navigation & Offcanvas Drawer
-  initExgridNavbar();
+  // 2. Initialize Exgrid UI Interactions
+  initExgridInteractions();
 
-  // 5. Initialize Split-Letter Button Animations
-  initSplitButtons();
+  // 3. Initialize Custom Magnetic Cursor
+  initCustomCursor();
 
-  // 6. Initialize Case Study Hover Tracking & Modal Triggers
-  initCaseStudyInteractions();
-
-  // 7. Initialize Scroll-To-Top Circular Progress Wrap
+  // 4. Initialize Scroll-To-Top Progress Indicator
   initProgressWrap();
 
-  // 8. Render Dynamic Sub-Components if present on standalone pages
+  // 5. Render Dynamic Components if present on current standalone page
   if (document.getElementById('capabilities-container')) {
     renderCapabilities('capabilities-container');
   }
@@ -43,179 +34,75 @@ document.addEventListener('DOMContentLoaded', () => {
     initExperienceEducationToggle('exp-edu-container');
   }
 
-  // 9. Set Active Navigation Link
+  // 6. Set Active Navigation Link
   setActiveNavLink();
+
+  // 7. Case Study Row Click Handlers on Homepage
+  initCaseStudyTriggers();
 });
 
-/**
- * 01. Preloader fade-out
- */
-function initPreloader() {
-  const preloader = document.getElementById('preloader');
-  if (!preloader) return;
+function setActiveNavLink() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.navbar__list a, .offcanvas-links a');
 
-  const hidePreloader = () => {
-    preloader.classList.add('loaded');
-    setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 600);
-  };
-
-  if (document.readyState === 'complete') {
-    hidePreloader();
-  } else {
-    window.addEventListener('load', hidePreloader);
-    // Fallback safety timer
-    setTimeout(hidePreloader, 1200);
-  }
-}
-
-/**
- * 02. Dual Magnetic Cursor Engine
- */
-function initExgridCursor() {
-  const cursorOuter = document.getElementById('cursor-outer');
-  const cursorInner = document.getElementById('cursor-inner');
-  const cursorText = document.getElementById('cursor-text');
-
-  if (!cursorOuter || !cursorInner) return;
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let outerX = mouseX;
-  let outerY = mouseY;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorInner.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
-  });
-
-  function renderCursor() {
-    outerX += (mouseX - outerX) * 0.18;
-    outerY += (mouseY - outerY) * 0.18;
-    cursorOuter.style.transform = `translate3d(${outerX}px, ${outerY}px, 0) translate(-50%, -50%)`;
-    requestAnimationFrame(renderCursor);
-  }
-  renderCursor();
-
-  // Interactive Hover Triggers
-  document.addEventListener('mouseover', (e) => {
-    const projectRow = e.target.closest('.banner__content-study__single');
-    const interactiveTarget = e.target.closest('a, button, .tw, .in, .fb, .yt, .banner__meta-single, .tool-logo-item');
-
-    if (projectRow) {
-      cursorInner.classList.add('cursor-project');
-      cursorOuter.style.opacity = '0';
-      if (cursorText) cursorText.textContent = 'VIEW';
-    } else if (interactiveTarget) {
-      cursorOuter.classList.add('cursor-hover');
-      cursorInner.classList.add('cursor-hover');
-    }
-  });
-
-  document.addEventListener('mouseout', (e) => {
-    const projectRow = e.target.closest('.banner__content-study__single');
-    const interactiveTarget = e.target.closest('a, button, .tw, .in, .fb, .yt, .banner__meta-single, .tool-logo-item');
-
-    if (projectRow) {
-      cursorInner.classList.remove('cursor-project');
-      cursorOuter.style.opacity = '0.6';
-      if (cursorText) cursorText.textContent = '';
-    } else if (interactiveTarget) {
-      cursorOuter.classList.remove('cursor-hover');
-      cursorInner.classList.remove('cursor-hover');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
 }
 
-/**
- * 03. Primary Navbar & Offcanvas Toggle
- */
-function initExgridNavbar() {
-  const navbar = document.getElementById('primary-navbar');
+function initExgridInteractions() {
+  // Offcanvas Menu Toggle
   const openBtn = document.getElementById('open-offcanvas-btn');
   const closeBtn = document.getElementById('close-offcanvas-btn');
   const offcanvasDrawer = document.getElementById('offcanvas-drawer');
 
-  // Sticky navbar shadow on scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar?.classList.add('navbar-active');
-    } else {
-      navbar?.classList.remove('navbar-active');
-    }
-  });
-
-  // Offcanvas drawer triggers
   if (openBtn && offcanvasDrawer) {
     openBtn.addEventListener('click', () => {
-      openBtn.classList.toggle('active');
-      offcanvasDrawer.classList.toggle('open');
-      document.body.classList.toggle('body-active');
+      offcanvasDrawer.classList.add('open');
     });
   }
 
   if (closeBtn && offcanvasDrawer) {
     closeBtn.addEventListener('click', () => {
-      openBtn?.classList.remove('active');
       offcanvasDrawer.classList.remove('open');
-      document.body.classList.remove('body-active');
+    });
+  }
+
+  // Quick Copy for Email
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(PERSONAL_INFO.email).then(() => {
+        const originalText = copyEmailBtn.innerHTML;
+        copyEmailBtn.innerHTML = `<span>COPIED!</span>`;
+        setTimeout(() => { copyEmailBtn.innerHTML = originalText; }, 2000);
+      });
     });
   }
 }
 
-/**
- * 04. Split-Letter Button Hover Animations (.anim-btn)
- */
-function initSplitButtons() {
-  const animButtons = document.querySelectorAll('.anim-btn');
-
-  animButtons.forEach((btn) => {
-    const animSpan = btn.querySelector('.btn-anim');
-    if (!animSpan) return;
-
-    const text = animSpan.textContent.trim();
-    animSpan.innerHTML = '';
-
-    const letters = text.split('').map((char) => {
-      const span = document.createElement('span');
-      span.textContent = char === ' ' ? '\u00A0' : char;
-      return span;
-    });
-
-    letters.forEach((span, index) => {
-      span.style.transitionDelay = `${index * 0.04}s`;
-      animSpan.appendChild(span);
-    });
-  });
-}
-
-/**
- * 05. Case Study Floating Hover Preview & Modal Triggers
- */
-function initCaseStudyInteractions() {
+function initCaseStudyTriggers() {
   const caseStudyRows = document.querySelectorAll('.banner__content-study__single');
-
-  caseStudyRows.forEach((row) => {
+  caseStudyRows.forEach(row => {
     const projectId = row.getAttribute('data-project-id');
-    const project = SELECTED_WORK.find((p) => p.id === projectId);
-    const hoverThumb = row.querySelector('.case-study-hover');
+    const project = SELECTED_WORK.find(p => p.id === projectId);
 
-    // Smooth cursor follower inside row
-    if (hoverThumb) {
+    // Mouse movement inside row to position floating hover preview
+    const hoverPreview = row.querySelector('.case-study-hover');
+    if (hoverPreview) {
       row.addEventListener('mousemove', (e) => {
         const rect = row.getBoundingClientRect();
-        const dx = e.clientX - rect.left;
-        const dy = e.clientY - rect.top;
-
-        // Position hover image relative to cursor with dynamic tilt
-        hoverThumb.style.left = `${dx + 30}px`;
-        hoverThumb.style.top = `${dy - 40}px`;
+        const x = e.clientX - rect.left;
+        hoverPreview.style.left = `${Math.min(Math.max(x + 20, 150), rect.width - 240)}px`;
       });
     }
 
-    // Click handler to open rich modal
+    // Click to open modal
     row.addEventListener('click', () => {
       if (project) {
         openModal(project);
@@ -224,9 +111,6 @@ function initCaseStudyInteractions() {
   });
 }
 
-/**
- * 06. Circular SVG Progress Wrap Indicator
- */
 function initProgressWrap() {
   const progressWrap = document.getElementById('progress-wrap');
   const progressCircle = progressWrap ? progressWrap.querySelector('path') : null;
@@ -246,7 +130,7 @@ function initProgressWrap() {
     const progress = pathLength - (scroll * pathLength / height);
     progressCircle.style.strokeDashoffset = progress;
 
-    if (scroll > 120) {
+    if (scroll > 150) {
       progressWrap.classList.add('active-progress');
     } else {
       progressWrap.classList.remove('active-progress');
@@ -262,19 +146,55 @@ function initProgressWrap() {
   });
 }
 
-/**
- * 07. Active Nav Link Helper
- */
-function setActiveNavLink() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.navbar__list a, .offcanvas-links a');
+function initCustomCursor() {
+  const cursor = document.getElementById('custom-cursor');
+  const dot = document.getElementById('custom-cursor-dot');
+  const cursorText = cursor ? cursor.querySelector('span') : null;
 
-  navLinks.forEach((link) => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
+  if (!cursor || !dot) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let cursorX = mouseX;
+  let cursorY = mouseY;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+  });
+
+  function renderCursor() {
+    cursorX += (mouseX - cursorX) * 0.15;
+    cursorY += (mouseY - cursorY) * 0.15;
+    cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+    requestAnimationFrame(renderCursor);
+  }
+  renderCursor();
+
+  document.addEventListener('mouseover', (e) => {
+    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card');
+    if (target) {
+      cursor.classList.add('cursor-hover');
+      if (cursorText) {
+        if (target.classList.contains('banner__content-study__single')) {
+          cursorText.textContent = 'PROJECT';
+        } else if (target.classList.contains('capability-card')) {
+          cursorText.textContent = 'CRAFT';
+        } else if (target.classList.contains('ticker-card') || target.classList.contains('tool-logo-item')) {
+          cursorText.textContent = 'TOOL';
+        } else {
+          cursorText.textContent = 'VIEW';
+        }
+      }
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    const target = e.target.closest('a, button, .banner__content-study__single, .ticker-card, .tool-logo-item, .banner__meta-single, .capability-card, .live-product-card');
+    if (target) {
+      cursor.classList.remove('cursor-hover');
+      if (cursorText) cursorText.textContent = '';
     }
   });
 }

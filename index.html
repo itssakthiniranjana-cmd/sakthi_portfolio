@@ -17,7 +17,7 @@
   <meta property="og:description" content="Senior UX/UI Designer & Creative Head building meaningful digital experiences across products, platforms and brands.">
   
   <!-- Favicon -->
-  <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23f70354'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='42' font-family='sans-serif' font-weight='900' fill='white'%3ESN%3C/text%3E%3C/svg%3E" type="image/x-icon">
+  <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238b5cf6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='42' font-family='sans-serif' font-weight='900' fill='white'%3ESN%3C/text%3E%3C/svg%3E" type="image/x-icon">
 
   <!-- Icons CDN: Font Awesome 6 & Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,7 +26,7 @@
   <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/main.css">
@@ -34,22 +34,20 @@
 </head>
 <body>
 
-  <!-- ==== 01. PRELOADER ==== -->
-  <div id="preloader">
-    <div id="loader"></div>
-  </div>
+  <!-- Ambient Light Orbs -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
 
-  <!-- ==== 02. DUAL MAGNETIC MOUSE CURSOR ==== -->
-  <div class="mouseCursor cursor-outer" id="cursor-outer" aria-hidden="true"></div>
-  <div class="mouseCursor cursor-inner" id="cursor-inner" aria-hidden="true">
-    <span id="cursor-text">VIEW</span>
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <span>VIEW</span>
   </div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot" aria-hidden="true"></div>
 
-  <!-- ==== PAGE WRAPPER ==== -->
   <div class="my-app">
-
-    <!-- ==== 03. PRIMARY NAVBAR ==== -->
-    <header class="primary-navbar" id="primary-navbar">
+    <!-- ==== EXGRID PRIMARY HEADER NAVIGATION ==== -->
+    <header class="primary-navbar">
       <div class="container">
         <div class="navbar-inner">
           <div class="navbar__logo">
@@ -77,16 +75,11 @@
       </div>
     </header>
 
-    <!-- ==== 04. OFFCANVAS OVERLAY DRAWER ==== -->
+    <!-- ==== EXGRID OFFCANVAS OVERLAY DRAWER ==== -->
     <div class="offcanvas-menu" id="offcanvas-drawer">
       <button class="offcanvas-close" id="close-offcanvas-btn" aria-label="Close offcanvas">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <div style="margin-bottom: 2.5rem;">
-        <a href="index.html" aria-label="Sakthi Niranjana Home">
-          <img src="assets/img/logo-white.png" alt="Sakthi Niranjana S." style="height: 48px; max-width: 220px; object-fit: contain;">
-        </a>
-      </div>
       <ul class="offcanvas-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -96,20 +89,15 @@
       </ul>
     </div>
 
-    <!-- ==== 05. MAIN BENTO BANNER SECTION ==== -->
+    <!-- ==== EXGRID 3-COLUMN BENTO BANNER SECTION ==== -->
     <main>
       <section class="banner">
-        <!-- Vertical Background Watermark -->
-        <div class="tag-t" aria-hidden="true">
-          <h2>SAKTHI</h2>
-        </div>
-
         <div class="container">
           <div class="banner__inner">
 
             <!-- 1. LEFT COLUMN: PROFILE META CARD -->
             <aside class="banner__meta">
-              <div class="banner__meta-single bg-grd-one">
+              <div class="banner__meta-single">
                 <div class="thumb">
                   <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana S Portrait" loading="eager">
                 </div>
@@ -132,385 +120,352 @@
                 </div>
                 <hr>
                 <div class="social">
-                  <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="tw" title="LinkedIn">
+                  <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
                     <i class="fa-brands fa-linkedin-in"></i>
                   </a>
-                  <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="in" title="Behance">
+                  <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn" title="Behance">
                     <i class="fa-brands fa-behance"></i>
                   </a>
-                  <a href="mailto:its.sakthiniranjana@gmail.com" class="fb" title="Direct Email">
+                  <a href="mailto:its.sakthiniranjana@gmail.com" class="social-btn" title="Email Direct">
                     <i class="fa-regular fa-envelope"></i>
                   </a>
-                  <a href="tel:6374523020" class="yt" title="Direct Phone">
+                  <a href="tel:6374523020" class="social-btn" title="Phone">
                     <i class="fa-solid fa-phone"></i>
                   </a>
                 </div>
               </div>
 
               <div class="banner__meta-btn">
-                <a href="contact.html" class="rt-btn">
-                  <span>Hire Me / Connect</span>
+                <a href="contact.html">
+                  <span>Hire Me / Let's Connect</span>
                   <i class="fa-solid fa-circle-arrow-right"></i>
                 </a>
               </div>
 
               <div class="banner__meta-btn">
-                <a href="mailto:its.sakthiniranjana@gmail.com" id="downloadCv">
-                  <span>Download Resume</span>
+                <a href="mailto:its.sakthiniranjana@gmail.com" id="download-cv-btn">
+                  <span>Request Full Resume</span>
                   <i class="fa-solid fa-cloud-arrow-down"></i>
                 </a>
               </div>
 
               <p class="tertiary-text">
-                &copy; 2026 Sakthi Niranjana S.<br>All Rights Reserved.
+                &copy; 2026 Sakthi Niranjana S. All Rights Reserved.
               </p>
             </aside>
 
             <!-- 2. MIDDLE COLUMN: MAIN CONTENT STREAM -->
             <div class="banner__content">
 
-              <!-- HERO GREETING CARD -->
-              <div class="banner__content-single bg-grd-two">
+              <!-- HERO GREETING INTRO CARD -->
+              <div class="banner__content-single">
                 <h2>
                   Hi I'm Sakthi,<br>
-                  <span>Senior UX/UI</span> &amp; Product Designer
+                  <span>Senior UX/UI &amp; Product Designer</span>
                 </h2>
                 <p class="intro-lead">
                   I specialize in turning complex enterprise workflows and early-stage startup visions into intuitive, accessible and visually arresting digital platforms. Currently leading design at FlowHive Solutions.
                 </p>
                 <hr>
-                <div class="cta">
-                  <div class="cta-single">
-                    <p>
+                <div class="cta-row">
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
                       <i class="fa-solid fa-circle-check"></i>
                       <span>4+</span>
-                    </p>
-                    <p>YEARS EXPERIENCE</p>
+                    </div>
+                    <span class="cta-stat-label">YEARS EXPERIENCE</span>
                   </div>
-                  <div class="cta-single">
-                    <p>
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
                       <i class="fa-solid fa-circle-check"></i>
                       <span>23</span>
-                    </p>
-                    <p>LIVE PROJECTS</p>
+                    </div>
+                    <span class="cta-stat-label">LIVE PROJECTS</span>
                   </div>
-                  <div class="cta-single">
-                    <p>
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
                       <i class="fa-solid fa-circle-check"></i>
                       <span>10+</span>
-                    </p>
-                    <p>DISCIPLINES</p>
+                    </div>
+                    <span class="cta-stat-label">DISCIPLINES</span>
                   </div>
-                  <div class="cta-single">
+                  <div class="cta-stat-item">
                     <a href="contact.html" class="anim-btn">
-                      <span class="btn-anim">Hire Me</span>
-                      <span class="btn-m">Hire Me</span>
+                      <span>Hire Me</span>
                       <i class="fa-solid fa-circle-arrow-right"></i>
                     </a>
                   </div>
                 </div>
               </div>
 
-              <!-- PROJECTS / CASE STUDY STREAM -->
+              <!-- PROJECTS STREAM -->
               <div class="banner__content-study">
-                <div class="title-animation">
-                  <h2 class="title-xl">Case</h2>
-                  <h2 class="title-xl text-quinary">Study</h2>
+                <div class="section-title-wrap">
+                  <h3 class="title-xl">Projects</h3>
+                  <a href="work.html" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
+                    VIEW ALL PROJECTS <i class="fa-solid fa-arrow-right"></i>
+                  </a>
                 </div>
 
-                <div class="banner__content-study__inner">
-                  <!-- Project 1: Paytrav -->
-                  <div class="banner__content-study__single" data-project-id="paytrav">
-                    <div class="tag">
-                      <span class="case-pill">FinTech</span>
-                      <span class="case-pill">B2B SaaS</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Paytrav — B2B Travel SaaS &amp; Payments Switch</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Lead UX/UI &amp; Product</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/paytrav.jpg');"></div>
+                <!-- Project 1: Paytrav -->
+                <div class="banner__content-study__single" data-project-id="paytrav">
+                  <div class="tag">
+                    <span class="case-pill">FinTech</span>
+                    <span class="case-pill">B2B Travel SaaS</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Paytrav — B2B Travel SaaS &amp; Payments Switch</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Lead UX/UI &amp; Product Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/paytrav.jpg');"></div>
+                </div>
 
-                  <!-- Project 2: Gulf Ticket -->
-                  <div class="banner__content-study__single" data-project-id="gulfticket">
-                    <div class="tag">
-                      <span class="case-pill">Gaming</span>
-                      <span class="case-pill">Global Lottery</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Gulf Ticket — Global Digital Lottery &amp; Raffles</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Senior UX/UI Designer</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/gulfticket.jpg');"></div>
+                <!-- Project 2: Gulf Ticket -->
+                <div class="banner__content-study__single" data-project-id="gulfticket">
+                  <div class="tag">
+                    <span class="case-pill">Gaming</span>
+                    <span class="case-pill">Global Ticketing</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Gulf Ticket — Global Digital Lottery &amp; Raffles</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Senior UX/UI Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/gulfticket.jpg');"></div>
+                </div>
 
-                  <!-- Project 3: Easestay -->
-                  <div class="banner__content-study__single" data-project-id="easestay">
-                    <div class="tag">
-                      <span class="case-pill">PropTech</span>
-                      <span class="case-pill">Corporate Housing</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Easestay — Corporate Housing &amp; Managed Stays</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Product &amp; Interaction</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/easestay.jpg');"></div>
+                <!-- Project 3: Easestay -->
+                <div class="banner__content-study__single" data-project-id="easestay">
+                  <div class="tag">
+                    <span class="case-pill">PropTech</span>
+                    <span class="case-pill">Corporate Stays</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Easestay — Corporate Housing &amp; Managed Stays</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Product &amp; Interaction Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/easestay.jpg');"></div>
+                </div>
 
-                  <!-- Project 4: ARMSOFT -->
-                  <div class="banner__content-study__single" data-project-id="armsoft">
-                    <div class="tag">
-                      <span class="case-pill">Enterprise</span>
-                      <span class="case-pill">Industrial Tech</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">ARMSOFT — Industrial Software &amp; IT Solutions</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>UX/UI &amp; Brand Strategist</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/armsoft.jpg');"></div>
+                <!-- Project 4: ARMSOFT -->
+                <div class="banner__content-study__single" data-project-id="armsoft">
+                  <div class="tag">
+                    <span class="case-pill">Enterprise</span>
+                    <span class="case-pill">Industrial Tech</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">ARMSOFT — Industrial Software &amp; IT Solutions</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>UX/UI &amp; Brand Strategist</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/armsoft.jpg');"></div>
+                </div>
 
-                  <!-- Project 5: GI Smart Parking -->
-                  <div class="banner__content-study__single" data-project-id="gismartparking">
-                    <div class="tag">
-                      <span class="case-pill">Logistics</span>
-                      <span class="case-pill">Smart City IoT</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">GI Smart Parking — IoT Urban Telemetry Hub</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Lead Product Designer</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/gismartparking.jpg');"></div>
+                <!-- Project 5: GI Smart Parking -->
+                <div class="banner__content-study__single" data-project-id="gismartparking">
+                  <div class="tag">
+                    <span class="case-pill">Logistics</span>
+                    <span class="case-pill">Smart City IoT</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">GI Smart Parking — IoT Urban Parking Telemetry</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Lead Product Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/gismartparking.jpg');"></div>
+                </div>
 
-                  <!-- Project 6: Wingspace -->
-                  <div class="banner__content-study__single" data-project-id="wingspace">
-                    <div class="tag">
-                      <span class="case-pill">PropTech</span>
-                      <span class="case-pill">Managed Coworking</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Wingspace — Premium Managed Office Suites</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>UX/UI &amp; Experience</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/wingspace.jpg');"></div>
+                <!-- Project 6: Wingspace -->
+                <div class="banner__content-study__single" data-project-id="wingspace">
+                  <div class="tag">
+                    <span class="case-pill">PropTech</span>
+                    <span class="case-pill">Managed Coworking</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Wingspace — Premium Managed Office Suites</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>UX/UI &amp; Experience Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/wingspace.jpg');"></div>
+                </div>
 
-                  <!-- Project 7: Cityflo -->
-                  <div class="banner__content-study__single" data-project-id="cityflo">
-                    <div class="tag">
-                      <span class="case-pill">Logistics</span>
-                      <span class="case-pill">Urban Mobility</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Cityflo — Corporate Bus Transit &amp; Seat Booking</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Mobile UX &amp; Product</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/cityflo.jpg');"></div>
+                <!-- Project 7: Cityflo -->
+                <div class="banner__content-study__single" data-project-id="cityflo">
+                  <div class="tag">
+                    <span class="case-pill">Logistics</span>
+                    <span class="case-pill">Urban Mobility</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Cityflo — Corporate Bus Transit &amp; Seat Booking</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Mobile UX &amp; Product Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/cityflo.jpg');"></div>
+                </div>
 
-                  <!-- Project 8: Raftaar Pay -->
-                  <div class="banner__content-study__single" data-project-id="raftaarpay">
-                    <div class="tag">
-                      <span class="case-pill">FinTech</span>
-                      <span class="case-pill">UPI Soundbox</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Raftaar Pay — UPI Soundbox &amp; Merchant Hub</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Lead Product Designer</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/raftaarpay.jpg');"></div>
+                <!-- Project 8: Raftaar Pay -->
+                <div class="banner__content-study__single" data-project-id="raftaarpay">
+                  <div class="tag">
+                    <span class="case-pill">FinTech</span>
+                    <span class="case-pill">UPI Soundbox</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Raftaar Pay — UPI Soundbox &amp; Merchant Hub</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Lead Product Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/raftaarpay.jpg');"></div>
+                </div>
 
-                  <!-- Project 9: Wareknit -->
-                  <div class="banner__content-study__single" data-project-id="wareknit">
-                    <div class="tag">
-                      <span class="case-pill">Logistics</span>
-                      <span class="case-pill">Textile SaaS</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Wareknit — Garment Supply Chain Telemetry</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Enterprise UX Designer</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/wareknit.jpg');"></div>
+                <!-- Project 9: Wareknit -->
+                <div class="banner__content-study__single" data-project-id="wareknit">
+                  <div class="tag">
+                    <span class="case-pill">Logistics</span>
+                    <span class="case-pill">Textile SaaS</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Wareknit — Garment Supply Chain Telemetry</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Enterprise UX Designer</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/wareknit.jpg');"></div>
+                </div>
 
-                  <!-- Project 10: Figma Enterprise Archive -->
-                  <div class="banner__content-study__single" data-project-id="figmaprojects">
-                    <div class="tag">
-                      <span class="case-pill">Enterprise</span>
-                      <span class="case-pill">Design Systems</span>
-                      <a href="javascript:void(0)" class="view-demo-tag">
-                        Case Study <i class="fa-solid fa-play" style="font-size: 10px; margin-left: 4px;"></i>
-                      </a>
-                    </div>
-                    <div class="content">
-                      <div class="content__left">
-                        <h3 class="title-lg">Figma Archive — Enterprise 3PL WMS &amp; Systems</h3>
-                      </div>
-                      <div class="content__right">
-                        <p>Senior UX/UI Lead</p>
-                      </div>
-                    </div>
-                    <div class="case-study-hover" style="background-image: url('assets/img/projects/figmaprojects.jpg');"></div>
+                <!-- Project 10: Figma Enterprise Archive -->
+                <div class="banner__content-study__single" data-project-id="figmaprojects">
+                  <div class="tag">
+                    <span class="case-pill">Enterprise</span>
+                    <span class="case-pill">Design Systems</span>
                   </div>
+                  <div class="content">
+                    <div class="content__left">
+                      <h4 class="title-lg">Figma Archive — Enterprise 3PL WMS &amp; Design Systems</h4>
+                    </div>
+                    <div class="content__right">
+                      <span>Senior UX/UI Lead</span>
+                    </div>
+                  </div>
+                  <div class="case-study-hover" style="background-image: url('assets/img/projects/figmaprojects.jpg');"></div>
                 </div>
               </div>
 
               <!-- ABOUT & LEADERSHIP CARD -->
-              <div class="banner__content-about">
-                <div class="title-animation">
-                  <h2 class="title-xl">About</h2>
-                  <h2 class="title-xl text-quinary">Me</h2>
-                </div>
-
-                <div class="banner__content-about-inner">
-                  <h3 class="about-headline">
-                    "Turning complex <span class="span-block">product systems, digital innovation &amp; brand strategy</span> into effortless, human-centered digital experiences."
-                  </h3>
-                  <p style="color:var(--quaternary-color); line-height:1.7; margin-bottom:1.5rem;">
-                    Passionate UX/UI Designer and Content Strategist with a focus on creating user-centered digital experiences and impactful brand communication. Dedicated to building intuitive interfaces, scalable design solutions, and engaging user experiences that align with business goals.
-                  </p>
-                  <ul class="bn-about__content">
-                    <li>
-                      <i class="fa-solid fa-circle-check"></i>
-                      <div>
-                        <strong>FlowHive Solutions (Atlanta, GA):</strong>
-                        <span> Senior UX/UI Designer &amp; Content Head contributing to product design, design systems, and digital innovation.</span>
-                      </div>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-circle-check"></i>
-                      <div>
-                        <strong>GI TECH GAMING CO INDIA PVT LTD:</strong>
-                        <span> UX/UI Designer delivering high-fidelity UI, user research, wireframing, motion graphics &amp; component libraries.</span>
-                      </div>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-circle-check"></i>
-                      <div>
-                        <strong>23 Live Real-World Products:</strong>
-                        <span> Designed and shipped production platforms across FinTech, Gaming, PropTech, and Logistics.</span>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="banner__content-about-inner">
+                <h3 class="about-headline-quote">
+                  "Turning complex <span class="highlight">product systems, digital innovation &amp; brand strategy</span> into effortless, human-centered digital experiences."
+                </h3>
+                <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
+                  Passionate UX/UI Designer and Content Strategist with a focus on creating user-centered digital experiences and impactful brand communication. Dedicated to building intuitive interfaces, scalable design solutions, and engaging user experiences that align with business goals.
+                </p>
+                <div class="bn-about-achievements">
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-award"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">FlowHive Solutions (Atlanta, GA):</strong>
+                      <span> Senior UX/UI Designer &amp; Content Head contributing to product design, design systems, and digital innovation.</span>
+                    </div>
+                  </div>
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">GI TECH GAMING CO INDIA PVT LTD:</strong>
+                      <span> UX/UI Designer delivering high-fidelity UI, user research, wireframing, motion graphics &amp; component libraries.</span>
+                    </div>
+                  </div>
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">23 Live Real-World Products:</strong>
+                      <span> Designed and shipped production platforms across FinTech, Gaming, PropTech, and Logistics.</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- EXPERIENCE HISTORY STREAM -->
+              <!-- EXPERIENCE HISTORY -->
               <div class="banner__history">
-                <h3 class="title-xl">History</h3>
+                <div class="section-title-wrap">
+                  <h3 class="title-xl">Experience History</h3>
+                  <a href="about.html#experience" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
+                    VIEW FULL TIMELINE <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
 
                 <div class="banner__history-single">
                   <div class="lefter">
-                    <h4 class="title-lg">Feb 2026 — Present</h4>
+                    <h2 class="title-lg">Feb 2026 — Present</h2>
                   </div>
                   <div class="righter">
-                    <h4 class="title-lg">Senior UX/UI Designer &amp; Content Head</h4>
+                    <h2 class="title-lg">Senior UX/UI Designer &amp; Content Head</h2>
                     <p>FlowHive Solutions • Atlanta, GA</p>
                   </div>
                 </div>
 
                 <div class="banner__history-single">
                   <div class="lefter">
-                    <h4 class="title-lg">May 2024 — Present</h4>
+                    <h2 class="title-lg">May 2024 — Present</h2>
                   </div>
                   <div class="righter">
-                    <h4 class="title-lg">UX/UI Designer</h4>
+                    <h2 class="title-lg">UX/UI Designer</h2>
                     <p>GI TECH GAMING CO INDIA PRIVATE LTD • Chennai</p>
                   </div>
                 </div>
 
                 <div class="banner__history-single">
                   <div class="lefter">
-                    <h4 class="title-lg">Nov 2023 — Jan 2024</h4>
+                    <h2 class="title-lg">Nov 2023 — Jan 2024</h2>
                   </div>
                   <div class="righter">
-                    <h4 class="title-lg">UX/UI Design Intern</h4>
+                    <h2 class="title-lg">UX/UI Design Intern</h2>
                     <p>Techienutpam • Chennai</p>
                   </div>
                 </div>
 
                 <div class="banner__history-single">
                   <div class="lefter">
-                    <h4 class="title-lg">Jul 2022 — Sep 2022</h4>
+                    <h2 class="title-lg">Jul 2022 — Sep 2022</h2>
                   </div>
                   <div class="righter">
-                    <h4 class="title-lg">Research Department Specialist</h4>
+                    <h2 class="title-lg">Research Department Specialist</h2>
                     <p>Puthiya Thalaimurai Tv • Chennai</p>
                   </div>
                 </div>
 
                 <div class="banner__history-single">
                   <div class="lefter">
-                    <h4 class="title-lg">May 2021 — Jul 2021</h4>
+                    <h2 class="title-lg">May 2021 — Jul 2021</h2>
                   </div>
                   <div class="righter">
-                    <h4 class="title-lg">Student Volunteer</h4>
+                    <h2 class="title-lg">Student Volunteer</h2>
                     <p>Greater Chennai Corporation • Chennai</p>
                   </div>
                 </div>
@@ -605,12 +560,45 @@
         </div>
       </section>
 
-      <!-- ==== 06. TOOLS & TECHNOLOGIES LOGO MARQUEE ==== -->
+      <!-- ==== TOOLS & TECHNOLOGIES LOGO MARQUEE (NO CARDS) ==== -->
       <section class="img-view" aria-label="Tools and Technologies Logos">
+        <!-- SVG Shared Gradients Definition -->
+        <svg width="0" height="0" style="position: absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+          <defs>
+            <linearGradient id="canvaGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00C4CC"/>
+              <stop offset="1" stop-color="#7D2AE8"/>
+            </linearGradient>
+            <linearGradient id="expGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#EB1000"/>
+              <stop offset="1" stop-color="#7B1FA2"/>
+            </linearGradient>
+            <linearGradient id="agGrad" x1="7" y1="6" x2="25" y2="27" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#8B5CF6"/>
+              <stop offset="1" stop-color="#38BDF8"/>
+            </linearGradient>
+            <linearGradient id="figmakeGrad" x1="7" y1="7" x2="25" y2="25" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF7262"/>
+              <stop offset="0.5" stop-color="#A259FF"/>
+              <stop offset="1" stop-color="#1ABCFE"/>
+            </linearGradient>
+            <linearGradient id="geminiGrad" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#4E8CFF"/>
+              <stop offset="0.5" stop-color="#8E75FF"/>
+              <stop offset="1" stop-color="#FF748D"/>
+            </linearGradient>
+            <linearGradient id="lovableGrad" x1="8" y1="8.5" x2="24" y2="23.5" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF3366"/>
+              <stop offset="1" stop-color="#FF6B00"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div class="ticker-track">
-          <!-- Figma -->
+          <!-- ===== SET 1: 21 TOOLS ===== -->
+          <!-- 1. Figma -->
           <div class="tool-logo-item" title="Figma">
-            <svg width="34" height="34" viewBox="0 0 38 57" fill="none">
+            <svg width="36" height="36" viewBox="0 0 38 57" fill="none">
               <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
               <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
               <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
@@ -620,82 +608,169 @@
             <span>Figma</span>
           </div>
 
-          <!-- Photoshop -->
+          <!-- 2. Photoshop -->
           <div class="tool-logo-item" title="Adobe Photoshop">
-            <svg width="34" height="34" viewBox="0 0 32 32">
+            <svg width="36" height="36" viewBox="0 0 32 32">
               <rect width="32" height="32" rx="7" fill="#001E36"/>
               <text x="7" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#31A8FF">Ps</text>
             </svg>
             <span>Photoshop</span>
           </div>
 
-          <!-- Illustrator -->
+          <!-- 3. Illustrator -->
           <div class="tool-logo-item" title="Adobe Illustrator">
-            <svg width="34" height="34" viewBox="0 0 32 32">
+            <svg width="36" height="36" viewBox="0 0 32 32">
               <rect width="32" height="32" rx="7" fill="#330000"/>
               <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF9A00">Ai</text>
             </svg>
             <span>Illustrator</span>
           </div>
 
-          <!-- InDesign -->
+          <!-- 4. InDesign -->
           <div class="tool-logo-item" title="Adobe InDesign">
-            <svg width="34" height="34" viewBox="0 0 32 32">
+            <svg width="36" height="36" viewBox="0 0 32 32">
               <rect width="32" height="32" rx="7" fill="#49021F"/>
               <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF3366">Id</text>
             </svg>
             <span>InDesign</span>
           </div>
 
-          <!-- Canva -->
+          <!-- 5. Canva -->
           <div class="tool-logo-item" title="Canva">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="7" fill="#00C4CC"/>
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="url(#canvaGrad)"/>
               <path d="M16.5 8C11.8 8 8 11.6 8 16c0 4.4 3.8 8 8.5 8 2.6 0 4.9-1.1 6.5-2.9l-2-1.6c-1.2 1.4-2.8 2.2-4.5 2.2-3.3 0-6-2.5-6-5.7s2.7-5.7 6-5.7c2.1 0 3.9 1 5 2.7l2.1-1.4C22.1 9.5 19.5 8 16.5 8z" fill="#ffffff"/>
             </svg>
             <span>Canva</span>
           </div>
 
-          <!-- Antigravity -->
+          <!-- 6. Adobe Express -->
+          <div class="tool-logo-item" title="Adobe Express">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="url(#expGrad)"/>
+              <text x="6" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF">Ex</text>
+            </svg>
+            <span>Adobe Express</span>
+          </div>
+
+          <!-- 7. Antigravity -->
           <div class="tool-logo-item" title="Antigravity">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#0F172A"/>
-              <path d="M16 6L25 11.5V21.5L16 27L7 21.5V11.5L16 6Z" stroke="#8B5CF6" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 6L25 11.5V21.5L16 27L7 21.5V11.5L16 6Z" stroke="url(#agGrad)" stroke-width="2.5" stroke-linejoin="round"/>
               <circle cx="16" cy="16.5" r="3.5" fill="#8B5CF6"/>
             </svg>
             <span>Antigravity</span>
           </div>
 
-          <!-- Gemini -->
+          <!-- 8. Google Flow -->
+          <div class="tool-logo-item" title="Google Flow">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#F8FAFC" stroke="#E2E8F0"/>
+              <path d="M8 12C8 9.79 9.79 8 12 8H20C22.21 8 24 9.79 24 12V20C24 22.21 22.21 24 20 24H12C9.79 24 8 22.21 8 20V12Z" fill="#4285F4" fill-opacity="0.15"/>
+              <path d="M11 16H21M16 11V21" stroke="#4285F4" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="21" cy="16" r="2.5" fill="#EA4335"/>
+              <circle cx="11" cy="16" r="2.5" fill="#34A853"/>
+              <circle cx="16" cy="11" r="2.5" fill="#FBBC05"/>
+            </svg>
+            <span>Google Flow</span>
+          </div>
+
+          <!-- 9. Figma Make -->
+          <div class="tool-logo-item" title="Figma Make">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#2C2D30"/>
+              <path d="M16 7L18.2 13.8L25 16L18.2 18.2L16 25L13.8 18.2L7 16L13.8 13.8L16 7Z" fill="url(#figmakeGrad)"/>
+            </svg>
+            <span>Figma Make</span>
+          </div>
+
+          <!-- 10. Gemini -->
           <div class="tool-logo-item" title="Google Gemini">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#1E1F20"/>
-              <path d="M16 6C16 11.5 11.5 16 6 16C11.5 16 16 20.5 16 26C16 20.5 20.5 16 26 16C20.5 16 16 11.5 16 6Z" fill="#8E75FF"/>
+              <path d="M16 6C16 11.5 11.5 16 6 16C11.5 16 16 20.5 16 26C16 20.5 20.5 16 26 16C20.5 16 16 11.5 16 6Z" fill="url(#geminiGrad)"/>
             </svg>
             <span>Gemini</span>
           </div>
 
-          <!-- ChatGPT -->
+          <!-- 11. ChatGPT -->
           <div class="tool-logo-item" title="ChatGPT">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#10A37F"/>
               <path d="M22.8 13.7C22.5 11.8 21 10.3 19.1 10C18.6 9.4 18 8.9 17.2 8.6C15.6 7.9 13.7 8.3 12.5 9.5C11.4 9.1 10.1 9.4 9.3 10.3C8.1 11.5 7.8 13.4 8.5 14.9C8.1 15.6 8 16.5 8.2 17.4C8.6 19.1 9.9 20.4 11.6 20.8C12 21.4 12.6 21.9 13.4 22.2C15 22.9 16.9 22.5 18.1 21.3C19.2 21.7 20.5 21.4 21.3 20.5C22.5 19.3 22.8 17.4 22.1 15.9C22.6 15.2 22.8 14.4 22.8 13.7Z" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"/>
             </svg>
             <span>ChatGPT</span>
           </div>
 
-          <!-- Perplexity -->
+          <!-- 12. Perplexity -->
           <div class="tool-logo-item" title="Perplexity AI">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#202222"/>
               <path d="M16 7V25M9 11.5L23 20.5M23 11.5L9 20.5M9 11.5V20.5M23 11.5V20.5" stroke="#22B8CD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <span>Perplexity</span>
           </div>
 
-          <!-- Miro -->
+          <!-- 13. Balsamiq -->
+          <div class="tool-logo-item" title="Balsamiq">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#990000"/>
+              <path d="M10 9H18C20.2 9 22 10.8 22 13C22 14.6 21 15.9 19.6 16.6C21.4 17.3 22.6 19 22.6 20.9C22.6 23.4 20.5 25.5 18 25.5H10V9ZM13.5 11.8V15.5H17.5C18.9 15.5 20 14.4 20 13C20 11.6 18.9 11.8 17.5 11.8H13.5ZM13.5 18.2V22.7H18C19.5 22.7 20.7 21.5 20.7 20C20.7 18.5 19.5 18.2 18 18.2H13.5Z" fill="#FFFFFF"/>
+            </svg>
+            <span>Balsamiq</span>
+          </div>
+
+          <!-- 14. Claude -->
+          <div class="tool-logo-item" title="Anthropic Claude">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#D97757"/>
+              <path d="M16 8V24M8 16H24M10.3 10.3L21.7 21.7M21.7 10.3L10.3 21.7" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+            <span>Claude</span>
+          </div>
+
+          <!-- 15. PowerPoint -->
+          <div class="tool-logo-item" title="Microsoft PowerPoint">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#C43E1C"/>
+              <text x="9" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">P</text>
+              <rect x="18" y="10" width="8" height="8" rx="2" fill="#FFFFFF" fill-opacity="0.3"/>
+            </svg>
+            <span>PowerPoint</span>
+          </div>
+
+          <!-- 16. Excel -->
+          <div class="tool-logo-item" title="Microsoft Excel">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#107C41"/>
+              <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">X</text>
+              <rect x="18" y="10" width="8" height="8" rx="2" fill="#FFFFFF" fill-opacity="0.3"/>
+            </svg>
+            <span>Excel</span>
+          </div>
+
+          <!-- 17. Google Docs -->
+          <div class="tool-logo-item" title="Google Docs / Word">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#185ABD"/>
+              <text x="5" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF">Doc</text>
+            </svg>
+            <span>Docs</span>
+          </div>
+
+          <!-- 18. Adobe XD -->
+          <div class="tool-logo-item" title="Adobe XD">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#470137"/>
+              <text x="6" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF61F6">Xd</text>
+            </svg>
+            <span>Adobe XD</span>
+          </div>
+
+          <!-- 19. Miro -->
           <div class="tool-logo-item" title="Miro">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#FFD02F"/>
               <path d="M10 8L13.5 13.5V24L10 18.5V8Z" fill="#050038"/>
               <path d="M14.5 8L18 13.5V24L14.5 18.5V8Z" fill="#050038"/>
@@ -704,9 +779,9 @@
             <span>Miro</span>
           </div>
 
-          <!-- Notion -->
+          <!-- 20. Notion -->
           <div class="tool-logo-item" title="Notion">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#000000"/>
               <path d="M8.5 9.2L19.8 7.5C21.1 7.3 22 8.3 22 9.5V22.8C22 23.9 21.2 24.8 20.1 25L9.2 26.5C8 26.7 7 25.7 7 24.5V10.8C7 9.9 7.7 9.3 8.5 9.2Z" fill="#FFFFFF"/>
               <path d="M11 12.5V22.5L14.5 22V15L17.5 21.5L20 21.2V12L17.5 12.3V18L14.5 12V12.5L11 12.5Z" fill="#000000"/>
@@ -714,10 +789,19 @@
             <span>Notion</span>
           </div>
 
-          <!-- DUPLICATE FOR INFINITE SEAMLESS LOOP -->
-          <!-- Figma -->
+          <!-- 21. Lovable -->
+          <div class="tool-logo-item" title="Lovable">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#18181B"/>
+              <path d="M16 23.5S8 18 8 13.5C8 10.5 10.5 8.5 13.5 8.5C14.8 8.5 15.6 9 16 9.5C16.4 9 17.2 8.5 18.5 8.5C21.5 8.5 24 10.5 24 13.5C24 18 16 23.5 16 23.5Z" fill="url(#lovableGrad)"/>
+            </svg>
+            <span>Lovable</span>
+          </div>
+
+          <!-- ===== SET 2: DUPLICATE FOR SEAMLESS INFINITE LOOP ===== -->
+          <!-- 1. Figma -->
           <div class="tool-logo-item" title="Figma">
-            <svg width="34" height="34" viewBox="0 0 38 57" fill="none">
+            <svg width="36" height="36" viewBox="0 0 38 57" fill="none">
               <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
               <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
               <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
@@ -727,82 +811,169 @@
             <span>Figma</span>
           </div>
 
-          <!-- Photoshop -->
+          <!-- 2. Photoshop -->
           <div class="tool-logo-item" title="Adobe Photoshop">
-            <svg width="34" height="34" viewBox="0 0 32 32">
+            <svg width="36" height="36" viewBox="0 0 32 32">
               <rect width="32" height="32" rx="7" fill="#001E36"/>
               <text x="7" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#31A8FF">Ps</text>
             </svg>
             <span>Photoshop</span>
           </div>
 
-          <!-- Illustrator -->
+          <!-- 3. Illustrator -->
           <div class="tool-logo-item" title="Adobe Illustrator">
-            <svg width="34" height="34" viewBox="0 0 32 32">
+            <svg width="36" height="36" viewBox="0 0 32 32">
               <rect width="32" height="32" rx="7" fill="#330000"/>
               <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF9A00">Ai</text>
             </svg>
             <span>Illustrator</span>
           </div>
 
-          <!-- InDesign -->
+          <!-- 4. InDesign -->
           <div class="tool-logo-item" title="Adobe InDesign">
-            <svg width="34" height="34" viewBox="0 0 32 32">
+            <svg width="36" height="36" viewBox="0 0 32 32">
               <rect width="32" height="32" rx="7" fill="#49021F"/>
               <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF3366">Id</text>
             </svg>
             <span>InDesign</span>
           </div>
 
-          <!-- Canva -->
+          <!-- 5. Canva -->
           <div class="tool-logo-item" title="Canva">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="7" fill="#00C4CC"/>
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="url(#canvaGrad)"/>
               <path d="M16.5 8C11.8 8 8 11.6 8 16c0 4.4 3.8 8 8.5 8 2.6 0 4.9-1.1 6.5-2.9l-2-1.6c-1.2 1.4-2.8 2.2-4.5 2.2-3.3 0-6-2.5-6-5.7s2.7-5.7 6-5.7c2.1 0 3.9 1 5 2.7l2.1-1.4C22.1 9.5 19.5 8 16.5 8z" fill="#ffffff"/>
             </svg>
             <span>Canva</span>
           </div>
 
-          <!-- Antigravity -->
+          <!-- 6. Adobe Express -->
+          <div class="tool-logo-item" title="Adobe Express">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="url(#expGrad)"/>
+              <text x="6" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF">Ex</text>
+            </svg>
+            <span>Adobe Express</span>
+          </div>
+
+          <!-- 7. Antigravity -->
           <div class="tool-logo-item" title="Antigravity">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#0F172A"/>
-              <path d="M16 6L25 11.5V21.5L16 27L7 21.5V11.5L16 6Z" stroke="#8B5CF6" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 6L25 11.5V21.5L16 27L7 21.5V11.5L16 6Z" stroke="url(#agGrad)" stroke-width="2.5" stroke-linejoin="round"/>
               <circle cx="16" cy="16.5" r="3.5" fill="#8B5CF6"/>
             </svg>
             <span>Antigravity</span>
           </div>
 
-          <!-- Gemini -->
+          <!-- 8. Google Flow -->
+          <div class="tool-logo-item" title="Google Flow">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#F8FAFC" stroke="#E2E8F0"/>
+              <path d="M8 12C8 9.79 9.79 8 12 8H20C22.21 8 24 9.79 24 12V20C24 22.21 22.21 24 20 24H12C9.79 24 8 22.21 8 20V12Z" fill="#4285F4" fill-opacity="0.15"/>
+              <path d="M11 16H21M16 11V21" stroke="#4285F4" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="21" cy="16" r="2.5" fill="#EA4335"/>
+              <circle cx="11" cy="16" r="2.5" fill="#34A853"/>
+              <circle cx="16" cy="11" r="2.5" fill="#FBBC05"/>
+            </svg>
+            <span>Google Flow</span>
+          </div>
+
+          <!-- 9. Figma Make -->
+          <div class="tool-logo-item" title="Figma Make">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#2C2D30"/>
+              <path d="M16 7L18.2 13.8L25 16L18.2 18.2L16 25L13.8 18.2L7 16L13.8 13.8L16 7Z" fill="url(#figmakeGrad)"/>
+            </svg>
+            <span>Figma Make</span>
+          </div>
+
+          <!-- 10. Gemini -->
           <div class="tool-logo-item" title="Google Gemini">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#1E1F20"/>
-              <path d="M16 6C16 11.5 11.5 16 6 16C11.5 16 16 20.5 16 26C16 20.5 20.5 16 26 16C20.5 16 16 11.5 16 6Z" fill="#8E75FF"/>
+              <path d="M16 6C16 11.5 11.5 16 6 16C11.5 16 16 20.5 16 26C16 20.5 20.5 16 26 16C20.5 16 16 11.5 16 6Z" fill="url(#geminiGrad)"/>
             </svg>
             <span>Gemini</span>
           </div>
 
-          <!-- ChatGPT -->
+          <!-- 11. ChatGPT -->
           <div class="tool-logo-item" title="ChatGPT">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#10A37F"/>
               <path d="M22.8 13.7C22.5 11.8 21 10.3 19.1 10C18.6 9.4 18 8.9 17.2 8.6C15.6 7.9 13.7 8.3 12.5 9.5C11.4 9.1 10.1 9.4 9.3 10.3C8.1 11.5 7.8 13.4 8.5 14.9C8.1 15.6 8 16.5 8.2 17.4C8.6 19.1 9.9 20.4 11.6 20.8C12 21.4 12.6 21.9 13.4 22.2C15 22.9 16.9 22.5 18.1 21.3C19.2 21.7 20.5 21.4 21.3 20.5C22.5 19.3 22.8 17.4 22.1 15.9C22.6 15.2 22.8 14.4 22.8 13.7Z" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"/>
             </svg>
             <span>ChatGPT</span>
           </div>
 
-          <!-- Perplexity -->
+          <!-- 12. Perplexity -->
           <div class="tool-logo-item" title="Perplexity AI">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#202222"/>
               <path d="M16 7V25M9 11.5L23 20.5M23 11.5L9 20.5M9 11.5V20.5M23 11.5V20.5" stroke="#22B8CD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <span>Perplexity</span>
           </div>
 
-          <!-- Miro -->
+          <!-- 13. Balsamiq -->
+          <div class="tool-logo-item" title="Balsamiq">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#990000"/>
+              <path d="M10 9H18C20.2 9 22 10.8 22 13C22 14.6 21 15.9 19.6 16.6C21.4 17.3 22.6 19 22.6 20.9C22.6 23.4 20.5 25.5 18 25.5H10V9ZM13.5 11.8V15.5H17.5C18.9 15.5 20 14.4 20 13C20 11.6 18.9 11.8 17.5 11.8H13.5ZM13.5 18.2V22.7H18C19.5 22.7 20.7 21.5 20.7 20C20.7 18.5 19.5 18.2 18 18.2H13.5Z" fill="#FFFFFF"/>
+            </svg>
+            <span>Balsamiq</span>
+          </div>
+
+          <!-- 14. Claude -->
+          <div class="tool-logo-item" title="Anthropic Claude">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#D97757"/>
+              <path d="M16 8V24M8 16H24M10.3 10.3L21.7 21.7M21.7 10.3L10.3 21.7" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+            <span>Claude</span>
+          </div>
+
+          <!-- 15. PowerPoint -->
+          <div class="tool-logo-item" title="Microsoft PowerPoint">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#C43E1C"/>
+              <text x="9" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">P</text>
+              <rect x="18" y="10" width="8" height="8" rx="2" fill="#FFFFFF" fill-opacity="0.3"/>
+            </svg>
+            <span>PowerPoint</span>
+          </div>
+
+          <!-- 16. Excel -->
+          <div class="tool-logo-item" title="Microsoft Excel">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#107C41"/>
+              <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">X</text>
+              <rect x="18" y="10" width="8" height="8" rx="2" fill="#FFFFFF" fill-opacity="0.3"/>
+            </svg>
+            <span>Excel</span>
+          </div>
+
+          <!-- 17. Google Docs -->
+          <div class="tool-logo-item" title="Google Docs / Word">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#185ABD"/>
+              <text x="5" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF">Doc</text>
+            </svg>
+            <span>Docs</span>
+          </div>
+
+          <!-- 18. Adobe XD -->
+          <div class="tool-logo-item" title="Adobe XD">
+            <svg width="36" height="36" viewBox="0 0 32 32">
+              <rect width="32" height="32" rx="7" fill="#470137"/>
+              <text x="6" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF61F6">Xd</text>
+            </svg>
+            <span>Adobe XD</span>
+          </div>
+
+          <!-- 19. Miro -->
           <div class="tool-logo-item" title="Miro">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#FFD02F"/>
               <path d="M10 8L13.5 13.5V24L10 18.5V8Z" fill="#050038"/>
               <path d="M14.5 8L18 13.5V24L14.5 18.5V8Z" fill="#050038"/>
@@ -811,49 +982,58 @@
             <span>Miro</span>
           </div>
 
-          <!-- Notion -->
+          <!-- 20. Notion -->
           <div class="tool-logo-item" title="Notion">
-            <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#000000"/>
               <path d="M8.5 9.2L19.8 7.5C21.1 7.3 22 8.3 22 9.5V22.8C22 23.9 21.2 24.8 20.1 25L9.2 26.5C8 26.7 7 25.7 7 24.5V10.8C7 9.9 7.7 9.3 8.5 9.2Z" fill="#FFFFFF"/>
               <path d="M11 12.5V22.5L14.5 22V15L17.5 21.5L20 21.2V12L17.5 12.3V18L14.5 12V12.5L11 12.5Z" fill="#000000"/>
             </svg>
             <span>Notion</span>
+          </div>
+
+          <!-- 21. Lovable -->
+          <div class="tool-logo-item" title="Lovable">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#18181B"/>
+              <path d="M16 23.5S8 18 8 13.5C8 10.5 10.5 8.5 13.5 8.5C14.8 8.5 15.6 9 16 9.5C16.4 9 17.2 8.5 18.5 8.5C21.5 8.5 24 10.5 24 13.5C24 18 16 23.5 16 23.5Z" fill="url(#lovableGrad)"/>
+            </svg>
+            <span>Lovable</span>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ==== 07. BIG EDITORIAL FOOTER ==== -->
+    <!-- ==== EXGRID BIG EDITORIAL FOOTER ==== -->
     <footer class="footer">
       <div class="container">
         <div class="footer__intro">
-          <h2 class="title-xl">Let's Work Together</h2>
-          <h5 class="title-sm">SEND ME A MESSAGE</h5>
+          <h2>Let's Work Together</h2>
+          <h5>SEND ME A MESSAGE</h5>
         </div>
 
         <div class="footer__content">
           <h2 class="light-title-xl">
-            <a href="mailto:its.sakthiniranjana@gmail.com" class="animated-text" title="Email Sakthi Niranjana">its.sakthiniranjana@gmail.com</a>
+            <a href="mailto:its.sakthiniranjana@gmail.com" title="Email Sakthi Niranjana">its.sakthiniranjana@gmail.com</a>
           </h2>
         </div>
 
         <div class="footer__copyright">
           <div class="footer__copyright-inner">
-            <p class="tertiary-text" style="text-align: left;">
-              &copy; 2026 Sakthi Niranjana S. All Rights Reserved. Senior UX/UI &amp; Product Designer.
+            <p style="color:var(--text-quaternary); font-size:0.875rem;">
+              &copy; 2026 Sakthi Niranjana S. All Rights Reserved. Senior UX/UI Designer.
             </p>
             <div class="social">
-              <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="tw" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="in" title="Behance">
+              <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn">
                 <i class="fa-brands fa-behance"></i>
               </a>
-              <a href="mailto:its.sakthiniranjana@gmail.com" class="fb" title="Direct Email">
+              <a href="mailto:its.sakthiniranjana@gmail.com" class="social-btn">
                 <i class="fa-regular fa-envelope"></i>
               </a>
-              <a href="tel:6374523020" class="yt" title="Direct Phone">
+              <a href="tel:6374523020" class="social-btn">
                 <i class="fa-solid fa-phone"></i>
               </a>
             </div>
@@ -862,7 +1042,7 @@
       </div>
     </footer>
 
-    <!-- ==== 08. SCROLL TO TOP PROGRESS INDICATOR ==== -->
+    <!-- ==== SCROLL TO TOP PROGRESS WRAP BUTTON ==== -->
     <button class="progress-wrap" id="progress-wrap" aria-label="Scroll to top" title="Go to top">
       <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
@@ -881,7 +1061,7 @@
     </div>
   </div>
 
-  <!-- Main Application Script -->
+  <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
