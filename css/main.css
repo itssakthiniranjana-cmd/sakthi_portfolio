@@ -591,6 +591,11 @@ a:hover {
   background: var(--bg-card);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  color: var(--text-primary);
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 2;
 }
 
 .banner__content-single:hover {
@@ -598,25 +603,29 @@ a:hover {
   box-shadow: var(--shadow-lavender);
 }
 
+.banner__content-single h1,
 .banner__content-single h2 {
   font-size: clamp(2rem, 3.8vw, 3.25rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 1.5rem;
   letter-spacing: -0.03em;
+  color: var(--text-primary) !important;
 }
 
+.banner__content-single h1 span,
 .banner__content-single h2 span {
-  color: var(--lavender-primary);
+  color: var(--lavender-primary) !important;
   position: relative;
   display: inline-block;
 }
 
 .banner__content-single p.intro-lead {
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-  color: var(--text-secondary);
+  color: var(--text-secondary) !important;
   line-height: 1.65;
   margin-bottom: 2rem;
+  opacity: 1 !important;
 }
 
 .banner__content-single hr {
@@ -638,6 +647,7 @@ a:hover {
 .cta-single, .cta-stat-item {
   display: flex;
   flex-direction: column;
+  opacity: 1 !important;
 }
 
 .cta-single p.d-flex, .cta-stat-num {
@@ -647,20 +657,20 @@ a:hover {
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   margin-bottom: 0.25rem;
 }
 
 .cta-single p.d-flex i, .cta-stat-num i {
   font-size: 1.15rem;
-  color: var(--lavender-primary);
+  color: var(--lavender-primary) !important;
 }
 
 .cta-single p.text-uppercase, .cta-stat-label {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   font-weight: 700;
-  color: var(--text-quaternary);
+  color: var(--text-quaternary) !important;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-top: 0.25rem;
