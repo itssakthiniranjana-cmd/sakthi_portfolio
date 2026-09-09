@@ -24,22 +24,22 @@
   --text-muted: #949494;         /* Muted gray */
   --text-white: #ffffff;
 
-  /* Luminous Lavender Accent Tokens */
-  --lavender-primary: #8b5cf6;   /* Electric Lavender */
-  --lavender-hover: #7c3aed;     /* Deep Royal Lavender */
-  --lavender-light: #a78bfa;     /* Soft Lavender */
-  --lavender-tint: rgba(139, 92, 246, 0.08);
-  --lavender-glow: rgba(139, 92, 246, 0.25);
-  --lavender-glow-strong: rgba(139, 92, 246, 0.45);
+  /* Luminous Electric Lavender (#c77dff) Primary Color System */
+  --lavender-primary: #c77dff;   /* Electric Lavender (#c77dff) */
+  --lavender-hover: #9d4edd;     /* Deep Royal Violet */
+  --lavender-light: #e0aaff;     /* Soft Lavender Lilac */
+  --lavender-tint: rgba(199, 125, 255, 0.08);
+  --lavender-glow: rgba(199, 125, 255, 0.25);
+  --lavender-glow-strong: rgba(199, 125, 255, 0.45);
 
-  --accent-primary: #8b5cf6;
-  --accent-secondary: #7c3aed;
+  --accent-primary: #c77dff;
+  --accent-secondary: #9d4edd;
 
   /* Exgrid Clean Borders */
   --border-color: #d9d9d9;
   --border-subtle: #e5e7eb;
   --border-hover: #181818;
-  --border-lavender: rgba(139, 92, 246, 0.35);
+  --border-lavender: rgba(199, 125, 255, 0.35);
 
   /* Elevation */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -128,7 +128,7 @@ body {
   right: -5vw;
   width: 45vw;
   height: 45vw;
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(224, 170, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .ambient-glow-2 {
@@ -136,7 +136,7 @@ body {
   left: -10vw;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(199, 125, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 /* Container */
@@ -706,7 +706,7 @@ a:hover {
   background-position: top center;
   background-repeat: no-repeat;
   border-radius: 18px;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22), 0 0 35px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22), 0 0 35px rgba(199, 125, 255, 0.3);
   opacity: 0;
   pointer-events: none;
   z-index: 20;
@@ -1234,7 +1234,7 @@ a:hover {
   height: 32px;
   border-radius: 50%;
   border: 1.5px solid var(--lavender-primary);
-  background: rgba(139, 92, 246, 0.04);
+  background: rgba(199, 125, 255, 0.04);
   pointer-events: none;
   z-index: 10000;
   transform: translate(-50%, -50%);
@@ -1463,7 +1463,7 @@ a:hover {
   right: -40px;
   width: 140px;
   height: 140px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(199, 125, 255, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
@@ -1513,7 +1513,7 @@ a:hover {
 }
 
 .capability-card:hover .case-pill {
-  border-color: rgba(139, 92, 246, 0.4);
+  border-color: rgba(199, 125, 255, 0.4);
   background: var(--lavender-soft);
   color: var(--lavender-primary);
 }
@@ -1523,7 +1523,7 @@ a:hover {
   height: 46px;
   border-radius: 14px;
   background: var(--bg-lavender-tint);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(199, 125, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1569,8 +1569,8 @@ a:hover {
 }
 
 .capability-impact-box {
-  background: rgba(139, 92, 246, 0.05);
-  border: 1px dashed rgba(139, 92, 246, 0.35);
+  background: rgba(199, 125, 255, 0.05);
+  border: 1px dashed rgba(199, 125, 255, 0.35);
   border-radius: 10px;
   padding: 0.65rem 0.9rem;
   margin-bottom: 1.25rem;
@@ -1615,7 +1615,7 @@ a:hover {
 }
 
 .capability-card:hover .capability-skill-pill {
-  border-color: rgba(139, 92, 246, 0.35);
+  border-color: rgba(199, 125, 255, 0.35);
   color: var(--text-primary);
   background: var(--lavender-soft);
 }
@@ -1766,7 +1766,7 @@ a:hover {
 
 .project-stage-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 25px 60px rgba(139, 92, 246, 0.12), 0 0 35px var(--lavender-glow);
+  box-shadow: 0 25px 60px rgba(199, 125, 255, 0.12), 0 0 35px var(--lavender-glow);
   transform: translateY(-4px);
   background: #ffffff;
 }
@@ -1796,7 +1796,7 @@ a:hover {
 }
 
 .project-stage-card:hover .project-visual-stage {
-  box-shadow: 0 16px 40px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 16px 40px rgba(199, 125, 255, 0.15);
 }
 
 .project-browser-frame {
@@ -2134,7 +2134,7 @@ a:hover {
 .project-grid-card:hover {
   border-color: var(--lavender-primary);
   transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(139, 92, 246, 0.14), 0 0 25px var(--lavender-glow);
+  box-shadow: 0 20px 45px rgba(199, 125, 255, 0.14), 0 0 25px var(--lavender-glow);
 }
 
 .project-card-thumb {
@@ -2271,7 +2271,7 @@ a:hover {
 
 .project-grid-card:hover .project-card-tag {
   background: var(--lavender-soft);
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color: rgba(199, 125, 255, 0.3);
   color: var(--text-primary);
 }
 
@@ -2413,7 +2413,7 @@ a:hover {
 .exp-edu-card:hover {
   border-color: var(--lavender-primary);
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(139, 92, 246, 0.12), 0 0 20px var(--lavender-glow);
+  box-shadow: 0 18px 40px rgba(199, 125, 255, 0.12), 0 0 20px var(--lavender-glow);
 }
 
 .exp-edu-card-top {
@@ -2437,7 +2437,7 @@ a:hover {
 }
 
 .exp-edu-card:hover .exp-edu-period-pill {
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color: rgba(199, 125, 255, 0.3);
   background: var(--lavender-soft);
   color: var(--text-primary);
 }
@@ -2496,7 +2496,7 @@ a:hover {
 
 .exp-edu-card:hover .exp-edu-tag {
   background: var(--lavender-soft);
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color: rgba(199, 125, 255, 0.3);
   color: var(--text-primary);
 }
 

@@ -39,7 +39,7 @@ export function renderMockupCanvas(canvasElement, projectOrType) {
 }
 
 function renderProjectMockup(ctx, w, h, p) {
-  const primaryColor = p.color || '#8b5cf6';
+  const primaryColor = p.color || '#c77dff';
   const name = p.name || p.title || 'Live Product';
   const cat = (p.categoryLabel || p.category || 'Product Design').toUpperCase();
   const highlights = p.highlights || p.features || [];
@@ -189,13 +189,13 @@ function renderProjectMockup(ctx, w, h, p) {
 }
 
 function hexToRgba(hex, alpha = 1) {
-  if (!hex || typeof hex !== 'string') return `rgba(139, 92, 246, ${alpha})`;
+  if (!hex || typeof hex !== 'string') return `rgba(199, 125, 255, ${alpha})`;
   let cleanHex = hex.replace('#', '');
   if (cleanHex.length === 3) {
     cleanHex = cleanHex.split('').map(c => c + c).join('');
   }
   const num = parseInt(cleanHex, 16);
-  if (isNaN(num)) return `rgba(139, 92, 246, ${alpha})`;
+  if (isNaN(num)) return `rgba(199, 125, 255, ${alpha})`;
   const r = (num >> 16) & 255;
   const g = (num >> 8) & 255;
   const b = num & 255;
@@ -233,8 +233,8 @@ function renderEnipuMockup(ctx, w, h) {
 
   // Soft violet ambient aura
   const aura = ctx.createRadialGradient(w * 0.7, h * 0.4, 10, w * 0.7, h * 0.4, 280);
-  aura.addColorStop(0, 'rgba(124, 58, 237, 0.45)');
-  aura.addColorStop(1, 'rgba(124, 58, 237, 0)');
+  aura.addColorStop(0, 'rgba(157, 78, 221, 0.45)');
+  aura.addColorStop(1, 'rgba(157, 78, 221, 0)');
   ctx.fillStyle = aura;
   ctx.fillRect(0, 0, w, h);
 
@@ -255,7 +255,7 @@ function renderEnipuMockup(ctx, w, h) {
   ctx.fillText('ENIPU', 35, 48);
 
   ctx.font = '600 12px "JetBrains Mono", monospace';
-  ctx.fillStyle = 'rgba(167, 139, 250, 0.9)';
+  ctx.fillStyle = 'rgba(224, 170, 255, 0.9)';
   ctx.fillText('BRAND IDENTITY & DIGITAL EXPERIENCE', 35, 74);
 
   // UI Metrics block
@@ -364,7 +364,7 @@ function renderInceptionMockup(ctx, w, h) {
   ctx.lineTo(w, h);
   ctx.lineTo(w * 0.4, h);
   ctx.closePath();
-  ctx.fillStyle = 'rgba(139, 92, 246, 0.15)';
+  ctx.fillStyle = 'rgba(199, 125, 255, 0.15)';
   ctx.fill();
   ctx.restore();
 

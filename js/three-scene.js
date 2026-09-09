@@ -82,7 +82,7 @@ class HeroThreeScene {
     mainLight.position.set(5, 8, 6);
     this.scene.add(mainLight);
 
-    const violetLight = new THREE.PointLight(0x7c3aed, 3.5, 20);
+    const violetLight = new THREE.PointLight(0x9d4edd, 3.5, 20);
     violetLight.position.set(-4, -2, 3);
     this.scene.add(violetLight);
 
@@ -131,7 +131,7 @@ class HeroThreeScene {
     // Inner Floating Iridescent Core Sphere
     const innerSphereGeo = new THREE.SphereGeometry(0.75, 48, 48);
     const innerMaterial = new THREE.MeshPhysicalMaterial({
-      color: 0x8b5cf6,
+      color: 0xc77dff,
       emissive: 0x4f46e5,
       emissiveIntensity: 0.35,
       roughness: 0.2,
