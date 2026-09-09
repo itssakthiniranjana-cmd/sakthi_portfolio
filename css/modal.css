@@ -1,6 +1,5 @@
 /* ==========================================================================
-   PROJECT DETAIL & LIVE SITE MODAL SYSTEM
-   Cinematic full-screen overlay, case-study narrative, tabs, iframe/preview container
+   PROJECT DETAIL & LIVE SITE MODAL SYSTEM — EXGRID LIGHT EDITION
    ========================================================================== */
 
 .modal-backdrop {
@@ -9,17 +8,17 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(20, 15, 35, 0.55);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 1000;
+  background: rgba(24, 24, 24, 0.65);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s var(--ease-out-expo), visibility 0.4s;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
 }
 
 .modal-backdrop.open {
@@ -29,16 +28,16 @@
 
 .modal-container {
   background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color, #d9d9d9);
+  border-radius: var(--radius-xl, 30px);
   width: 100%;
   max-width: 1050px;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 30px 80px rgba(20, 15, 45, 0.2), 0 0 50px var(--lavender-glow);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
   position: relative;
   transform: translateY(30px) scale(0.97);
-  transition: transform 0.4s var(--ease-out-expo);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
@@ -54,54 +53,55 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-medium);
+  background: #ffffff;
+  border: 1px solid var(--border-color, #d9d9d9);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  transition: all var(--transition-fast);
-  color: var(--text-primary);
+  transition: all 0.25s ease;
+  color: var(--theme-color, #181818);
 }
 
 .modal-close-btn:hover {
-  background: var(--lavender-primary);
-  border-color: var(--lavender-primary);
+  background: var(--quinary-color, #f70354);
+  border-color: var(--quinary-color, #f70354);
   color: #ffffff;
-  box-shadow: 0 0 20px var(--lavender-glow);
   transform: rotate(90deg);
 }
 
 .modal-header {
   padding: 3rem 3rem 1.5rem 3rem;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-color, #d9d9d9);
   position: relative;
 }
 
 .modal-category-tag {
   display: inline-flex;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, monospace);
   font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--accent-primary);
+  color: var(--quinary-color, #f70354);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
 }
 
 .modal-title {
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-family: var(--sp-grotesk, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.15;
+  color: var(--theme-color, #181818);
   margin-bottom: 0.75rem;
 }
 
 .modal-subtitle {
   font-size: 1.125rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
+  color: var(--quaternary-color, #686868);
+  line-height: 1.6;
   max-width: 780px;
 }
 
@@ -113,12 +113,12 @@
 }
 
 .modal-visual-hero {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-lg, 24px);
   overflow: hidden;
   aspect-ratio: 16/9;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-secondary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color, #d9d9d9);
+  background: #f8f8f8;
 }
 
 .modal-visual-hero img, .modal-visual-hero .modal-canvas-art {
@@ -134,24 +134,25 @@
 }
 
 .modal-section-title {
-  font-family: var(--font-display);
+  font-family: var(--sp-grotesk, sans-serif);
   font-size: 1.25rem;
   font-weight: 800;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
+  color: var(--theme-color, #181818);
 }
 
 .modal-desc-paragraph {
   font-size: 1.0625rem;
-  color: var(--text-secondary);
+  color: var(--quaternary-color, #686868);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
 .modal-meta-box {
-  background: var(--bg-lavender-tint);
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
+  background: rgba(247, 3, 84, 0.04);
+  border: 1px solid var(--border-color, #d9d9d9);
+  border-radius: var(--radius-md, 20px);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
@@ -164,20 +165,20 @@
 }
 
 .modal-meta-key {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, monospace);
   font-size: 0.6875rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--senary-color, #949494);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.25rem;
 }
 
 .modal-meta-val {
-  font-family: var(--font-display);
+  font-family: var(--sp-grotesk, sans-serif);
   font-size: 0.9375rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--theme-color, #181818);
 }
 
 .modal-key-screens-grid {
@@ -187,22 +188,24 @@
 }
 
 .modal-screen-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid var(--border-color, #d9d9d9);
+  border-radius: var(--radius-md, 20px);
   padding: 1.25rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .modal-screen-name {
+  font-family: var(--sp-grotesk, sans-serif);
   font-size: 0.9375rem;
   font-weight: 700;
   margin-bottom: 0.35rem;
+  color: var(--theme-color, #181818);
 }
 
 .modal-screen-desc {
   font-size: 0.8125rem;
-  color: var(--text-secondary);
+  color: var(--quaternary-color, #686868);
   line-height: 1.5;
 }
 
@@ -212,7 +215,7 @@
   align-items: center;
   gap: 1rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border-color, #d9d9d9);
 }
 
 @media (max-width: 860px) {
