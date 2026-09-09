@@ -4,7 +4,6 @@
  * Senior UX/UI Designer | Product Designer | Creative Strategist
  */
 
-import { initExgridAnimations } from './animations.js';
 import { renderCapabilities } from './capabilities-3d.js';
 import { renderSelectedWork } from './gallery-3d.js';
 import { initExperienceEducationToggle } from './experience-toggle.js';
@@ -12,22 +11,19 @@ import { initModal, openModal } from './modal.js';
 import { PERSONAL_INFO, SELECTED_WORK } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Exgrid Animations & Lenis Smooth Scrolling
-  initExgridAnimations();
-
-  // 2. Initialize Modals
+  // 1. Initialize Modals
   initModal();
 
-  // 3. Initialize Exgrid UI Interactions
+  // 2. Initialize Exgrid UI Interactions
   initExgridInteractions();
 
-  // 4. Initialize Custom Magnetic Cursor
+  // 3. Initialize Custom Magnetic Cursor
   initCustomCursor();
 
-  // 5. Initialize Scroll-To-Top Progress Indicator
+  // 4. Initialize Scroll-To-Top Progress Indicator
   initProgressWrap();
 
-  // 6. Render Dynamic Components if present on current standalone page
+  // 5. Render Dynamic Components if present on current standalone page
   if (document.getElementById('capabilities-container')) {
     renderCapabilities('capabilities-container');
   }
@@ -38,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initExperienceEducationToggle('exp-edu-container');
   }
 
-  // 7. Set Active Navigation Link
+  // 6. Set Active Navigation Link
   setActiveNavLink();
 
-  // 8. Case Study Row Click Handlers on Homepage
+  // 7. Case Study Row Click Handlers on Homepage
   initCaseStudyTriggers();
 });
 
@@ -95,18 +91,14 @@ function initCaseStudyTriggers() {
   caseStudyRows.forEach(row => {
     const projectId = row.getAttribute('data-project-id');
     const project = SELECTED_WORK.find(p => p.id === projectId);
-    const hoverPreview = row.querySelector('.case-study-hover');
 
-    if (hoverPreview && window.innerWidth > 576) {
+    // Mouse movement inside row to position floating hover preview
+    const hoverPreview = row.querySelector('.case-study-hover');
+    if (hoverPreview) {
       row.addEventListener('mousemove', (e) => {
         const rect = row.getBoundingClientRect();
-        const dx = e.clientX - rect.left;
-        const dy = e.clientY - rect.top;
-        hoverPreview.style.transform = `translate(${dx - 140}px, ${dy - 90}px) rotate(6deg) scale(1)`;
-      });
-
-      row.addEventListener('mouseleave', () => {
-        hoverPreview.style.transform = `translate(-50%, -50%) rotate(3deg) scale(0.85)`;
+        const x = e.clientX - rect.left;
+        hoverPreview.style.left = `${Math.min(Math.max(x + 20, 150), rect.width - 240)}px`;
       });
     }
 

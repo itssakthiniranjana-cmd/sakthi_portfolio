@@ -34,14 +34,6 @@
 </head>
 <body>
 
-  <!-- ==== EXGRID PRELOADER ==== -->
-  <div id="preloader">
-    <div class="preloader-inner">
-      <img src="assets/img/logo.png" alt="Sakthi Niranjana" class="preloader-logo">
-      <div class="preloader-spinner"></div>
-    </div>
-  </div>
-
   <!-- Ambient Light Orbs -->
   <div class="noise-overlay" aria-hidden="true"></div>
   <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
@@ -60,7 +52,8 @@
         <div class="navbar-inner">
           <div class="navbar__logo">
             <a href="index.html" aria-label="Sakthi Niranjana Home">
-              <img src="assets/img/logo.png" alt="Sakthi Niranjana S." class="navbar-logo-img">
+              <i class="fa-solid fa-shapes" style="color:var(--lavender-primary);"></i>
+              <span>SAKTHI NIRANJANA</span>
             </a>
           </div>
 
@@ -88,61 +81,13 @@
       <button class="offcanvas-close" id="close-offcanvas-btn" aria-label="Close offcanvas">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <div class="offcanvas-inner">
-        <div class="offcanvas-header-block">
-          <span class="case-pill">EXPLORE PORTFOLIO</span>
-          <h2 class="title-xl fw-8">Sakthi Niranjana S</h2>
-        </div>
-        <ul class="offcanvas-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="capabilities.html">Capabilities</a></li>
-          <li><a href="work.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="offcanvas-gallery">
-          <a href="work.html" class="offcanvas-card">
-            <div class="offcanvas-card-thumb">
-              <img src="assets/img/projects/paytrav.jpg" alt="Paytrav">
-              <span class="offcanvas-badge">FinTech</span>
-            </div>
-            <div class="offcanvas-card-info">
-              <h4>Paytrav Platform</h4>
-              <p>B2B Travel SaaS &amp; Payments Switch</p>
-            </div>
-          </a>
-          <a href="work.html" class="offcanvas-card">
-            <div class="offcanvas-card-thumb">
-              <img src="assets/img/projects/gulfticket.jpg" alt="Gulf Ticket">
-              <span class="offcanvas-badge">Gaming</span>
-            </div>
-            <div class="offcanvas-card-info">
-              <h4>Gulf Ticket</h4>
-              <p>Global Digital Lottery &amp; Raffles</p>
-            </div>
-          </a>
-          <a href="work.html" class="offcanvas-card">
-            <div class="offcanvas-card-thumb">
-              <img src="assets/img/projects/easestay.jpg" alt="Easestay">
-              <span class="offcanvas-badge">PropTech</span>
-            </div>
-            <div class="offcanvas-card-info">
-              <h4>Easestay</h4>
-              <p>Corporate Housing &amp; Managed Stays</p>
-            </div>
-          </a>
-          <a href="work.html" class="offcanvas-card">
-            <div class="offcanvas-card-thumb">
-              <img src="assets/img/projects/wareknit.jpg" alt="Wareknit">
-              <span class="offcanvas-badge">Logistics</span>
-            </div>
-            <div class="offcanvas-card-info">
-              <h4>Wareknit</h4>
-              <p>Garment Supply Chain Telemetry</p>
-            </div>
-          </a>
-        </div>
-      </div>
+      <ul class="offcanvas-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="work.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <!-- ==== EXGRID 3-COLUMN BENTO BANNER SECTION ==== -->
@@ -153,7 +98,7 @@
 
             <!-- 1. LEFT COLUMN: PROFILE META CARD -->
             <aside class="banner__meta">
-              <div class="banner__meta-single bg-grd-one">
+              <div class="banner__meta-single">
                 <div class="thumb">
                   <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana S Portrait" loading="eager">
                 </div>
@@ -175,11 +120,11 @@
                   </p>
                 </div>
                 <hr>
-                <div class="social justify-content-start">
-                  <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn in" title="LinkedIn">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
                     <i class="fa-brands fa-linkedin-in"></i>
                   </a>
-                  <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn tw" title="Behance">
+                  <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn" title="Behance">
                     <i class="fa-brands fa-behance"></i>
                   </a>
                   <a href="mailto:its.sakthiniranjana@gmail.com" class="social-btn" title="Email Direct">
@@ -192,20 +137,20 @@
               </div>
 
               <div class="banner__meta-btn">
-                <a href="contact.html" class="fw-7 text-capitalize rt-btn">
+                <a href="contact.html">
                   <span>Hire Me / Let's Connect</span>
                   <i class="fa-solid fa-circle-arrow-right"></i>
                 </a>
               </div>
 
               <div class="banner__meta-btn">
-                <a href="mailto:its.sakthiniranjana@gmail.com" class="fw-7 text-capitalize rt-btn" id="downloadCv">
+                <a href="mailto:its.sakthiniranjana@gmail.com" id="download-cv-btn">
                   <span>Request Full Resume</span>
                   <i class="fa-solid fa-cloud-arrow-down"></i>
                 </a>
               </div>
 
-              <p class="text-senary tertiary-text">
+              <p class="tertiary-text">
                 &copy; 2026 Sakthi Niranjana S. All Rights Reserved.
               </p>
             </aside>
@@ -214,43 +159,40 @@
             <div class="banner__content">
 
               <!-- HERO GREETING INTRO CARD -->
-              <div class="banner__content-single bg-grd-two">
-                <h2 class="title-xxl">
+              <div class="banner__content-single">
+                <h2>
                   Hi I'm Sakthi,<br>
                   <span>Senior UX/UI &amp; Product Designer</span>
                 </h2>
                 <p class="intro-lead">
-                  I specialize in turning complex enterprise workflows, SaaS platforms, and startup visions into intuitive, accessible and visually arresting digital platforms. Currently leading design at FlowHive Solutions.
+                  I specialize in turning complex enterprise workflows and early-stage startup visions into intuitive, accessible and visually arresting digital platforms. Currently leading design at FlowHive Solutions.
                 </p>
                 <hr>
-                <div class="cta">
-                  <div class="cta-single">
-                    <p class="d-flex align-items-center">
+                <div class="cta-row">
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
                       <i class="fa-solid fa-circle-check"></i>
                       <span>4+</span>
-                    </p>
-                    <p class="text-uppercase text-quaternary text-sm">YEARS EXPERIENCE</p>
+                    </div>
+                    <span class="cta-stat-label">YEARS EXPERIENCE</span>
                   </div>
-                  <div class="cta-single">
-                    <p class="d-flex align-items-center">
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
                       <i class="fa-solid fa-circle-check"></i>
                       <span>23</span>
-                    </p>
-                    <p class="text-uppercase text-quaternary text-sm">LIVE PROJECTS</p>
+                    </div>
+                    <span class="cta-stat-label">LIVE PROJECTS</span>
                   </div>
-                  <div class="cta-single">
-                    <p class="d-flex align-items-center">
+                  <div class="cta-stat-item">
+                    <div class="cta-stat-num">
                       <i class="fa-solid fa-circle-check"></i>
                       <span>10+</span>
-                    </p>
-                    <p class="text-uppercase text-quaternary text-sm">DISCIPLINES</p>
+                    </div>
+                    <span class="cta-stat-label">DISCIPLINES</span>
                   </div>
-                  <div class="cta-single cta-btn-col">
-                    <a href="contact.html" class="fw-7 text-capitalize anim-btn">
-                      <span class="btn-anim-wrapper">
-                        <span class="btn-anim">Hire Me</span>
-                        <span class="btn-m">Hire Me</span>
-                      </span>
+                  <div class="cta-stat-item">
+                    <a href="contact.html" class="anim-btn">
+                      <span>Hire Me</span>
                       <i class="fa-solid fa-circle-arrow-right"></i>
                     </a>
                   </div>
@@ -258,11 +200,11 @@
               </div>
 
               <!-- PROJECTS STREAM -->
-              <div class="banner__content-study pt-60 fade-wrapper">
-                <div class="title-animation">
-                  <h2>Featured <span class="text-quinary">Projects</span></h2>
-                  <a href="work.html" class="view-all-link">
-                    VIEW ALL 23 <i class="fa-solid fa-arrow-right"></i>
+              <div class="banner__content-study">
+                <div class="section-title-wrap">
+                  <h3 class="title-xl">Projects</h3>
+                  <a href="work.html" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
+                    VIEW ALL PROJECTS <i class="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
 
@@ -437,57 +379,49 @@
                 </div>
               </div>
 
-              <!-- ABOUT ME SECTION -->
-              <div class="banner__content-about pt-60 fade-wrapper">
-                <div class="title-animation">
-                  <h2>About <span class="text-quinary">Me</span></h2>
-                  <a href="about.html" class="view-all-link">
-                    READ FULL STORY <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="banner__content-about-inner">
-                  <h3 class="about-headline-quote">
-                    "Turning complex <span class="highlight">product systems, digital innovation &amp; brand strategy</span> into effortless, human-centered digital experiences."
-                  </h3>
-                  <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
-                    Passionate UX/UI Designer and Content Strategist with a focus on creating user-centered digital experiences and impactful brand communication. Dedicated to building intuitive interfaces, scalable design solutions, and engaging user experiences that align with business goals.
-                  </p>
-                  <div class="bn-about-achievements">
-                    <div class="achievement-row">
-                      <i class="fa-solid fa-award"></i>
-                      <div>
-                        <strong style="color:var(--text-primary);">FlowHive Solutions (Atlanta, GA):</strong>
-                        <span> Senior UX/UI Designer &amp; Content Head contributing to product design, design systems, and digital innovation.</span>
-                      </div>
+              <!-- ABOUT & LEADERSHIP CARD -->
+              <div class="banner__content-about-inner">
+                <h3 class="about-headline-quote">
+                  "Turning complex <span class="highlight">product systems, digital innovation &amp; brand strategy</span> into effortless, human-centered digital experiences."
+                </h3>
+                <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
+                  Passionate UX/UI Designer and Content Strategist with a focus on creating user-centered digital experiences and impactful brand communication. Dedicated to building intuitive interfaces, scalable design solutions, and engaging user experiences that align with business goals.
+                </p>
+                <div class="bn-about-achievements">
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-award"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">FlowHive Solutions (Atlanta, GA):</strong>
+                      <span> Senior UX/UI Designer &amp; Content Head contributing to product design, design systems, and digital innovation.</span>
                     </div>
-                    <div class="achievement-row">
-                      <i class="fa-solid fa-layer-group"></i>
-                      <div>
-                        <strong style="color:var(--text-primary);">GI TECH GAMING CO INDIA PVT LTD:</strong>
-                        <span> UX/UI Designer delivering high-fidelity UI, user research, wireframing, motion graphics &amp; component libraries.</span>
-                      </div>
+                  </div>
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">GI TECH GAMING CO INDIA PVT LTD:</strong>
+                      <span> UX/UI Designer delivering high-fidelity UI, user research, wireframing, motion graphics &amp; component libraries.</span>
                     </div>
-                    <div class="achievement-row">
-                      <i class="fa-solid fa-globe"></i>
-                      <div>
-                        <strong style="color:var(--text-primary);">23 Live Real-World Products:</strong>
-                        <span> Designed and shipped production platforms across FinTech, Gaming, PropTech, and Logistics.</span>
-                      </div>
+                  </div>
+                  <div class="achievement-row">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                      <strong style="color:var(--text-primary);">23 Live Real-World Products:</strong>
+                      <span> Designed and shipped production platforms across FinTech, Gaming, PropTech, and Logistics.</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               <!-- EXPERIENCE HISTORY -->
-              <div class="banner__history fade-wrapper">
-                <div class="title-animation">
-                  <h2>Experience <span class="text-quinary">History</span></h2>
-                  <a href="about.html#experience" class="view-all-link">
+              <div class="banner__history">
+                <div class="section-title-wrap">
+                  <h3 class="title-xl">Experience History</h3>
+                  <a href="about.html#experience" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
                     VIEW FULL TIMELINE <i class="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
 
-                <div class="banner__history-single fade-top">
+                <div class="banner__history-single">
                   <div class="lefter">
                     <h2 class="title-lg">Feb 2026 — Present</h2>
                   </div>
@@ -497,7 +431,7 @@
                   </div>
                 </div>
 
-                <div class="banner__history-single fade-top">
+                <div class="banner__history-single">
                   <div class="lefter">
                     <h2 class="title-lg">May 2024 — Present</h2>
                   </div>
@@ -507,7 +441,7 @@
                   </div>
                 </div>
 
-                <div class="banner__history-single fade-top">
+                <div class="banner__history-single">
                   <div class="lefter">
                     <h2 class="title-lg">Nov 2023 — Jan 2024</h2>
                   </div>
@@ -517,7 +451,7 @@
                   </div>
                 </div>
 
-                <div class="banner__history-single fade-top">
+                <div class="banner__history-single">
                   <div class="lefter">
                     <h2 class="title-lg">Jul 2022 — Sep 2022</h2>
                   </div>
@@ -527,7 +461,7 @@
                   </div>
                 </div>
 
-                <div class="banner__history-single fade-top">
+                <div class="banner__history-single">
                   <div class="lefter">
                     <h2 class="title-lg">May 2021 — Jul 2021</h2>
                   </div>
@@ -541,13 +475,13 @@
             </div>
 
             <!-- 3. RIGHT COLUMN: SIDEBAR WIDGETS -->
-            <aside class="banner__sidebar fade-wrapper">
+            <aside class="banner__sidebar">
 
               <!-- Specializations Widget -->
-              <div class="banner__sidebar-single bg-grd-two">
+              <div class="banner__sidebar-single">
                 <h5 class="title-sm">My Specializations</h5>
 
-                <div class="banner__sidebar-special fade-top">
+                <div class="banner__sidebar-special">
                   <a href="capabilities.html">
                     <div class="service-info">
                       <span class="spec-name">UX/UI Design</span>
@@ -557,7 +491,7 @@
                   </a>
                 </div>
 
-                <div class="banner__sidebar-special fade-top">
+                <div class="banner__sidebar-special">
                   <a href="capabilities.html">
                     <div class="service-info">
                       <span class="spec-name">Product Strategy</span>
@@ -567,7 +501,7 @@
                   </a>
                 </div>
 
-                <div class="banner__sidebar-special fade-top">
+                <div class="banner__sidebar-special">
                   <a href="capabilities.html">
                     <div class="service-info">
                       <span class="spec-name">Design Systems</span>
@@ -577,7 +511,7 @@
                   </a>
                 </div>
 
-                <div class="banner__sidebar-special fade-top">
+                <div class="banner__sidebar-special">
                   <a href="capabilities.html">
                     <div class="service-info">
                       <span class="spec-name">Enterprise WMS</span>
@@ -587,7 +521,7 @@
                   </a>
                 </div>
 
-                <div class="banner__sidebar-special fade-top">
+                <div class="banner__sidebar-special">
                   <a href="capabilities.html">
                     <div class="service-info">
                       <span class="spec-name">AI Transformation</span>
@@ -599,22 +533,22 @@
               </div>
 
               <!-- Education & Experience Widget -->
-              <div class="banner__sidebar-single bg-grd-two">
+              <div class="banner__sidebar-single">
                 <h5 class="title-sm">Career &amp; Education</h5>
 
-                <div class="banner__sidebar-experience fade-top">
+                <div class="banner__sidebar-experience">
                   <span class="time-frame-pill">Feb 2026 - Present</span>
                   <p class="designation">Senior UX/UI Designer &amp; Content Head</p>
                   <p class="ins-name">FlowHive Solutions (Atlanta, GA)</p>
                 </div>
 
-                <div class="banner__sidebar-experience fade-top">
+                <div class="banner__sidebar-experience">
                   <span class="time-frame-pill">May 2024 - Present</span>
                   <p class="designation">UX/UI Designer</p>
                   <p class="ins-name">GI TECH GAMING CO INDIA PVT LTD</p>
                 </div>
 
-                <div class="banner__sidebar-experience fade-top">
+                <div class="banner__sidebar-experience">
                   <span class="time-frame-pill">Nov 2023 - Jan 2024</span>
                   <p class="designation">UX/UI Design Intern</p>
                   <p class="ins-name">Techienutpam</p>
@@ -624,11 +558,6 @@
             </aside>
 
           </div>
-        </div>
-
-        <!-- Exgrid Signature Vertical Watermark -->
-        <div class="tag-t" aria-hidden="true">
-          <h2>SAKTHI</h2>
         </div>
       </section>
 
@@ -666,158 +595,7 @@
           </defs>
         </svg>
 
-        <!-- Dual Track Showcase: Row 1 Projects Gallery (Moving Left) -->
-        <div class="img-view__wrapper img-view__left">
-          <div class="ticker-track">
-            <!-- Set 1: 10 Project Showcase Cards -->
-            <div class="img-view__single">
-              <img src="assets/img/projects/paytrav.jpg" alt="Paytrav B2B SaaS" loading="lazy">
-              <div class="card-caption">
-                <span>Paytrav Platform</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gulfticket.jpg" alt="Gulf Ticket Global Lottery" loading="lazy">
-              <div class="card-caption">
-                <span>Gulf Ticket</span>
-                <span class="case-pill">Gaming</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/easestay.jpg" alt="Easestay PropTech" loading="lazy">
-              <div class="card-caption">
-                <span>Easestay</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/armsoft.jpg" alt="ARMSOFT Enterprise" loading="lazy">
-              <div class="card-caption">
-                <span>ARMSOFT</span>
-                <span class="case-pill">Enterprise</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gismartparking.jpg" alt="GI Smart Parking IoT" loading="lazy">
-              <div class="card-caption">
-                <span>GI Smart Parking</span>
-                <span class="case-pill">Smart IoT</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wingspace.jpg" alt="Wingspace Coworking" loading="lazy">
-              <div class="card-caption">
-                <span>Wingspace</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/cityflo.jpg" alt="Cityflo Mobility" loading="lazy">
-              <div class="card-caption">
-                <span>Cityflo Transit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/raftaarpay.jpg" alt="Raftaar Pay Merchant Hub" loading="lazy">
-              <div class="card-caption">
-                <span>Raftaar Pay</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wareknit.jpg" alt="Wareknit Textile Telemetry" loading="lazy">
-              <div class="card-caption">
-                <span>Wareknit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/figmaprojects.jpg" alt="Figma Enterprise Design System" loading="lazy">
-              <div class="card-caption">
-                <span>Figma Archive</span>
-                <span class="case-pill">Design Systems</span>
-              </div>
-            </div>
-
-            <!-- Set 2: Duplicate for Seamless Loop -->
-            <div class="img-view__single">
-              <img src="assets/img/projects/paytrav.jpg" alt="Paytrav B2B SaaS" loading="lazy">
-              <div class="card-caption">
-                <span>Paytrav Platform</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gulfticket.jpg" alt="Gulf Ticket Global Lottery" loading="lazy">
-              <div class="card-caption">
-                <span>Gulf Ticket</span>
-                <span class="case-pill">Gaming</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/easestay.jpg" alt="Easestay PropTech" loading="lazy">
-              <div class="card-caption">
-                <span>Easestay</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/armsoft.jpg" alt="ARMSOFT Enterprise" loading="lazy">
-              <div class="card-caption">
-                <span>ARMSOFT</span>
-                <span class="case-pill">Enterprise</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gismartparking.jpg" alt="GI Smart Parking IoT" loading="lazy">
-              <div class="card-caption">
-                <span>GI Smart Parking</span>
-                <span class="case-pill">Smart IoT</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wingspace.jpg" alt="Wingspace Coworking" loading="lazy">
-              <div class="card-caption">
-                <span>Wingspace</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/cityflo.jpg" alt="Cityflo Mobility" loading="lazy">
-              <div class="card-caption">
-                <span>Cityflo Transit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/raftaarpay.jpg" alt="Raftaar Pay Merchant Hub" loading="lazy">
-              <div class="card-caption">
-                <span>Raftaar Pay</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wareknit.jpg" alt="Wareknit Textile Telemetry" loading="lazy">
-              <div class="card-caption">
-                <span>Wareknit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/figmaprojects.jpg" alt="Figma Enterprise Design System" loading="lazy">
-              <div class="card-caption">
-                <span>Figma Archive</span>
-                <span class="case-pill">Design Systems</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dual Track Showcase: Row 2 Tools & Technologies Marquee (Moving Right) -->
-        <div class="img-view__wrapper img-view__right">
-          <div class="ticker-track">
+        <div class="ticker-track">
           <!-- ===== SET 1: 21 TOOLS ===== -->
           <!-- 1. Figma -->
           <div class="tool-logo-item" title="Figma">
@@ -1224,8 +1002,7 @@
             <span>Lovable</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </main>
 
     <!-- ==== EXGRID BIG EDITORIAL FOOTER ==== -->
@@ -1284,10 +1061,6 @@
       <div id="modal-content-target"></div>
     </div>
   </div>
-
-  <!-- GSAP & ScrollTrigger CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
