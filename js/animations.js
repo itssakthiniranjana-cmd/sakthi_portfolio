@@ -1,24 +1,18 @@
 /**
- * Exgrid Light Animations & Smooth Scrolling System
- * Exact match to Exgrid ScrollSmoother (smooth: 2.2, effects: true, sticky pinning)
+ * Exgrid Light Animations System
+ * Native Natural Scrolling with GSAP 3 & ScrollTrigger
  */
 
 export function initExgridAnimations() {
-  // 1. Initialize Smooth Scrolling (2.2s smooth inertia matching Exgrid)
-  const lenis = initLenisSmoothScroll();
-
-  // 2. Preloader Animation
+  // 1. Preloader Animation
   initPreloader();
 
-  // 3. GSAP ScrollTrigger Animations
+  // 2. GSAP ScrollTrigger Animations
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
     // Hero Greeting Title Reveal
     initHeroAnimations();
-
-    // Sticky Bento Columns Pinning (Matching Exgrid banner sticky)
-    initBannerSticky();
 
     // Section Titles Kinetic Animations
     initTitleAnimations();
@@ -26,60 +20,14 @@ export function initExgridAnimations() {
     // Fade-Top Staggered Elements
     initFadeTopAnimations();
 
-    // Watermark Background Parallax (Matching Exgrid tag-t parallax)
+    // Watermark Background Parallax
     initWatermarkParallax();
 
     // Footer Animations
     initFooterAnimations();
   }
 
-  return lenis;
-}
-
-function initLenisSmoothScroll() {
-  if (typeof Lenis === 'undefined') return null;
-
-  try {
-    const wrapperEl = document.getElementById('smooth-wrapper');
-    const contentEl = document.getElementById('smooth-content');
-
-    const lenis = new Lenis({
-      wrapper: wrapperEl || window,
-      content: contentEl || document.body,
-      duration: 2.2, // Exact Exgrid 2.2 smooth inertia
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      smoothTouch: true,
-      touchMultiplier: 1.5,
-      wheelMultiplier: 1.0,
-      lerp: 0.08,
-    });
-
-    // Synchronize Lenis with GSAP ScrollTrigger
-    if (typeof ScrollTrigger !== 'undefined') {
-      lenis.on('scroll', ScrollTrigger.update);
-    }
-
-    if (typeof gsap !== 'undefined') {
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-      });
-      gsap.ticker.lagSmoothing(500, 33);
-    } else {
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-    }
-
-    return lenis;
-  } catch (err) {
-    console.warn('Lenis initialization skipped:', err);
-    return null;
-  }
+  return null;
 }
 
 function initPreloader() {
@@ -114,43 +62,6 @@ function initPreloader() {
       setTimeout(hidePreloader, 200);
     });
     setTimeout(hidePreloader, 1000);
-  }
-}
-
-function initBannerSticky() {
-  if (typeof ScrollTrigger === 'undefined') return;
-  if (window.innerWidth < 1200) return;
-
-  const banner = document.querySelector('.banner');
-  const metaElement = document.querySelector('.banner__meta');
-  const sidebarElement = document.querySelector('.banner__sidebar');
-
-  if (!banner) return;
-
-  if (metaElement) {
-    ScrollTrigger.create({
-      trigger: banner,
-      start: 'top top+=90px',
-      end: () => `bottom top+=${metaElement.clientHeight + 160}`,
-      pin: metaElement,
-      pinSpacing: false,
-      id: 'banner-meta-pin',
-      markers: false,
-      invalidateOnRefresh: true,
-    });
-  }
-
-  if (sidebarElement) {
-    ScrollTrigger.create({
-      trigger: banner,
-      start: 'top top+=90px',
-      end: () => `bottom top+=${sidebarElement.clientHeight + 160}`,
-      pin: sidebarElement,
-      pinSpacing: false,
-      id: 'banner-sidebar-pin',
-      markers: false,
-      invalidateOnRefresh: true,
-    });
   }
 }
 
