@@ -1,10 +1,10 @@
 /**
  * Exgrid Light Animations & Smooth Scrolling System
- * Integrates Lenis Smooth Scroll with GSAP 3 & ScrollTrigger
+ * Exact match to Exgrid ScrollSmoother (smooth: 2.2, effects: true, sticky pinning)
  */
 
 export function initExgridAnimations() {
-  // 1. Initialize Lenis Smooth Scrolling
+  // 1. Initialize Smooth Scrolling (2.2s smooth inertia matching Exgrid)
   const lenis = initLenisSmoothScroll();
 
   // 2. Preloader Animation
@@ -17,13 +17,16 @@ export function initExgridAnimations() {
     // Hero Greeting Title Reveal
     initHeroAnimations();
 
+    // Sticky Bento Columns Pinning (Matching Exgrid banner sticky)
+    initBannerSticky();
+
     // Section Titles Kinetic Animations
     initTitleAnimations();
 
     // Fade-Top Staggered Elements
     initFadeTopAnimations();
 
-    // Watermark Background Parallax
+    // Watermark Background Parallax (Matching Exgrid tag-t parallax)
     initWatermarkParallax();
 
     // Footer Animations
@@ -37,14 +40,21 @@ function initLenisSmoothScroll() {
   if (typeof Lenis === 'undefined') return null;
 
   try {
+    const wrapperEl = document.getElementById('smooth-wrapper');
+    const contentEl = document.getElementById('smooth-content');
+
     const lenis = new Lenis({
-      duration: 1.2,
+      wrapper: wrapperEl || window,
+      content: contentEl || document.body,
+      duration: 2.2, // Exact Exgrid 2.2 smooth inertia
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smooth: true,
-      smoothTouch: false,
-      touchMultiplier: 2,
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      smoothTouch: true,
+      touchMultiplier: 1.5,
+      wheelMultiplier: 1.0,
+      lerp: 0.08,
     });
 
     // Synchronize Lenis with GSAP ScrollTrigger
@@ -104,6 +114,43 @@ function initPreloader() {
       setTimeout(hidePreloader, 200);
     });
     setTimeout(hidePreloader, 1000);
+  }
+}
+
+function initBannerSticky() {
+  if (typeof ScrollTrigger === 'undefined') return;
+  if (window.innerWidth < 1200) return;
+
+  const banner = document.querySelector('.banner');
+  const metaElement = document.querySelector('.banner__meta');
+  const sidebarElement = document.querySelector('.banner__sidebar');
+
+  if (!banner) return;
+
+  if (metaElement) {
+    ScrollTrigger.create({
+      trigger: banner,
+      start: 'top top+=90px',
+      end: () => `bottom top+=${metaElement.clientHeight + 160}`,
+      pin: metaElement,
+      pinSpacing: false,
+      id: 'banner-meta-pin',
+      markers: false,
+      invalidateOnRefresh: true,
+    });
+  }
+
+  if (sidebarElement) {
+    ScrollTrigger.create({
+      trigger: banner,
+      start: 'top top+=90px',
+      end: () => `bottom top+=${sidebarElement.clientHeight + 160}`,
+      pin: sidebarElement,
+      pinSpacing: false,
+      id: 'banner-sidebar-pin',
+      markers: false,
+      invalidateOnRefresh: true,
+    });
   }
 }
 
@@ -268,18 +315,26 @@ function initFadeTopAnimations() {
 
 function initWatermarkParallax() {
   const watermark = document.querySelector('.tag-t');
-  if (!watermark) return;
+  const watermarkHeading = document.querySelector('.tag-t h2');
+  if (!watermark || !watermarkHeading) return;
 
-  gsap.to(watermark, {
-    scrollTrigger: {
-      trigger: '.banner',
-      start: 'top top',
-      end: 'bottom bottom',
-      scrub: 1.5
-    },
-    y: 120,
-    ease: 'none'
-  });
+  if (window.innerWidth >= 992) {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.tag-t',
+        endTrigger: '.banner',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 0.5,
+        pin: true,
+      }
+    }).to(watermarkHeading, {
+      y: '-140px',
+      opacity: 0.35,
+      ease: 'none',
+      duration: 2,
+    });
+  }
 }
 
 function initFooterAnimations() {
@@ -323,4 +378,5 @@ function initFooterAnimations() {
     );
   }
 }
+
 

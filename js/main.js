@@ -95,14 +95,18 @@ function initCaseStudyTriggers() {
   caseStudyRows.forEach(row => {
     const projectId = row.getAttribute('data-project-id');
     const project = SELECTED_WORK.find(p => p.id === projectId);
-
-    // Mouse movement inside row to position floating hover preview
     const hoverPreview = row.querySelector('.case-study-hover');
-    if (hoverPreview) {
+
+    if (hoverPreview && window.innerWidth > 576) {
       row.addEventListener('mousemove', (e) => {
         const rect = row.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        hoverPreview.style.left = `${Math.min(Math.max(x + 20, 150), rect.width - 240)}px`;
+        const dx = e.clientX - rect.left;
+        const dy = e.clientY - rect.top;
+        hoverPreview.style.transform = `translate(${dx - 140}px, ${dy - 90}px) rotate(6deg) scale(1)`;
+      });
+
+      row.addEventListener('mouseleave', () => {
+        hoverPreview.style.transform = `translate(-50%, -50%) rotate(3deg) scale(0.85)`;
       });
     }
 
