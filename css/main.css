@@ -330,6 +330,33 @@ a:hover {
   padding-bottom: 80px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+/* Exgrid Signature Vertical Background Watermark */
+.tag-t {
+  position: absolute;
+  left: -20px;
+  bottom: 12%;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  opacity: 0.18;
+}
+
+.tag-t h2 {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 14vw, 13rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--lavender-primary);
+  margin: 0;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .banner__inner {
@@ -339,6 +366,63 @@ a:hover {
   justify-content: space-between;
   position: relative;
   z-index: 1;
+}
+
+/* Card Surface Backgrounds */
+.bg-grd-one,
+.bg-grd-two {
+  background: var(--bg-card);
+}
+
+/* Section Header Bar with Split Text & View All Link */
+.title-animation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.title-animation h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.title-animation h2 span.text-quinary {
+  color: var(--lavender-primary);
+}
+
+.view-all-link {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--lavender-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.view-all-link:hover {
+  color: var(--lavender-hover);
+  transform: translateX(4px);
+}
+
+.view-all-link i {
+  font-size: 0.85rem;
+  transition: transform var(--transition-fast);
+}
+
+.view-all-link:hover i {
+  transform: translateX(3px);
 }
 
 /* 1. LEFT COLUMN: PROFILE META CARD */
@@ -543,7 +627,7 @@ a:hover {
 }
 
 /* Stats / CTA Row */
-.cta-row {
+.cta, .cta-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -551,27 +635,28 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.cta-stat-item {
+.cta-single, .cta-stat-item {
   display: flex;
   flex-direction: column;
 }
 
-.cta-stat-num {
+.cta-single p.d-flex, .cta-stat-num {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 800;
   color: var(--text-primary);
+  margin-bottom: 0.25rem;
 }
 
-.cta-stat-num i {
+.cta-single p.d-flex i, .cta-stat-num i {
   font-size: 1.15rem;
   color: var(--lavender-primary);
 }
 
-.cta-stat-label {
+.cta-single p.text-uppercase, .cta-stat-label {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   font-weight: 700;
@@ -581,7 +666,78 @@ a:hover {
   margin-top: 0.25rem;
 }
 
-/* Animated Action Button */
+/* ==========================================================================
+   EXGRID PRELOADER
+   ========================================================================== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease;
+}
+
+#preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.preloader-spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--lavender-primary);
+  border-radius: 50%;
+  animation: preloader-spin 0.8s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+}
+
+.preloader-logo {
+  height: 38px;
+  width: auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 10px var(--lavender-glow));
+}
+
+@keyframes preloader-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   LENIS SMOOTH SCROLLING
+   ========================================================================== */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Animated Action Button with Rolling Text */
 .anim-btn {
   display: inline-flex;
   align-items: center;
@@ -597,7 +753,39 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
-  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.anim-btn .btn-anim-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 1.25em;
+  line-height: 1.25em;
+}
+
+.anim-btn .btn-anim {
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anim-btn .btn-m {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #ffffff;
+}
+
+.anim-btn:hover .btn-anim {
+  transform: translateY(-100%);
+}
+
+.anim-btn:hover .btn-m {
+  transform: translateY(-100%);
 }
 
 .anim-btn:hover {
@@ -609,7 +797,7 @@ a:hover {
 
 .anim-btn i {
   font-size: 1.1rem;
-  transition: transform var(--transition-fast);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .anim-btn:hover i {
@@ -974,12 +1162,40 @@ a:hover {
    TOOLS & TECHNOLOGIES LOGO MARQUEE (IMG-VIEW)
    ========================================================================== */
 .img-view {
-  padding: 36px 0;
+  padding: 42px 0;
   position: relative;
   overflow: hidden;
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.img-view__wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.img-view__left .ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  width: max-content;
+  animation: ticker-slide-left 42s linear infinite;
+}
+
+.img-view__right .ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  width: max-content;
+  animation: ticker-slide-right 42s linear infinite;
 }
 
 .ticker-track {
@@ -987,16 +1203,21 @@ a:hover {
   align-items: center;
   gap: 3.5rem;
   width: max-content;
-  animation: ticker-slide 45s linear infinite;
+  animation: ticker-slide-left 42s linear infinite;
 }
 
 .ticker-track:hover {
   animation-play-state: paused;
 }
 
-@keyframes ticker-slide {
+@keyframes ticker-slide-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes ticker-slide-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 .tool-logo-item {
