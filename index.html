@@ -347,66 +347,9 @@
                   </div>
                 </div>
               </div>
-
-              <!-- About & Honors Bento Card -->
-              <div class="banner__content-about" style="margin-top: 2rem;">
-                <div class="title-animation" style="margin-bottom: 1.5rem;">
-                  <h2 class="title-xl fw-7">About <span style="color:var(--lavender-primary);">Me</span></h2>
-                </div>
-                <div class="banner__content-about-inner">
-                  <h3 class="title-xxl fw-7" style="margin-bottom: 1.25rem;">
-                    Designing with <span style="color:var(--lavender-primary);">Purpose</span>, Clarity & Precision.
-                  </h3>
-                  <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                    Sakthi Niranjana is a Senior UX/UI & Product Designer focused on turning complex ideas into clear, intuitive and visually compelling digital systems for startups, enterprise platforms, and global brands.
-                  </p>
-                  <div class="bn-about__content">
-                    <h3 class="title-lg" style="margin-bottom:0.75rem;">Honors & Recognition.</h3>
-                    <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem; color:var(--text-secondary);">
-                      <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> 23+ High-Impact Enterprise & Startup Product Launches</li>
-                      <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> Lead Design System Architect for Multi-Platform Suites</li>
-                      <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> Cross-Platform Mobile & Web UI Specialist (iOS, Android, React)</li>
-                      <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> Fintech, IoT Mobility, and Logistics Domain Recognition</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- History Timeline -->
-              <div class="banner__history" style="margin-top: 2rem;">
-                <h3 class="title-xl fw-7" style="margin-bottom: 1.25rem;">Career History</h3>
-                <div class="banner__history-single">
-                  <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">Now</h2></div>
-                  <div class="righter">
-                    <h2 class="title-lg">Lead Product Designer</h2>
-                    <p style="color:var(--text-secondary);">SoftSuave Technologies / Freelance Consulting</p>
-                  </div>
-                </div>
-                <div class="banner__history-single">
-                  <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">2023</h2></div>
-                  <div class="righter">
-                    <h2 class="title-lg">Senior UI/UX Designer</h2>
-                    <p style="color:var(--text-secondary);">GI Projects & Enterprise Mobility</p>
-                  </div>
-                </div>
-                <div class="banner__history-single">
-                  <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">2022</h2></div>
-                  <div class="righter">
-                    <h2 class="title-lg">UI/UX Designer & Prototyper</h2>
-                    <p style="color:var(--text-secondary);">Digital Product Studio</p>
-                  </div>
-                </div>
-                <div class="banner__history-single">
-                  <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">2021</h2></div>
-                  <div class="righter">
-                    <h2 class="title-lg">Design Engineer</h2>
-                    <p style="color:var(--text-secondary);">Web Architecture & Frontend Systems</p>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <!-- 3. RIGHT SIDEBAR COLUMN -->
+            <!-- 3. RIGHT SIDEBAR COLUMN (Sticky with left sidebar) -->
             <aside class="banner__sidebar">
               <div class="banner__sidebar-single">
                 <h5 class="title-sm fw-7" style="margin-bottom:1rem;">My Specializations</h5>
@@ -481,7 +424,70 @@
               </div>
             </aside>
 
+          </div> <!-- /banner__inner -->
+
+          <!-- ==== ABOUT ME & CAREER HISTORY SECTION (Flows naturally once center scroll reaches About Me) ==== -->
+          <div class="landing-bottom-flow" id="about-me-section">
+            
+            <!-- About & Honors Bento Card -->
+            <div class="banner__content-about">
+              <div class="title-animation" style="margin-bottom: 1.5rem;">
+                <h2 class="title-xl fw-7">About <span style="color:var(--lavender-primary);">Me</span></h2>
+              </div>
+              <div class="banner__content-about-inner">
+                <h3 class="title-xxl fw-7" style="margin-bottom: 1.25rem;">
+                  Designing with <span style="color:var(--lavender-primary);">Purpose</span>, Clarity &amp; Precision.
+                </h3>
+                <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                  Sakthi Niranjana is a Senior UX/UI &amp; Product Designer focused on turning complex ideas into clear, intuitive and visually compelling digital systems for startups, enterprise platforms, and global brands.
+                </p>
+                <div class="bn-about__content">
+                  <h3 class="title-lg" style="margin-bottom:0.75rem;">Honors &amp; Recognition.</h3>
+                  <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem; color:var(--text-secondary);">
+                    <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> 23+ High-Impact Enterprise &amp; Startup Product Launches</li>
+                    <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> Lead Design System Architect for Multi-Platform Suites</li>
+                    <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> Cross-Platform Mobile &amp; Web UI Specialist (iOS, Android, React)</li>
+                    <li><i class="fa-solid fa-circle-check" style="color:var(--lavender-primary); margin-right:8px;"></i> Fintech, IoT Mobility, and Logistics Domain Recognition</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- History Timeline -->
+            <div class="banner__history">
+              <h3 class="title-xl fw-7" style="margin-bottom: 1.25rem;">Career History</h3>
+              <div class="banner__history-single">
+                <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">Now</h2></div>
+                <div class="righter">
+                  <h2 class="title-lg">Lead Product Designer</h2>
+                  <p style="color:var(--text-secondary);">SoftSuave Technologies / Freelance Consulting</p>
+                </div>
+              </div>
+              <div class="banner__history-single">
+                <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">2023</h2></div>
+                <div class="righter">
+                  <h2 class="title-lg">Senior UI/UX Designer</h2>
+                  <p style="color:var(--text-secondary);">GI Projects &amp; Enterprise Mobility</p>
+                </div>
+              </div>
+              <div class="banner__history-single">
+                <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">2022</h2></div>
+                <div class="righter">
+                  <h2 class="title-lg">UI/UX Designer &amp; Prototyper</h2>
+                  <p style="color:var(--text-secondary);">Digital Product Studio</p>
+                </div>
+              </div>
+              <div class="banner__history-single">
+                <div class="lefter"><h2 class="title-lg" style="color:var(--lavender-primary);">2021</h2></div>
+                <div class="righter">
+                  <h2 class="title-lg">Design Engineer</h2>
+                  <p style="color:var(--text-secondary);">Web Architecture &amp; Frontend Systems</p>
+                </div>
+              </div>
+            </div>
+
           </div>
+
         </div>
       </section>
 
