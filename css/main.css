@@ -227,7 +227,7 @@ a:hover {
 }
 
 .navbar__logo a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.75rem;
   font-family: var(--font-display);
@@ -236,6 +236,36 @@ a:hover {
   letter-spacing: -0.02em;
   color: var(--text-primary);
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-bounce), filter 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(234, 99, 140, 0.2));
+}
+
+.navbar__logo a:hover .navbar-logo-img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 16px rgba(234, 99, 140, 0.45));
+}
+
+@media (max-width: 991px) {
+  .navbar-logo-img {
+    height: 42px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-logo-img {
+    height: 36px;
+    max-width: 155px;
+  }
 }
 
 .navbar__logo a:hover {
