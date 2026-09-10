@@ -3035,68 +3035,299 @@ a:hover {
   gap: 0.35rem;
 }
 
-/* Recruiter Skills Grid */
-.recruiter-skills-grid {
+/* ===================================================
+   ELEVATED SKILLS & EXPERTISE BENTO MATRIX (HOMEPAGE)
+   =================================================== */
+.skills-bento-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.recruiter-skill-card {
+.skills-bento-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
   padding: 1.75rem;
-  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.recruiter-skill-card:hover {
+.skills-bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--lavender-primary), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.skills-bento-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: var(--shadow-lavender);
-  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(137, 2, 62, 0.08);
+  transform: translateY(-4px);
 }
 
-.recruiter-skill-header {
+.skills-bento-card:hover::before {
+  opacity: 1;
+}
+
+.skills-bento-card.span-bottom {
+  grid-column: span 1;
+}
+
+@media (min-width: 992px) {
+  .skills-bento-card.span-1-5 {
+    grid-column: span 1;
+  }
+  .skills-bento-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .skills-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills-bento-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
 }
 
-.recruiter-skill-header i {
-  font-size: 1.25rem;
+.skills-icon-wrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--lavender-tint);
+  border: 1px solid var(--border-lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--lavender-primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.recruiter-skill-header h3 {
+.skills-bento-card:hover .skills-icon-wrapper {
+  background: var(--lavender-primary);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.skills-bento-titles h3 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--text-primary);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 
-.recruiter-skill-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.skills-bento-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-quaternary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+  display: block;
+}
+
+.skills-pills-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.recruiter-skill-list li {
-  font-size: 0.85rem;
+.skill-matrix-pill {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
   font-weight: 500;
   color: var(--text-secondary);
-  background: rgba(0, 0, 0, 0.03);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
   border: 1px solid var(--border-subtle);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.skill-matrix-pill:hover {
+  background: var(--lavender-tint);
+  border-color: var(--border-lavender);
+  color: var(--lavender-primary);
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   ELEVATED CONNECTED EXPERIENCE TIMELINE (HOMEPAGE)
+   =================================================== */
+.exp-timeline-container {
+  position: relative;
+  padding-left: 2.25rem;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Continuous Vertical Spine */
+.exp-timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  bottom: 2rem;
+  left: 9px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--lavender-primary) 0%, var(--border-color) 70%, transparent 100%);
+}
+
+.exp-timeline-item {
+  position: relative;
+}
+
+/* Glowing Timeline Dot */
+.exp-timeline-dot {
+  position: absolute;
+  top: 1.5rem;
+  left: -2.25rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-body);
+  border: 3px solid var(--lavender-primary);
+  box-shadow: 0 0 0 4px var(--lavender-tint);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.exp-timeline-item:hover .exp-timeline-dot {
+  background: var(--lavender-primary);
+  box-shadow: 0 0 0 6px var(--lavender-tint), 0 0 16px var(--lavender-glow-strong);
+  transform: scale(1.15);
+}
+
+.exp-timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-timeline-card:hover {
+  border-color: var(--lavender-primary);
+  box-shadow: 0 14px 36px rgba(137, 2, 62, 0.08);
+  transform: translateY(-3px);
+}
+
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.exp-period-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: var(--lavender-tint);
+  border: 1px solid var(--border-lavender);
+  color: var(--lavender-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.exp-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  display: inline-block;
+}
+
+.exp-location-tag {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-quaternary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.exp-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.exp-company-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lavender-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.exp-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.exp-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .exp-timeline-container {
+    padding-left: 1.75rem;
+  }
+  .exp-timeline-dot {
+    left: -1.75rem;
+  }
 }
 
 /* AEO FAQ Accordion */
