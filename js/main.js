@@ -124,6 +124,20 @@ function initExgridInteractions() {
     });
   }
 
+  // Fixed Navbar Scroll Elevation
+  const navbar = document.querySelector('.primary-navbar');
+  if (navbar) {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('navbar-active', 'scrolled');
+      } else {
+        navbar.classList.remove('navbar-active', 'scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
   // Quick Copy for Email
   const copyEmailBtn = document.getElementById('copy-email-btn');
   if (copyEmailBtn) {

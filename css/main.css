@@ -197,18 +197,25 @@ a:hover {
 .fw-7 { font-weight: 700 !important; }
 .fw-8 { font-weight: 800 !important; }
 
-/* Exgrid Header Navigation */
+/* Exgrid Header Navigation (Fixed at top across all pages) */
 .primary-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.92);
+  z-index: 9990;
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(217, 217, 217, 0.6);
-  transition: var(--transition);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.primary-navbar.navbar-active,
+.primary-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border-bottom-color: rgba(217, 217, 217, 0.9);
 }
 
 .navbar-inner {
