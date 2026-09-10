@@ -49,7 +49,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 10. FAQ Accordion Toggle Interaction
   initFaqAccordion();
+
+  // 11. Skills & Expertise Domain Filter Interaction
+  initSkillsDomainFilter();
 });
+
+function initSkillsDomainFilter() {
+  const filterBtns = document.querySelectorAll('.skills-filter-btn');
+  const cards = document.querySelectorAll('.skills-master-card');
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      const filter = btn.getAttribute('data-skill-filter');
+
+      cards.forEach(card => {
+        const domain = card.getAttribute('data-domain');
+        if (filter === 'all' || domain === filter) {
+          card.style.display = 'flex';
+          card.classList.remove('dimmed');
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
 
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.aeo-faq-item');
