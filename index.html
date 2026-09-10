@@ -1,1038 +1,943 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Required Meta Tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO & Social Meta -->
-  <title>Sakthi Niranjana S — Senior UX/UI & Product Designer</title>
-  <meta name="description" content="Portfolio of Sakthi Niranjana S — Senior UX/UI and Product Designer creating meaningful digital experiences across products, platforms and brands.">
-  <meta name="keywords" content="Sakthi Niranjana, UX/UI Designer, Product Designer, Creative Strategist, FlowHive Solutions, Design Systems, WMS, Supply Chain, Figma">
-  <meta name="author" content="Sakthi Niranjana S">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Sakthi Niranjana S — Senior UX/UI & Product Designer">
-  <meta property="og:description" content="Senior UX/UI Designer & Creative Head building meaningful digital experiences across products, platforms and brands.">
-  
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23c77dff'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='42' font-family='sans-serif' font-weight='900' fill='white'%3ESN%3C/text%3E%3C/svg%3E" type="image/x-icon">
+    <head>
+        <!-- required meta -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- #favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+        <!-- #title -->
+        <title>Sakthi Niranjana | Lead Product Designer & Design Engineer</title>
+        <!-- #keywords -->
+        <meta name="keywords" content="Sakthi Niranjana, Product Designer, UI/UX Designer, Design Engineer, Portfolio, Design Systems, Fintech, Web3, iOS, Android">
+        <!-- #description -->
+        <meta name="description" content="Portfolio of Sakthi Niranjana — Lead Product Designer & Design Engineer specializing in scalable design systems, multi-platform applications, and intuitive UX/UI for fintech, enterprise, logistics, and web ecosystems.">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
-  <!-- Icons CDN: Font Awesome 6 & Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, Inter, JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/modal.css">
-</head>
-<body>
-
-  <!-- ==== EXGRID PRELOADER ==== -->
-  <div id="preloader">
-    <div class="preloader-inner">
-      <div class="preloader-spinner"></div>
-    </div>
-  </div>
-
-  <!-- Ambient Light Orbs -->
-  <div class="noise-overlay" aria-hidden="true"></div>
-  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
-  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
-
-  <!-- Custom Magnetic Cursor -->
-  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
-    <span>VIEW</span>
-  </div>
-  <div class="custom-cursor-dot" id="custom-cursor-dot" aria-hidden="true"></div>
-
-  <div class="my-app">
-    <!-- ==== EXGRID PRIMARY HEADER NAVIGATION ==== -->
-    <header class="primary-navbar">
-      <div class="container">
-        <div class="navbar-inner">
-          <div class="navbar__logo">
-            <a href="index.html" aria-label="Sakthi Niranjana Home">
-              <i class="fa-solid fa-shapes" style="color:var(--lavender-primary);"></i>
-              <span>SAKTHI NIRANJANA</span>
-            </a>
-          </div>
-
-          <nav class="navbar__menu" aria-label="Main Navigation">
-            <ul class="navbar__list">
-              <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="capabilities.html">Capabilities</a></li>
-              <li><a href="work.html">Projects</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-
-          <div class="navbar__options">
-            <button class="animated-bar" id="open-offcanvas-btn" aria-label="Open offcanvas menu" title="Open Menu">
-              <span class="bar-line"></span>
-            </button>
-          </div>
+        <!-- ==== css dependencies start ==== -->
+        <!-- bootstrap five css -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- bootstrap icons css -->
+        <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+        <!-- material icons css -->
+        <link rel="stylesheet" href="assets/css/material-icons.css">
+        <!-- font awesome six css -->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!-- nice select css -->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!-- magnific popup css -->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!-- slick css -->
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <!-- odometer css -->
+        <link rel="stylesheet" href="assets/css/odometer.css">
+        <!-- ==== / css dependencies end ==== -->
+        <!-- main css -->
+        <link rel="stylesheet" href="assets/css/main.min.css">
+        <style>
+            :root {
+                --quinary-color: #c77dff;
+                --theme-color: #181818;
+            }
+            .banner__meta .thumb img {
+                width: 100%;
+                height: 270px;
+                object-fit: cover;
+                border-radius: 24px;
+            }
+            .navbar__logo a {
+                text-decoration: none;
+            }
+            .navbar__logo-badge {
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #c77dff, #9d4edd);
+                color: #ffffff;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 800;
+                font-size: 15px;
+                box-shadow: 0 4px 15px rgba(199, 125, 255, 0.4);
+            }
+            .navbar__logo-text {
+                font-family: var(--sp-grotesk);
+                font-weight: 700;
+                font-size: 20px;
+                color: #181818;
+                letter-spacing: -0.5px;
+            }
+            .status-indicator {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 4px 12px;
+                background: rgba(199, 125, 255, 0.12);
+                border: 1px solid rgba(199, 125, 255, 0.3);
+                border-radius: 100px;
+                font-size: 12px;
+                font-weight: 600;
+                color: #7b2cbf;
+                margin-bottom: 12px;
+            }
+            .status-indicator::before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #c77dff;
+                box-shadow: 0 0 8px #c77dff;
+                animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); opacity: 1; }
+                50% { transform: scale(1.3); opacity: 0.6; }
+            }
+            .case-study-hover {
+                background-size: cover !important;
+                background-position: center !important;
+                border-radius: 16px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+            }
+            .img-view__single img {
+                border-radius: 16px;
+                object-fit: cover;
+            }
+            .custom-toast {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                background: #181818;
+                color: #fff;
+                padding: 12px 24px;
+                border-radius: 12px;
+                border-left: 4px solid #c77dff;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                z-index: 99999;
+                font-size: 14px;
+                font-weight: 500;
+                transform: translateY(100px);
+                opacity: 0;
+                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .custom-toast.show {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <!-- ==== preloader start ==== -->
+        <div id="preloader">
+            <div id="loader"></div>
         </div>
-      </div>
-    </header>
-
-    <!-- ==== EXGRID OFFCANVAS OVERLAY DRAWER ==== -->
-    <div class="offcanvas-menu" id="offcanvas-drawer">
-      <button class="offcanvas-close" id="close-offcanvas-btn" aria-label="Close offcanvas">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <ul class="offcanvas-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="capabilities.html">Capabilities</a></li>
-        <li><a href="work.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- ==== EXGRID 3-COLUMN BENTO BANNER SECTION ==== -->
-    <main>
-      <section class="banner">
-        <div class="container">
-          <div class="banner__inner">
-
-            <!-- 1. LEFT COLUMN: PROFILE META CARD -->
-            <aside class="banner__meta">
-              <div class="banner__meta-single bg-grd-one">
-                <div class="thumb">
-                  <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana S Portrait" loading="eager">
-                </div>
-                <div class="content">
-                  <p class="title-sm fw-7">
-                    <a href="about.html">Sakthi Niranjana S</a>
-                  </p>
-                  <p class="meta-info-item">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <span>Senior UX/UI Designer &amp; Content Head</span>
-                  </p>
-                  <p class="meta-info-item">
-                    <i class="fa-solid fa-building"></i>
-                    <span>FlowHive Solutions</span>
-                  </p>
-                  <p class="meta-info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Atlanta, GA / Chennai, India</span>
-                  </p>
-                </div>
-                <hr>
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                  <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn" title="Behance">
-                    <i class="fa-brands fa-behance"></i>
-                  </a>
-                  <a href="mailto:its.sakthiniranjana@gmail.com" class="social-btn" title="Email Direct">
-                    <i class="fa-regular fa-envelope"></i>
-                  </a>
-                  <a href="tel:6374523020" class="social-btn" title="Phone">
-                    <i class="fa-solid fa-phone"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="banner__meta-btn">
-                <a href="contact.html" class="fw-7 text-capitalize rt-btn">
-                  <span>Hire Me / Let's Connect</span>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
-                </a>
-              </div>
-
-              <div class="banner__meta-btn">
-                <a href="mailto:its.sakthiniranjana@gmail.com" class="fw-7 text-capitalize rt-btn" id="downloadCv">
-                  <span>Request Full Resume</span>
-                  <i class="fa-solid fa-cloud-arrow-down"></i>
-                </a>
-              </div>
-
-              <p class="text-senary tertiary-text">
-                &copy; 2026 Sakthi Niranjana S. All Rights Reserved.
-              </p>
-            </aside>
-
-            <!-- 2. MIDDLE COLUMN: MAIN CONTENT STREAM -->
-            <div class="banner__content">
-
-              <!-- HERO GREETING INTRO CARD -->
-              <div class="banner__content-single bg-grd-two">
-                <h2 class="title-xxl">
-                  Hi I'm Sakthi,<br>
-                  <span>Senior UX/UI &amp; Product Designer</span>
-                </h2>
-                <p class="intro-lead">
-                  I specialize in turning complex enterprise workflows, SaaS platforms, and startup visions into intuitive, accessible and visually arresting digital platforms. Currently leading design at FlowHive Solutions.
-                </p>
-                <hr>
-                <div class="cta">
-                  <div class="cta-single">
-                    <p class="d-flex align-items-center">
-                      <i class="fa-solid fa-circle-check"></i>
-                      <span>4+</span>
-                    </p>
-                    <p class="text-uppercase text-quaternary text-sm">YEARS EXPERIENCE</p>
-                  </div>
-                  <div class="cta-single">
-                    <p class="d-flex align-items-center">
-                      <i class="fa-solid fa-circle-check"></i>
-                      <span>23</span>
-                    </p>
-                    <p class="text-uppercase text-quaternary text-sm">LIVE PROJECTS</p>
-                  </div>
-                  <div class="cta-single">
-                    <p class="d-flex align-items-center">
-                      <i class="fa-solid fa-circle-check"></i>
-                      <span>10+</span>
-                    </p>
-                    <p class="text-uppercase text-quaternary text-sm">DISCIPLINES</p>
-                  </div>
-                  <div class="cta-single cta-btn-col">
-                    <a href="contact.html" class="fw-7 text-capitalize anim-btn">
-                      <span class="btn-anim-wrapper">
-                        <span class="btn-anim">Hire Me</span>
-                        <span class="btn-m">Hire Me</span>
-                      </span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PROJECTS STREAM -->
-              <div class="banner__content-study pt-60 fade-wrapper">
-                <div class="title-animation">
-                  <h3 class="title-xl">Featured <span style="color:var(--lavender-primary);">Projects</span></h3>
-                  <a href="work.html" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
-                    VIEW ALL 23 <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-
-                <!-- Project 1: Paytrav -->
-                <div class="banner__content-study__single fade-top" data-project-id="paytrav">
-                  <div class="tag">
-                    <span class="case-pill">FinTech</span>
-                    <span class="case-pill">B2B Travel SaaS</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Paytrav — B2B Travel SaaS &amp; Payments Switch</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Lead UX/UI &amp; Product Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/paytrav.jpg');"></div>
-                </div>
-
-                <!-- Project 2: Gulf Ticket -->
-                <div class="banner__content-study__single fade-top" data-project-id="gulfticket">
-                  <div class="tag">
-                    <span class="case-pill">Gaming</span>
-                    <span class="case-pill">Global Ticketing</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Gulf Ticket — Global Digital Lottery &amp; Raffles</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Senior UX/UI Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/gulfticket.jpg');"></div>
-                </div>
-
-                <!-- Project 3: Easestay -->
-                <div class="banner__content-study__single fade-top" data-project-id="easestay">
-                  <div class="tag">
-                    <span class="case-pill">PropTech</span>
-                    <span class="case-pill">Corporate Stays</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Easestay — Corporate Housing &amp; Managed Stays</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Product &amp; Interaction Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/easestay.jpg');"></div>
-                </div>
-
-                <!-- Project 4: ARMSOFT -->
-                <div class="banner__content-study__single fade-top" data-project-id="armsoft">
-                  <div class="tag">
-                    <span class="case-pill">Enterprise</span>
-                    <span class="case-pill">Industrial Tech</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">ARMSOFT — Industrial Software &amp; IT Solutions</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>UX/UI &amp; Brand Strategist</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/armsoft.jpg');"></div>
-                </div>
-
-                <!-- Project 5: GI Smart Parking -->
-                <div class="banner__content-study__single fade-top" data-project-id="gismartparking">
-                  <div class="tag">
-                    <span class="case-pill">Logistics</span>
-                    <span class="case-pill">Smart City IoT</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">GI Smart Parking — IoT Urban Parking Telemetry</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Lead Product Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/gismartparking.jpg');"></div>
-                </div>
-
-                <!-- Project 6: Wingspace -->
-                <div class="banner__content-study__single fade-top" data-project-id="wingspace">
-                  <div class="tag">
-                    <span class="case-pill">PropTech</span>
-                    <span class="case-pill">Managed Coworking</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Wingspace — Premium Managed Office Suites</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>UX/UI &amp; Experience Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/wingspace.jpg');"></div>
-                </div>
-
-                <!-- Project 7: Cityflo -->
-                <div class="banner__content-study__single fade-top" data-project-id="cityflo">
-                  <div class="tag">
-                    <span class="case-pill">Logistics</span>
-                    <span class="case-pill">Urban Mobility</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Cityflo — Corporate Bus Transit &amp; Seat Booking</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Mobile UX &amp; Product Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/cityflo.jpg');"></div>
-                </div>
-
-                <!-- Project 8: Raftaar Pay -->
-                <div class="banner__content-study__single fade-top" data-project-id="raftaarpay">
-                  <div class="tag">
-                    <span class="case-pill">FinTech</span>
-                    <span class="case-pill">UPI Soundbox</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Raftaar Pay — UPI Soundbox &amp; Merchant Hub</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Lead Product Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/raftaarpay.jpg');"></div>
-                </div>
-
-                <!-- Project 9: Wareknit -->
-                <div class="banner__content-study__single fade-top" data-project-id="wareknit">
-                  <div class="tag">
-                    <span class="case-pill">Logistics</span>
-                    <span class="case-pill">Textile SaaS</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Wareknit — Garment Supply Chain Telemetry</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Enterprise UX Designer</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/wareknit.jpg');"></div>
-                </div>
-
-                <!-- Project 10: Figma Enterprise Archive -->
-                <div class="banner__content-study__single fade-top" data-project-id="figmaprojects">
-                  <div class="tag">
-                    <span class="case-pill">Enterprise</span>
-                    <span class="case-pill">Design Systems</span>
-                  </div>
-                  <div class="content">
-                    <div class="content__left">
-                      <h4 class="title-lg">Figma Archive — Enterprise 3PL WMS &amp; Design Systems</h4>
-                    </div>
-                    <div class="content__right">
-                      <span>Senior UX/UI Lead</span>
-                    </div>
-                  </div>
-                  <div class="case-study-hover" style="background-image: url('assets/img/projects/figmaprojects.jpg');"></div>
-                </div>
-              </div>
-
-              <!-- ABOUT & LEADERSHIP CARD -->
-              <div class="banner__content-about pt-60 fade-wrapper">
-                <div class="banner__content-about-inner bg-grd-two">
-                  <h3 class="about-headline-quote">
-                    "Turning complex <span class="highlight">product systems, digital innovation &amp; brand strategy</span> into effortless, human-centered digital experiences."
-                  </h3>
-                  <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
-                    Passionate UX/UI Designer and Content Strategist with a focus on creating user-centered digital experiences and impactful brand communication. Dedicated to building intuitive interfaces, scalable design solutions, and engaging user experiences that align with business goals.
-                  </p>
-                  <div class="bn-about-achievements">
-                    <div class="achievement-row">
-                      <i class="fa-solid fa-award"></i>
-                      <div>
-                        <strong style="color:var(--text-primary);">FlowHive Solutions (Atlanta, GA):</strong>
-                        <span> Senior UX/UI Designer &amp; Content Head contributing to product design, design systems, and digital innovation.</span>
-                      </div>
-                    </div>
-                    <div class="achievement-row">
-                      <i class="fa-solid fa-layer-group"></i>
-                      <div>
-                        <strong style="color:var(--text-primary);">GI TECH GAMING CO INDIA PVT LTD:</strong>
-                        <span> UX/UI Designer delivering high-fidelity UI, user research, wireframing, motion graphics &amp; component libraries.</span>
-                      </div>
-                    </div>
-                    <div class="achievement-row">
-                      <i class="fa-solid fa-globe"></i>
-                      <div>
-                        <strong style="color:var(--text-primary);">23 Live Real-World Products:</strong>
-                        <span> Designed and shipped production platforms across FinTech, Gaming, PropTech, and Logistics.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- EXPERIENCE HISTORY -->
-              <div class="banner__history fade-wrapper">
-                <div class="title-animation">
-                  <h3 class="title-xl">Experience <span style="color:var(--lavender-primary);">History</span></h3>
-                  <a href="about.html#experience" style="font-weight:700; color:var(--lavender-primary); font-size:0.875rem;">
-                    VIEW FULL TIMELINE <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-
-                <div class="banner__history-single fade-top">
-                  <div class="lefter">
-                    <h2 class="title-lg">Feb 2026 — Present</h2>
-                  </div>
-                  <div class="righter">
-                    <h2 class="title-lg">Senior UX/UI Designer &amp; Content Head</h2>
-                    <p>FlowHive Solutions • Atlanta, GA</p>
-                  </div>
-                </div>
-
-                <div class="banner__history-single fade-top">
-                  <div class="lefter">
-                    <h2 class="title-lg">May 2024 — Present</h2>
-                  </div>
-                  <div class="righter">
-                    <h2 class="title-lg">UX/UI Designer</h2>
-                    <p>GI TECH GAMING CO INDIA PRIVATE LTD • Chennai</p>
-                  </div>
-                </div>
-
-                <div class="banner__history-single fade-top">
-                  <div class="lefter">
-                    <h2 class="title-lg">Nov 2023 — Jan 2024</h2>
-                  </div>
-                  <div class="righter">
-                    <h2 class="title-lg">UX/UI Design Intern</h2>
-                    <p>Techienutpam • Chennai</p>
-                  </div>
-                </div>
-
-                <div class="banner__history-single fade-top">
-                  <div class="lefter">
-                    <h2 class="title-lg">Jul 2022 — Sep 2022</h2>
-                  </div>
-                  <div class="righter">
-                    <h2 class="title-lg">Research Department Specialist</h2>
-                    <p>Puthiya Thalaimurai Tv • Chennai</p>
-                  </div>
-                </div>
-
-                <div class="banner__history-single fade-top">
-                  <div class="lefter">
-                    <h2 class="title-lg">May 2021 — Jul 2021</h2>
-                  </div>
-                  <div class="righter">
-                    <h2 class="title-lg">Student Volunteer</h2>
-                    <p>Greater Chennai Corporation • Chennai</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- 3. RIGHT COLUMN: SIDEBAR WIDGETS -->
-            <aside class="banner__sidebar fade-wrapper">
-
-              <!-- Specializations Widget -->
-              <div class="banner__sidebar-single bg-grd-two">
-                <h5 class="title-sm">My Specializations</h5>
-
-                <div class="banner__sidebar-special fade-top">
-                  <a href="capabilities.html">
-                    <div class="service-info">
-                      <span class="spec-name">UX/UI Design</span>
-                      <span class="spec-count">45+ Projects</span>
-                    </div>
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </a>
-                </div>
-
-                <div class="banner__sidebar-special fade-top">
-                  <a href="capabilities.html">
-                    <div class="service-info">
-                      <span class="spec-name">Product Strategy</span>
-                      <span class="spec-count">28+ Projects</span>
-                    </div>
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </a>
-                </div>
-
-                <div class="banner__sidebar-special fade-top">
-                  <a href="capabilities.html">
-                    <div class="service-info">
-                      <span class="spec-name">Design Systems</span>
-                      <span class="spec-count">15+ Libraries</span>
-                    </div>
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </a>
-                </div>
-
-                <div class="banner__sidebar-special fade-top">
-                  <a href="capabilities.html">
-                    <div class="service-info">
-                      <span class="spec-name">Enterprise WMS</span>
-                      <span class="spec-count">12+ Platforms</span>
-                    </div>
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </a>
-                </div>
-
-                <div class="banner__sidebar-special fade-top">
-                  <a href="capabilities.html">
-                    <div class="service-info">
-                      <span class="spec-name">AI Transformation</span>
-                      <span class="spec-count">8+ AI Products</span>
-                    </div>
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Education & Experience Widget -->
-              <div class="banner__sidebar-single bg-grd-two">
-                <h5 class="title-sm">Career &amp; Education</h5>
-
-                <div class="banner__sidebar-experience fade-top">
-                  <span class="time-frame-pill">Feb 2026 - Present</span>
-                  <p class="designation">Senior UX/UI Designer &amp; Content Head</p>
-                  <p class="ins-name">FlowHive Solutions (Atlanta, GA)</p>
-                </div>
-
-                <div class="banner__sidebar-experience fade-top">
-                  <span class="time-frame-pill">May 2024 - Present</span>
-                  <p class="designation">UX/UI Designer</p>
-                  <p class="ins-name">GI TECH GAMING CO INDIA PVT LTD</p>
-                </div>
-
-                <div class="banner__sidebar-experience fade-top">
-                  <span class="time-frame-pill">Nov 2023 - Jan 2024</span>
-                  <p class="designation">UX/UI Design Intern</p>
-                  <p class="ins-name">Techienutpam</p>
-                </div>
-              </div>
-
-            </aside>
-
-          </div>
+        <!-- ==== / preloader end ==== -->
+        <!-- ==== mouse cursor drag start ==== -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner">
+            <span>Drag</span>
         </div>
+        <!-- ==== / mouse cursor drag end ==== -->
+        <!-- ==== page wrapper start ==== -->
+        <div class="my-app">
+            <!-- ==== header start ==== -->
+            <header class="header">
+                <div class="primary-navbar" data-background="assets/images/header-bg.png">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <nav class="navbar p-0">
+                                    <div class="navbar__logo">
+                                        <a href="index.html" aria-label="home page" title="Sakthi Niranjana" class="d-flex align-items-center gap-2">
+                                            <span class="navbar__logo-badge">SN</span>
+                                            <span class="navbar__logo-text">Sakthi Niranjana</span>
+                                        </a>
+                                    </div>
+                                    <div class="navbar__menu">
+                                        <ul class="navbar__list">
+                                            <li class="navbar__item nav-fade">
+                                                <a href="index.html" class="active">Home</a>
+                                            </li>
+                                            <li class="navbar__item nav-fade">
+                                                <a href="about.html">About Me</a>
+                                            </li>
+                                            <li class="navbar__item nav-fade">
+                                                <a href="capabilities.html">Capabilities</a>
+                                            </li>
+                                            <li class="navbar__item nav-fade">
+                                                <a href="work.html">Case Studies</a>
+                                            </li>
+                                            <li class="navbar__item nav-fade">
+                                                <a href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="navbar__options">
+                                        <button class="open-mobile-info animated-bar d-none d-xl-flex" aria-label="toggle offset info" title="open offset info">
+                                            <span class="bar-line"></span>
+                                        </button>
+                                        <button class="open-mobile-menu animated-bar d-flex d-xl-none" aria-label="toggle mobile menu" title="open mobile menu">
+                                            <span class="bar-line"></span>
+                                        </button>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- ==== mobile menu start ==== -->
+            <div class="mobile-menu d-block d-xl-none">
+                <nav class="mobile-menu__wrapper">
+                    <div class="mobile-menu__header nav-fade">
+                        <div class="mobile-menu__logo">
+                            <a href="index.html" class="d-flex align-items-center gap-2">
+                                <span class="navbar__logo-badge">SN</span>
+                                <span class="navbar__logo-text">Sakthi Niranjana</span>
+                            </a>
+                        </div>
+                        <button aria-label="close mobile menu" class="close-mobile-menu">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-menu__list"></div>
+                    <div class="mobile-menu__social social nav-fade">
+                        <a href="https://www.linkedin.com/in/sakthi-niranjana-92576b208/" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="in">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.behance.net/itssakthiniranjana" target="_blank" aria-label="Behance" title="Behance" class="tw">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                        <a href="https://github.com/itssakthiniranjana-cmd" target="_blank" aria-label="GitHub" title="GitHub" class="fb">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://dribbble.com/sakthiniranjana" target="_blank" aria-label="Dribbble" title="Dribbble" class="yt">
+                            <i class="fa-brands fa-dribbble"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="mobile-menu__backdrop"></div>
+            <!-- ==== / mobile menu end ==== -->
+            <!-- ==== offset info start ==== -->
+            <div class="menu">
+                <button aria-label="close off canvas" class="off-canvas-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="menu-inner">
+                    <div class="gallery">
+                        <div class="title menu-nav-link">
+                            <h2 class="title-xl text-uppercase fw-7">Featured Case Studies</h2>
+                        </div>
+                        <div class="images">
+                            <a class="image-link" href="work.html#gulfticket">
+                                <div class="image" data-label="Gulf Ticket • Fintech Lottery">
+                                    <img src="assets/img/projects/gulfticket.jpg" alt="Gulf Ticket">
+                                </div>
+                            </a>
+                            <a class="image-link" href="work.html#easestay">
+                                <div class="image" data-label="EaseStay • Hospitality PMS">
+                                    <img src="assets/img/projects/easestay.jpg" alt="EaseStay">
+                                </div>
+                            </a>
+                            <a class="image-link" href="work.html#raftaarpay">
+                                <div class="image" data-label="Raftaar Pay • Neo Banking">
+                                    <img src="assets/img/projects/raftaarpay.jpg" alt="Raftaar Pay">
+                                </div>
+                            </a>
+                            <a class="image-link" href="work.html#gismartparking">
+                                <div class="image" data-label="GI Smart Parking • IoT Transit">
+                                    <img src="assets/img/projects/gismartparking.jpg" alt="GI Smart Parking">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ==== offset info end ==== -->
+            <!-- ==== / header end ==== -->
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+                    <main>
+                        <!-- ==== banner start ==== -->
+                        <section class="banner">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="banner__inner">
+                                            <!-- Left Sidebar Column -->
+                                            <div class="banner__meta">
+                                                <div class="banner__meta-single bg-grd-one">
+                                                    <div class="thumb">
+                                                        <img src="assets/img/sakthi-portrait.jpg" alt="Sakthi Niranjana">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="status-indicator">
+                                                            Available for Roles & Projects
+                                                        </div>
+                                                        <p class="title-sm fw-7">
+                                                            <a href="about.html">Sakthi Niranjana</a>
+                                                        </p>
+                                                        <p class="text-sm text-quaternary d-flex align-items-center fw-7">
+                                                            <i class="fa-solid fa-briefcase"></i>
+                                                            Lead Product Designer
+                                                        </p>
+                                                        <p class="text-sm text-quaternary d-flex align-items-center fw-7">
+                                                            <i class="fa-solid fa-location-dot"></i>
+                                                            Chennai, India • Remote Global
+                                                        </p>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="social justify-content-start">
+                                                        <a href="https://www.linkedin.com/in/sakthi-niranjana-92576b208/" class="in" target="_blank" title="LinkedIn">
+                                                            <i class="fa-brands fa-linkedin-in"></i>
+                                                        </a>
+                                                        <a href="https://www.behance.net/itssakthiniranjana" class="tw" target="_blank" title="Behance">
+                                                            <i class="fa-brands fa-behance"></i>
+                                                        </a>
+                                                        <a href="https://github.com/itssakthiniranjana-cmd" class="fb" target="_blank" title="GitHub">
+                                                            <i class="fa-brands fa-github"></i>
+                                                        </a>
+                                                        <a href="https://dribbble.com/sakthiniranjana" class="yt" target="_blank" title="Dribbble">
+                                                            <i class="fa-brands fa-dribbble"></i>
+                                                        </a>
+                                                        <a href="https://medium.com/@sakthiniranjana" class="tw" target="_blank" title="Medium">
+                                                            <i class="fa-brands fa-medium"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="banner__meta-btn">
+                                                    <a href="contact.html" class="fw-7 text-capitalize rt-btn">
+                                                        Hire Me
+                                                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="banner__meta-btn">
+                                                    <button aria-label="download my cv" class="fw-7 text-capitalize rt-btn" id="downloadCv" onclick="copyEmail()">
+                                                        Copy Email Address
+                                                        <i class="fa-solid fa-envelope"></i>
+                                                    </button>
+                                                </div>
+                                                <p class="text-senary tertiary-text">
+                                                    &copy;
+                                                    All Rights Reserved
+                                                    <a href="index.html" class="fw-6">Sakthi Niranjana</a>
+                                                </p>
+                                            </div>
 
-        <!-- Exgrid Signature Vertical Watermark -->
-        <div class="tag-t" aria-hidden="true">
-          <h2>SAKTHI</h2>
+                                            <!-- Center Hero Column -->
+                                            <div class="banner__content">
+                                                <div class="banner__content-single bg-grd-two">
+                                                    <h2 class="title-xxl fw-5 title-anim">
+                                                        Hi I'm Sakthi,
+                                                        <br>
+                                                        <span data-before-image="assets/images/banner/shape.png">Product</span>
+                                                        Designer
+                                                    </h2>
+                                                    <p>
+                                                        Lead Product Designer & Design Engineer with 4+ years of specialized expertise in architecting high-converting design systems, multi-platform applications, and intuitive UX/UI for fintech, enterprise SaaS, logistics, and emerging digital platforms.
+                                                    </p>
+                                                    <hr>
+                                                    <div class="cta">
+                                                        <div class="cta-single">
+                                                            <p class="d-flex align-items-center">
+                                                                <i class="fa-solid fa-check"></i>
+                                                                <span>4+</span>
+                                                            </p>
+                                                            <p class="text-uppercase text-quaternary text-sm">YEARS EXPERIENCE</p>
+                                                        </div>
+                                                        <div class="cta-single">
+                                                            <p class="d-flex align-items-center">
+                                                                <i class="fa-solid fa-check"></i>
+                                                                <span>100%</span>
+                                                            </p>
+                                                            <p class="text-uppercase text-quaternary text-sm">SATISFACTION RATE</p>
+                                                        </div>
+                                                        <div class="cta-single">
+                                                            <p class="d-flex align-items-center">
+                                                                <i class="fa-solid fa-check"></i>
+                                                                <span>23+</span>
+                                                            </p>
+                                                            <p class="text-uppercase text-quaternary text-sm">TOTAL PROJECTS</p>
+                                                        </div>
+                                                        <div class="cta-single">
+                                                            <a href="contact.html" class="fw-7 text-capitalize anim-btn">
+                                                                <span class="btn-anim">Hire Me</span>
+                                                                <span class="btn-m">hire me</span>
+                                                                <i class="fa-solid fa-circle-arrow-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Case Studies Stream -->
+                                                <div class="banner__content-study pt-60 fade-wrapper">
+                                                    <div class="title-animation position-relative d-flex align-items-center justify-content-center">
+                                                        <div class="overflow-hidden position-relative">
+                                                            <h2 class="fw-5 text-white title-xl">Case</h2>
+                                                        </div>
+                                                        <div class="overflow-hidden position-relative">
+                                                            <h2 class="fw-5 text-quinary title-xl">Study</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banner__content-study__inner">
+                                                        <!-- Project 1 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#gulfticket">Fintech & Web3</a>
+                                                                <a href="work.html#gulfticket">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#gulfticket">Gulf Ticket Global Platform</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#gulfticket">design & ecosystem</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/gulfticket.jpg"></div>
+                                                        </div>
+
+                                                        <!-- Project 2 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#easestay">Hospitality PMS</a>
+                                                                <a href="work.html#easestay">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#easestay">EaseStay Property Ecosystem</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#easestay">saas & mobile</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/easestay.jpg"></div>
+                                                        </div>
+
+                                                        <!-- Project 3 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#raftaarpay">Neo-Banking</a>
+                                                                <a href="work.html#raftaarpay">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#raftaarpay">Raftaar Pay Multi-Currency</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#raftaarpay">fintech & banking</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/raftaarpay.jpg"></div>
+                                                        </div>
+
+                                                        <!-- Project 4 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#gismartparking">IoT Mobility</a>
+                                                                <a href="work.html#gismartparking">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#gismartparking">GI Smart Parking Architecture</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#gismartparking">iot & dashboard</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/gismartparking.jpg"></div>
+                                                        </div>
+
+                                                        <!-- Project 5 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#wingspace">Coworking Space</a>
+                                                                <a href="work.html#wingspace">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#wingspace">Wingspace Workspace Engine</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#wingspace">enterprise ui</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/wingspace.jpg"></div>
+                                                        </div>
+
+                                                        <!-- Project 6 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#cityflo">Urban Transit</a>
+                                                                <a href="work.html#cityflo">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#cityflo">Cityflo Commuter Experience</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#cityflo">mobile & booking</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/cityflo.jpg"></div>
+                                                        </div>
+
+                                                        <!-- Project 7 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#wareknit">Supply Chain ERP</a>
+                                                                <a href="work.html#wareknit">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#wareknit">Wareknit Logistics Operating System</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#wareknit">enterprise erp</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/wareknit.jpg"></div>
+                                                        </div>
+
+                                                        <!-- Project 8 -->
+                                                        <div class="banner__content-study__single fade-top">
+                                                            <div class="tag">
+                                                                <a href="work.html#sttpaytech">Payment Gateway</a>
+                                                                <a href="work.html#sttpaytech">
+                                                                    View Case Study
+                                                                    <i class="bi bi-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center justify-content-between">
+                                                                <div class="content__left">
+                                                                    <h3 class="title-lg">
+                                                                        <a href="work.html#sttpaytech">STT PayTech Gateway Console</a>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="content__right">
+                                                                    <p class="text-sm text-capitalize">
+                                                                        <a href="work.html#sttpaytech">fintech api</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="case-study-hover d-none d-md-block" data-background="assets/img/projects/sttpaytech.jpg"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- About Me Section -->
+                                                <div class="banner__content-about pt-60 fade-wrapper">
+                                                    <div class="title-animation position-relative d-flex align-items-center justify-content-center">
+                                                        <div class="overflow-hidden position-relative">
+                                                            <h2 class="fw-5 text-white title-xl">About</h2>
+                                                        </div>
+                                                        <div class="overflow-hidden position-relative">
+                                                            <h2 class="fw-5 text-quinary title-xl">Me</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banner__content-about-inner">
+                                                        <h3 class="title-xxl text-capitalize fw-4 title-anim">
+                                                            Hi I'm Sakthi,
+                                                            <span class="fw-7">Lead Product Designer</span>
+                                                            & Design Engineer.
+                                                            I craft
+                                                            <span class="span-block">Next-Gen Digital Systems</span>
+                                                            for global clients
+                                                            <span class="fw-7">
+                                                                worldwide
+                                                            </span>
+                                                            .
+                                                        </h3>
+                                                        <div class="bn-about-thumb fade-top">
+                                                            <img src="assets/images/banner/bn-blog.png" alt="Sakthi Design Showcase">
+                                                            <a href="work.html" class="yt" title="Explore All Projects">
+                                                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="bn-about__content fade-top">
+                                                            <div class="bn-about__content-left">
+                                                                <h3 class="title-lg">Honors.</h3>
+                                                            </div>
+                                                            <div class="bn-about__content-right">
+                                                                <ul>
+                                                                    <li>23+ High-Impact Enterprise & Startup Product Launches</li>
+                                                                    <li>Lead Design System Architect for Multi-Platform Suites</li>
+                                                                    <li>Cross-Platform Mobile & Web UI Specialist (iOS, Android, React)</li>
+                                                                    <li>Fintech, IoT Transit, and Logistics Domain Recognition</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- History Timeline Section -->
+                                                <div class="banner__history fade-wrapper">
+                                                    <h3 class="title-xl">History</h3>
+                                                    <div class="banner__history-single fade-top">
+                                                        <div class="lefter">
+                                                            <h2 class="title-lg">Now</h2>
+                                                        </div>
+                                                        <div class="righter">
+                                                            <h2 class="title-lg">Lead Product Designer</h2>
+                                                            <p>SoftSuave Technologies / Freelance Consulting</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banner__history-single fade-top">
+                                                        <div class="lefter">
+                                                            <h2 class="title-lg">2023</h2>
+                                                        </div>
+                                                        <div class="righter">
+                                                            <h2 class="title-lg">Senior UI/UX Designer</h2>
+                                                            <p>GI Projects & Enterprise Mobility</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banner__history-single fade-top">
+                                                        <div class="lefter">
+                                                            <h2 class="title-lg">2022</h2>
+                                                        </div>
+                                                        <div class="righter">
+                                                            <h2 class="title-lg">UI/UX Designer & Prototyper</h2>
+                                                            <p>Digital Product Studio</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banner__history-single fade-top">
+                                                        <div class="lefter">
+                                                            <h2 class="title-lg">2021</h2>
+                                                        </div>
+                                                        <div class="righter">
+                                                            <h2 class="title-lg">Design Engineer</h2>
+                                                            <p>Web Architecture & Frontend Systems</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Right Sidebar Column -->
+                                            <div class="banner__sidebar fade-wrapper">
+                                                <div class="banner__sidebar-single bg-grd-two">
+                                                    <h5 class="title-sm">My Specializations</h5>
+                                                    <div class="banner__sidebar-special fade-top">
+                                                        <a href="capabilities.html">
+                                                            <span class="service-info">
+                                                                <span class="fw-5">Product Design</span>
+                                                                <span class="text-sm">23 Projects</span>
+                                                            </span>
+                                                            <span>
+                                                                <i class="bi bi-arrow-right-circle-fill"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="banner__sidebar-special fade-top">
+                                                        <a href="capabilities.html">
+                                                            <span class="service-info">
+                                                                <span class="fw-5">Design Systems</span>
+                                                                <span class="text-sm">18 Systems</span>
+                                                            </span>
+                                                            <span>
+                                                                <i class="bi bi-arrow-right-circle-fill"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="banner__sidebar-special fade-top">
+                                                        <a href="capabilities.html">
+                                                            <span class="service-info">
+                                                                <span class="fw-5">UI/UX Design</span>
+                                                                <span class="text-sm">45+ Flows</span>
+                                                            </span>
+                                                            <span>
+                                                                <i class="bi bi-arrow-right-circle-fill"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="banner__sidebar-special fade-top">
+                                                        <a href="capabilities.html">
+                                                            <span class="service-info">
+                                                                <span class="fw-5">Design Engineering</span>
+                                                                <span class="text-sm">15 Releases</span>
+                                                            </span>
+                                                            <span>
+                                                                <i class="bi bi-arrow-right-circle-fill"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="banner__sidebar-single bg-grd-two">
+                                                    <h5 class="title-sm">Education & Experience</h5>
+                                                    <div class="banner__sidebar-experience fade-top">
+                                                        <div class="time-frame">
+                                                            <span class="text-xs">2023</span>
+                                                            <span class="text-xs">-</span>
+                                                            <span class="text-xs">Present</span>
+                                                        </div>
+                                                        <p class="designation text-quaternary">Lead Product Designer</p>
+                                                        <p class="ins-name text-quaternary text-xs">SoftSuave Technologies</p>
+                                                    </div>
+                                                    <div class="banner__sidebar-experience fade-top">
+                                                        <div class="time-frame">
+                                                            <span class="text-xs">2022</span>
+                                                            <span class="text-xs">-</span>
+                                                            <span class="text-xs">2023</span>
+                                                        </div>
+                                                        <p class="designation text-quaternary">Senior UI/UX Designer</p>
+                                                        <p class="ins-name text-quaternary text-xs">GI Projects & Mobility</p>
+                                                    </div>
+                                                    <div class="banner__sidebar-experience fade-top">
+                                                        <div class="time-frame">
+                                                            <span class="text-xs">2021</span>
+                                                            <span class="text-xs">-</span>
+                                                            <span class="text-xs">2022</span>
+                                                        </div>
+                                                        <p class="designation text-quaternary">UI/UX Designer</p>
+                                                        <p class="ins-name text-quaternary text-xs">Digital Solutions Agency</p>
+                                                    </div>
+                                                    <div class="banner__sidebar-experience fade-top">
+                                                        <div class="time-frame">
+                                                            <span class="text-xs">2017</span>
+                                                            <span class="text-xs">-</span>
+                                                            <span class="text-xs">2021</span>
+                                                        </div>
+                                                        <p class="designation text-quaternary">B.E. Computer Science</p>
+                                                        <p class="ins-name text-quaternary text-xs">First Class Distinction</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- ==== / banner end ==== -->
+
+                        <!-- ==== img view start ==== -->
+                        <div class="img-view">
+                            <div class="img-view__wrapper img-view__left">
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/gulfticket.jpg" alt="Gulf Ticket Platform" style="width:320px; height:200px;">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/easestay.jpg" alt="EaseStay PMS" style="width:320px; height:200px;">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/raftaarpay.jpg" alt="Raftaar Pay" style="width:320px; height:200px;">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/gismartparking.jpg" alt="GI Smart Parking" style="width:320px; height:200px;">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/wingspace.jpg" alt="Wingspace" style="width:320px; height:200px;">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/cityflo.jpg" alt="Cityflo Transit" style="width:320px; height:200px;">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/wareknit.jpg" alt="Wareknit ERP" style="width:320px; height:200px;">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/img/projects/sttpaytech.jpg" alt="STT PayTech" style="width:320px; height:200px;">
+                                </div>
+                            </div>
+                            <div class="img-view__wrapper img-view__right">
+                                <div class="img-view__single">
+                                    <img src="assets/images/img-view/one.png" alt="Figma & Design Systems">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/images/img-view/two.png" alt="Spline 3D & WebGL">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/images/img-view/three.png" alt="Interactive Prototyping">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/images/img-view/four.png" alt="Design Engineering">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/images/img-view/five.png" alt="React & GSAP Motion">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/images/img-view/six.png" alt="Enterprise UX">
+                                </div>
+                                <div class="img-view__single">
+                                    <img src="assets/images/img-view/seven.png" alt="Mobile Ecosystems">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==== / img view end ==== -->
+                    </main>
+
+                    <!-- ==== footer start ==== -->
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="footer__content text-center pt-120 pb-120">
+                                        <h2 class="light-title-xl text-uppercase fw-5">
+                                            <a href="mailto:sakthiniranjana.cmd@gmail.com" class="animated-text">sakthiniranjana.cmd@gmail.com</a>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__copyright" data-background="assets/images/footer-bg.png">
+                            <div class="container">
+                                <div class="row align-items-center gaper">
+                                    <div class="col-12 col-lg-8">
+                                        <div class="footer__copyright-text text-center text-lg-start">
+                                            <p class="text-senary tertiary-text">
+                                                &copy;
+                                                <span id="copyYear"></span>
+                                                . All Rights Reserved
+                                                <a href="index.html" class="fw-6">Sakthi Niranjana</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <div class="social justify-content-center justify-content-lg-end">
+                                            <a href="https://www.linkedin.com/in/sakthi-niranjana-92576b208/" target="_blank" title="LinkedIn">
+                                                <i class="fa-brands fa-linkedin-in"></i>
+                                            </a>
+                                            <a href="https://www.behance.net/itssakthiniranjana" target="_blank" title="Behance">
+                                                <i class="fa-brands fa-behance"></i>
+                                            </a>
+                                            <a href="https://github.com/itssakthiniranjana-cmd" target="_blank" title="GitHub">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                            <a href="https://dribbble.com/sakthiniranjana" target="_blank" title="Dribbble">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                            </a>
+                                            <a href="https://medium.com/@sakthiniranjana" target="_blank" title="Medium">
+                                                <i class="fa-brands fa-medium"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- ==== / footer end ==== -->
+                </div>
+            </div>
         </div>
-      </section>
+        <!-- ==== / page wrapper end ==== -->
 
-      <!-- ==== DUAL-STREAM HORIZONTAL GALLERY & TOOLS MARQUEE (IMG-VIEW) ==== -->
-      <section class="img-view" aria-label="Projects Showcase and Tools Stack">
-        <!-- SVG Shared Gradients Definition -->
-        <svg width="0" height="0" style="position: absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
-          <defs>
-            <linearGradient id="canvaGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#00C4CC"/>
-              <stop offset="1" stop-color="#7D2AE8"/>
-            </linearGradient>
-            <linearGradient id="expGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#EB1000"/>
-              <stop offset="1" stop-color="#7B1FA2"/>
-            </linearGradient>
-            <linearGradient id="agGrad" x1="7" y1="6" x2="25" y2="27" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#c77dff"/>
-              <stop offset="1" stop-color="#38BDF8"/>
-            </linearGradient>
-            <linearGradient id="figmakeGrad" x1="7" y1="7" x2="25" y2="25" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FF7262"/>
-              <stop offset="0.5" stop-color="#A259FF"/>
-              <stop offset="1" stop-color="#1ABCFE"/>
-            </linearGradient>
-            <linearGradient id="geminiGrad" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#4E8CFF"/>
-              <stop offset="0.5" stop-color="#8E75FF"/>
-              <stop offset="1" stop-color="#FF748D"/>
-            </linearGradient>
-            <linearGradient id="lovableGrad" x1="8" y1="8.5" x2="24" y2="23.5" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FF3366"/>
-              <stop offset="1" stop-color="#FF6B00"/>
-            </linearGradient>
-          </defs>
-        </svg>
-
-        <!-- Dual Track Showcase: Row 1 Projects Gallery (Moving Left) -->
-        <div class="img-view__wrapper img-view__left">
-          <div class="ticker-track">
-            <!-- Set 1: 10 Project Showcase Cards -->
-            <div class="img-view__single">
-              <img src="assets/img/projects/paytrav.jpg" alt="Paytrav B2B SaaS" loading="lazy">
-              <div class="card-caption">
-                <span>Paytrav Platform</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gulfticket.jpg" alt="Gulf Ticket Global Lottery" loading="lazy">
-              <div class="card-caption">
-                <span>Gulf Ticket</span>
-                <span class="case-pill">Gaming</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/easestay.jpg" alt="Easestay PropTech" loading="lazy">
-              <div class="card-caption">
-                <span>Easestay</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/armsoft.jpg" alt="ARMSOFT Enterprise" loading="lazy">
-              <div class="card-caption">
-                <span>ARMSOFT</span>
-                <span class="case-pill">Enterprise</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gismartparking.jpg" alt="GI Smart Parking IoT" loading="lazy">
-              <div class="card-caption">
-                <span>GI Smart Parking</span>
-                <span class="case-pill">Smart IoT</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wingspace.jpg" alt="Wingspace Coworking" loading="lazy">
-              <div class="card-caption">
-                <span>Wingspace</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/cityflo.jpg" alt="Cityflo Mobility" loading="lazy">
-              <div class="card-caption">
-                <span>Cityflo Transit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/raftaarpay.jpg" alt="Raftaar Pay Merchant Hub" loading="lazy">
-              <div class="card-caption">
-                <span>Raftaar Pay</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wareknit.jpg" alt="Wareknit Textile Telemetry" loading="lazy">
-              <div class="card-caption">
-                <span>Wareknit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/figmaprojects.jpg" alt="Figma Enterprise Design System" loading="lazy">
-              <div class="card-caption">
-                <span>Figma Archive</span>
-                <span class="case-pill">Design Systems</span>
-              </div>
-            </div>
-
-            <!-- Set 2: Duplicate for Seamless Loop -->
-            <div class="img-view__single">
-              <img src="assets/img/projects/paytrav.jpg" alt="Paytrav B2B SaaS" loading="lazy">
-              <div class="card-caption">
-                <span>Paytrav Platform</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gulfticket.jpg" alt="Gulf Ticket Global Lottery" loading="lazy">
-              <div class="card-caption">
-                <span>Gulf Ticket</span>
-                <span class="case-pill">Gaming</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/easestay.jpg" alt="Easestay PropTech" loading="lazy">
-              <div class="card-caption">
-                <span>Easestay</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/armsoft.jpg" alt="ARMSOFT Enterprise" loading="lazy">
-              <div class="card-caption">
-                <span>ARMSOFT</span>
-                <span class="case-pill">Enterprise</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/gismartparking.jpg" alt="GI Smart Parking IoT" loading="lazy">
-              <div class="card-caption">
-                <span>GI Smart Parking</span>
-                <span class="case-pill">Smart IoT</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wingspace.jpg" alt="Wingspace Coworking" loading="lazy">
-              <div class="card-caption">
-                <span>Wingspace</span>
-                <span class="case-pill">PropTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/cityflo.jpg" alt="Cityflo Mobility" loading="lazy">
-              <div class="card-caption">
-                <span>Cityflo Transit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/raftaarpay.jpg" alt="Raftaar Pay Merchant Hub" loading="lazy">
-              <div class="card-caption">
-                <span>Raftaar Pay</span>
-                <span class="case-pill">FinTech</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/wareknit.jpg" alt="Wareknit Textile Telemetry" loading="lazy">
-              <div class="card-caption">
-                <span>Wareknit</span>
-                <span class="case-pill">Logistics</span>
-              </div>
-            </div>
-            <div class="img-view__single">
-              <img src="assets/img/projects/figmaprojects.jpg" alt="Figma Enterprise Design System" loading="lazy">
-              <div class="card-caption">
-                <span>Figma Archive</span>
-                <span class="case-pill">Design Systems</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dual Track Showcase: Row 2 Tools & Technologies Marquee (Moving Right) -->
-        <div class="img-view__wrapper img-view__right">
-          <div class="ticker-track">
-            <!-- ===== SET 1: 21 TOOLS ===== -->
-            <!-- 1. Figma -->
-            <div class="tool-logo-item" title="Figma">
-              <svg width="36" height="36" viewBox="0 0 38 57" fill="none">
-                <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
-                <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
-                <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
-                <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
-                <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
-              </svg>
-              <span>Figma</span>
-            </div>
-
-            <!-- 2. Photoshop -->
-            <div class="tool-logo-item" title="Adobe Photoshop">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="#001E36"/>
-                <text x="7" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#31A8FF">Ps</text>
-              </svg>
-              <span>Photoshop</span>
-            </div>
-
-            <!-- 3. Illustrator -->
-            <div class="tool-logo-item" title="Adobe Illustrator">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="#330000"/>
-                <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF9A00">Ai</text>
-              </svg>
-              <span>Illustrator</span>
-            </div>
-
-            <!-- 4. InDesign -->
-            <div class="tool-logo-item" title="Adobe InDesign">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="#49021F"/>
-                <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF3366">Id</text>
-              </svg>
-              <span>InDesign</span>
-            </div>
-
-            <!-- 5. Canva -->
-            <div class="tool-logo-item" title="Canva">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="url(#canvaGrad)"/>
-                <path d="M16.5 8C11.8 8 8 11.6 8 16c0 4.4 3.8 8 8.5 8 2.6 0 4.9-1.1 6.5-2.9l-2-1.6c-1.2 1.4-2.8 2.2-4.5 2.2-3.3 0-6-2.5-6-5.7s2.7-5.7 6-5.7c2.1 0 3.9 1 5 2.7l2.1-1.4C22.1 9.5 19.5 8 16.5 8z" fill="#ffffff"/>
-              </svg>
-              <span>Canva</span>
-            </div>
-
-            <!-- 6. Adobe Express -->
-            <div class="tool-logo-item" title="Adobe Express">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="url(#expGrad)"/>
-                <text x="6" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF">Ex</text>
-              </svg>
-              <span>Adobe Express</span>
-            </div>
-
-            <!-- 7. Antigravity -->
-            <div class="tool-logo-item" title="Antigravity">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#0F172A"/>
-                <path d="M16 6L25 11.5V21.5L16 27L7 21.5V11.5L16 6Z" stroke="url(#agGrad)" stroke-width="2.5" stroke-linejoin="round"/>
-                <circle cx="16" cy="16.5" r="3.5" fill="#c77dff"/>
-              </svg>
-              <span>Antigravity</span>
-            </div>
-
-            <!-- 8. Google Flow -->
-            <div class="tool-logo-item" title="Google Flow">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#F8FAFC" stroke="#E2E8F0"/>
-                <path d="M8 12C8 9.79 9.79 8 12 8H20C22.21 8 24 9.79 24 12V20C24 22.21 22.21 24 20 24H12C9.79 24 8 22.21 8 20V12Z" fill="#4285F4" fill-opacity="0.15"/>
-                <path d="M11 16H21M16 11V21" stroke="#4285F4" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="21" cy="16" r="2.5" fill="#EA4335"/>
-                <circle cx="11" cy="16" r="2.5" fill="#34A853"/>
-                <circle cx="16" cy="11" r="2.5" fill="#FBBC05"/>
-              </svg>
-              <span>Google Flow</span>
-            </div>
-
-            <!-- 9. Figma Make -->
-            <div class="tool-logo-item" title="Figma Make">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#2C2D30"/>
-                <path d="M16 7L18.2 13.8L25 16L18.2 18.2L16 25L13.8 18.2L7 16L13.8 13.8L16 7Z" fill="url(#figmakeGrad)"/>
-              </svg>
-              <span>Figma Make</span>
-            </div>
-
-            <!-- 10. Gemini -->
-            <div class="tool-logo-item" title="Google Gemini">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#1E1F20"/>
-                <path d="M16 6C16 11.5 11.5 16 6 16C11.5 16 16 20.5 16 26C16 20.5 20.5 16 26 16C20.5 16 16 11.5 16 6Z" fill="url(#geminiGrad)"/>
-              </svg>
-              <span>Gemini</span>
-            </div>
-
-            <!-- 11. ChatGPT -->
-            <div class="tool-logo-item" title="ChatGPT">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#10A37F"/>
-                <path d="M22.8 13.7C22.5 11.8 21 10.3 19.1 10C18.6 9.4 18 8.9 17.2 8.6C15.6 7.9 13.7 8.3 12.5 9.5C11.4 9.1 10.1 9.4 9.3 10.3C8.1 11.5 7.8 13.4 8.5 14.9C8.1 15.6 8 16.5 8.2 17.4C8.6 19.1 9.9 20.4 11.6 20.8C12 21.4 12.6 21.9 13.4 22.2C15 22.9 16.9 22.5 18.1 21.3C19.2 21.7 20.5 21.4 21.3 20.5C22.5 19.3 22.8 17.4 22.1 15.9C22.6 15.2 22.8 14.4 22.8 13.7Z" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"/>
-              </svg>
-              <span>ChatGPT</span>
-            </div>
-
-            <!-- 12. Perplexity -->
-            <div class="tool-logo-item" title="Perplexity AI">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#202222"/>
-                <path d="M16 7V25M9 11.5L23 20.5M23 11.5L9 20.5M9 11.5V20.5M23 11.5V20.5" stroke="#22B8CD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Perplexity</span>
-            </div>
-
-            <!-- 13. Balsamiq -->
-            <div class="tool-logo-item" title="Balsamiq">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#990000"/>
-                <path d="M10 9H18C20.2 9 22 10.8 22 13C22 14.6 21 15.9 19.6 16.6C21.4 17.3 22.6 19 22.6 20.9C22.6 23.4 20.5 25.5 18 25.5H10V9ZM13.5 11.8V15.5H17.5C18.9 15.5 20 14.4 20 13C20 11.6 18.9 11.8 17.5 11.8H13.5ZM13.5 18.2V22.7H18C19.5 22.7 20.7 21.5 20.7 20C20.7 18.5 19.5 18.2 18 18.2H13.5Z" fill="#FFFFFF"/>
-              </svg>
-              <span>Balsamiq</span>
-            </div>
-
-            <!-- 14. Claude -->
-            <div class="tool-logo-item" title="Anthropic Claude">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#D97757"/>
-                <path d="M16 8V24M8 16H24M10.3 10.3L21.7 21.7M21.7 10.3L10.3 21.7" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
-              </svg>
-              <span>Claude</span>
-            </div>
-
-            <!-- 15. PowerPoint -->
-            <div class="tool-logo-item" title="Microsoft PowerPoint">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="#C43E1C"/>
-                <text x="9" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">P</text>
-                <rect x="18" y="10" width="8" height="8" rx="2" fill="#FFFFFF" fill-opacity="0.3"/>
-              </svg>
-              <span>PowerPoint</span>
-            </div>
-
-            <!-- 16. Excel -->
-            <div class="tool-logo-item" title="Microsoft Excel">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="#107C41"/>
-                <text x="8" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">X</text>
-                <rect x="18" y="10" width="8" height="8" rx="2" fill="#FFFFFF" fill-opacity="0.3"/>
-              </svg>
-              <span>Excel</span>
-            </div>
-
-            <!-- 17. Google Docs -->
-            <div class="tool-logo-item" title="Google Docs / Word">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="#185ABD"/>
-                <text x="5" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF">Doc</text>
-              </svg>
-              <span>Docs</span>
-            </div>
-
-            <!-- 18. Adobe XD -->
-            <div class="tool-logo-item" title="Adobe XD">
-              <svg width="36" height="36" viewBox="0 0 32 32">
-                <rect width="32" height="32" rx="7" fill="#470137"/>
-                <text x="6" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#FF61F6">Xd</text>
-              </svg>
-              <span>Adobe XD</span>
-            </div>
-
-            <!-- 19. Miro -->
-            <div class="tool-logo-item" title="Miro">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#FFD02F"/>
-                <path d="M10 8L13.5 13.5V24L10 18.5V8Z" fill="#050038"/>
-                <path d="M14.5 8L18 13.5V24L14.5 18.5V8Z" fill="#050038"/>
-                <path d="M19 8L22.5 13.5V24L19 18.5V8Z" fill="#050038"/>
-              </svg>
-              <span>Miro</span>
-            </div>
-
-            <!-- 20. Notion -->
-            <div class="tool-logo-item" title="Notion">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#000000"/>
-                <path d="M8.5 9.2L19.8 7.5C21.1 7.3 22 8.3 22 9.5V22.8C22 23.9 21.2 24.8 20.1 25L9.2 26.5C8 26.7 7 25.7 7 24.5V10.8C7 9.9 7.7 9.3 8.5 9.2Z" fill="#FFFFFF"/>
-                <path d="M11 12.5V22.5L14.5 22V15L17.5 21.5L20 21.2V12L17.5 12.3V18L14.5 12V12.5L11 12.5Z" fill="#000000"/>
-              </svg>
-              <span>Notion</span>
-            </div>
-
-            <!-- 21. Lovable -->
-            <div class="tool-logo-item" title="Lovable">
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="7" fill="#18181B"/>
-                <path d="M16 23.5S8 18 8 13.5C8 10.5 10.5 8.5 13.5 8.5C14.8 8.5 15.6 9 16 9.5C16.4 9 17.2 8.5 18.5 8.5C21.5 8.5 24 10.5 24 13.5C24 18 16 23.5 16 23.5Z" fill="url(#lovableGrad)"/>
-              </svg>
-              <span>Lovable</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ==== EXGRID BIG EDITORIAL FOOTER ==== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__intro">
-          <h2>Let's Work Together</h2>
-          <h5>SEND ME A MESSAGE</h5>
+        <!-- ==== toast popup ==== -->
+        <div id="emailToast" class="custom-toast">
+            <i class="fa-solid fa-circle-check text-success me-2"></i> Email copied to clipboard: sakthiniranjana.cmd@gmail.com
         </div>
 
-        <div class="footer__content">
-          <h2 class="light-title-xl">
-            <a href="mailto:its.sakthiniranjana@gmail.com" title="Email Sakthi Niranjana">its.sakthiniranjana@gmail.com</a>
-          </h2>
-        </div>
+        <!-- ==== scroll to top start ==== -->
+        <button class="progress-wrap" aria-label="scroll indicator" title="go to top">
+            <span></span>
+            <svg
+                class="progress-circle svg-content"
+                width="100%"
+                height="100%"
+                viewBox="-1 -1 102 102"
+            >
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </button>
+        <!-- ==== / scroll to top end ==== -->
 
-        <div class="footer__copyright">
-          <div class="footer__copyright-inner">
-            <p style="color:var(--text-quaternary); font-size:0.875rem;">
-              &copy; 2026 Sakthi Niranjana S. All Rights Reserved. Senior UX/UI Designer.
-            </p>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="https://www.behance.net/sakthinir" target="_blank" rel="noopener noreferrer" class="social-btn" title="Behance">
-                <i class="fa-brands fa-behance"></i>
-              </a>
-              <a href="mailto:its.sakthiniranjana@gmail.com" class="social-btn" title="Email Direct">
-                <i class="fa-regular fa-envelope"></i>
-              </a>
-              <a href="tel:6374523020" class="social-btn" title="Phone">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- ==== SCROLL TO TOP PROGRESS WRAP BUTTON ==== -->
-    <button class="progress-wrap" id="progress-wrap" aria-label="Scroll to top" title="Go to top">
-      <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-      </svg>
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
-  </div>
-
-  <!-- Dynamic Case Study & Live Product Modal -->
-  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
-    <div class="modal-container" role="dialog" aria-modal="true">
-      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div id="modal-content-target"></div>
-    </div>
-  </div>
-
-  <!-- GSAP 3 & ScrollTrigger CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- Scripts -->
-  <script type="module" src="js/main.js"></script>
-</body>
+        <!-- ==== js dependencies ==== -->
+        <!-- jquery -->
+        <script src="assets/js/jquery-3.7.0.min.js"></script>
+        <!-- bootstrap five js -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- nice select js -->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!-- magnific popup js -->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!-- slick js -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- odometer js -->
+        <script src="assets/js/odometer.min.js"></script>
+        <!-- scroll smoother js -->
+        <script src="assets/js/ScrollSmoother.min.js"></script>
+        <!-- splittext js -->
+        <script src="assets/js/SplitText.min.js"></script>
+        <!-- scrollto js -->
+        <script src="assets/js/ScrollToPlugin.min.js"></script>
+        <!-- scrolltrigger js -->
+        <script src="assets/js/ScrollTrigger.min.js"></script>
+        <!-- gsap js -->
+        <script src="assets/js/gsap.min.js"></script>
+        <!-- chroma js -->
+        <script src="assets/js/chroma.min.js"></script>
+        <!-- viewport js -->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!-- typed js -->
+        <script src="assets/js/typed.umd.js"></script>
+        <!-- ==== / js dependencies end ==== -->
+        <!-- main js -->
+        <script src="assets/js/custom.js"></script>
+        <script>
+            function copyEmail() {
+                navigator.clipboard.writeText('sakthiniranjana.cmd@gmail.com').then(() => {
+                    const toast = document.getElementById('emailToast');
+                    toast.classList.add('show');
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 3000);
+                });
+            }
+        </script>
+    </body>
 </html>
