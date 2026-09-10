@@ -4,6 +4,7 @@
  * Senior UX/UI Designer | Product Designer | Creative Strategist
  */
 
+import { initExgridAnimations } from './animations.js';
 import { renderCapabilities } from './capabilities-3d.js';
 import { renderSelectedWork } from './gallery-3d.js';
 import { initExperienceEducationToggle } from './experience-toggle.js';
@@ -11,19 +12,22 @@ import { initModal, openModal } from './modal.js';
 import { PERSONAL_INFO, SELECTED_WORK } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Modals
+  // 1. Initialize Exgrid Animations
+  initExgridAnimations();
+
+  // 2. Initialize Modals
   initModal();
 
-  // 2. Initialize Exgrid UI Interactions
+  // 3. Initialize Exgrid UI Interactions
   initExgridInteractions();
 
-  // 3. Initialize Custom Magnetic Cursor
+  // 4. Initialize Custom Magnetic Cursor
   initCustomCursor();
 
-  // 4. Initialize Scroll-To-Top Progress Indicator
+  // 5. Initialize Scroll-To-Top Progress Indicator
   initProgressWrap();
 
-  // 5. Render Dynamic Components if present on current standalone page
+  // 6. Render Dynamic Components if present on current standalone page
   if (document.getElementById('capabilities-container')) {
     renderCapabilities('capabilities-container');
   }
@@ -34,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initExperienceEducationToggle('exp-edu-container');
   }
 
-  // 6. Set Active Navigation Link
+  // 7. Set Active Navigation Link
   setActiveNavLink();
 
-  // 7. Case Study Row Click Handlers on Homepage
+  // 8. Case Study Row Click Handlers on Homepage
   initCaseStudyTriggers();
 });
 
@@ -91,14 +95,18 @@ function initCaseStudyTriggers() {
   caseStudyRows.forEach(row => {
     const projectId = row.getAttribute('data-project-id');
     const project = SELECTED_WORK.find(p => p.id === projectId);
-
-    // Mouse movement inside row to position floating hover preview
     const hoverPreview = row.querySelector('.case-study-hover');
-    if (hoverPreview) {
+
+    if (hoverPreview && window.innerWidth > 576) {
       row.addEventListener('mousemove', (e) => {
         const rect = row.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        hoverPreview.style.left = `${Math.min(Math.max(x + 20, 150), rect.width - 240)}px`;
+        const dx = e.clientX - rect.left;
+        const dy = e.clientY - rect.top;
+        hoverPreview.style.transform = `translate(${dx - 140}px, ${dy - 90}px) rotate(6deg) scale(1)`;
+      });
+
+      row.addEventListener('mouseleave', () => {
+        hoverPreview.style.transform = `translate(-50%, -50%) rotate(3deg) scale(0.85)`;
       });
     }
 
