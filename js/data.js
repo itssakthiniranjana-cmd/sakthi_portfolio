@@ -21,13 +21,13 @@ export const PERSONAL_INFO = {
   status: "Available for product design & UX leadership roles",
   positioningStatement: "I design scalable digital products, enterprise SaaS experiences and design systems that turn complex workflows into intuitive user experiences.",
   heroKeywords: ["UX/UI Design", "Product Design", "Design Systems", "Enterprise SaaS", "Fintech", "Mobile", "Web", "Figma"],
-  heroStatement: "Sakthi Niranjana S is a Senior UX/UI & Product Designer based in Chennai, India, specializing in enterprise SaaS, fintech, web and mobile applications, dashboards and scalable design systems. With experience across production digital products, Sakthi focuses on solving complex user and business problems through research, information architecture, interaction design, high-fidelity UI, prototyping and design systems.",
+  heroStatement: "Senior UX/UI & Product Designer based in Chennai, India. Specializing in enterprise SaaS, fintech, web & mobile apps, dashboards, and scalable Figma design systems.",
   aboutHeadline: "About Sakthi Niranjana",
   aboutSubheadline: "Senior UX/UI & Product Designer specializing in scalable digital products and design systems.",
   aboutBio: [
-    "Sakthi Niranjana S is a Senior UX/UI & Product Designer based in Chennai, India, specializing in enterprise SaaS, fintech, web and mobile applications, dashboards and scalable design systems.",
-    "With experience across 23+ production digital products and 15+ multi-brand design systems, Sakthi focuses on solving complex user and business problems through research, information architecture, interaction design, high-fidelity UI, prototyping and design systems.",
-    "Currently contributing to product design, design systems, and operational workflows at FlowHive Solutions (Atlanta, GA) and delivering high-fidelity UX/UI and user research at GI Tech Gaming."
+    "Senior UX/UI & Product Designer based in Chennai, India. Leading product design & design systems at FlowHive Solutions and delivering enterprise UI & user research at GI Tech Gaming.",
+    "Specializes in enterprise SaaS platforms, fintech ecosystems, dashboards, mobile applications, and scalable Figma design systems.",
+    "Available for product design, UX/UI, enterprise SaaS, and design system opportunities worldwide."
   ]
 };
 
