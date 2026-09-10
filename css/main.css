@@ -25,23 +25,23 @@
   --text-white: #ffffff;
 
   /* Velvet Crimson (#89023e) Primary Color System */
-  --lavender-primary: #89023e;   /* Velvet Crimson Primary (#89023e) */
-  --lavender-hover: #68012f;     /* Deep Wine Crimson */
-  --lavender-light: #b8145a;     /* Vibrant Magenta Rose */
-  --lavender-soft: rgba(137, 2, 62, 0.08);
-  --bg-lavender-tint: rgba(137, 2, 62, 0.04);
-  --lavender-tint: rgba(137, 2, 62, 0.08);
-  --lavender-glow: rgba(137, 2, 62, 0.25);
-  --lavender-glow-strong: rgba(137, 2, 62, 0.45);
+  --lavender-primary: #e4c1f9;   /* Velvet Crimson Primary (#89023e) */
+  --lavender-hover: #d29bf5;     /* Deep Wine Crimson */
+  --lavender-light: #f5e8fd;     /* Vibrant Magenta Rose */
+  --lavender-soft: rgba(228, 193, 249, 0.08);
+  --bg-lavender-tint: rgba(228, 193, 249, 0.04);
+  --lavender-tint: rgba(228, 193, 249, 0.08);
+  --lavender-glow: rgba(228, 193, 249, 0.25);
+  --lavender-glow-strong: rgba(228, 193, 249, 0.45);
 
-  --accent-primary: #89023e;
-  --accent-secondary: #68012f;
+  --accent-primary: #e4c1f9;
+  --accent-secondary: #d29bf5;
 
   /* Exgrid Clean Borders */
   --border-color: #d9d9d9;
   --border-subtle: #e5e7eb;
   --border-hover: #181818;
-  --border-lavender: rgba(137, 2, 62, 0.35);
+  --border-lavender: rgba(228, 193, 249, 0.35);
 
   /* Elevation */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -93,7 +93,7 @@ body {
 
 ::selection {
   background: var(--lavender-primary);
-  color: #ffffff;
+  color: #181818;
 }
 
 /* Background Ambient Elements */
@@ -138,7 +138,7 @@ body {
   left: -10vw;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(137, 2, 62, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(228, 193, 249, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 /* Container */
@@ -275,7 +275,7 @@ a:hover {
 }
 
 .navbar__list a.active {
-  color: #ffffff !important;
+  color: #181818 !important;
   background: var(--lavender-primary) !important;
   font-weight: 700;
   box-shadow: 0 4px 16px var(--lavender-glow);
@@ -458,7 +458,7 @@ a:hover {
 .social-btn:hover {
   background: var(--lavender-primary);
   border-color: var(--lavender-primary);
-  color: #ffffff;
+  color: #181818;
   transform: translateY(-3px);
   box-shadow: 0 6px 16px var(--lavender-glow);
 }
@@ -485,7 +485,7 @@ a:hover {
 .banner__meta-btn a:hover, .banner__meta-btn button:hover, .rt-btn:hover {
   border-color: var(--lavender-primary);
   background: var(--lavender-primary);
-  color: #ffffff;
+  color: #181818;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px var(--lavender-glow);
 }
@@ -497,7 +497,7 @@ a:hover {
 }
 
 .banner__meta-btn a:hover i, .banner__meta-btn button:hover i, .rt-btn:hover i {
-  color: #ffffff;
+  color: #181818;
   transform: translateX(3px);
 }
 
@@ -649,7 +649,7 @@ a:hover {
   left: 0;
   display: block;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  color: #ffffff;
+  color: #181818;
 }
 
 .anim-btn:hover .btn-anim {
@@ -778,7 +778,7 @@ a:hover {
   background-position: top center;
   background-repeat: no-repeat;
   border-radius: 18px;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22), 0 0 35px rgba(137, 2, 62, 0.3);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22), 0 0 35px rgba(228, 193, 249, 0.3);
   opacity: 0;
   pointer-events: none;
   z-index: 20;
@@ -926,7 +926,7 @@ a:hover {
 .banner__history-single:hover .lefter h2,
 .banner__history-single:hover .righter h2,
 .banner__history-single:hover .righter p {
-  color: #ffffff !important;
+  color: #181818 !important;
 }
 
 /* 3. RIGHT COLUMN: SIDEBAR WIDGETS */
@@ -1381,7 +1381,7 @@ a:hover {
 .offcanvas-close:hover {
   background: var(--lavender-primary);
   border-color: var(--lavender-primary);
-  color: #ffffff;
+  color: #181818;
   transform: rotate(90deg);
 }
 
@@ -1435,7 +1435,7 @@ a:hover {
   height: 32px;
   border-radius: 50%;
   border: 1.5px solid var(--lavender-primary);
-  background: rgba(137, 2, 62, 0.04);
+  background: rgba(228, 193, 249, 0.04);
   pointer-events: none;
   z-index: 10000;
   transform: translate(-50%, -50%);
@@ -1664,7 +1664,7 @@ a:hover {
   right: -40px;
   width: 140px;
   height: 140px;
-  background: radial-gradient(circle, rgba(137, 2, 62, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(228, 193, 249, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
@@ -1714,7 +1714,7 @@ a:hover {
 }
 
 .capability-card:hover .case-pill {
-  border-color: rgba(137, 2, 62, 0.4);
+  border-color: rgba(228, 193, 249, 0.4);
   background: var(--lavender-soft);
   color: var(--lavender-primary);
 }
@@ -1724,7 +1724,7 @@ a:hover {
   height: 46px;
   border-radius: 14px;
   background: var(--bg-lavender-tint);
-  border: 1px solid rgba(137, 2, 62, 0.25);
+  border: 1px solid rgba(228, 193, 249, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1737,7 +1737,7 @@ a:hover {
 
 .capability-card:hover .capability-icon-badge {
   background: var(--lavender-primary);
-  color: #ffffff;
+  color: #181818;
   box-shadow: 0 0 20px var(--lavender-glow);
 }
 
@@ -1770,8 +1770,8 @@ a:hover {
 }
 
 .capability-impact-box {
-  background: rgba(137, 2, 62, 0.05);
-  border: 1px dashed rgba(137, 2, 62, 0.35);
+  background: rgba(228, 193, 249, 0.05);
+  border: 1px dashed rgba(228, 193, 249, 0.35);
   border-radius: 10px;
   padding: 0.65rem 0.9rem;
   margin-bottom: 1.25rem;
@@ -1816,7 +1816,7 @@ a:hover {
 }
 
 .capability-card:hover .capability-skill-pill {
-  border-color: rgba(137, 2, 62, 0.35);
+  border-color: rgba(228, 193, 249, 0.35);
   color: var(--text-primary);
   background: var(--lavender-soft);
 }
@@ -1888,7 +1888,7 @@ a:hover {
 
 .capability-card:hover .capability-arrow-btn {
   background: var(--lavender-primary);
-  color: #ffffff;
+  color: #181818;
   transform: translateX(4px);
   box-shadow: 0 0 12px var(--lavender-glow);
 }
@@ -1967,7 +1967,7 @@ a:hover {
 
 .project-stage-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 25px 60px rgba(137, 2, 62, 0.12), 0 0 35px var(--lavender-glow);
+  box-shadow: 0 25px 60px rgba(228, 193, 249, 0.12), 0 0 35px var(--lavender-glow);
   transform: translateY(-4px);
   background: #ffffff;
 }
@@ -1997,7 +1997,7 @@ a:hover {
 }
 
 .project-stage-card:hover .project-visual-stage {
-  box-shadow: 0 16px 40px rgba(137, 2, 62, 0.15);
+  box-shadow: 0 16px 40px rgba(228, 193, 249, 0.15);
 }
 
 .project-browser-frame {
@@ -2108,7 +2108,7 @@ a:hover {
   font-size: 0.8125rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: #181818;
   background: var(--lavender-primary);
   padding: 0.6rem 1.25rem;
   border-radius: 100px;
@@ -2335,7 +2335,7 @@ a:hover {
 .project-grid-card:hover {
   border-color: var(--lavender-primary);
   transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(137, 2, 62, 0.14), 0 0 25px var(--lavender-glow);
+  box-shadow: 0 20px 45px rgba(228, 193, 249, 0.14), 0 0 25px var(--lavender-glow);
 }
 
 .project-card-thumb {
@@ -2387,7 +2387,7 @@ a:hover {
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: #181818;
   background: var(--lavender-primary);
   padding: 0.45rem 1.1rem;
   border-radius: 100px;
@@ -2472,7 +2472,7 @@ a:hover {
 
 .project-grid-card:hover .project-card-tag {
   background: var(--lavender-soft);
-  border-color: rgba(137, 2, 62, 0.3);
+  border-color: rgba(228, 193, 249, 0.3);
   color: var(--text-primary);
 }
 
@@ -2614,7 +2614,7 @@ a:hover {
 .exp-edu-card:hover {
   border-color: var(--lavender-primary);
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(137, 2, 62, 0.12), 0 0 20px var(--lavender-glow);
+  box-shadow: 0 18px 40px rgba(228, 193, 249, 0.12), 0 0 20px var(--lavender-glow);
 }
 
 .exp-edu-card-top {
@@ -2638,7 +2638,7 @@ a:hover {
 }
 
 .exp-edu-card:hover .exp-edu-period-pill {
-  border-color: rgba(137, 2, 62, 0.3);
+  border-color: rgba(228, 193, 249, 0.3);
   background: var(--lavender-soft);
   color: var(--text-primary);
 }
@@ -2697,7 +2697,7 @@ a:hover {
 
 .exp-edu-card:hover .exp-edu-tag {
   background: var(--lavender-soft);
-  border-color: rgba(137, 2, 62, 0.3);
+  border-color: rgba(228, 193, 249, 0.3);
   color: var(--text-primary);
 }
 
@@ -2903,7 +2903,7 @@ a:hover {
 .about-profile-socials a:hover {
   background: var(--lavender-primary);
   border-color: var(--lavender-primary);
-  color: #ffffff;
+  color: #181818;
   transform: translateY(-2px);
 }
 
@@ -3082,7 +3082,7 @@ a:hover {
 
 .minimal-skill-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 10px 28px rgba(137, 2, 62, 0.07);
+  box-shadow: 0 10px 28px rgba(228, 193, 249, 0.07);
   transform: translateY(-3px);
 }
 
@@ -3234,7 +3234,7 @@ a:hover {
 
 .exp-timeline-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 14px 36px rgba(137, 2, 62, 0.08);
+  box-shadow: 0 14px 36px rgba(228, 193, 249, 0.08);
   transform: translateY(-3px);
 }
 
