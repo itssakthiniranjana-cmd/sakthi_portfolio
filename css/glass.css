@@ -85,9 +85,9 @@
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(228, 193, 249, 0.18);
+  border: 1px solid rgba(234, 99, 140, 0.18);
   border-radius: var(--radius-full);
-  box-shadow: 0 10px 30px rgba(30, 20, 70, 0.06), 0 0 25px rgba(228, 193, 249, 0.05);
+  box-shadow: 0 10px 30px rgba(30, 20, 70, 0.06), 0 0 25px rgba(234, 99, 140, 0.05);
   transition: all var(--transition-normal);
   max-width: 960px;
   width: 100%;
@@ -129,12 +129,12 @@
 
 .nav-link:hover, .nav-link.active {
   color: var(--accent-primary);
-  background: rgba(228, 193, 249, 0.08);
+  background: rgba(234, 99, 140, 0.08);
 }
 
 .nav-link.active {
   font-weight: 700;
-  background: rgba(228, 193, 249, 0.12);
+  background: rgba(234, 99, 140, 0.12);
 }
 
 /* Mobile Menu Toggle */
@@ -174,8 +174,8 @@
   width: 80px;
   height: 80px;
   border-radius: 24px;
-  background: linear-gradient(135deg, rgba(228, 193, 249, 0.15) 0%, rgba(104, 1, 47, 0.3) 100%);
-  border: 1px solid rgba(228, 193, 249, 0.35);
+  background: linear-gradient(135deg, rgba(234, 99, 140, 0.15) 0%, rgba(104, 1, 47, 0.3) 100%);
+  border: 1px solid rgba(234, 99, 140, 0.35);
   backdrop-filter: blur(20px);
   display: flex;
   align-items: center;
@@ -185,7 +185,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--lavender-primary);
-  box-shadow: 0 10px 30px rgba(228, 193, 249, 0.25);
+  box-shadow: 0 10px 30px rgba(234, 99, 140, 0.25);
   margin-bottom: 2rem;
   animation: float-glow 3s infinite alternate ease-in-out;
 }
@@ -193,11 +193,11 @@
 @keyframes float-glow {
   0% {
     transform: translateY(0) scale(1);
-    box-shadow: 0 0 25px rgba(228, 193, 249, 0.2);
+    box-shadow: 0 0 25px rgba(234, 99, 140, 0.2);
   }
   100% {
     transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 0 45px rgba(228, 193, 249, 0.45);
+    box-shadow: 0 0 45px rgba(234, 99, 140, 0.45);
   }
 }
 
@@ -214,7 +214,7 @@
 .preloader-progress-wrap {
   width: 200px;
   height: 3px;
-  background: rgba(228, 193, 249, 0.15);
+  background: rgba(234, 99, 140, 0.15);
   border-radius: var(--radius-full);
   position: relative;
   overflow: hidden;

@@ -125,7 +125,7 @@
   width: 120%;
   height: 120%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(228, 193, 249, 0.28) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(234, 99, 140, 0.28) 0%, rgba(255, 255, 255, 0) 70%);
   filter: blur(40px);
   z-index: 0;
   pointer-events: none;
@@ -191,7 +191,7 @@
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(228, 193, 249, 0.28);
+  border: 1px solid rgba(234, 99, 140, 0.28);
   border-radius: var(--radius-full);
   box-shadow: 0 10px 25px rgba(20, 15, 45, 0.08);
   display: flex;
@@ -393,7 +393,7 @@
 .capability-card:hover {
   transform: translateZ(40px) translateY(-6px);
   border-color: var(--lavender-primary);
-  box-shadow: 0 25px 50px rgba(228, 193, 249, 0.16), 0 0 30px var(--lavender-glow);
+  box-shadow: 0 25px 50px rgba(234, 99, 140, 0.16), 0 0 30px var(--lavender-glow);
   background: #ffffff;
   z-index: 10;
 }
@@ -437,7 +437,7 @@
 
 .capability-card:hover .capability-skill-pill {
   color: var(--lavender-hover);
-  border-color: rgba(228, 193, 249, 0.3);
+  border-color: rgba(234, 99, 140, 0.3);
 }
 
 /* Selected Work 3D Gallery */
@@ -812,7 +812,7 @@
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, var(--lavender-primary) 0%, rgba(228, 193, 249, 0.15) 100%);
+  background: linear-gradient(180deg, var(--lavender-primary) 0%, rgba(234, 99, 140, 0.15) 100%);
 }
 
 .timeline-item {
@@ -918,7 +918,7 @@
 
 .philosophy-statement-card:hover .philosophy-big-text {
   color: var(--lavender-primary);
-  text-shadow: 0 0 25px rgba(228, 193, 249, 0.35);
+  text-shadow: 0 0 25px rgba(234, 99, 140, 0.35);
 }
 
 .philosophy-explanation {
@@ -967,7 +967,7 @@
 
 .contact-headline:hover {
   color: var(--lavender-primary);
-  text-shadow: 0 0 25px rgba(228, 193, 249, 0.3);
+  text-shadow: 0 0 25px rgba(234, 99, 140, 0.3);
 }
 
 .contact-subtext {
