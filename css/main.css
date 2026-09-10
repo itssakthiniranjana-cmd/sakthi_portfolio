@@ -2651,6 +2651,313 @@ a:hover {
   }
 }
 
+/* ==========================================================================
+   ABOUT HERO 3-COLUMN BENTO SYSTEM (EXACT REFERENCE SPECIFICATION)
+   ========================================================================== */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.85fr 0.95fr;
+  gap: 1.75rem;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.about-vision-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: clamp(2rem, 3vw, 2.75rem);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-vision-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.about-vision-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 2.75vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.about-card-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  border: none;
+  margin: 1.5rem 0;
+}
+
+.about-vision-desc {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.about-vision-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.about-vision-meta span, 
+.about-vision-meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about-vision-meta a:hover {
+  color: var(--lavender-primary);
+}
+
+.about-vision-meta i {
+  color: var(--lavender-primary);
+  font-size: 0.95rem;
+}
+
+/* Middle Persona Card */
+.about-profile-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-profile-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.about-profile-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.about-profile-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-profile-card:hover .about-profile-thumb img {
+  transform: scale(1.04);
+}
+
+.about-profile-info {
+  padding: 1.25rem 0.25rem 0.5rem 0.25rem;
+}
+
+.about-profile-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.about-profile-role {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-quaternary);
+  display: flex;
+  align-items: center;
+}
+
+.about-profile-role .typing-cursor {
+  display: inline-block;
+  color: var(--lavender-primary);
+  font-weight: 800;
+  animation: blink-cursor 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.about-profile-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 1rem;
+}
+
+.about-profile-footer span {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-quaternary);
+}
+
+.about-profile-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.about-profile-socials a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.about-profile-socials a:hover {
+  background: var(--lavender-primary);
+  border-color: var(--lavender-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Right Skills Card */
+.about-skills-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: clamp(1.75rem, 2.5vw, 2.25rem);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-skills-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.about-skills-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.about-skills-indicator {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.about-skills-indicator span:first-child {
+  width: 28px;
+  height: 2px;
+  background: var(--lavender-primary);
+  border-radius: 2px;
+}
+
+.about-skills-indicator span:last-child {
+  width: 10px;
+  height: 2px;
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+.about-skill-item {
+  margin-bottom: 1.15rem;
+}
+
+.about-skill-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.45rem;
+}
+
+.about-skill-name {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.about-skill-pct {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-quaternary);
+}
+
+.about-skill-track {
+  width: 100%;
+  height: 4px;
+  background: #f1f5f9;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.about-skill-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 1100px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-vision-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-vision-card {
+    grid-column: span 1;
+  }
+}
+
+
 
 
 

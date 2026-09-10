@@ -43,7 +43,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Case Study Row Click Handlers on Homepage
   initCaseStudyTriggers();
+
+  // 9. About Page Typewriter Persona Animation
+  initAboutTypewriter();
 });
+
+function initAboutTypewriter() {
+  const typedEl = document.getElementById('about-typed-text');
+  if (!typedEl) return;
+
+  const roles = [
+    'Senior UX/UI Designer',
+    'Product Designer',
+    'Content Strategist',
+    'Design Systems Lead'
+  ];
+
+  let roleIndex = 0;
+  let charIndex = roles[0].length;
+  let isDeleting = true;
+  let typingDelay = 100;
+
+  function typeLoop() {
+    const currentRole = roles[roleIndex];
+
+    if (isDeleting) {
+      charIndex--;
+      typedEl.textContent = currentRole.substring(0, charIndex);
+      typingDelay = 40;
+    } else {
+      charIndex++;
+      typedEl.textContent = currentRole.substring(0, charIndex);
+      typingDelay = 90;
+    }
+
+    if (!isDeleting && charIndex === currentRole.length) {
+      isDeleting = true;
+      typingDelay = 2200;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      typingDelay = 400;
+    }
+
+    setTimeout(typeLoop, typingDelay);
+  }
+
+  setTimeout(typeLoop, 2200);
+}
 
 function setActiveNavLink() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
