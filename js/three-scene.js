@@ -131,8 +131,8 @@ class HeroThreeScene {
     // Inner Floating Iridescent Core Sphere
     const innerSphereGeo = new THREE.SphereGeometry(0.75, 48, 48);
     const innerMaterial = new THREE.MeshPhysicalMaterial({
-      color: 0xc77dff,
-      emissive: 0x4f46e5,
+      color: 0x89023e,
+      emissive: 0x68012f,
       emissiveIntensity: 0.35,
       roughness: 0.2,
       metalness: 0.8,
