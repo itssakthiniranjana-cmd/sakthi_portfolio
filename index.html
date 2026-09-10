@@ -116,9 +116,22 @@
                 color: var(--quinary-color) !important;
                 background: rgba(199, 125, 255, 0.12) !important;
             }
+            .navbar__options {
+                display: none !important;
+                align-items: center;
+                gap: 1rem;
+            }
+            @media (max-width: 991px) {
+                .navbar__menu {
+                    display: none !important;
+                }
+                .navbar__options {
+                    display: flex !important;
+                }
+            }
             .animated-bar {
-                width: 48px;
-                height: 48px;
+                width: 44px;
+                height: 44px;
                 border-radius: 50%;
                 background: #181818;
                 border: 1px solid rgba(255, 255, 255, 0.1);
@@ -129,7 +142,7 @@
                 transition: all 0.3s ease;
             }
             .animated-bar .bar-line {
-                width: 20px;
+                width: 18px;
                 height: 2px;
                 background: #ffffff;
                 position: relative;
@@ -140,20 +153,21 @@
             .animated-bar .bar-line::after {
                 content: '';
                 position: absolute;
-                width: 20px;
+                width: 18px;
                 height: 2px;
                 background: #ffffff;
                 transition: all 0.3s ease;
                 left: 0;
             }
             .animated-bar .bar-line::before {
-                top: -6px;
+                top: -5px;
             }
             .animated-bar .bar-line::after {
-                top: 6px;
+                top: 5px;
             }
             .animated-bar:hover {
                 background: var(--quinary-color);
+                border-color: var(--quinary-color);
                 transform: scale(1.05);
             }
             .banner__meta .thumb img {
@@ -259,10 +273,7 @@
                             </ul>
                         </nav>
                         <div class="navbar__options">
-                            <button class="open-mobile-info animated-bar d-none d-xl-flex" aria-label="toggle offset info" title="open offset info">
-                                <span class="bar-line"></span>
-                            </button>
-                            <button class="open-mobile-menu animated-bar d-flex d-xl-none" aria-label="toggle mobile menu" title="open mobile menu">
+                            <button class="animated-bar" id="open-offcanvas-btn" aria-label="Open offcanvas menu" title="Open Menu">
                                 <span class="bar-line"></span>
                             </button>
                         </div>
@@ -270,20 +281,28 @@
                 </div>
             </header>
             <!-- ==== mobile menu start ==== -->
-            <div class="mobile-menu d-block d-xl-none">
+            <div class="mobile-menu d-block d-lg-none" id="offcanvas-drawer">
                 <nav class="mobile-menu__wrapper">
                     <div class="mobile-menu__header nav-fade">
                         <div class="mobile-menu__logo">
                             <a href="index.html" class="d-flex align-items-center gap-2">
-                                <span class="navbar__logo-badge">SN</span>
-                                <span class="navbar__logo-text">Sakthi Niranjana</span>
+                                <i class="fa-solid fa-shapes" style="color:var(--quinary-color); font-size:1.25rem;"></i>
+                                <span class="navbar__logo-text">SAKTHI NIRANJANA</span>
                             </a>
                         </div>
                         <button aria-label="close mobile menu" class="close-mobile-menu">
                             <i class="bi bi-x-lg"></i>
                         </button>
                     </div>
-                    <div class="mobile-menu__list"></div>
+                    <div class="mobile-menu__list">
+                        <ul class="navbar__list flex-column align-items-start gap-3 p-4">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="capabilities.html">Capabilities</a></li>
+                            <li><a href="work.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
                     <div class="mobile-menu__social social nav-fade">
                         <a href="https://www.linkedin.com/in/sakthi-nir" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="in">
                             <i class="fa-brands fa-linkedin-in"></i>
@@ -1006,6 +1025,18 @@
                     }, 3000);
                 });
             }
+
+            // Mobile menu toggle
+            $('#open-offcanvas-btn').on('click', function(e) {
+                e.preventDefault();
+                $('.mobile-menu').addClass('show-menu');
+                $('.mobile-menu__backdrop').addClass('mobile-menu__backdrop-active');
+            });
+            $('.close-mobile-menu, .mobile-menu__backdrop').on('click', function(e) {
+                e.preventDefault();
+                $('.mobile-menu').removeClass('show-menu');
+                $('.mobile-menu__backdrop').removeClass('mobile-menu__backdrop-active');
+            });
         </script>
     </body>
 </html>
