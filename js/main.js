@@ -93,12 +93,22 @@ function initAboutTypewriter() {
 }
 
 function setActiveNavLink() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.navbar__list a, .offcanvas-links a');
+  const pathname = window.location.pathname;
+  let pageName = pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (!pageName.includes('.')) {
+    if (['about', 'capabilities', 'work', 'contact'].includes(pageName.toLowerCase())) {
+      pageName = pageName.toLowerCase() + '.html';
+    } else {
+      pageName = 'index.html';
+    }
+  }
 
+  const navLinks = document.querySelectorAll('.navbar__list a, .offcanvas-links a');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (!href) return;
+    const cleanHref = href.split('#')[0].split('?')[0].split('/').pop();
+    if (cleanHref === pageName || (pageName === 'index.html' && (cleanHref === 'index.html' || cleanHref === '' || href === './' || href === '/'))) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
