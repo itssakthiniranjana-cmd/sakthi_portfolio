@@ -669,10 +669,10 @@ export const EXPERIENCE_TIMELINE = [
   {
     id: "gitech",
     role: "UX/UI Designer",
-    company: "GI TECH GAMING CO INDIA PRIVATE LTD",
+    company: "GI Tech Gaming Co",
     location: "Chennai, Tamil Nadu, India",
-    period: "May 2024 — Present (2 years 5 months)",
-    status: "Present",
+    period: "2024 — 2026",
+    status: "Completed",
     badge: "Core Experience",
     summary: "Specializing in creating user-centered designs that seamlessly blend functionality and aesthetics. Transforming complex problems into simple, elegant solutions that provide users with an intuitive and enjoyable experience across mobile apps, websites, and enterprise software.",
     description: "Delivering designs rooted in user needs and behaviors with a strong foundation in both user research and interface design. Well-versed in Figma, Sketch, Adobe XD, and InVision, thriving in agile environments prioritizing user feedback and iterative design.",
