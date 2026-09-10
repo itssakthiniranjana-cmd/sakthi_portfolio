@@ -383,10 +383,11 @@ a:hover {
   margin-bottom: 1.15rem;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 1 / 1.15;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+  aspect-ratio: 1 / 1;
+  background: transparent;
+  border: none;
   position: relative;
+  width: 100%;
 }
 
 .banner__meta .thumb img {
@@ -2806,10 +2807,11 @@ a:hover {
 
 .about-profile-thumb {
   width: 100%;
-  aspect-ratio: 1 / 1.1;
+  aspect-ratio: 1 / 1;
   border-radius: 22px;
   overflow: hidden;
-  background: #f1f5f9;
+  background: transparent;
+  border: none;
 }
 
 .about-profile-thumb img {
@@ -2817,6 +2819,7 @@ a:hover {
   height: 100%;
   object-fit: cover;
   object-position: center 15%;
+  border-radius: 22px;
   display: block;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
