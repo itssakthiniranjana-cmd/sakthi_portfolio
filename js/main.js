@@ -46,7 +46,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 9. About Page Typewriter Persona Animation
   initAboutTypewriter();
+
+  // 10. FAQ Accordion Toggle Interaction
+  initFaqAccordion();
 });
+
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.aeo-faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.aeo-faq-question');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        // Close others for clean accordion experience
+        faqItems.forEach(other => {
+          if (other !== item) {
+            other.classList.remove('active');
+            const otherBtn = other.querySelector('.aeo-faq-question');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        item.classList.toggle('active', !isOpen);
+        questionBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      });
+    }
+  });
+}
 
 function initAboutTypewriter() {
   const typedEl = document.getElementById('about-typed-text');

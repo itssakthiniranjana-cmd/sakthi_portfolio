@@ -8,7 +8,8 @@
 export const PERSONAL_INFO = {
   name: "Sakthi Niranjana S",
   monogram: "SN",
-  role: "Senior UX/UI Designer | Product Designer | Creative Strategist",
+  role: "Senior UX/UI & Product Designer",
+  title: "Senior UX/UI & Product Designer | Enterprise SaaS, Fintech & Design Systems",
   currentPosition: "Senior UX/UI Designer & Content Head",
   company: "FlowHive Solutions",
   location: "Chennai, India",
@@ -17,13 +18,16 @@ export const PERSONAL_INFO = {
   linkedin: "https://www.linkedin.com/in/sakthi-nir",
   behance: "https://www.behance.net/sakthinir",
   figmaArchive: "https://www.figma.com/design/d3oZb24wi6CtKMWgLNJueH/projects?node-id=0-1&t=GkhLeqCbhTEmBzBM-1",
-  status: "Available for selected projects",
-  heroStatement: "Senior UX/UI Designer & Creative Head building meaningful digital experiences across products, platforms and brands.",
-  aboutHeadline: "DESIGNING WITH PURPOSE, CLARITY & PRECISION.",
+  status: "Available for product design & UX leadership roles",
+  positioningStatement: "I design scalable digital products, enterprise SaaS experiences and design systems that turn complex workflows into intuitive user experiences.",
+  heroKeywords: ["UX/UI Design", "Product Design", "Design Systems", "Enterprise SaaS", "Fintech", "Mobile", "Web", "Figma"],
+  heroStatement: "Sakthi Niranjana S is a Senior UX/UI & Product Designer based in Chennai, India, specializing in enterprise SaaS, fintech, web and mobile applications, dashboards and scalable design systems. With experience across production digital products, Sakthi focuses on solving complex user and business problems through research, information architecture, interaction design, high-fidelity UI, prototyping and design systems.",
+  aboutHeadline: "About Sakthi Niranjana",
+  aboutSubheadline: "Senior UX/UI & Product Designer specializing in scalable digital products and design systems.",
   aboutBio: [
-    "Sakthi Niranjana is a Senior UX/UI and product designer focused on turning complex ideas into clear, intuitive and visually strong digital experiences.",
-    "Her work spans enterprise UX/UI design, product thinking, design systems, branding and high-impact digital platforms across multiple global industries.",
-    "She currently works as a Senior UX/UI Designer & Content Head at FlowHive Solutions, contributing to digital experiences involving WMS, supply chain optimization and AI-powered transformation."
+    "Sakthi Niranjana S is a Senior UX/UI & Product Designer based in Chennai, India, specializing in enterprise SaaS, fintech, web and mobile applications, dashboards and scalable design systems.",
+    "With experience across 23+ production digital products and 15+ multi-brand design systems, Sakthi focuses on solving complex user and business problems through research, information architecture, interaction design, high-fidelity UI, prototyping and design systems.",
+    "Currently contributing to product design, design systems, and operational workflows at FlowHive Solutions (Atlanta, GA) and delivering high-fidelity UX/UI and user research at GI Tech Gaming."
   ]
 };
 
@@ -790,5 +794,123 @@ export const EDUCATION_TIMELINE = [
     tags: ["Design Systems", "Tokens Studio", "Motion Design", "Governance"]
   }
 ];
+
+export const RECRUITER_SKILLS_DATA = [
+  {
+    category: "UX / PRODUCT DESIGN",
+    icon: "fa-solid fa-compass-drafting",
+    skills: [
+      "User Experience Design",
+      "Product Design",
+      "User Research",
+      "Usability Testing",
+      "User Flows",
+      "Information Architecture",
+      "Journey Mapping",
+      "Wireframing",
+      "Prototyping",
+      "Interaction Design",
+      "UX Strategy"
+    ]
+  },
+  {
+    category: "UI / VISUAL DESIGN",
+    icon: "fa-solid fa-palette",
+    skills: [
+      "User Interface Design",
+      "Visual Design",
+      "Responsive Design",
+      "Web Design",
+      "Mobile App Design",
+      "Dashboard Design",
+      "High-Fidelity UI",
+      "Micro-interactions"
+    ]
+  },
+  {
+    category: "DESIGN SYSTEMS",
+    icon: "fa-solid fa-layer-group",
+    skills: [
+      "Design Systems",
+      "Design Tokens",
+      "Component Libraries",
+      "Figma Components",
+      "Figma Variables",
+      "UI Libraries",
+      "Design System Documentation",
+      "Scalable Design Architecture"
+    ]
+  },
+  {
+    category: "PRODUCT DOMAINS",
+    icon: "fa-solid fa-briefcase",
+    skills: [
+      "Enterprise SaaS",
+      "B2B SaaS",
+      "Fintech",
+      "Enterprise Applications",
+      "Mobile Applications",
+      "Web Applications",
+      "Dashboards",
+      "Digital Products"
+    ]
+  },
+  {
+    category: "TOOLS",
+    icon: "fa-solid fa-toolbox",
+    skills: [
+      "Figma",
+      "FigJam",
+      "Tokens Studio",
+      "Prototyping",
+      "Design Tokens",
+      "Component Libraries"
+    ]
+  }
+];
+
+export const FAQ_DATA = [
+  {
+    question: "Who is Sakthi Niranjana?",
+    answer: "Sakthi Niranjana S is a Senior UX/UI & Product Designer based in Chennai, India, specializing in enterprise SaaS, fintech, web and mobile applications, dashboards and scalable design systems."
+  },
+  {
+    question: "What does Sakthi Niranjana specialize in?",
+    answer: "Sakthi specializes in enterprise SaaS product design, multi-brand design systems, fintech user experiences, high-density dashboard architectures, and cross-platform mobile and web application design."
+  },
+  {
+    question: "What type of designer is Sakthi Niranjana?",
+    answer: "Sakthi is an end-to-end Senior UX/UI and Product Designer who bridges user research, information architecture, wireframing, high-fidelity UI design, interactive prototyping, and design system governance."
+  },
+  {
+    question: "What industries has Sakthi Niranjana designed for?",
+    answer: "Sakthi has designed for Enterprise SaaS, FinTech & Payments, Logistics & Supply Chain (3PL/WMS), Smart City Mobility & IoT, PropTech & Coworking, Gaming & Lotteries, and E-Commerce."
+  },
+  {
+    question: "What products does Sakthi Niranjana design?",
+    answer: "Sakthi designs enterprise SaaS platforms, B2B dashboards, payment switches, mobile applications (iOS and Android), warehouse management systems (WMS), landlord portals, and complex transactional workflows."
+  },
+  {
+    question: "Does Sakthi Niranjana specialize in design systems?",
+    answer: "Yes, Sakthi specializes in multi-brand design token architectures, reusable component libraries, Figma auto-layout systems, variables, and accessibility-compliant (WCAG) developer handoff specifications."
+  },
+  {
+    question: "What tools does Sakthi Niranjana use?",
+    answer: "Sakthi primarily uses Figma, FigJam, Tokens Studio, modern prototyping tools, HTML/CSS for design-to-code alignment, and user research frameworks."
+  },
+  {
+    question: "Where is Sakthi Niranjana based?",
+    answer: "Sakthi Niranjana S is based in Chennai, Tamil Nadu, India, and collaborates with global teams and enterprise clients worldwide."
+  },
+  {
+    question: "What type of UX/UI design projects has Sakthi Niranjana worked on?",
+    answer: "Sakthi has architected and shipped 23+ live production platforms, 45+ enterprise SaaS interfaces, 15+ multi-brand design systems, and multi-currency fintech gateways."
+  },
+  {
+    question: "What is Sakthi Niranjana's design process?",
+    answer: "Sakthi follows a structured 5-stage human-centered design process: 1) Discover & User Research, 2) Information Architecture & User Flows, 3) Wireframing & Prototyping, 4) High-Fidelity UI & Design Systems, and 5) Usability Testing & Agile Engineering Handoff."
+  }
+];
+
 
 
