@@ -44,34 +44,123 @@
                 --quinary-color: #c77dff;
                 --theme-color: #181818;
             }
+            /* Clean Glass Navbar Matching About Page */
+            .primary-navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 999;
+                background: rgba(255, 255, 255, 0.94) !important;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(217, 217, 217, 0.6) !important;
+                padding: 0 !important;
+                background-image: none !important;
+            }
+            .navbar-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 80px;
+                gap: 2rem;
+            }
+            .navbar__logo a {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                font-family: var(--sp-grotesk);
+                font-weight: 800;
+                font-size: 1.15rem;
+                letter-spacing: -0.02em;
+                color: #181818;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            .navbar__logo a:hover {
+                color: var(--quinary-color);
+            }
+            .navbar__logo-text {
+                font-family: var(--sp-grotesk);
+                font-weight: 800;
+                font-size: 1.15rem;
+                color: #181818;
+                letter-spacing: 0.5px;
+            }
+            .navbar__menu {
+                display: flex;
+                align-items: center;
+            }
+            .navbar__list {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .navbar__list a {
+                padding: 0.5rem 1.15rem;
+                font-family: var(--sp-grotesk);
+                font-weight: 600;
+                font-size: 0.95rem;
+                color: #686868;
+                border-radius: 100px;
+                transition: all 0.3s ease-in-out;
+                display: inline-block;
+                text-decoration: none;
+            }
+            .navbar__list a:hover,
+            .navbar__list a.active {
+                color: var(--quinary-color) !important;
+                background: rgba(199, 125, 255, 0.12) !important;
+            }
+            .animated-bar {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #181818;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .animated-bar .bar-line {
+                width: 20px;
+                height: 2px;
+                background: #ffffff;
+                position: relative;
+                transition: all 0.3s ease;
+                display: block;
+            }
+            .animated-bar .bar-line::before,
+            .animated-bar .bar-line::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background: #ffffff;
+                transition: all 0.3s ease;
+                left: 0;
+            }
+            .animated-bar .bar-line::before {
+                top: -6px;
+            }
+            .animated-bar .bar-line::after {
+                top: 6px;
+            }
+            .animated-bar:hover {
+                background: var(--quinary-color);
+                transform: scale(1.05);
+            }
             .banner__meta .thumb img {
                 width: 100%;
                 height: 270px;
                 object-fit: cover;
                 border-radius: 24px;
-            }
-            .navbar__logo a {
-                text-decoration: none;
-            }
-            .navbar__logo-badge {
-                width: 38px;
-                height: 38px;
-                border-radius: 50%;
-                background: linear-gradient(135deg, #c77dff, #9d4edd);
-                color: #ffffff;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: 800;
-                font-size: 15px;
-                box-shadow: 0 4px 15px rgba(199, 125, 255, 0.4);
-            }
-            .navbar__logo-text {
-                font-family: var(--sp-grotesk);
-                font-weight: 700;
-                font-size: 20px;
-                color: #181818;
-                letter-spacing: -0.5px;
             }
             .status-indicator {
                 display: inline-flex;
@@ -130,7 +219,9 @@
                 transform: translateY(0);
                 opacity: 1;
             }
-        </style>
+            .footer__copyright {
+                background-image: none !important;
+            }
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -150,47 +241,31 @@
         <!-- ==== page wrapper start ==== -->
         <div class="my-app">
             <!-- ==== header start ==== -->
-            <header class="header">
-                <div class="primary-navbar" data-background="assets/images/header-bg.png">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <nav class="navbar p-0">
-                                    <div class="navbar__logo">
-                                        <a href="index.html" aria-label="home page" title="Sakthi Niranjana" class="d-flex align-items-center gap-2">
-                                            <span class="navbar__logo-badge">SN</span>
-                                            <span class="navbar__logo-text">Sakthi Niranjana</span>
-                                        </a>
-                                    </div>
-                                    <div class="navbar__menu">
-                                        <ul class="navbar__list">
-                                            <li class="navbar__item nav-fade">
-                                                <a href="index.html" class="active">Home</a>
-                                            </li>
-                                            <li class="navbar__item nav-fade">
-                                                <a href="about.html">About Me</a>
-                                            </li>
-                                            <li class="navbar__item nav-fade">
-                                                <a href="capabilities.html">Capabilities</a>
-                                            </li>
-                                            <li class="navbar__item nav-fade">
-                                                <a href="work.html">Case Studies</a>
-                                            </li>
-                                            <li class="navbar__item nav-fade">
-                                                <a href="contact.html">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="navbar__options">
-                                        <button class="open-mobile-info animated-bar d-none d-xl-flex" aria-label="toggle offset info" title="open offset info">
-                                            <span class="bar-line"></span>
-                                        </button>
-                                        <button class="open-mobile-menu animated-bar d-flex d-xl-none" aria-label="toggle mobile menu" title="open mobile menu">
-                                            <span class="bar-line"></span>
-                                        </button>
-                                    </div>
-                                </nav>
-                            </div>
+            <header class="primary-navbar">
+                <div class="container">
+                    <div class="navbar-inner">
+                        <div class="navbar__logo">
+                            <a href="index.html" aria-label="Sakthi Niranjana Home">
+                                <i class="fa-solid fa-shapes" style="color:var(--quinary-color); font-size:1.25rem;"></i>
+                                <span class="navbar__logo-text">SAKTHI NIRANJANA</span>
+                            </a>
+                        </div>
+                        <nav class="navbar__menu" aria-label="Main Navigation">
+                            <ul class="navbar__list">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="about.html">About Me</a></li>
+                                <li><a href="capabilities.html">Capabilities</a></li>
+                                <li><a href="work.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="navbar__options">
+                            <button class="open-mobile-info animated-bar d-none d-xl-flex" aria-label="toggle offset info" title="open offset info">
+                                <span class="bar-line"></span>
+                            </button>
+                            <button class="open-mobile-menu animated-bar d-flex d-xl-none" aria-label="toggle mobile menu" title="open mobile menu">
+                                <span class="bar-line"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -832,7 +907,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__copyright" data-background="assets/images/footer-bg.png">
+                        <div class="footer__copyright">
                             <div class="container">
                                 <div class="row align-items-center gaper">
                                     <div class="col-12 col-lg-8">
