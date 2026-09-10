@@ -595,7 +595,11 @@
      * 20. preloader
      * ======================================
      */
-    $("#preloader").fadeOut(800);
+    try {
+      $("#preloader").fadeOut(300, function() {
+        $(this).remove();
+      });
+    } catch(e) {}
 
     /**
      * ======================================
@@ -1197,28 +1201,25 @@
         var fadeItems = section.find(".fade-top");
 
         fadeItems.each(function (index, element) {
-          var delay = index * 0.15;
+          var delay = index * 0.08;
 
-          gsap.set(element, {
-            opacity: 0,
-            y: 100,
-          });
-
-          ScrollTrigger.create({
-            trigger: element,
-            start: "top 100%",
-            end: "bottom 20%",
-            scrub: 0.5,
-            onEnter: function () {
-              gsap.to(element, {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                delay: delay,
-              });
-            },
-            once: true,
-          });
+          gsap.fromTo(
+            element,
+            { opacity: 0, y: 35 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              delay: delay,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 90%",
+                toggleActions: "play none none none",
+                once: true,
+              },
+            }
+          );
         });
       });
     }
@@ -1525,11 +1526,17 @@
      * 52. smooth scroll
      * ======================================
      */
-    ScrollSmoother.create({
-      smooth: 2.2,
-      effects: true,
-      smoothTouch: 0.1,
-    });
+    try {
+      if (typeof ScrollSmoother !== "undefined" && $("#smooth-wrapper").length > 0) {
+        ScrollSmoother.create({
+          smooth: 1.5,
+          effects: true,
+          smoothTouch: 0.1,
+        });
+      }
+    } catch(e) {
+      console.warn("ScrollSmoother skipped:", e);
+    }
 
     /**
      * ======================================
@@ -1599,29 +1606,35 @@
     }
 
     if ($(".title-anim").length > 0) {
-      let char_come = gsap.utils.toArray(".title-anim");
-      char_come.forEach((char_come) => {
-        let split_char = new SplitText(char_come, {
-          type: "chars, words",
-          lineThreshold: 0.5,
+      try {
+        let char_come = gsap.utils.toArray(".title-anim");
+        char_come.forEach((char_come) => {
+          if (typeof SplitText !== "undefined") {
+            let split_char = new SplitText(char_come, {
+              type: "chars, words",
+              lineThreshold: 0.5,
+            });
+            const tl2 = gsap.timeline({
+              scrollTrigger: {
+                trigger: char_come,
+                start: "top 90%",
+                end: "bottom 60%",
+                scrub: false,
+                markers: false,
+                toggleActions: "play none none none",
+              },
+            });
+            tl2.from(split_char.chars, {
+              duration: 0.8,
+              x: 50,
+              autoAlpha: 0,
+              stagger: 0.02,
+            });
+          }
         });
-        const tl2 = gsap.timeline({
-          scrollTrigger: {
-            trigger: char_come,
-            start: "top 90%",
-            end: "bottom 60%",
-            scrub: false,
-            markers: false,
-            toggleActions: "play none none none",
-          },
-        });
-        tl2.from(split_char.chars, {
-          duration: 0.8,
-          x: 70,
-          autoAlpha: 0,
-          stagger: 0.03,
-        });
-      });
+      } catch(e) {
+        console.warn("title-anim skipped:", e);
+      }
     }
   });
 })(jQuery);
