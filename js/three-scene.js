@@ -82,7 +82,7 @@ class HeroThreeScene {
     mainLight.position.set(5, 8, 6);
     this.scene.add(mainLight);
 
-    const violetLight = new THREE.PointLight(0x985277, 3.5, 20);
+    const violetLight = new THREE.PointLight(0xCE6A85, 3.5, 20);
     violetLight.position.set(-4, -2, 3);
     this.scene.add(violetLight);
 
@@ -131,8 +131,8 @@ class HeroThreeScene {
     // Inner Floating Iridescent Core Sphere
     const innerSphereGeo = new THREE.SphereGeometry(0.75, 48, 48);
     const innerMaterial = new THREE.MeshPhysicalMaterial({
-      color: 0x985277,
-      emissive: 0x7F4262,
+      color: 0xCE6A85,
+      emissive: 0xB9536E,
       emissiveIntensity: 0.35,
       roughness: 0.2,
       metalness: 0.8,
@@ -147,7 +147,7 @@ class HeroThreeScene {
       color: 0xFFB7C3,
       metalness: 0.9,
       roughness: 0.1,
-      emissive: 0x985277,
+      emissive: 0xCE6A85,
       emissiveIntensity: 0.25
     });
     const ringMesh1 = new THREE.Mesh(ringGeo1, ringMat1);
@@ -157,10 +157,10 @@ class HeroThreeScene {
 
     const ringGeo2 = new THREE.TorusGeometry(2.65, 0.025, 24, 100);
     const ringMat2 = new THREE.MeshStandardMaterial({
-      color: 0x985277,
+      color: 0xCE6A85,
       metalness: 0.9,
       roughness: 0.1,
-      emissive: 0x7F4262,
+      emissive: 0xB9536E,
       emissiveIntensity: 0.2
     });
     const ringMesh2 = new THREE.Mesh(ringGeo2, ringMat2);
