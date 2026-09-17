@@ -1,16 +1,14 @@
 /**
- * Contact Page Interactive System
+ * Contact Page Interactive System — Form-Free Direct Communication Edition
  * Sakthi Niranjana S Portfolio
  */
 
 export function initContactPage() {
   initClipboardHandlers();
-  initFormChips();
-  initContactForm();
   initContactFaq();
 }
 
-function showToast(message) {
+export function showToast(message) {
   let toast = document.getElementById('contact-toast');
   if (!toast) {
     toast = document.createElement('div');
@@ -54,69 +52,6 @@ function initClipboardHandlers() {
         showToast('+91 6374523020');
       });
     });
-  });
-}
-
-function initFormChips() {
-  const chipGroups = document.querySelectorAll('.form-chips-wrap');
-  chipGroups.forEach(group => {
-    const isMulti = group.dataset.multi === 'true';
-    const chips = group.querySelectorAll('.form-chip');
-
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        if (isMulti) {
-          chip.classList.toggle('active');
-        } else {
-          chips.forEach(c => c.classList.remove('active'));
-          chip.classList.add('active');
-        }
-      });
-    });
-  });
-}
-
-function initContactForm() {
-  const form = document.getElementById('contact-inquiry-form');
-  const successBanner = document.getElementById('form-success-banner');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const nameInput = document.getElementById('contact-name');
-    const emailInput = document.getElementById('contact-email');
-    const messageInput = document.getElementById('contact-message');
-    const activeChips = Array.from(form.querySelectorAll('.form-chip.active')).map(c => c.textContent.trim());
-
-    const name = nameInput ? nameInput.value.trim() : '';
-    const email = emailInput ? emailInput.value.trim() : '';
-    const message = messageInput ? messageInput.value.trim() : '';
-    const interest = activeChips.length ? activeChips.join(', ') : 'General Product Inquiry';
-
-    if (!name || !email) {
-      showToast('Please enter your name and email address.');
-      return;
-    }
-
-    // Build Mailto link as a reliable fallback
-    const subject = encodeURIComponent(`Product Design Inquiry: ${name} (${interest})`);
-    const body = encodeURIComponent(
-      `Hello Sakthi,\n\nName: ${name}\nEmail: ${email}\nInterest: ${interest}\n\nMessage:\n${message}\n\nBest regards,\n${name}`
-    );
-    const mailtoUrl = `mailto:its.sakthiniranjana@gmail.com?subject=${subject}&body=${body}`;
-
-    // Show Success feedback
-    if (successBanner) {
-      successBanner.classList.add('active');
-      successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    showToast('Inquiry drafted! Launching email client...');
-
-    setTimeout(() => {
-      window.location.href = mailtoUrl;
-    }, 1200);
   });
 }
 
