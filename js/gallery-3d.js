@@ -33,7 +33,7 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
         <!-- Project Thumbnail Image Container -->
         <div class="project-card-thumb">
           <div class="project-card-thumb-inner">
-            <img src="${project.image}?v=5" alt="${project.name} - ${project.categoryLabel || project.category} UX/UI &amp; Product Design by Sakthi Niranjana" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/figmaprojects.jpg';">
+            <img src="${project.image}?v=6" alt="${project.name} - ${project.categoryLabel || project.category} UX/UI &amp; Product Design by Sakthi Niranjana" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/figmaprojects.jpg';">
             <div class="project-card-overlay">
               <span class="view-specs-badge"><i class="fa-solid fa-expand"></i> VIEW SPECS</span>
             </div>
