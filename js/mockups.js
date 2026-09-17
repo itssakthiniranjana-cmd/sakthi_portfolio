@@ -189,13 +189,13 @@ function renderProjectMockup(ctx, w, h, p) {
 }
 
 function hexToRgba(hex, alpha = 1) {
-  if (!hex || typeof hex !== 'string') return `rgba(0, 180, 216, ${alpha})`;
+  if (!hex || typeof hex !== 'string') return `rgba(163, 196, 243, ${alpha})`;
   let cleanHex = hex.replace('#', '');
   if (cleanHex.length === 3) {
     cleanHex = cleanHex.split('').map(c => c + c).join('');
   }
   const num = parseInt(cleanHex, 16);
-  if (isNaN(num)) return `rgba(0, 180, 216, ${alpha})`;
+  if (isNaN(num)) return `rgba(163, 196, 243, ${alpha})`;
   const r = (num >> 16) & 255;
   const g = (num >> 8) & 255;
   const b = num & 255;
@@ -364,7 +364,7 @@ function renderInceptionMockup(ctx, w, h) {
   ctx.lineTo(w, h);
   ctx.lineTo(w * 0.4, h);
   ctx.closePath();
-  ctx.fillStyle = 'rgba(0, 180, 216, 0.15)';
+  ctx.fillStyle = 'rgba(163, 196, 243, 0.15)';
   ctx.fill();
   ctx.restore();
 
