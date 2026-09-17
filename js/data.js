@@ -622,29 +622,6 @@ export const ALL_PROJECTS = [
     ]
   },
   {
-    "id": "revo6",
-    "name": "Revo6",
-    "url": "https://revo6.vercel.app/",
-    "image": "assets/img/projects/revo6.jpg",
-    "category": "Creative",
-    "categoryLabel": "Digital Studio & Modern Web",
-    "tagline": "High-performance digital studio showcase featuring modern web interactions.",
-    "description": "Revo6 is an avant-garde digital product showcase demonstrating kinetic micro-interactions, responsive grid systems, and cutting-edge frontend web aesthetics.",
-    "role": "Product Designer & Frontend Collaborator",
-    "color": "#7c3aed",
-    "gradient": "linear-gradient(135deg, #4c1d95 0%, #c084fc 100%)",
-    "features": [
-      "Fluid CSS Grid & Kinetic Scroll Animations",
-      "Interactive 3D UI Showcase Elements",
-      "Case Study Narrative & Feature Breakdowns"
-    ],
-    "highlights": [
-      "Avant-Garde Web",
-      "3D Interactive",
-      "Kinetic Motion"
-    ]
-  },
-  {
     "id": "behance-movieposters",
     "name": "Movie Posters Art Direction",
     "url": "https://www.behance.net/gallery/254323847/movie-posters",

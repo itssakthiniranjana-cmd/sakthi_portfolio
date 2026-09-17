@@ -41,7 +41,6 @@
    - **The Trippin Tee** (Streetwear Direct-to-Consumer Store)
    - **Wareknit** (Industrial Textile SaaS & Supply Chain)
    - **Smart Biz Care** (Corporate Compliance & Legal Portal)
-   - **Revo6** (Digital Product & Modern Web Studio)
    - **Enterprise Figma Archive** (FlowHive 3PL/WMS, PropPulse Landlord Suite, Quantum Design System)
 
 3. **Multi-Page Architecture**:
