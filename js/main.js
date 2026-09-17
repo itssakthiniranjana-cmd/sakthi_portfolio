@@ -9,6 +9,7 @@ import { renderCapabilities } from './capabilities-3d.js';
 import { renderSelectedWork } from './gallery-3d.js';
 import { initExperienceEducationToggle } from './experience-toggle.js';
 import { initModal, openModal } from './modal.js';
+import { initContactPage } from './contact.js';
 import { PERSONAL_INFO, SELECTED_WORK } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 10. FAQ Accordion Toggle Interaction
   initFaqAccordion();
+
+  // 11. Contact Page Interactive Handlers
+  initContactPage();
 });
 
 function initFaqAccordion() {
