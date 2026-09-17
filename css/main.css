@@ -24,24 +24,25 @@
   --text-muted: #949494;         /* Muted gray */
   --text-white: #ffffff;
 
-  /* Lavender / Slate Purple (#7D70BA) Primary Color System */
-  --lavender-primary: #7D70BA;   /* Primary Color (#7D70BA) */
-  --lavender-hover: #695CA8;     /* Rich Hover (#695CA8) */
-  --lavender-light: #f1eff9;     /* Soft Tint (#f1eff9) */
-  --lavender-soft: rgba(125, 112, 186, 0.08);
-  --bg-lavender-tint: rgba(125, 112, 186, 0.04);
-  --lavender-tint: rgba(125, 112, 186, 0.08);
-  --lavender-glow: rgba(125, 112, 186, 0.25);
-  --lavender-glow-strong: rgba(125, 112, 186, 0.45);
+  /* Primary (#AA4465) & Secondary (#FFB7C3) Color System */
+  --lavender-primary: #AA4465;   /* Primary Color (#AA4465) */
+  --lavender-secondary: #FFB7C3; /* Secondary Color (#FFB7C3) */
+  --lavender-hover: #8E3451;     /* Rich Hover (#8E3451) */
+  --lavender-light: #fdf2f4;     /* Soft Light Tint (#fdf2f4) */
+  --lavender-soft: rgba(170, 68, 101, 0.08);
+  --bg-lavender-tint: rgba(170, 68, 101, 0.04);
+  --lavender-tint: rgba(170, 68, 101, 0.08);
+  --lavender-glow: rgba(170, 68, 101, 0.25);
+  --lavender-glow-strong: rgba(170, 68, 101, 0.45);
 
-  --accent-primary: #7D70BA;
-  --accent-secondary: #695CA8;
+  --accent-primary: #AA4465;
+  --accent-secondary: #FFB7C3;
 
   /* Exgrid Clean Borders */
   --border-color: #d9d9d9;
   --border-subtle: #e5e7eb;
   --border-hover: #181818;
-  --border-lavender: rgba(125, 112, 186, 0.35);
+  --border-lavender: rgba(170, 68, 101, 0.35);
 
   /* Elevation */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -138,7 +139,7 @@ body {
   left: -10vw;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(125, 112, 186, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(170, 68, 101, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 /* Container */
@@ -246,12 +247,12 @@ a:hover {
   object-fit: contain;
   display: block;
   transition: transform var(--transition-bounce), filter 0.3s ease;
-  filter: drop-shadow(0 2px 8px rgba(125, 112, 186, 0.2));
+  filter: drop-shadow(0 2px 8px rgba(170, 68, 101, 0.2));
 }
 
 .navbar__logo a:hover .navbar-logo-img {
   transform: scale(1.05);
-  filter: drop-shadow(0 4px 16px rgba(125, 112, 186, 0.45));
+  filter: drop-shadow(0 4px 16px rgba(170, 68, 101, 0.45));
 }
 
 @media (max-width: 991px) {
@@ -815,7 +816,7 @@ a:hover {
   background-position: top center;
   background-repeat: no-repeat;
   border-radius: 18px;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22), 0 0 35px rgba(125, 112, 186, 0.3);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22), 0 0 35px rgba(170, 68, 101, 0.3);
   opacity: 0;
   pointer-events: none;
   z-index: 20;
@@ -1472,7 +1473,7 @@ a:hover {
   height: 32px;
   border-radius: 50%;
   border: 1.5px solid var(--lavender-primary);
-  background: rgba(125, 112, 186, 0.04);
+  background: rgba(170, 68, 101, 0.04);
   pointer-events: none;
   z-index: 10000;
   transform: translate(-50%, -50%);
@@ -1701,7 +1702,7 @@ a:hover {
   right: -40px;
   width: 140px;
   height: 140px;
-  background: radial-gradient(circle, rgba(125, 112, 186, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(170, 68, 101, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
@@ -1751,7 +1752,7 @@ a:hover {
 }
 
 .capability-card:hover .case-pill {
-  border-color: rgba(125, 112, 186, 0.4);
+  border-color: rgba(170, 68, 101, 0.4);
   background: var(--lavender-soft);
   color: var(--lavender-primary);
 }
@@ -1761,7 +1762,7 @@ a:hover {
   height: 46px;
   border-radius: 14px;
   background: var(--bg-lavender-tint);
-  border: 1px solid rgba(125, 112, 186, 0.25);
+  border: 1px solid rgba(170, 68, 101, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1807,8 +1808,8 @@ a:hover {
 }
 
 .capability-impact-box {
-  background: rgba(125, 112, 186, 0.05);
-  border: 1px dashed rgba(125, 112, 186, 0.35);
+  background: rgba(170, 68, 101, 0.05);
+  border: 1px dashed rgba(170, 68, 101, 0.35);
   border-radius: 10px;
   padding: 0.65rem 0.9rem;
   margin-bottom: 1.25rem;
@@ -1853,7 +1854,7 @@ a:hover {
 }
 
 .capability-card:hover .capability-skill-pill {
-  border-color: rgba(125, 112, 186, 0.35);
+  border-color: rgba(170, 68, 101, 0.35);
   color: var(--text-primary);
   background: var(--lavender-soft);
 }
@@ -2004,7 +2005,7 @@ a:hover {
 
 .project-stage-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 25px 60px rgba(125, 112, 186, 0.12), 0 0 35px var(--lavender-glow);
+  box-shadow: 0 25px 60px rgba(170, 68, 101, 0.12), 0 0 35px var(--lavender-glow);
   transform: translateY(-4px);
   background: #ffffff;
 }
@@ -2034,7 +2035,7 @@ a:hover {
 }
 
 .project-stage-card:hover .project-visual-stage {
-  box-shadow: 0 16px 40px rgba(125, 112, 186, 0.15);
+  box-shadow: 0 16px 40px rgba(170, 68, 101, 0.15);
 }
 
 .project-browser-frame {
@@ -2372,7 +2373,7 @@ a:hover {
 .project-grid-card:hover {
   border-color: var(--lavender-primary);
   transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(125, 112, 186, 0.14), 0 0 25px var(--lavender-glow);
+  box-shadow: 0 20px 45px rgba(170, 68, 101, 0.14), 0 0 25px var(--lavender-glow);
 }
 
 .project-card-thumb {
@@ -2509,7 +2510,7 @@ a:hover {
 
 .project-grid-card:hover .project-card-tag {
   background: var(--lavender-soft);
-  border-color: rgba(125, 112, 186, 0.3);
+  border-color: rgba(170, 68, 101, 0.3);
   color: var(--text-primary);
 }
 
@@ -2671,7 +2672,7 @@ a:hover {
 .exp-edu-card:hover {
   border-color: var(--lavender-primary);
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(125, 112, 186, 0.12), 0 0 20px var(--lavender-glow);
+  box-shadow: 0 18px 40px rgba(170, 68, 101, 0.12), 0 0 20px var(--lavender-glow);
 }
 
 .exp-edu-card-top {
@@ -2695,7 +2696,7 @@ a:hover {
 }
 
 .exp-edu-card:hover .exp-edu-period-pill {
-  border-color: rgba(125, 112, 186, 0.3);
+  border-color: rgba(170, 68, 101, 0.3);
   background: var(--lavender-soft);
   color: var(--text-primary);
 }
@@ -2754,7 +2755,7 @@ a:hover {
 
 .exp-edu-card:hover .exp-edu-tag {
   background: var(--lavender-soft);
-  border-color: rgba(125, 112, 186, 0.3);
+  border-color: rgba(170, 68, 101, 0.3);
   color: var(--text-primary);
 }
 
@@ -3139,7 +3140,7 @@ a:hover {
 
 .minimal-skill-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 10px 28px rgba(125, 112, 186, 0.07);
+  box-shadow: 0 10px 28px rgba(170, 68, 101, 0.07);
   transform: translateY(-3px);
 }
 
@@ -3291,7 +3292,7 @@ a:hover {
 
 .exp-timeline-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 14px 36px rgba(125, 112, 186, 0.08);
+  box-shadow: 0 14px 36px rgba(170, 68, 101, 0.08);
   transform: translateY(-3px);
 }
 

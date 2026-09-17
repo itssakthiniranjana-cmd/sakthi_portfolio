@@ -134,7 +134,7 @@ function initParallaxCard(card) {
     // 2. Dynamic Directional 3D Drop Shadow
     const shadowX = -normX * 22;
     const shadowY = -normY * 22 + 25;
-    card.style.boxShadow = `${shadowX.toFixed(1)}px ${shadowY.toFixed(1)}px 45px rgba(125, 112, 186, 0.18), 0 10px 25px rgba(0, 0, 0, 0.04)`;
+    card.style.boxShadow = `${shadowX.toFixed(1)}px ${shadowY.toFixed(1)}px 45px rgba(170, 68, 101, 0.18), 0 10px 25px rgba(0, 0, 0, 0.04)`;
 
     // 3. Multi-layer Parallax Depth Separation
     if (header) {
@@ -164,7 +164,7 @@ function initParallaxCard(card) {
       const glareX = (mouseX / bounds.width) * 100;
       const glareY = (mouseY / bounds.height) * 100;
       glare.style.opacity = '1';
-      glare.style.background = `radial-gradient(circle 320px at ${glareX}% ${glareY}%, rgba(125, 112, 186, 0.22), rgba(255, 255, 255, 0.45) 35%, transparent 70%)`;
+      glare.style.background = `radial-gradient(circle 320px at ${glareX}% ${glareY}%, rgba(170, 68, 101, 0.22), rgba(255, 255, 255, 0.45) 35%, transparent 70%)`;
     }
 
     rafId = requestAnimationFrame(updateTransform);

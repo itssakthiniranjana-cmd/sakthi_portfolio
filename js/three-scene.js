@@ -82,11 +82,11 @@ class HeroThreeScene {
     mainLight.position.set(5, 8, 6);
     this.scene.add(mainLight);
 
-    const violetLight = new THREE.PointLight(0x9d4edd, 3.5, 20);
+    const violetLight = new THREE.PointLight(0xAA4465, 3.5, 20);
     violetLight.position.set(-4, -2, 3);
     this.scene.add(violetLight);
 
-    const indigoLight = new THREE.PointLight(0x4f46e5, 3.0, 20);
+    const indigoLight = new THREE.PointLight(0xFFB7C3, 3.0, 20);
     indigoLight.position.set(4, 3, -2);
     this.scene.add(indigoLight);
 
@@ -95,7 +95,7 @@ class HeroThreeScene {
     this.scene.add(warmAccentLight);
 
     // Interactive cursor follow light
-    this.cursorLight = new THREE.PointLight(0x6366f1, 2.5, 12);
+    this.cursorLight = new THREE.PointLight(0xFFB7C3, 2.5, 12);
     this.cursorLight.position.set(0, 0, 3);
     this.scene.add(this.cursorLight);
   }
@@ -131,8 +131,8 @@ class HeroThreeScene {
     // Inner Floating Iridescent Core Sphere
     const innerSphereGeo = new THREE.SphereGeometry(0.75, 48, 48);
     const innerMaterial = new THREE.MeshPhysicalMaterial({
-      color: 0x7D70BA,
-      emissive: 0x695CA8,
+      color: 0xAA4465,
+      emissive: 0x8E3451,
       emissiveIntensity: 0.35,
       roughness: 0.2,
       metalness: 0.8,
@@ -144,11 +144,11 @@ class HeroThreeScene {
     // Orbiting Dimensional Rings
     const ringGeo1 = new THREE.TorusGeometry(2.4, 0.035, 24, 100);
     const ringMat1 = new THREE.MeshStandardMaterial({
-      color: 0x6366f1,
+      color: 0xFFB7C3,
       metalness: 0.9,
       roughness: 0.1,
-      emissive: 0x4338ca,
-      emissiveIntensity: 0.2
+      emissive: 0xAA4465,
+      emissiveIntensity: 0.25
     });
     const ringMesh1 = new THREE.Mesh(ringGeo1, ringMat1);
     ringMesh1.rotation.x = Math.PI / 3;
@@ -157,10 +157,10 @@ class HeroThreeScene {
 
     const ringGeo2 = new THREE.TorusGeometry(2.65, 0.025, 24, 100);
     const ringMat2 = new THREE.MeshStandardMaterial({
-      color: 0xa855f7,
+      color: 0xAA4465,
       metalness: 0.9,
       roughness: 0.1,
-      emissive: 0x7e22ce,
+      emissive: 0x8E3451,
       emissiveIntensity: 0.2
     });
     const ringMesh2 = new THREE.Mesh(ringGeo2, ringMat2);
