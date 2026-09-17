@@ -29,12 +29,13 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
       const highlights = project.highlights || project.features || [];
       const cleanUrl = project.url ? project.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0] : '';
       const isUnderConstruction = project.isUnderConstruction;
+      const isBehance = project.isBehance;
 
       card.innerHTML = `
         <!-- Project Thumbnail Image Container -->
         <div class="project-card-thumb">
           <div class="project-card-thumb-inner">
-            <img src="${project.image}?v=7" alt="${project.name} - ${project.categoryLabel || project.category} UX/UI &amp; Product Design by Sakthi Niranjana" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/gulfticket.jpg';">
+            <img src="${project.image}?v=8" alt="${project.name} - ${project.categoryLabel || project.category} UX/UI &amp; Product Design by Sakthi Niranjana" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/gulfticket.jpg';">
             <div class="project-card-overlay">
               <span class="view-specs-badge"><i class="fa-solid fa-expand"></i> VIEW SPECS</span>
             </div>
@@ -45,8 +46,9 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
         <div class="project-card-body">
           <div class="project-card-meta">
             <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-              <span class="case-pill">${project.categoryLabel || project.category}</span>
+              <span class="case-pill ${isBehance ? 'case-pill-behance' : ''}">${project.categoryLabel || project.category}</span>
               ${isUnderConstruction ? `<span class="case-pill case-pill-construction"><i class="fa-solid fa-person-digging"></i> Under Construction</span>` : ''}
+              ${isBehance ? `<span class="case-pill case-pill-behance"><i class="fa-brands fa-behance"></i> Behance</span>` : ''}
             </div>
             <span class="project-card-dot" style="background: ${isUnderConstruction ? '#f59e0b' : (project.color || 'var(--lavender-primary)')}; box-shadow: 0 0 8px ${isUnderConstruction ? '#f59e0b' : (project.color || 'var(--lavender-primary)')}"></span>
           </div>
@@ -69,6 +71,11 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
                 <span>UNDER CONSTRUCTION</span>
                 <i class="fa-solid fa-person-digging"></i>
               </span>
+            ` : isBehance ? `
+              <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link project-card-link--behance" onclick="event.stopPropagation();" aria-label="View Behance Case Studies">
+                <span>VIEW ON BEHANCE</span>
+                <i class="fa-brands fa-behance"></i>
+              </a>
             ` : `
               <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link" onclick="event.stopPropagation();">
                 <span>VISIT LIVE</span>
@@ -106,6 +113,12 @@ function setupWorkFilterTabs(buildCards) {
       const filter = tab.getAttribute('data-filter');
       if (!filter || filter === 'all') {
         buildCards(ALL_PROJECTS);
+      } else if (filter === 'Behance') {
+        const filtered = ALL_PROJECTS.filter(p => p.isBehance || p.category === 'Behance');
+        buildCards(filtered.length ? filtered : ALL_PROJECTS);
+      } else if (filter === 'Creative') {
+        const filtered = ALL_PROJECTS.filter(p => p.category === 'Creative' || p.isBehance);
+        buildCards(filtered.length ? filtered : ALL_PROJECTS);
       } else {
         const filtered = ALL_PROJECTS.filter(p => p.category === filter);
         buildCards(filtered.length ? filtered : ALL_PROJECTS);

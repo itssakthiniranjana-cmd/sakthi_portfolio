@@ -2561,10 +2561,30 @@ a:hover {
   transform: translateX(2px);
 }
 
+.project-card-link--behance {
+  color: #0057ff !important;
+  font-weight: 700;
+}
+
+.project-card-link--behance:hover {
+  color: #003ebd !important;
+  transform: translateX(2px);
+}
+
 .case-pill-construction {
   background: rgba(245, 158, 11, 0.12) !important;
   color: #f59e0b !important;
   border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.case-pill-behance {
+  background: rgba(0, 87, 255, 0.08) !important;
+  color: #0057ff !important;
+  border: 1px solid rgba(0, 87, 255, 0.3) !important;
   font-weight: 700 !important;
   display: inline-flex !important;
   align-items: center;

@@ -119,6 +119,11 @@ export function openModal(project) {
             <span>UNDER ACTIVE REDESIGN</span>
             <i class="fa-solid fa-person-digging"></i>
           </button>
+        ` : project.isBehance ? `
+          <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="anim-btn" style="padding:0.95rem 1.85rem; background:#0057ff; color:#ffffff !important; border-color:#0057ff;" aria-label="View Behance Case Study for ${project.name || project.title}">
+            <span>VIEW ON BEHANCE</span>
+            <i class="fa-brands fa-behance"></i>
+          </a>
         ` : `
           <a href="${project.url || project.behanceUrl || project.figmaLink}" target="_blank" rel="noopener noreferrer" class="anim-btn" style="padding:0.95rem 1.85rem;" aria-label="Visit Live Production Website for ${project.name || project.title}">
             <span>VISIT LIVE PROJECT</span>

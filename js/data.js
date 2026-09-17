@@ -136,6 +136,30 @@ export const CAPABILITIES = [
 
 export const ALL_PROJECTS = [
   {
+    id: "behance-casestudies",
+    name: "Behance UX/UI Case Studies",
+    url: "https://www.behance.net/sakthinir",
+    image: "assets/img/projects/behance.jpg",
+    category: "Creative",
+    categoryLabel: "UX/UI Case Studies & Systems",
+    isBehance: true,
+    tagline: "End-to-end UX research, design systems, mobile app flows, and interactive UI case studies.",
+    description: "A curated showcase of end-to-end UX/UI case studies on Behance, featuring user journey mapping, design systems, wireframe iterations, and high-fidelity mobile & web prototypes crafted by Sakthi Niranjana S.",
+    role: "Lead UX/UI & Product Designer",
+    color: "#0057ff",
+    gradient: "linear-gradient(135deg, #0033cc 0%, #0057ff 100%)",
+    problem: "Translating complex user journeys and multi-platform digital ecosystems into intuitive, beautifully choreographed mobile and web product experiences.",
+    strategy: "Conducted in-depth user research, heuristic reviews, information architecture structuring, iterative Figma component architecture, and interactive prototyping with rich micro-interactions.",
+    features: [
+      "Comprehensive UX Discovery, Personas & User Journey Maps",
+      "Multi-Brand Figma Design Systems & Token Governance",
+      "Interactive High-Fidelity Mobile App & Web Prototypes"
+    ],
+    highlights: ["Behance Case Studies", "UX Research", "Design Systems"],
+    tools: ["Figma", "Behance", "Photoshop", "Illustrator", "Prototyping"],
+    outcome: "Demonstrating end-to-end design thinking, user-centric problem solving, and modern visual craft."
+  },
+  {
     id: "paytrav",
     name: "Paytrav",
     url: "https://paytrav.in/",
