@@ -136,6 +136,30 @@ export const CAPABILITIES = [
 
 export const ALL_PROJECTS = [
   {
+    id: "behance-movieposters",
+    name: "Movie Posters Art Direction",
+    url: "https://www.behance.net/gallery/254323847/movie-posters",
+    image: "assets/img/projects/movie-posters.jpg",
+    category: "Creative",
+    categoryLabel: "Visual Design & Movie Posters",
+    isBehance: true,
+    tagline: "Cinematic visual design, typography composition, and digital poster art collection on Behance.",
+    description: "A published Behance visual exploration showcasing cinematic movie poster designs, dramatic lighting choreography, expressive typography hierarchies, and atmospheric storytelling crafted by Sakthi Niranjana S.",
+    role: "Visual Designer & Art Director",
+    color: "#e11d48",
+    gradient: "linear-gradient(135deg, #881337 0%, #e11d48 100%)",
+    problem: "Distilling complex cinematic narratives, emotional tension, and genre identity into an iconic, high-impact key art poster.",
+    strategy: "Executed mood research, dynamic spatial compositions, custom headline typography treatments, layered lighting effects, and digital photo-manipulation.",
+    features: [
+      "Cinematic Lighting, Mood Grading & Atmosphere Creation",
+      "Expressive Custom Headline Typography & Hierarchy",
+      "High-Impact Key Art Composition & Visual Storytelling"
+    ],
+    highlights: ["Movie Posters", "Art Direction", "Cinematic Visuals"],
+    tools: ["Photoshop", "Illustrator", "Digital Art", "Behance"],
+    outcome: "Published on Behance as an artistic showcase of visual design mastery, emotional resonance, and spatial typography."
+  },
+  {
     id: "behance-flowhive",
     name: "FlowHive WMS & 3PL Logistics Suite",
     url: "https://www.behance.net/sakthinir",
