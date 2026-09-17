@@ -313,6 +313,7 @@ export const ALL_PROJECTS = [
     image: "assets/img/projects/inzozi.jpg",
     category: "Gaming",
     categoryLabel: "Gaming & Lotteries",
+    isUnderConstruction: true,
     tagline: "Rwanda's official national digital lottery and community jackpot ticket platform.",
     description: "Inzozi Lotto is the national digital lottery of Rwanda, empowering players through instant Mobile Money checkouts and allocating ticket proceeds to grassroots community projects.",
     role: "UX/UI & Localization Designer",
@@ -389,6 +390,7 @@ export const ALL_PROJECTS = [
     image: "assets/img/projects/tajdraw.jpg",
     category: "Gaming",
     categoryLabel: "Gaming & Raffles",
+    isUnderConstruction: true,
     tagline: "Lifestyle raffle draws, luxury giveaways, and digital ticket platform.",
     description: "Tajdraw is a luxury raffle and prize draw platform offering transparent ticket issuance, live draw streaming, and verified prize delivery across the Middle East.",
     role: "Senior UX/UI Designer",
@@ -446,6 +448,7 @@ export const ALL_PROJECTS = [
     image: "assets/img/projects/schooloftechies.jpg",
     category: "Enterprise",
     categoryLabel: "EdTech & Design Academy",
+    isUnderConstruction: true,
     tagline: "Career-focused tech academy offering UI/UX design and engineering programs.",
     description: "School of Techies is an elite technology and design academy offering immersive cohort programs in UX/UI design, design systems, and frontend product engineering.",
     role: "UX/UI Design Contributor & Alumna",
@@ -552,25 +555,6 @@ export const ALL_PROJECTS = [
       "Case Study Narrative & Feature Breakdowns"
     ],
     highlights: ["Avant-Garde Web", "3D Interactive", "Kinetic Motion"]
-  },
-  {
-    id: "figmaprojects",
-    name: "Figma Enterprise Projects",
-    url: "https://www.figma.com/design/d3oZb24wi6CtKMWgLNJueH/projects?node-id=0-1&t=GkhLeqCbhTEmBzBM-1",
-    image: "assets/img/projects/figmaprojects.jpg",
-    category: "Enterprise",
-    categoryLabel: "Design Systems & Enterprise Figma Archive",
-    tagline: "Complete Figma design archive covering multi-tenant WMS, 3PL logistics, and landlord portals.",
-    description: "Comprehensive enterprise Figma architecture featuring FlowHive 3PL & Warehouse Management Systems, PropPulse Landlord Portal, and Quantum Design System with 200+ auto-layout components.",
-    role: "Senior UX/UI Lead & Design Systems Architect",
-    color: "#f24e1e",
-    gradient: "linear-gradient(135deg, #9a2004 0%, #f97316 100%)",
-    features: [
-      "FlowHive 3PL & WMS High-Density Logistics Cockpit",
-      "PropPulse Multi-Tenant Landlord & Lease Portal",
-      "Quantum DS: 200+ Figma Design Tokens & Auto-Layout Components"
-    ],
-    highlights: ["Figma Enterprise", "200+ Tokens", "WMS & 3PL Logistics"]
   }
 ];
 

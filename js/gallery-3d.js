@@ -27,13 +27,14 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
       card.dataset.category = project.category;
 
       const highlights = project.highlights || project.features || [];
-      const cleanUrl = project.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0];
+      const cleanUrl = project.url ? project.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0] : '';
+      const isUnderConstruction = project.isUnderConstruction;
 
       card.innerHTML = `
         <!-- Project Thumbnail Image Container -->
         <div class="project-card-thumb">
           <div class="project-card-thumb-inner">
-            <img src="${project.image}?v=6" alt="${project.name} - ${project.categoryLabel || project.category} UX/UI &amp; Product Design by Sakthi Niranjana" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/figmaprojects.jpg';">
+            <img src="${project.image}?v=7" alt="${project.name} - ${project.categoryLabel || project.category} UX/UI &amp; Product Design by Sakthi Niranjana" class="project-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/img/projects/gulfticket.jpg';">
             <div class="project-card-overlay">
               <span class="view-specs-badge"><i class="fa-solid fa-expand"></i> VIEW SPECS</span>
             </div>
@@ -43,8 +44,11 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
         <!-- Project Body -->
         <div class="project-card-body">
           <div class="project-card-meta">
-            <span class="case-pill">${project.categoryLabel || project.category}</span>
-            <span class="project-card-dot" style="background: ${project.color || 'var(--lavender-primary)'}; box-shadow: 0 0 8px ${project.color || 'var(--lavender-primary)'}"></span>
+            <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+              <span class="case-pill">${project.categoryLabel || project.category}</span>
+              ${isUnderConstruction ? `<span class="case-pill case-pill-construction"><i class="fa-solid fa-person-digging"></i> Under Construction</span>` : ''}
+            </div>
+            <span class="project-card-dot" style="background: ${isUnderConstruction ? '#f59e0b' : (project.color || 'var(--lavender-primary)')}; box-shadow: 0 0 8px ${isUnderConstruction ? '#f59e0b' : (project.color || 'var(--lavender-primary)')}"></span>
           </div>
 
           <h3 class="project-card-title">${project.name}</h3>
@@ -60,10 +64,17 @@ export function renderSelectedWork(containerId = 'work-gallery-container') {
         <div class="project-card-footer">
           <span class="project-card-domain">${cleanUrl}</span>
           <div class="project-card-actions">
-            <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link" onclick="event.stopPropagation();">
-              <span>VISIT LIVE</span>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+            ${isUnderConstruction ? `
+              <span class="project-card-link project-card-link--construction" title="Site undergoing maintenance / active redesign">
+                <span>UNDER CONSTRUCTION</span>
+                <i class="fa-solid fa-person-digging"></i>
+              </span>
+            ` : `
+              <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link" onclick="event.stopPropagation();">
+                <span>VISIT LIVE</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            `}
           </div>
         </div>
       `;

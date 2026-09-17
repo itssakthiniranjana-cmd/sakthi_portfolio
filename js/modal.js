@@ -105,17 +105,26 @@ export function openModal(project) {
             </div>
             <div class="modal-meta-row">
               <span class="modal-meta-key">Status</span>
-              <span class="modal-meta-val" style="color: #10b981; font-weight:700;">● Production Live</span>
+              <span class="modal-meta-val" style="color: ${project.isUnderConstruction ? '#f59e0b' : '#10b981'}; font-weight:700;">
+                ${project.isUnderConstruction ? '<i class="fa-solid fa-person-digging" style="margin-right:4px;"></i> Under Construction' : '● Production Live'}
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="modal-cta-row" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
-        <a href="${project.url || project.behanceUrl || project.figmaLink}" target="_blank" rel="noopener noreferrer" class="anim-btn" style="padding:0.95rem 1.85rem;" aria-label="Visit Live Production Website for ${project.name || project.title}">
-          <span>VISIT LIVE PROJECT</span>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
+        ${project.isUnderConstruction ? `
+          <button class="anim-btn" style="padding:0.95rem 1.85rem; background:rgba(245,158,11,0.12); color:#f59e0b !important; border:1px solid rgba(245,158,11,0.4); cursor:default;" disabled aria-label="Project under active redesign">
+            <span>UNDER ACTIVE REDESIGN</span>
+            <i class="fa-solid fa-person-digging"></i>
+          </button>
+        ` : `
+          <a href="${project.url || project.behanceUrl || project.figmaLink}" target="_blank" rel="noopener noreferrer" class="anim-btn" style="padding:0.95rem 1.85rem;" aria-label="Visit Live Production Website for ${project.name || project.title}">
+            <span>VISIT LIVE PROJECT</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        `}
         <button class="anim-btn" id="modal-close-bottom" style="background:#ffffff; color:var(--text-primary) !important;" aria-label="Close Case Study Modal">
           <span>CLOSE</span>
         </button>
