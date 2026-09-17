@@ -3114,41 +3114,46 @@ a:hover {
 }
 
 /* ===================================================
-   MINIMALIST SKILLS & EXPERTISE MATRIX (HOMEPAGE)
+   MINIMALIST MONOSPACE TECH BADGES & METRIC MATRIX
    =================================================== */
-.minimal-skills-container {
+.tech-matrix-container {
   margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-.minimal-skills-grid-top {
+.tech-matrix-grid-top {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-.minimal-skills-grid-bottom {
+.tech-matrix-grid-bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-@media (max-width: 991px) {
-  .minimal-skills-grid-top {
-    grid-template-columns: 1fr;
-  }
-  .minimal-skills-grid-bottom {
-    grid-template-columns: 1fr;
+@media (max-width: 1100px) {
+  .tech-matrix-grid-top {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.minimal-skill-card {
+@media (max-width: 768px) {
+  .tech-matrix-grid-top,
+  .tech-matrix-grid-bottom {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.tech-matrix-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 1.75rem 1.5rem;
+  border-radius: 14px;
+  padding: 1.6rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -3158,46 +3163,77 @@ a:hover {
   overflow: hidden;
 }
 
-.minimal-skill-card:hover {
+.tech-matrix-card:hover {
   border-color: var(--lavender-primary);
-  box-shadow: 0 10px 28px rgba(206, 106, 133, 0.07);
+  box-shadow: 0 12px 32px rgba(206, 106, 133, 0.1);
   transform: translateY(-3px);
 }
 
-.minimal-skill-header {
+.tech-matrix-card-head {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--border-subtle);
+  align-items: flex-start;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px dashed var(--border-subtle);
   width: 100%;
 }
 
-.minimal-skill-title-wrap {
+.tech-matrix-title-group {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
-.minimal-skill-icon {
-  font-size: 1.15rem;
-  color: var(--lavender-primary);
+.tech-matrix-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--lavender-soft);
+  border: 1px solid rgba(206, 106, 133, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--lavender-primary);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
-.minimal-skill-title {
+.tech-matrix-card:hover .tech-matrix-icon {
+  background: var(--lavender-primary);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.tech-matrix-title {
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 800;
   color: var(--text-primary);
   margin: 0;
+  line-height: 1.25;
   letter-spacing: -0.01em;
 }
 
-.minimal-skill-index {
+.tech-matrix-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.tech-matrix-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.tech-matrix-index {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 700;
@@ -3205,49 +3241,72 @@ a:hover {
   letter-spacing: 0.05em;
 }
 
-.minimal-tags-wrap {
+.tech-matrix-badge-metric {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--lavender-primary);
+  background: var(--lavender-soft);
+  border: 1px solid rgba(206, 106, 133, 0.25);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.tech-badge-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
   align-content: flex-start;
-  justify-content: flex-start;
   width: 100%;
 }
 
-.min-tag {
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
-  padding: 0.35rem 0.75rem;
-  border-radius: 8px;
+.tech-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  transition: all 0.2s ease;
+  justify-content: space-between;
+  gap: 0.55rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.35rem 0.65rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 0.8125rem;
+  font-family: var(--font-body);
 }
 
-.min-tag-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--lavender-primary);
-  opacity: 0.6;
-  display: inline-block;
-  transition: all 0.2s ease;
-}
-
-.min-tag:hover {
-  background: var(--lavender-tint);
-  border-color: var(--border-lavender);
-  color: var(--lavender-primary);
+.tech-badge:hover {
+  border-color: var(--lavender-primary);
+  background: #ffffff;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(206, 106, 133, 0.08);
 }
 
-.min-tag:hover .min-tag-dot {
-  opacity: 1;
+.tech-badge-key {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+}
+
+.tech-badge-val {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--lavender-primary);
+  background: var(--lavender-soft);
+  border: 1px solid rgba(206, 106, 133, 0.2);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.tech-badge:hover .tech-badge-val {
+  background: var(--lavender-primary);
+  color: #ffffff;
+  border-color: var(--lavender-primary);
+}
   transform: scale(1.3);
 }
 
