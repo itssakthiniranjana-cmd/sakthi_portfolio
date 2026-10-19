@@ -1,0 +1,4 @@
+.DS_Store
+*.bak
+.system_generated/
+scratch/

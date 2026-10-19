@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch" color-scheme="light">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Works &amp; Case Studies || Sakthi Niranjana S</title>
+  <meta name="description" content="Explore selected UI/UX case studies, Warehouse Management Systems (WMS), Supply Chain SaaS, and mobile apps by Sakthi Niranjana S."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/custom.css?v=4"/>
+  <link rel="icon" type="image/png" href="img/logo.png"/>
+  <link rel="apple-touch-icon" href="img/logo.png"/>
+
+  <script>
+    (function() {
+      try {
+        var scheme = localStorage.getItem('color-scheme') || 'light';
+        document.documentElement.setAttribute('color-scheme', scheme);
+      } catch(e) {}
+    })();
+
+    function togglePortfolioMenu(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      var isOpen = document.body.classList.contains('nav-open');
+      var menuWrap = document.querySelector('.mxd-menu__wrapper');
+      var navWrap = document.querySelector('.mxd-nav__wrap');
+      if (isOpen) {
+        document.body.classList.remove('nav-open');
+        if (menuWrap) {
+          menuWrap.classList.remove('active_menu');
+          menuWrap.style.opacity = '0';
+          menuWrap.style.visibility = 'hidden';
+          menuWrap.style.pointerEvents = 'none';
+        }
+        if (navWrap) {
+          navWrap.classList.remove('active_menu');
+          navWrap.style.pointerEvents = 'none';
+        }
+      } else {
+        document.body.classList.add('nav-open');
+        if (menuWrap) {
+          menuWrap.classList.add('active_menu');
+          menuWrap.style.display = 'block';
+          menuWrap.style.opacity = '1';
+          menuWrap.style.visibility = 'visible';
+          menuWrap.style.pointerEvents = 'auto';
+        }
+        if (navWrap) {
+          navWrap.classList.add('active_menu');
+          navWrap.style.pointerEvents = 'auto';
+        }
+      }
+    }
+  </script>
+</head>
+<body class="page-loaded">
+
+  <!-- Fullscreen Navigation Menu Overlay -->
+  <nav class="mxd-nav__wrap" data-lenis-prevent="">
+
+    
+    <div class="mxd-menu__wrapper">
+      <div class="mxd-menu__base" onclick="togglePortfolioMenu(event)"></div>
+      <div class="mxd-menu__contain">
+        <div class="mxd-menu__inner">
+          <div class="mxd-menu__left">
+            <p class="mxd-menu__caption fade-in-elm">
+              🦄 Senior UI/UX &amp; Product Designer<br/>
+              Specializing in WMS, Supply Chain &amp; SaaS Products
+            </p>
+            <div class="main-menu">
+              <nav class="main-menu__content">
+                <ul id="main-menu" class="main-menu__accordion">
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Home" href="index.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Home</div>
+                        <div class="btn-anim__block" aria-hidden="true">Home</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="About us" href="about-us.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">About us</div>
+                        <div class="btn-anim__block" aria-hidden="true">About us</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm active">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Works" href="works-simple.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Works (40)</div>
+                        <div class="btn-anim__block" aria-hidden="true">Works (40)</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Services" href="services.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Services</div>
+                        <div class="btn-anim__block" aria-hidden="true">Services</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Contact" href="contact.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Contact</div>
+                        <div class="btn-anim__block" aria-hidden="true">Contact</div>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="mxd-menu__right">
+            <div class="menu-promo">
+              <div class="menu-promo__content">
+                <p class="menu-promo__caption fade-in-elm">
+                  👋 10 featured projects spanning complex WMS, retail e-commerce, and enterprise design systems.
+                </p>
+                <div class="menu-promo__video fade-in-up-elm">
+                  <video class="menu-video" id="inner-video" preload="auto" autoplay="" loop="" muted="" poster="video/540x310_video-01.webp">
+                    <source type="video/mp4" src="video/540x310_video-01.mp4"/>
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mxd-menu__data fade-in-up-elm">
+            <p class="t-xsmall">
+              Based in Chennai, India &bull; <a class="no-effect" href="mailto:its.sakthiniranjana@gmail.com">its.sakthiniranjana@gmail.com</a>
+            </p>
+            <p class="t-xsmall"><i class="ph ph-copyright"></i> 2026 Sakthi Niranjana S</p>
+          </div>
+        </div>
+        <div class="hamburger__parking-slot"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="header" class="mxd-header">
+    <div class="mxd-header__logo loading__fade">
+      <a class="mxd-logo" href="index.html">
+        <img class="mxd-logo__image" src="img/logo.png" alt="Sakthi Niranjana" width="56" height="56"/>
+        <span class="mxd-logo__text">Sakthi<br/>Niranjana</span>
+      </a>
+    </div>
+
+    <div class="mxd-header__controls loading__fade">
+      <button class="mxd-color-switcher" aria-label="Toggle Color Theme">
+        <i class="ph-bold ph-moon"></i>
+      </button>
+
+      <a class="btn-anim btn btn-anim btn-default btn-outline slide-right" aria-label="Say Hello" href="contact.html">
+        <span class="btn-caption">
+          <div class="btn-anim__block">Say Hello</div>
+          <div class="btn-anim__block" aria-hidden="true">Say Hello</div>
+        </span>
+        <i class="ph-bold ph-arrow-up-right"></i>
+      </a>
+
+      <!-- Menu Toggle Hamburger -->
+      <a href="#" class="mxd-nav__hamburger" aria-label="Toggle Menu" onclick="togglePortfolioMenu(event)">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main id="mxd-page-content" class="mxd-page-content inner-page-content">
+
+    <!-- Inner Headline Section -->
+    <div class="mxd-section mxd-section-inner-headline padding-headline-pre-stack">
+      <div class="mxd-container grid-container">
+        <div class="mxd-block loading-wrap">
+          <div class="container-fluid px-0">
+            <div class="row gx-0">
+              <div class="col-12 col-xl-2 mxd-grid-item no-margin">
+                <div class="mxd-block__name name-inner-headline loading__item">
+                  <p class="mxd-point-subtitle">
+                    <i class="ph-fill ph-sparkle"></i>
+                    <span>Works</span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-xl-10 mxd-grid-item no-margin">
+                <div class="mxd-block__content">
+                  <div class="mxd-block__inner-headline loading__item">
+                    <h1 class="inner-headline__title headline-img-after headline-img-03">
+                      Where bold ideas take shape
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Stacking Projects -->
+    <div class="mxd-section padding-stacked-section">
+      <div class="mxd-container grid-container">
+        <div class="mxd-block mxd-grid-item no-margin">
+          <div class="content__block loading__fade">
+            <div class="stack-wrapper">
+              <div class="stack-offset"></div>
+              <div class="projects-stack">
+                
+                <!-- Stack Card 1: Intelligent Solutions -->
+                <div class="stack-item" style="will-change:transform">
+                  <a class="mxd-projects-stack__inner justify-between" href="https://intelligent-solutions-lyart.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <div class="mxd-projects-stack__image">
+                      <img alt="Intelligent Solutions AI SaaS" src="img/works/preview/1920x1080_prv-01.webp" width="1920" height="1080"/>
+                    </div>
+                    <div class="mxd-projects-stack__tags">
+                      <span class="tag tag-default tag-outline-permanent">AI Enterprise SaaS</span>
+                      <span class="tag tag-default tag-outline-permanent">Live Product</span>
+                      <span class="tag tag-default tag-outline-permanent">Intelligent Solutions</span>
+                    </div>
+                    <div class="mxd-projects-stack__title no-margin">
+                      <h2 class="permanent-light">Intelligent Solutions &mdash; Enterprise AI Workflow &amp; Analytics Platform &nearr;</h2>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Stack Card 2: Paytrav -->
+                <div class="stack-item" style="will-change:transform">
+                  <a class="mxd-projects-stack__inner justify-between" href="https://paytrav.in/" target="_blank" rel="noopener noreferrer">
+                    <div class="mxd-projects-stack__image">
+                      <img alt="Paytrav Expense Management" src="img/works/preview/1920x1080_prv-04.webp" width="1920" height="1080"/>
+                    </div>
+                    <div class="mxd-projects-stack__tags">
+                      <span class="tag tag-default tag-outline-permanent">FinTech Platform</span>
+                      <span class="tag tag-default tag-outline-permanent">Travel Tech</span>
+                      <span class="tag tag-default tag-outline-permanent">Paytrav</span>
+                    </div>
+                    <div class="mxd-projects-stack__title no-margin">
+                      <h2 class="permanent-light">Paytrav &mdash; Automated Corporate Travel &amp; Expense Management &nearr;</h2>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Stack Card 3: Cityflo -->
+                <div class="stack-item" style="will-change:transform">
+                  <a class="mxd-projects-stack__inner justify-between" href="https://www.cityflo.com/" target="_blank" rel="noopener noreferrer">
+                    <div class="mxd-projects-stack__image">
+                      <img alt="Cityflo Commute App" src="img/works/preview/1920x1080_prv-05.webp" width="1920" height="1080"/>
+                    </div>
+                    <div class="mxd-projects-stack__tags">
+                      <span class="tag tag-default tag-outline-permanent">Urban Mobility</span>
+                      <span class="tag tag-default tag-outline-permanent">Transit App</span>
+                      <span class="tag tag-default tag-outline-permanent">Cityflo</span>
+                    </div>
+                    <div class="mxd-projects-stack__title no-margin">
+                      <h2 class="permanent-light">Cityflo &mdash; Premium Daily Commute &amp; Smart Transit Experience &nearr;</h2>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Stack Card 4: Enipu UX Case Study -->
+                <div class="stack-item" style="will-change:transform">
+                  <a class="mxd-projects-stack__inner justify-between" href="https://www.behance.net/gallery/232917963/Case-Study-(Enipu)" target="_blank" rel="noopener noreferrer">
+                    <div class="mxd-projects-stack__image">
+                      <img alt="Enipu UX Case Study" src="img/works/preview/1400x1400_prv-01.webp" width="1400" height="1400"/>
+                    </div>
+                    <div class="mxd-projects-stack__tags">
+                      <span class="tag tag-default tag-outline-permanent">UX Case Study</span>
+                      <span class="tag tag-default tag-outline-permanent">Food Tech</span>
+                      <span class="tag tag-default tag-outline-permanent">Behance</span>
+                    </div>
+                    <div class="mxd-projects-stack__title no-margin">
+                      <h2 class="permanent-light">Enipu &mdash; End-to-End Food Ordering &amp; Delivery UX Case Study &nearr;</h2>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Buttons & Archive List -->
+    <div class="mxd-section overflow-hidden padding-grid-pre-mtext">
+      <div class="mxd-container grid-container">
+        
+        <!-- Archive Header & Filters -->
+        <div class="mxd-block">
+          <div class="mxd-section-title">
+            <div class="container-fluid p-0">
+              <div class="row g-0 align-items-center">
+                <div class="col-12 col-xl-5 mxd-grid-item no-margin">
+                  <div class="mxd-section-title__hrtitle">
+                    <h2 class="reveal-type anim-uni-in-up">Portfolio archive</h2>
+                  </div>
+                </div>
+                
+                <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                  <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:flex-start; margin-top:1.5rem;" class="filter-controls">
+                    <button class="btn btn-default btn-outline filter-btn active" data-filter="all">All (40)</button>
+                    <button class="btn btn-default btn-outline filter-btn" data-filter="saas-web">SaaS &amp; Web Apps (17)</button>
+                    <button class="btn btn-default btn-outline filter-btn" data-filter="mobile-ux">Mobile Apps &amp; UX (10)</button>
+                    <button class="btn btn-default btn-outline filter-btn" data-filter="ecommerce-mobility">Mobility &amp; Travel (6)</button>
+                    <button class="btn btn-default btn-outline filter-btn" data-filter="visual-branding">Branding &amp; Visual (7)</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 Detailed Project Items with Cursor Hover Reveal -->
+        <div class="mxd-block" style="margin-top:4rem;">
+          <div class="mxd-projects-list hover-reveal">
+
+            <!-- Project: Intelligent Solutions &bull; AI Enterprise Workflow &amp; Analytics SaaS -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://intelligent-solutions-lyart.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Intelligent Solutions &bull; AI Enterprise Workflow &amp; Analytics SaaS" class="hover-reveal__image" src="img/works/preview/600x730_prv-01.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Intelligent Solutions &bull; AI Enterprise Workflow &amp; Analytics SaaS</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">AI SaaS &bull; Web App</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Vercel Live</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2026</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Paytrav &bull; Corporate Travel &amp; Expense Management Platform -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://paytrav.in/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Paytrav &bull; Corporate Travel &amp; Expense Management Platform" class="hover-reveal__image" src="img/works/preview/600x730_prv-02.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Paytrav &bull; Corporate Travel &amp; Expense Management Platform</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">FinTech &bull; Travel Tech</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Paytrav.in</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Cityflo &bull; Premium Daily Commute &amp; Urban Transit App -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="ecommerce-mobility" href="https://www.cityflo.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Cityflo &bull; Premium Daily Commute &amp; Urban Transit App" class="hover-reveal__image" src="img/works/preview/600x730_prv-03.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Cityflo &bull; Premium Daily Commute &amp; Urban Transit App</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Urban Mobility &bull; Transit</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Cityflo.com</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: EaseStay &bull; Vacation Rental &amp; Hotel Booking Platform -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="ecommerce-mobility" href="https://easestay.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="EaseStay &bull; Vacation Rental &amp; Hotel Booking Platform" class="hover-reveal__image" src="img/works/preview/600x730_prv-04.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>EaseStay &bull; Vacation Rental &amp; Hotel Booking Platform</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Hospitality &bull; Booking</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">EaseStay.com</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: GI Smart Parking &bull; IoT Urban Parking &amp; Real-Time Space Finding -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="ecommerce-mobility" href="https://gismartparking.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="GI Smart Parking &bull; IoT Urban Parking &amp; Real-Time Space Finding" class="hover-reveal__image" src="img/works/preview/600x730_prv-05.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>GI Smart Parking &bull; IoT Urban Parking &amp; Real-Time Space Finding</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">IoT Mobility &bull; Smart City</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">GISmartParking</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Wing Space &bull; Flexible Coworking &amp; On-Demand Office Spaces -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="ecommerce-mobility" href="https://wingspace.in/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Wing Space &bull; Flexible Coworking &amp; On-Demand Office Spaces" class="hover-reveal__image" src="img/works/preview/600x730_prv-06.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Wing Space &bull; Flexible Coworking &amp; On-Demand Office Spaces</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Coworking &bull; Real Estate</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">WingSpace.in</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Gulf Ticket &bull; Digital Lottery &amp; Gaming Experience Engine -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://gulfticket.com/IN-en/lottery-ticket" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Gulf Ticket &bull; Digital Lottery &amp; Gaming Experience Engine" class="hover-reveal__image" src="img/works/preview/600x730_prv-01.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Gulf Ticket &bull; Digital Lottery &amp; Gaming Experience Engine</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">iGaming &bull; Lottery Tech</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">GulfTicket</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Armsoft Tech &bull; Enterprise IT Software &amp; Cloud Systems -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://www.armsoft-tech.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Armsoft Tech &bull; Enterprise IT Software &amp; Cloud Systems" class="hover-reveal__image" src="img/works/preview/600x730_prv-02.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Armsoft Tech &bull; Enterprise IT Software &amp; Cloud Systems</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Enterprise IT &bull; Software</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Armsoft-Tech</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Bwinners &bull; Sports Betting, Live Odds &amp; iGaming Platform -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://bwinners.net/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Bwinners &bull; Sports Betting, Live Odds &amp; iGaming Platform" class="hover-reveal__image" src="img/works/preview/600x730_prv-03.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Bwinners &bull; Sports Betting, Live Odds &amp; iGaming Platform</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Sports Betting &bull; iGaming</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Bwinners.net</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: ST Tech &bull; Digital Transformation &amp; Web Engineering Hub -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://www.sttech.in/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="ST Tech &bull; Digital Transformation &amp; Web Engineering Hub" class="hover-reveal__image" src="img/works/preview/600x730_prv-04.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>ST Tech &bull; Digital Transformation &amp; Web Engineering Hub</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Web Tech &bull; Solutions</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">STTech.in</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Löwen Play &bull; Licensed Casino &amp; Interactive Entertainment UI -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://www.lowen-play.es/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Löwen Play &bull; Licensed Casino &amp; Interactive Entertainment UI" class="hover-reveal__image" src="img/works/preview/600x730_prv-05.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Löwen Play &bull; Licensed Casino &amp; Interactive Entertainment UI</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">iGaming &bull; Casino Web</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Lowen-Play.es</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Revo6 &bull; Creative Digital Agency &amp; Brand Innovation Studio -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://revo6.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Revo6 &bull; Creative Digital Agency &amp; Brand Innovation Studio" class="hover-reveal__image" src="img/works/preview/600x730_prv-06.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Revo6 &bull; Creative Digital Agency &amp; Brand Innovation Studio</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Creative Agency &bull; Web</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Revo6.com</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Moiter Workz &bull; Design Studio, Brand Building &amp; Web Production -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://moiterworkz.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Moiter Workz &bull; Design Studio, Brand Building &amp; Web Production" class="hover-reveal__image" src="img/works/preview/600x730_prv-01.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Moiter Workz &bull; Design Studio, Brand Building &amp; Web Production</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Design Studio &bull; Web</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">MoiterWorkz</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: School of Techies &bull; EdTech Platform &amp; Tech Career Accelerator -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://schooloftechies.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="School of Techies &bull; EdTech Platform &amp; Tech Career Accelerator" class="hover-reveal__image" src="img/works/preview/600x730_prv-02.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>School of Techies &bull; EdTech Platform &amp; Tech Career Accelerator</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">EdTech &bull; Learning Hub</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">SchoolOfTechies</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Rewad &bull; Customer Loyalty, Rewards &amp; Growth Engine SaaS -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://www.rewad.co/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Rewad &bull; Customer Loyalty, Rewards &amp; Growth Engine SaaS" class="hover-reveal__image" src="img/works/preview/600x730_prv-03.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Rewad &bull; Customer Loyalty, Rewards &amp; Growth Engine SaaS</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Loyalty SaaS &bull; FinTech</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Rewad.co</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Trippin &bull; Experiential Travel Culture &amp; Curated City Guides -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="ecommerce-mobility" href="https://thetrippin.com/trippin" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Trippin &bull; Experiential Travel Culture &amp; Curated City Guides" class="hover-reveal__image" src="img/works/preview/600x730_prv-04.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Trippin &bull; Experiential Travel Culture &amp; Curated City Guides</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Travel Tech &bull; Discovery</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">TheTrippin</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: SmartBiz Cares &bull; SMB Financing Support &amp; Resource Hub -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://smartbizcares.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="SmartBiz Cares &bull; SMB Financing Support &amp; Resource Hub" class="hover-reveal__image" src="img/works/preview/600x730_prv-05.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>SmartBiz Cares &bull; SMB Financing Support &amp; Resource Hub</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">SMB Finance &bull; Lending</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">SmartBizCares</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: MegaLotto &bull; Global Lottery, Draws &amp; Jackpots Engine -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://uat.megalotto.com/" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="MegaLotto &bull; Global Lottery, Draws &amp; Jackpots Engine" class="hover-reveal__image" src="img/works/preview/600x730_prv-06.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>MegaLotto &bull; Global Lottery, Draws &amp; Jackpots Engine</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Lottery SaaS &bull; iGaming</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">MegaLotto UAT</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Sakthi Portfolio Archive &bull; Design Systems &amp; Case Studies -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://sakthi-portfolio-teal.vercel.app/work" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Sakthi Portfolio Archive &bull; Design Systems &amp; Case Studies" class="hover-reveal__image" src="img/works/preview/600x730_prv-01.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Sakthi Portfolio Archive &bull; Design Systems &amp; Case Studies</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Portfolio &bull; Works</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Vercel Showcase</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Festo (Just Book It) &bull; Event &amp; Ticket Booking Mobile App UX -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/236025237/Festo-(Just-Book-It)" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Festo (Just Book It) &bull; Event &amp; Ticket Booking Mobile App UX" class="hover-reveal__image" src="img/works/preview/600x730_prv-02.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Festo (Just Book It) &bull; Event &amp; Ticket Booking Mobile App UX</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Mobile App &bull; Ticketing</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Case Study</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Enipu UX Case Study &bull; End-to-End Food Ordering &amp; Delivery UX -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/232917963/Case-Study-(Enipu)" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Enipu UX Case Study &bull; End-to-End Food Ordering &amp; Delivery UX" class="hover-reveal__image" src="img/works/preview/600x730_prv-03.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Enipu UX Case Study &bull; End-to-End Food Ordering &amp; Delivery UX</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">UX Research &bull; Food Delivery</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Case Study</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Enipu &bull; The Taste of India Food Tech UI Design &amp; Visual System -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/232911803/enipu-(The-taste-of-india-)" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Enipu &bull; The Taste of India Food Tech UI Design &amp; Visual System" class="hover-reveal__image" src="img/works/preview/600x730_prv-04.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Enipu &bull; The Taste of India Food Tech UI Design &amp; Visual System</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Food Tech &bull; UI Design</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Showcase</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Job App &bull; Mobile Job Search, Match Algorithm &amp; Hiring UX -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/220270435/Job-app" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Job App &bull; Mobile Job Search, Match Algorithm &amp; Hiring UX" class="hover-reveal__image" src="img/works/preview/600x730_prv-05.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Job App &bull; Mobile Job Search, Match Algorithm &amp; Hiring UX</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Mobile App &bull; Career Tech</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Case Study</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: TravelNest &bull; Vacation Rental, Staycations &amp; Itinerary App -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/219729997/TRAVELNEST" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="TravelNest &bull; Vacation Rental, Staycations &amp; Itinerary App" class="hover-reveal__image" src="img/works/preview/600x730_prv-06.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>TravelNest &bull; Vacation Rental, Staycations &amp; Itinerary App</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Travel App &bull; Mobile UI</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Project</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Rest Area &bull; Highway Pitstop, Fuel, Food &amp; Amenity Navigator -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/187440563/REST-AREA" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Rest Area &bull; Highway Pitstop, Fuel, Food &amp; Amenity Navigator" class="hover-reveal__image" src="img/works/preview/600x730_prv-01.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Rest Area &bull; Highway Pitstop, Fuel, Food &amp; Amenity Navigator</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Mobility App &bull; Navigation</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Showcase</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Rest Area UI Case Study &bull; Wireframing, Prototypes &amp; Design System -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/187440959/REST-AREA-UI-CASE-STUDY" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Rest Area UI Case Study &bull; Wireframing, Prototypes &amp; Design System" class="hover-reveal__image" src="img/works/preview/600x730_prv-02.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Rest Area UI Case Study &bull; Wireframing, Prototypes &amp; Design System</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">UI Case Study &bull; System</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Deep Dive</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: YourDay UX Case Study &bull; Mental Wellness &amp; Daily Habit Journal -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/185701071/YOURDAY-UX-CASESTUDY" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="YourDay UX Case Study &bull; Mental Wellness &amp; Daily Habit Journal" class="hover-reveal__image" src="img/works/preview/600x730_prv-03.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>YourDay UX Case Study &bull; Mental Wellness &amp; Daily Habit Journal</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Wellness &bull; UX Research</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Case Study</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: YourDay UI Case Study &bull; Micro-Interactions, Themes &amp; Design Specs -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/185694979/YOURDAY-UI-CASESTUDY" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="YourDay UI Case Study &bull; Micro-Interactions, Themes &amp; Design Specs" class="hover-reveal__image" src="img/works/preview/600x730_prv-04.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>YourDay UI Case Study &bull; Micro-Interactions, Themes &amp; Design Specs</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Visual UI &bull; Micro-Interactions</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Case Study</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Business Growth Landing Page &bull; High-Converting B2B SaaS Layout -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://www.behance.net/gallery/209805327/Landing-page-for-business-growth" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Business Growth Landing Page &bull; High-Converting B2B SaaS Layout" class="hover-reveal__image" src="img/works/preview/600x730_prv-05.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Business Growth Landing Page &bull; High-Converting B2B SaaS Layout</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">B2B SaaS &bull; Landing Page</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Project</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Digital Marketing Web Page &bull; Performance Agency Web Experience -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://www.behance.net/gallery/195110637/Digital-marketing-web-page" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Digital Marketing Web Page &bull; Performance Agency Web Experience" class="hover-reveal__image" src="img/works/preview/600x730_prv-06.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Digital Marketing Web Page &bull; Performance Agency Web Experience</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Agency Web &bull; Marketing UI</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Project</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Multipages &bull; Enterprise Information Architecture &amp; Portal Design -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="saas-web" href="https://www.behance.net/gallery/232909585/Multipages" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Multipages &bull; Enterprise Information Architecture &amp; Portal Design" class="hover-reveal__image" src="img/works/preview/600x730_prv-01.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Multipages &bull; Enterprise Information Architecture &amp; Portal Design</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Enterprise Web &bull; Portals</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Showcase</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: 6 Days Challenge &bull; Rapid Interface Prototyping &amp; Design Sprints -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="mobile-ux" href="https://www.behance.net/gallery/192813601/6-days-challenge" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="6 Days Challenge &bull; Rapid Interface Prototyping &amp; Design Sprints" class="hover-reveal__image" src="img/works/preview/600x730_prv-02.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>6 Days Challenge &bull; Rapid Interface Prototyping &amp; Design Sprints</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Design Sprint &bull; Fast Lab</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Sprint</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Elegant &bull; Luxury Fashion &amp; Minimalist E-Commerce Experience -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="ecommerce-mobility" href="https://www.behance.net/gallery/195574581/Elegant" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Elegant &bull; Luxury Fashion &amp; Minimalist E-Commerce Experience" class="hover-reveal__image" src="img/works/preview/600x730_prv-03.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Elegant &bull; Luxury Fashion &amp; Minimalist E-Commerce Experience</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">E-Commerce &bull; Luxury Fashion</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Project</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Inception &bull; Visual Identity System, Typography &amp; Art Direction -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="visual-branding" href="https://www.behance.net/gallery/214685401/INCEPTION" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Inception &bull; Visual Identity System, Typography &amp; Art Direction" class="hover-reveal__image" src="img/works/preview/600x730_prv-04.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Inception &bull; Visual Identity System, Typography &amp; Art Direction</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Brand Identity &bull; Direction</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Identity</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Movie Posters &bull; Cinematic Poster Collection &amp; Concept Art -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="visual-branding" href="https://www.behance.net/gallery/254323847/movie-posters" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Movie Posters &bull; Cinematic Poster Collection &amp; Concept Art" class="hover-reveal__image" src="img/works/preview/600x730_prv-05.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Movie Posters &bull; Cinematic Poster Collection &amp; Concept Art</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Movie Posters &bull; Graphic Art</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Series</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2026</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Posters Series &bull; Contemporary Typography &amp; Poster Design -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="visual-branding" href="https://www.behance.net/gallery/227072265/Posters" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Posters Series &bull; Contemporary Typography &amp; Poster Design" class="hover-reveal__image" src="img/works/preview/600x730_prv-06.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Posters Series &bull; Contemporary Typography &amp; Poster Design</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Poster Design &bull; Typography</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Series</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Creative Design &bull; Visual Explorations, Layout Systems &amp; Art -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="visual-branding" href="https://www.behance.net/gallery/219741285/creative-design" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Creative Design &bull; Visual Explorations, Layout Systems &amp; Art" class="hover-reveal__image" src="img/works/preview/600x730_prv-01.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Creative Design &bull; Visual Explorations, Layout Systems &amp; Art</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Visual Design &bull; Layouts</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Lab</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Shades of Lavender &bull; Color Harmony, Moodboards &amp; Brand System -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="visual-branding" href="https://www.behance.net/gallery/217439391/Shades-of-lavender" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Shades of Lavender &bull; Color Harmony, Moodboards &amp; Brand System" class="hover-reveal__image" src="img/works/preview/600x730_prv-02.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Shades of Lavender &bull; Color Harmony, Moodboards &amp; Brand System</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Color Palette &bull; Branding</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Palette</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2025</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: Poster Art &bull; Modernist Swiss Style Graphic Composition -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="visual-branding" href="https://www.behance.net/gallery/214674357/Poster" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="Poster Art &bull; Modernist Swiss Style Graphic Composition" class="hover-reveal__image" src="img/works/preview/600x730_prv-03.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>Poster Art &bull; Modernist Swiss Style Graphic Composition</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Swiss Style &bull; Poster Art</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Minimal</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+
+            <!-- Project: A Person Who Loves Sunsets &bull; Narrative Visual Storytelling &amp; Art -->
+            <a class="mxd-projects-list__item hover-reveal__item portfolio-filter-item" data-category="visual-branding" href="https://www.behance.net/gallery/209632179/A-person-who-loves-sunsets" target="_blank" rel="noopener noreferrer">
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+              <div class="hover-reveal__content hover-reveal-280x340">
+                <img alt="A Person Who Loves Sunsets &bull; Narrative Visual Storytelling &amp; Art" class="hover-reveal__image" src="img/works/preview/600x730_prv-04.webp" width="600" height="730"/>
+              </div>
+              <div class="mxd-projects-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 align-items-center">
+                    <div class="col-12 col-xl-7 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__title anim-uni-in-up">
+                        <div class="mxd-projects-list__icon"><i class="ph-bold ph-arrow-up-right"></i></div>
+                        <p>A Person Who Loves Sunsets &bull; Narrative Visual Storytelling &amp; Art</p>
+                      </div>
+                    </div>
+                    <div class="col-7 col-md-8 col-xl-3 mxd-grid-item no-margin">
+                      <div class="mxd-projects-list__tagslist">
+                        <ul>
+                          <li class="anim-uni-in-up"><p class="t-small">Visual Story &bull; Concept Art</p></li>
+                          <li class="anim-uni-in-up"><p class="t-small">Behance Story</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-5 col-md-4 col-xl-2 mxd-grid-item no-margin text-end text-xl-start">
+                      <div class="mxd-projects-list__date anim-uni-in-up"><p class="t-small">2024</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-projects-list__border anim-uni-in-up"></div>
+            </a>
+          </div>
+
+    <!-- Scrolling Marquee -->
+    <div class="mxd-section padding-mtext">
+      <div class="mxd-container fullwidth-container">
+        <div class="mxd-block">
+          <div class="marquee-auto-scroll muted-extra">
+            <div class="marquee-track">
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Clients Approve</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Measurable Results</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">High Usability</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Zero Handoff Friction</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Clients Approve</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Measurable Results</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="mxd-section overflow-hidden">
+      <div class="mxd-container">
+        <div class="mxd-block">
+          <div class="mxd-promo">
+            <div class="mxd-promo__inner anim-zoom-out-container">
+              <div class="mxd-promo__bg"></div>
+              <div class="mxd-promo__content">
+                <p class="mxd-promo__title anim-uni-in-up">
+                  <span class="mxd-promo__icon"><img alt="Icon" src="img/icons/300x300_obj-cta-01.webp" width="300" height="300"/></span>
+                  <span class="reveal-type mxd-promo__caption">Have a product idea or complex platform to build?</span>
+                </p>
+                <div class="mxd-promo__controls anim-uni-in-up">
+                  <a class="btn-anim btn btn-anim btn-default btn-large btn-additional slide-right-up" href="contact.html">
+                    <span class="btn-caption"><div class="btn-anim__block">Contact Me</div><div class="btn-anim__block" aria-hidden="true">Contact Me</div></span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="mxd-promo__images">
+                <img alt="Image 1" class="promo-image promo-image-1" src="img/illustrations/cta-img-01.webp" width="800" height="912"/>
+                <img alt="Image 2" class="promo-image promo-image-2" src="img/illustrations/cta-img-02.webp" width="600" height="601"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="mxd-footer" class="mxd-footer">
+    <div class="mxd-footer__text-wrap">
+      <div class="fullwidth-text__tl-trigger"></div>
+      <div class="mxd-footer__fullwidth-text anim-top-to-bottom">
+        <svg class="mxd-footer__svg-v2" viewBox="0 0 1100 120" style="width:100%; height:auto;">
+          <text x="50%" y="65%" text-anchor="middle" font-family="'Funnel Display', sans-serif" font-weight="700" font-size="82" fill="var(--st-muted)" letter-spacing="1">SAKTHI NIRANJANA</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="mxd-footer__footer-blocks">
+      <div class="footer-blocks__column animate-card-3">
+        <div class="footer-blocks__card fullheight-card">
+          <div class="footer-blocks__nav">
+            <ul class="footer-nav">
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="index.html"><span class="btn-caption"><div class="btn-anim__block">Home</div><div class="btn-anim__block" aria-hidden="true">Home</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="about-us.html"><span class="btn-caption"><div class="btn-anim__block">About us</div><div class="btn-anim__block" aria-hidden="true">About us</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="works-simple.html"><span class="btn-caption"><div class="btn-anim__block">Works (40)</div><div class="btn-anim__block" aria-hidden="true">Works (40)</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="services.html"><span class="btn-caption"><div class="btn-anim__block">Services</div><div class="btn-anim__block" aria-hidden="true">Services</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="contact.html"><span class="btn-caption"><div class="btn-anim__block">Contact</div><div class="btn-anim__block" aria-hidden="true">Contact</div></span></a></li>
+            </ul>
+          </div>
+          <div class="footer-blocks__links anim-uni-in-up">
+            <span class="t-xsmall t-muted">Chennai, India &bull; Open to Remote Opportunities</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-blocks__column animate-card-3">
+        <div class="footer-blocks__card">
+          <p class="mxd-point-subtitle anim-uni-in-up">
+            <i class="ph-bold ph-envelope"></i>
+            <a href="mailto:its.sakthiniranjana@gmail.com">its.sakthiniranjana@gmail.com</a>
+          </p>
+        </div>
+        <div class="footer-blocks__card">
+          <p class="mxd-point-subtitle anim-uni-in-up">
+            <i class="ph-bold ph-phone-call"></i>
+            <a href="tel:+916374523020">+91 6374523020</a>
+          </p>
+        </div>
+        <div class="footer-blocks__card fill-card notify">
+          <div class="footer-blocks__title anim-uni-in-up">
+            <p class="footer-blocks__title-m">Subscribe to UX &amp; design insights:</p>
+          </div>
+          <div class="form-container anim-uni-in-up">
+            <div class="form__reply subscription-ok" style="display:none;">
+              <span class="reply__text">Done! Thanks for subscribing.</span>
+            </div>
+            <form class="form notify-form form-light">
+              <input type="email" placeholder="Your Email" required=""/>
+              <button class="btn btn-form btn-absolute-right btn-muted slide-right-up anim-no-delay" type="submit">
+                <i class="ph ph-arrow-up-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-blocks__column animate-card-3">
+        <div class="footer-blocks__card fullheight-card">
+          <div class="footer-blocks__block">
+            <div class="footer-blocks__title anim-uni-in-up">
+              <p class="footer-blocks__title-l">Ecosystem</p>
+            </div>
+            <div class="footer-blocks__socials">
+              <ul class="footer-socials">
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://www.linkedin.com/in/sakthi-nir" class="footer-socials__link" target="_blank">LinkedIn</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://www.behance.net/sakthinir" class="footer-socials__link" target="_blank">Behance</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://figma.com/@sakthinir" class="footer-socials__link" target="_blank">Figma Community</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://dribbble.com" class="footer-socials__link" target="_blank">Dribbble</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://github.com" class="footer-socials__link" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-blocks__links anim-uni-in-up">
+            <p class="t-xsmall t-muted">Designed &amp; Built for Sakthi Niranjana S &bull; &copy; 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="to-top" class="btn btn-to-top slide-up" aria-label="Back to Top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>

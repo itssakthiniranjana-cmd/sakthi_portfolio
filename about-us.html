@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch" color-scheme="light">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About Sakthi Niranjana S || Senior UI/UX &amp; Digital Designer</title>
+  <meta name="description" content="Discover the background, experience, design philosophy, and skills of Sakthi Niranjana S, Senior UX/UI & Product Designer."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/custom.css?v=4"/>
+  <link rel="icon" type="image/png" href="img/logo.png"/>
+  <link rel="apple-touch-icon" href="img/logo.png"/>
+
+  <script>
+    (function() {
+      try {
+        var scheme = localStorage.getItem('color-scheme') || 'light';
+        document.documentElement.setAttribute('color-scheme', scheme);
+      } catch(e) {}
+    })();
+
+    function togglePortfolioMenu(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      var isOpen = document.body.classList.contains('nav-open');
+      var menuWrap = document.querySelector('.mxd-menu__wrapper');
+      var navWrap = document.querySelector('.mxd-nav__wrap');
+      if (isOpen) {
+        document.body.classList.remove('nav-open');
+        if (menuWrap) {
+          menuWrap.classList.remove('active_menu');
+          menuWrap.style.opacity = '0';
+          menuWrap.style.visibility = 'hidden';
+          menuWrap.style.pointerEvents = 'none';
+        }
+        if (navWrap) {
+          navWrap.classList.remove('active_menu');
+          navWrap.style.pointerEvents = 'none';
+        }
+      } else {
+        document.body.classList.add('nav-open');
+        if (menuWrap) {
+          menuWrap.classList.add('active_menu');
+          menuWrap.style.display = 'block';
+          menuWrap.style.opacity = '1';
+          menuWrap.style.visibility = 'visible';
+          menuWrap.style.pointerEvents = 'auto';
+        }
+        if (navWrap) {
+          navWrap.classList.add('active_menu');
+          navWrap.style.pointerEvents = 'auto';
+        }
+      }
+    }
+  </script>
+</head>
+<body class="page-loaded">
+
+  <!-- Fullscreen Navigation Menu Overlay -->
+  <nav class="mxd-nav__wrap" data-lenis-prevent="">
+
+    
+    <div class="mxd-menu__wrapper">
+      <div class="mxd-menu__base" onclick="togglePortfolioMenu(event)"></div>
+      <div class="mxd-menu__contain">
+        <div class="mxd-menu__inner">
+          <div class="mxd-menu__left">
+            <p class="mxd-menu__caption fade-in-elm">
+              🦄 Senior UI/UX &amp; Product Designer<br/>
+              Specializing in WMS, Supply Chain &amp; SaaS Products
+            </p>
+            <div class="main-menu">
+              <nav class="main-menu__content">
+                <ul id="main-menu" class="main-menu__accordion">
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Home" href="index.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Home</div>
+                        <div class="btn-anim__block" aria-hidden="true">Home</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm active">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="About us" href="about-us.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">About us</div>
+                        <div class="btn-anim__block" aria-hidden="true">About us</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Works" href="works-simple.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Works (40)</div>
+                        <div class="btn-anim__block" aria-hidden="true">Works (40)</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Services" href="services.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Services</div>
+                        <div class="btn-anim__block" aria-hidden="true">Services</div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-menu__item fade-in-up-elm">
+                    <a class="btn-anim main-menu__link btn btn-anim" aria-label="Contact" href="contact.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Contact</div>
+                        <div class="btn-anim__block" aria-hidden="true">Contact</div>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="mxd-menu__right">
+            <div class="menu-promo">
+              <div class="menu-promo__content">
+                <p class="menu-promo__caption fade-in-elm">
+                  👋 Passionate about scalable design systems and human-first enterprise software.
+                </p>
+                <div class="menu-promo__video fade-in-up-elm">
+                  <video class="menu-video" id="inner-video" preload="auto" autoplay="" loop="" muted="" poster="video/540x310_video-01.webp">
+                    <source type="video/mp4" src="video/540x310_video-01.mp4"/>
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mxd-menu__data fade-in-up-elm">
+            <p class="t-xsmall">
+              Based in Chennai, India &bull; <a class="no-effect" href="mailto:its.sakthiniranjana@gmail.com">its.sakthiniranjana@gmail.com</a>
+            </p>
+            <p class="t-xsmall"><i class="ph ph-copyright"></i> 2026 Sakthi Niranjana S</p>
+          </div>
+        </div>
+        <div class="hamburger__parking-slot"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="header" class="mxd-header">
+    <div class="mxd-header__logo loading__fade">
+      <a class="mxd-logo" href="index.html">
+        <img class="mxd-logo__image" src="img/logo.png" alt="Sakthi Niranjana" width="56" height="56"/>
+        <span class="mxd-logo__text">Sakthi<br/>Niranjana</span>
+      </a>
+    </div>
+
+    <div class="mxd-header__controls loading__fade">
+      <button class="mxd-color-switcher" aria-label="Toggle Color Theme">
+        <i class="ph-bold ph-moon"></i>
+      </button>
+
+      <a class="btn-anim btn btn-anim btn-default btn-outline slide-right" aria-label="Say Hello" href="contact.html">
+        <span class="btn-caption">
+          <div class="btn-anim__block">Say Hello</div>
+          <div class="btn-anim__block" aria-hidden="true">Say Hello</div>
+        </span>
+        <i class="ph-bold ph-arrow-up-right"></i>
+      </a>
+
+      <!-- Menu Toggle Hamburger -->
+      <a href="#" class="mxd-nav__hamburger" aria-label="Toggle Menu" onclick="togglePortfolioMenu(event)">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main id="mxd-page-content" class="mxd-page-content inner-page-content">
+
+    <!-- Inner Headline Section -->
+    <div class="mxd-section mxd-section-inner-headline padding-headline-pre-block">
+      <div class="mxd-container grid-container">
+        <div class="mxd-block loading-wrap">
+          <div class="container-fluid px-0">
+            <div class="row gx-0">
+              <div class="col-12 col-xl-2 mxd-grid-item no-margin">
+                <div class="mxd-block__name name-inner-headline loading__item">
+                  <p class="mxd-point-subtitle">
+                    <i class="ph-fill ph-sparkle"></i>
+                    <span>About Me</span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-xl-10 mxd-grid-item no-margin">
+                <div class="mxd-block__content">
+                  <div class="mxd-block__inner-headline">
+                    <h1 class="inner-headline__title headline-img-before headline-img-06 loading__item">
+                      Driven by empathy, logic &amp; innovation
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values & Story Grid -->
+    <div class="mxd-section padding-grid-pre-mtext">
+      <div class="mxd-container grid-container">
+        <div class="mxd-block">
+          <div class="mxd-values loading__fade">
+            <div class="container-fluid p-0">
+              <div class="row g-0 d-flex">
+                
+                <!-- Col 1: Keywords & Focus Areas -->
+                <div class="col-12 col-xl-2 mxd-values__item order-2 order-xl-1 mxd-grid-item no-margin animate-card-2">
+                  <div class="mxd-values__lists fullheight-xl">
+                    <div class="container-fluid p-0 fullheight-xl">
+                      <div class="row g-0 fullheight-xl d-xl-flex flex-xl-column justify-content-xl-between">
+                        <div class="col-12 col-sm-6 col-xl-12 mxd-values__lists-item">
+                          <ul>
+                            <li><p class="t-small">User Research</p></li>
+                            <li><p class="t-small">WMS Architecture</p></li>
+                            <li><p class="t-small">Supply Chain SaaS</p></li>
+                            <li><p class="t-small">Design Systems</p></li>
+                            <li><p class="t-small">WCAG 2.1 AA</p></li>
+                            <li><p class="t-small">AI-Powered Velocity</p></li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-12 mxd-values__lists-item">
+                          <ul>
+                            <li><p class="t-small">Figma Auto-Layout</p></li>
+                            <li><p class="t-small">Rapid Prototyping</p></li>
+                            <li><p class="t-small">Usability Testing</p></li>
+                            <li><p class="t-small">Design Tokens</p></li>
+                            <li><p class="t-small">Marketing Collateral</p></li>
+                            <li><p class="t-small">Dev Handoff</p></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Col 2: Large Visual Showcase -->
+                <div class="col-12 col-xl-4 mxd-values__item order-1 order-xl-2 mxd-grid-item no-margin animate-card-2">
+                  <div class="mxd-values__image image-large-desktop image-values-1 parallax-img-small" style="background-image:url('img/team/1200x1600_team-01.webp');"></div>
+                </div>
+
+                <!-- Col 3: Bio & Philosophy -->
+                <div class="col-12 col-xl-6 mxd-values__item order-3 order-xl-3 mobile-reverse mxd-grid-item no-margin animate-card-2">
+                  <div class="mxd-values__image image-small-desktop image-values-2 parallax-img-small" style="background-image:url('img/team/1600x1200_team-01.webp');"></div>
+                  <div class="mxd-values__descr has-top-list anim-uni-in-up">
+                    <p class="reveal-type t-bright t-large">
+                      Senior UI/UX &amp; Product Designer passionate about creating meaningful digital experiences that balance user needs, business goals, and visual excellence.
+                    </p>
+                    <p style="margin-top:1.5rem; font-size:1.8rem; line-height:1.7;">
+                      With 3+ years of experience across web applications, mobile apps, SaaS platforms, enterprise solutions, and design systems, I transform complex problems into intuitive, accessible, and user-friendly experiences. Beyond product design, I bring a creative perspective through branding, visual design, marketing collateral, and AI-powered workflows to design products that are intuitive to use, visually compelling, and meaningful.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrolling Marquee Banner -->
+    <div class="mxd-section padding-mtext">
+      <div class="mxd-container fullwidth-container">
+        <div class="mxd-block">
+          <div class="marquee-auto-scroll muted-extra">
+            <div class="marquee-track">
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">User Research</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Design Systems</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">WMS Architecture</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Enterprise SaaS</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">WCAG 2.1 AA</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">AI Workflows</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">User Research</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">Design Systems</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+              <div class="marquee__item one-line item-regular text"><p class="marquee__text">WMS Architecture</p><div class="marquee__image"><i class="ph-fill ph-sparkle"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Employment History Section -->
+    <div class="mxd-section padding-default">
+      <div class="mxd-container grid-container">
+        <div class="mxd-block">
+          <div class="mxd-section-title">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-6 mxd-grid-item no-margin">
+                  <div class="mxd-section-title__hrtitle anim-uni-in-up">
+                    <h2 class="reveal-type">Work experience &amp;<br/>leadership roles</h2>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-3 mxd-grid-item no-margin">
+                  <div class="mxd-section-title__hrdescr">
+                    <p class="anim-uni-in-up">Feb 2026 – Present</p>
+                    <p class="anim-uni-in-up">May 2024 – Jan 2026</p>
+                    <p class="anim-uni-in-up">May 2023 – May 2024</p>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-3 mxd-grid-item no-margin">
+                  <div class="mxd-section-title__hrcontrols pre-title anim-uni-in-up">
+                    <a class="btn-anim btn btn-anim btn-default btn-outline slide-right-up" aria-label="Contact Sakthi" href="contact.html">
+                      <span class="btn-caption">
+                        <div class="btn-anim__block">Get in Touch</div>
+                        <div class="btn-anim__block" aria-hidden="true">Get in Touch</div>
+                      </span>
+                      <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mxd-block">
+          <div class="mxd-approach-list">
+            
+            <!-- Job 1 -->
+            <div class="mxd-approach-list__item">
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+              <div class="mxd-approach-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0">
+                    <div class="col-12 col-xl-3 mxd-grid-item no-margin">
+                      <span class="tag tag-default" style="margin-bottom:1rem; display:inline-block;">Feb 2026 – Present</span>
+                      <h5 style="margin-top:0.5rem;">Senior UX/UI Designer</h5>
+                      <p class="t-small t-muted">Flowhive solutions &bull; Remote</p>
+                    </div>
+                    <div class="col-12 col-xl-9 mxd-grid-item no-margin">
+                      <ul style="list-style:disc; padding-left:2rem; line-height:1.8; font-size:1.7rem; color:var(--t-medium);">
+                        <li>Lead end-to-end UX/UI design for WMS (Warehouse Management System), Supply Chain, and SaaS products, covering user research, wireframing, prototyping, design systems, usability testing, competitor analysis, and developer handoff.</li>
+                        <li>Collaborate with Product, Engineering, QA, Marketing, and Business teams in Agile/Scrum environments; mentor junior designers and maintain design standards, accessibility, and WCAG compliance.</li>
+                        <li>Create marketing collateral, social media creatives, brochures, flyers, case studies, white papers, presentations, sales/product decks, and event creatives using Adobe Creative Suite, Canva, PowerPoint, and AI-powered design tools.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="mxd-approach-list__item">
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+              <div class="mxd-approach-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0">
+                    <div class="col-12 col-xl-3 mxd-grid-item no-margin">
+                      <span class="tag tag-default" style="margin-bottom:1rem; display:inline-block;">May 2024 – Jan 2026</span>
+                      <h5 style="margin-top:0.5rem;">UX/UI Designer</h5>
+                      <p class="t-small t-muted">GI Game &amp; Retail Pvt Ltd &bull; Chennai</p>
+                    </div>
+                    <div class="col-12 col-xl-9 mxd-grid-item no-margin">
+                      <ul style="list-style:disc; padding-left:2rem; line-height:1.8; font-size:1.7rem; color:var(--t-medium);">
+                        <li>Conducted user research, stakeholder interviews, usability testing, and design iterations; translated insights into user journeys, wireframes, interactive prototypes, and high-fidelity UI designs using Figma.</li>
+                        <li>Collaborated with Product Owners, Developers, and Business stakeholders in Agile/Scrum sprints; created and maintained design systems, reusable components, responsive guidelines, and WCAG-compliant interfaces.</li>
+                        <li>Designed marketing collateral, social media creatives, posters, brochures, flyers, case studies, white papers, product documentation, presentations, sales decks, and booth/event materials.</li>
+                        <li>Created visual assets using Adobe Illustrator, Photoshop, InDesign, and PowerPoint; presented design rationale, incorporated cross-functional feedback, and delivered developer handoffs with clear specifications, annotations, and interaction documentation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="mxd-approach-list__item">
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+              <div class="mxd-approach-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0">
+                    <div class="col-12 col-xl-3 mxd-grid-item no-margin">
+                      <span class="tag tag-default" style="margin-bottom:1rem; display:inline-block;">May 2023 – May 2024</span>
+                      <h5 style="margin-top:0.5rem;">UX/UI Designer + HR Ops</h5>
+                      <p class="t-small t-muted">One click &bull; Chennai</p>
+                    </div>
+                    <div class="col-12 col-xl-9 mxd-grid-item no-margin">
+                      <ul style="list-style:disc; padding-left:2rem; line-height:1.8; font-size:1.7rem; color:var(--t-medium);">
+                        <li>Designed internal HR platforms through user research, workflow analysis, usability testing, wireframing, prototyping, and high-fidelity UI design.</li>
+                        <li>Collaborated with HR, Product, and Engineering teams in Agile sprints; refined designs through usability reviews and maintained consistent design system patterns.</li>
+                        <li>Created marketing collateral, social media creatives, flyers, presentations, case studies, branded documents, and internal communications using Adobe Illustrator, Photoshop, InDesign, and Microsoft Office.</li>
+                        <li>Delivered developer handoffs with clear UI specifications and interaction documentation, ensuring consistent and user-friendly experiences.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+            </div>
+
+            <!-- Internships -->
+            <div class="mxd-approach-list__item">
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+              <div class="mxd-approach-list__inner">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0">
+                    <div class="col-12 col-xl-3 mxd-grid-item no-margin">
+                      <span class="tag tag-default" style="margin-bottom:1rem; display:inline-block;">July 2023 – Sep 2023</span>
+                      <h5 style="margin-top:0.5rem;">Design &amp; Research Intern</h5>
+                      <p class="t-small t-muted">Techienutpam &bull; Puthiyathalaimurai</p>
+                    </div>
+                    <div class="col-12 col-xl-9 mxd-grid-item no-margin">
+                      <ul style="list-style:disc; padding-left:2rem; line-height:1.8; font-size:1.7rem; color:var(--t-medium);">
+                        <li>Supported end-to-end UX process for web and mobile platforms at Techienutpam OPC Private Limited; built user flows, wireframes, and interactive prototypes in Figma.</li>
+                        <li>Conducted exploratory user research and usability analysis for digital content platforms at Puthiyathalaimurai, synthesizing research findings and presenting actionable insights to marketing and product teams.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mxd-approach-list__border anim-uni-in-up"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education & Skills Matrix -->
+    <div class="mxd-section padding-pre-grid">
+      <div class="mxd-container grid-container">
+        <div class="mxd-block">
+          <div class="container-fluid px-0">
+            <div class="row gx-0">
+              
+              <!-- Education Box -->
+              <div class="col-12 col-xl-6 mxd-grid-item">
+                <div style="background:var(--base-tint); border:1px solid var(--st-muted); border-radius:var(--_radius-m); padding:4rem; height:100%;">
+                  <h3 style="margin-bottom:2rem;">Education &amp; Credentials</h3>
+                  
+                  <div style="margin-bottom:3rem;">
+                    <span class="tag tag-default" style="margin-bottom:0.8rem; display:inline-block;">Jul 2023 – Jan 2024</span>
+                    <h4>UI/UX Design Professional Course</h4>
+                    <p class="t-medium t-bright">School of Techies &bull; Chennai</p>
+                    <p style="margin-top:0.8rem; font-size:1.6rem; color:var(--t-medium);">
+                      Hands-on training in user research, wireframing, interaction design, and usability testing. Completed real-world projects including mental health app, e-commerce platform, and non-profit website.
+                    </p>
+                  </div>
+
+                  <div>
+                    <span class="tag tag-default" style="margin-bottom:0.8rem; display:inline-block;">Jun 2020 – May 2023</span>
+                    <h4>Bachelor of Business Administration (BBA)</h4>
+                    <p class="t-medium t-bright">Shri Shankarlal Sundarbai Shasun Jain College &bull; Chennai</p>
+                    <p style="margin-top:0.8rem; font-size:1.6rem; color:var(--t-medium);">
+                      Strong foundation in business strategy, stakeholder management, analytics, and organizational communication.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skills Matrix Box -->
+              <div class="col-12 col-xl-6 mxd-grid-item">
+                <div style="background:var(--base-tint); border:1px solid var(--st-muted); border-radius:var(--_radius-m); padding:4rem; height:100%;">
+                  <h3 style="margin-bottom:2rem;">Core Competencies &amp; Tools</h3>
+                  
+                  <div style="margin-bottom:2.5rem;">
+                    <h5 style="margin-bottom:1rem;"><i class="ph-bold ph-pencil-ruler"></i> UX &amp; Prototyping</h5>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.8rem;">
+                      <span class="tag tag-default tag-outline">User Research</span>
+                      <span class="tag tag-default tag-outline">Information Architecture</span>
+                      <span class="tag tag-default tag-outline">Wireframing</span>
+                      <span class="tag tag-default tag-outline">Design Systems</span>
+                      <span class="tag tag-default tag-outline">Usability Testing</span>
+                      <span class="tag tag-default tag-outline">WCAG 2.1 AA</span>
+                      <span class="tag tag-default tag-outline">Heuristic Evaluation</span>
+                    </div>
+                  </div>
+
+                  <div style="margin-bottom:2.5rem;">
+                    <h5 style="margin-bottom:1rem;"><i class="ph-bold ph-figma-logo"></i> Design &amp; Digital Tools</h5>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.8rem;">
+                      <span class="tag tag-default tag-outline">Figma (Auto Layout &amp; Variants)</span>
+                      <span class="tag tag-default tag-outline">FigJam</span>
+                      <span class="tag tag-default tag-outline">Miro</span>
+                      <span class="tag tag-default tag-outline">Adobe Illustrator</span>
+                      <span class="tag tag-default tag-outline">Adobe Photoshop</span>
+                      <span class="tag tag-default tag-outline">Adobe InDesign</span>
+                      <span class="tag tag-default tag-outline">Adobe XD</span>
+                      <span class="tag tag-default tag-outline">Webflow</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h5 style="margin-bottom:1rem;"><i class="ph-bold ph-robot"></i> AI-Powered Tools &amp; Methods</h5>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.8rem;">
+                      <span class="tag tag-default tag-outline">Figma AI</span>
+                      <span class="tag tag-default tag-outline">FigJam AI</span>
+                      <span class="tag tag-default tag-outline">ChatGPT</span>
+                      <span class="tag tag-default tag-outline">Claude AI</span>
+                      <span class="tag tag-default tag-outline">Gemini AI</span>
+                      <span class="tag tag-default tag-outline">Perplexity AI</span>
+                      <span class="tag tag-default tag-outline">Agile / Scrum</span>
+                      <span class="tag tag-default tag-outline">Developer Handoff</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="mxd-section padding-grid-pre-mtext overflow-hidden">
+      <div class="mxd-container grid-container">
+        <div class="mxd-block">
+          <div class="mxd-stats-cards">
+            <div class="container-fluid px-0">
+              <div class="row gx-0">
+                <div class="col-12 col-xl-5 mxd-stats-cards__item mxd-grid-item">
+                  <div class="mxd-stats-cards__inner align-end bg-accent radius-m padding-4">
+                    <div class="mxd-counter">
+                      <p class="mxd-counter__number mxd-stats-number opposite"><span data-target="3">3</span>+</p>
+                      <p class="mxd-counter__descr t-140 t-bright opposite">Years of proven expertise in enterprise UX &amp; WMS</p>
+                    </div>
+                    <div class="mxd-stats-cards__btngroup">
+                      <a class="btn-anim btn btn-anim btn-default btn-outline opposite slide-right-up" aria-label="Works" href="works-simple.html">
+                        <span class="btn-caption"><div class="btn-anim__block">View Works</div><div class="btn-anim__block" aria-hidden="true">View Works</div></span>
+                        <i class="ph-bold ph-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <div class="mxd-stats-cards__image mxd-stats-cards-image-1">
+                      <img alt="Illustration 3D" src="img/illustrations/800x800_card-image-01.webp" width="800" height="800"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-7 mxd-stats-cards__item mxd-grid-item">
+                  <div class="mxd-stats-cards__inner align-end bg-base-tint radius-m padding-4">
+                    <div class="mxd-counter align-end">
+                      <p class="mxd-counter__number mxd-stats-number"><span data-target="98">98</span>%</p>
+                      <p class="mxd-counter__descr t-140 t-bright">Usability satisfaction rating across internal &amp; SaaS users</p>
+                    </div>
+                    <div class="mxd-stats-cards__btngroup">
+                      <a class="btn-anim btn btn-anim btn-default btn-outline slide-right-down" aria-label="Say Hello" href="contact.html">
+                        <span class="btn-caption"><div class="btn-anim__block">Say Hello</div><div class="btn-anim__block" aria-hidden="true">Say Hello</div></span>
+                        <i class="ph-bold ph-arrow-down-right"></i>
+                      </a>
+                    </div>
+                    <div class="mxd-stats-cards__image mxd-stats-cards-image-2">
+                      <img alt="Illustration Star" src="img/illustrations/800x800_card-image-02.webp" width="800" height="800"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="mxd-section overflow-hidden">
+      <div class="mxd-container">
+        <div class="mxd-block">
+          <div class="mxd-promo">
+            <div class="mxd-promo__inner anim-zoom-out-container">
+              <div class="mxd-promo__bg"></div>
+              <div class="mxd-promo__content">
+                <p class="mxd-promo__title anim-uni-in-up">
+                  <span class="mxd-promo__icon">
+                    <img alt="Icon" src="img/icons/300x300_obj-cta-01.webp" width="300" height="300"/>
+                  </span>
+                  <span class="reveal-type mxd-promo__caption">Ready to elevate your product experience?</span>
+                </p>
+                <div class="mxd-promo__controls anim-uni-in-up">
+                  <a class="btn-anim btn btn-anim btn-default btn-large btn-additional slide-right-up" aria-label="Contact Me" href="contact.html">
+                    <span class="btn-caption">
+                      <div class="btn-anim__block">Contact Me</div>
+                      <div class="btn-anim__block" aria-hidden="true">Contact Me</div>
+                    </span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="mxd-promo__images">
+                <img alt="Image 1" class="promo-image promo-image-1" src="img/illustrations/cta-img-01.webp" width="800" height="912"/>
+                <img alt="Image 2" class="promo-image promo-image-2" src="img/illustrations/cta-img-02.webp" width="600" height="601"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="mxd-footer" class="mxd-footer">
+    <div class="mxd-footer__text-wrap">
+      <div class="fullwidth-text__tl-trigger"></div>
+      <div class="mxd-footer__fullwidth-text anim-top-to-bottom">
+        <svg class="mxd-footer__svg-v2" viewBox="0 0 1100 120" style="width:100%; height:auto;">
+          <text x="50%" y="65%" text-anchor="middle" font-family="'Funnel Display', sans-serif" font-weight="700" font-size="82" fill="var(--st-muted)" letter-spacing="1">SAKTHI NIRANJANA</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="mxd-footer__footer-blocks">
+      <div class="footer-blocks__column animate-card-3">
+        <div class="footer-blocks__card fullheight-card">
+          <div class="footer-blocks__nav">
+            <ul class="footer-nav">
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="index.html"><span class="btn-caption"><div class="btn-anim__block">Home</div><div class="btn-anim__block" aria-hidden="true">Home</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="about-us.html"><span class="btn-caption"><div class="btn-anim__block">About us</div><div class="btn-anim__block" aria-hidden="true">About us</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="works-simple.html"><span class="btn-caption"><div class="btn-anim__block">Works (40)</div><div class="btn-anim__block" aria-hidden="true">Works (40)</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="services.html"><span class="btn-caption"><div class="btn-anim__block">Services</div><div class="btn-anim__block" aria-hidden="true">Services</div></span></a></li>
+              <li class="footer-nav__item anim-uni-in-up"><a class="btn-anim footer-nav__link btn-anim" href="contact.html"><span class="btn-caption"><div class="btn-anim__block">Contact</div><div class="btn-anim__block" aria-hidden="true">Contact</div></span></a></li>
+            </ul>
+          </div>
+          <div class="footer-blocks__links anim-uni-in-up">
+            <span class="t-xsmall t-muted">Chennai, India &bull; Open to Remote Opportunities</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-blocks__column animate-card-3">
+        <div class="footer-blocks__card">
+          <p class="mxd-point-subtitle anim-uni-in-up">
+            <i class="ph-bold ph-envelope"></i>
+            <a href="mailto:its.sakthiniranjana@gmail.com">its.sakthiniranjana@gmail.com</a>
+          </p>
+        </div>
+        <div class="footer-blocks__card">
+          <p class="mxd-point-subtitle anim-uni-in-up">
+            <i class="ph-bold ph-phone-call"></i>
+            <a href="tel:+916374523020">+91 6374523020</a>
+          </p>
+        </div>
+        <div class="footer-blocks__card fill-card notify">
+          <div class="footer-blocks__title anim-uni-in-up">
+            <p class="footer-blocks__title-m">Subscribe to UX &amp; design insights:</p>
+          </div>
+          <div class="form-container anim-uni-in-up">
+            <div class="form__reply subscription-ok" style="display:none;">
+              <span class="reply__text">Done! Thanks for subscribing.</span>
+            </div>
+            <form class="form notify-form form-light">
+              <input type="email" placeholder="Your Email" required=""/>
+              <button class="btn btn-form btn-absolute-right btn-muted slide-right-up anim-no-delay" type="submit">
+                <i class="ph ph-arrow-up-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-blocks__column animate-card-3">
+        <div class="footer-blocks__card fullheight-card">
+          <div class="footer-blocks__block">
+            <div class="footer-blocks__title anim-uni-in-up">
+              <p class="footer-blocks__title-l">Ecosystem</p>
+            </div>
+            <div class="footer-blocks__socials">
+              <ul class="footer-socials">
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://www.linkedin.com/in/sakthi-nir" class="footer-socials__link" target="_blank">LinkedIn</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://www.behance.net/sakthinir" class="footer-socials__link" target="_blank">Behance</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://figma.com/@sakthinir" class="footer-socials__link" target="_blank">Figma Community</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://dribbble.com" class="footer-socials__link" target="_blank">Dribbble</a></li>
+                <li class="footer-socials__item anim-uni-in-up"><a href="https://github.com" class="footer-socials__link" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-blocks__links anim-uni-in-up">
+            <p class="t-xsmall t-muted">Designed &amp; Built for Sakthi Niranjana S &bull; &copy; 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="to-top" class="btn btn-to-top slide-up" aria-label="Back to Top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
